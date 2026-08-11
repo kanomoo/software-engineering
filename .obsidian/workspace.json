@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/Lecture 6 - Software Architecture & Microservices.md",
+                "file": "Wiki/Lecture 3 - Requirements Engineering, Elicitation & Case Studies.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 6 - Software Architecture & Microservices"
+              "title": "Lecture 3 - Requirements Engineering, Elicitation & Case Studies"
             }
           }
         ]
@@ -190,6 +190,7 @@
   },
   "active": "2b4e49dcf07ef492",
   "lastOpenFiles": [
+    "Wiki/Lecture 6 - Software Architecture & Microservices.md",
     "Wiki/Lecture 5 - Agile Software Engineering & Scrum Framework.md",
     "Wiki/Lecture 4 - Use Case Modeling & Textual Specifications.md",
     "Wiki/Lecture 8 - Security, Privacy & Reliable Programming.md",
@@ -197,7 +198,6 @@
     "Wiki/Lecture 11 - Software Cost Estimation & Metrics.md",
     "Wiki/Progress Checklist.md",
     "Wiki/Software Engineering Index.md",
-    "Wiki/Lecture 6 - Software Architecture & Microservices.md",
     "Wiki/Lecture 2 - Software Processes & Process Improvement.md",
     "Wiki/Lecture 3 - Requirements Engineering, Elicitation & Case Studies.md",
     "Wiki/Lecture 1 - Introduction to Software Engineering, Products & Ethics.md"

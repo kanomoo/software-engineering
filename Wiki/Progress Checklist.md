@@ -39,10 +39,15 @@ type: checklist
   - [x] SEI CMMI Capability Maturity Levels (1 to 5)
 
 - [x] **[[Lecture 3 - Requirements Engineering, Elicitation & Case Studies]]**
-  - [x] Requirements Types: Functional, Non-Functional, Domain, Constraints
-  - [x] 6 Elicitation Techniques (Pros/Cons/When to use)
-  - [x] Stakeholder Analysis (Primary, Secondary, External)
-  - [x] 8 Case Studies: BookNest, ParkEasy, StudyMate, FreshMart, KMUTNB Cafeteria, PizzaFriend, ReadSmart, EasyClinic
+  - [x] User Requirements vs System Requirements (Davis Abstraction & Target Readers Matrix)
+  - [x] Sommerville Non-Functional Requirements Taxonomy (Product, Organisational, External)
+  - [x] RE Process & Spiral Model (Elicitation, Analysis, Specification, Validation, Change Mgmt)
+  - [x] Elicitation Techniques (6 Core + Ethnography / Air Traffic Control & iLearn Scenarios)
+  - [x] Specification Formats (Natural Language rules, Form-based / Insulin Pump & Tabular Specs)
+  - [x] Software Requirements Document SRS Structure (IEEE 830 / Sommerville 10 Chapters) & Users
+  - [x] Requirements Validation (5 Core Checks & Review Checklist)
+  - [x] Requirements Management & Change Control (Volatile vs Enduring & Traceability Policies)
+  - [x] 10 Case Studies & Practice Exercises (FreshMart, KMUTNB Cafeteria, PizzaFriend, ReadSmart, EasyClinic, Mentcare, Insulin Pump, iLearn, BookNest, ParkEasy, StudyMate)
 
 - [x] **[[Lecture 4 - Use Case Modeling & Textual Specifications]]**
   - [x] UML Use Case Elements & System Boundary

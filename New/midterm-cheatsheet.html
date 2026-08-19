@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SE Midterm Cheatsheet — Print-Ready</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,400&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f9fb;
+      --card: #ffffff;
+      --text: #1a1a2e;
+      --text-secondary: #4a4a68;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --green: #059669;
+      --green-light: #d1fae5;
+      --orange: #d97706;
+      --orange-light: #fef3c7;
+      --red: #dc2626;
+      --red-light: #fee2e2;
+      --purple: #7c3aed;
+      --purple-light: #ede9fe;
+      --border: #e2e8f0;
+      --shadow: 0 1px 3px rgba(0,0,0,.08);
+      --radius: 8px;
+    }
+
+    html { font-size: 13px; }
+
+    body {
+      font-family: 'IBM Plex Sans Thai', 'Sarabun', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding: 16px;
+    }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      html { font-size: 10.5pt; }
+      body { background: white; padding: 0; }
+      .no-print, .print-btn-wrap { display: none !important; }
+      .page-break { page-break-before: always; }
+      .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+      .section { break-inside: avoid; }
+      table { font-size: 9.5pt; }
+      h1 { font-size: 16pt; }
+      h2 { font-size: 13pt; }
+      h3 { font-size: 11pt; }
+      @page { 
+        size: A4; 
+        margin: 12mm 10mm;
+      }
+    }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 900px; margin: 0 auto; }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb, #3b82f6);
+      color: white;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 6px; }
+    .header .subtitle { font-size: .95rem; opacity: .9; }
+    .header .exam-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      margin-top: 14px;
+      font-size: .85rem;
+    }
+    .header .exam-info span {
+      background: rgba(255,255,255,.15);
+      padding: 6px 10px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+    }
+    @media print {
+      .header { background: #1e3a8a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .header .exam-info span { border: 1px solid rgba(255,255,255,.3); }
+    }
+
+    /* ===== PRINT BUTTON ===== */
+    .print-btn-wrap {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .print-btn {
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: white;
+      border: none;
+      padding: 12px 36px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform .15s;
+    }
+    .print-btn:hover { transform: scale(1.04); }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 22px;
+      margin-bottom: 16px;
+      border-left: 4px solid var(--accent);
+    }
+    .card.green { border-left-color: var(--green); }
+    .card.orange { border-left-color: var(--orange); }
+    .card.red { border-left-color: var(--red); }
+    .card.purple { border-left-color: var(--purple); }
+
+    /* ===== HEADINGS ===== */
+    h1 { font-size: 1.5rem; margin-bottom: 12px; }
+    h2 { font-size: 1.2rem; color: var(--accent); margin: 16px 0 8px; border-bottom: 2px solid var(--accent-light); padding-bottom: 4px; }
+    h3 { font-size: 1.05rem; color: var(--text); margin: 12px 0 6px; }
+    h4 { font-size: .95rem; color: var(--text-secondary); margin: 8px 0 4px; }
+
+    .section-label {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: .75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+    .section-label.green { background: var(--green); }
+    .section-label.orange { background: var(--orange); }
+    .section-label.red { background: var(--red); }
+    .section-label.purple { background: var(--purple); }
+
+    @media print {
+      .section-label { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    /* ===== TABLES ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: .9rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 7px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    @media print {
+      th { background: #f1f5f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    /* ===== CALLOUT BOXES ===== */
+    .callout {
+      border-radius: 6px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      font-size: .9rem;
+    }
+    .callout.blue { background: var(--accent-light); border-left: 4px solid var(--accent); }
+    .callout.green { background: var(--green-light); border-left: 4px solid var(--green); }
+    .callout.orange { background: var(--orange-light); border-left: 4px solid var(--orange); }
+    .callout.red { background: var(--red-light); border-left: 4px solid var(--red); }
+    .callout.purple { background: var(--purple-light); border-left: 4px solid var(--purple); }
+    .callout .callout-title { font-weight: 700; margin-bottom: 4px; }
+    @media print {
+      .callout { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    /* ===== VISION TEMPLATE BOX ===== */
+    .vision-box {
+      background: #f8fafc;
+      border: 2px dashed var(--accent);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-family: 'Sarabun', monospace;
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+    .vision-box .label {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 110px;
+    }
+
+    /* ===== LISTS ===== */
+    ul, ol { padding-left: 20px; margin: 6px 0; }
+    li { margin-bottom: 4px; }
+    li::marker { color: var(--accent); }
+
+    /* ===== TAGS ===== */
+    .tag {
+      display: inline-block;
+      font-size: .72rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    .tag.fr { background: #dbeafe; color: #1d4ed8; }
+    .tag.nfr { background: #d1fae5; color: #065f46; }
+    .tag.domain { background: #fef3c7; color: #92400e; }
+    .tag.constraint { background: #fee2e2; color: #991b1b; }
+    .tag.stakeholder { background: #ede9fe; color: #5b21b6; }
+    .tag.vision { background: #fce7f3; color: #9d174d; }
+    @media print {
+      .tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    /* ===== CODE BLOCK ===== */
+    code {
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: .88em;
+      font-family: 'Sarabun', monospace;
+    }
+
+    /* ===== GRID LAYOUT ===== */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 650px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    @media print {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    .strong-en { font-weight: 600; color: #1e40af; }
+    .thai-trans { color: var(--text-secondary); font-style: italic; font-size: .88em; }
+
+    .divider {
+      border: none;
+      border-top: 2px dashed var(--border);
+      margin: 20px 0;
+    }
+
+    .two-lang b { color: #1e40af; }
+    .two-lang .th { color: #6b7280; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin-bottom: 18px;
+    }
+    .toc h3 { margin-top: 0; color: var(--accent); }
+    .toc ol { font-size: .92rem; }
+    .toc a { color: var(--accent); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ===== STEP BOX ===== */
+    .step-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 8px 0;
+      padding: 10px 14px;
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+    .step-num.green { background: var(--green); }
+    .step-num.orange { background: var(--orange); }
+    .step-num.red { background: var(--red); }
+    .step-num.purple { background: var(--purple); }
+
+    @media print {
+      .step-num { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      border: 2px solid #f59e0b;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .highlight-box h3 { color: #92400e; margin-top: 0; }
+
+    @media print {
+      .highlight-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <h1>📘 SE Midterm Exam — Cheatsheet</h1>
+    <div class="subtitle">แนวข้อสอบ + หลักการอ่านโจทย์ & วิธีตอบ + แปลโจทย์ Case Studies + ทฤษฎี Agile/Scrum</div>
+    <div class="exam-info">
+      <span>📅 วันอังคาร 19 ส.ค. 68 เวลา 09.00 น.</span>
+      <span>📖 Open Book เปิดตำราได้</span>
+      <span>📝 5 ข้อ = 30 คะแนน</span>
+      <span>🇬🇧 โจทย์ภาษาอังกฤษ</span>
+      <span>✅ ตอบไทยได้ ตอบ EN ทุกข้อ +5 คะแนน</span>
+    </div>
+  </div>
+
+  <!-- PRINT BUTTON -->
+  <div class="print-btn-wrap no-print">
+    <button class="print-btn" onclick="window.print()">🖨️ พิมพ์เอกสารนี้ (Ctrl+P)</button>
+  </div>
+
+  <!-- ===== TOC ===== -->
+  <div class="toc no-print">
+    <h3>📑 สารบัญ</h3>
+    <ol>
+      <li><a href="#sec1">หลักการอ่านโจทย์ & วิธีตอบข้อสอบ</a></li>
+      <li><a href="#sec2">สูตรลัดจำแนก Requirements (Cheat Sheet)</a></li>
+      <li><a href="#sec3">Moore's Vision Template</a></li>
+      <li><a href="#sec4">Case Study 1: FreshMart</a></li>
+      <li><a href="#sec5">Case Study 2: KMUTNB Cafeteria</a></li>
+      <li><a href="#sec6">Case Study 3: PizzaFriend</a></li>
+      <li><a href="#sec7">Case Study 4: ReadSmart</a></li>
+      <li><a href="#sec8">Case Study 5: EasyClinic</a></li>
+      <li><a href="#sec9">ทฤษฎี Agile & Scrum Framework (3-5-3)</a></li>
+      <li><a href="#sec10">เก็งแนวข้อสอบ 5 ข้อ + เฉลย 2 ภาษา</a></li>
+    </ol>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1: หลักการอ่านโจทย์ & วิธีตอบข้อสอบ                    -->
+  <!-- ============================================================ -->
+  <div id="sec1" class="card red">
+    <span class="section-label red">⚡ สำคัญที่สุด</span>
+    <h2>1. หลักการอ่านโจทย์ & วิธีตอบข้อสอบ</h2>
+    
+    <div class="highlight-box">
+      <h3>🔑 กฎทอง: ข้อสอบ SE มี 2 ประเภทเท่านั้น</h3>
+      <div class="grid-2">
+        <div>
+          <strong>ประเภท 1 — วิเคราะห์ Case Study</strong>
+          <ul>
+            <li>ให้ Case Study (สถานการณ์จำลอง) เป็นภาษาอังกฤษ</li>
+            <li>ให้วิเคราะห์: FR, NFR, Domain, Constraint, Stakeholder, Product Vision</li>
+          </ul>
+        </div>
+        <div>
+          <strong>ประเภท 2 — อธิบายทฤษฎี</strong>
+          <ul>
+            <li>ถาม Agile Manifesto / 4 Core Values</li>
+            <li>ถาม Scrum Framework (3 Roles, 5 Events, 3 Artifacts)</li>
+            <li>อาจให้ประยุกต์กับ Case Study ที่กำหนดให้</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>📖 ขั้นตอนอ่านโจทย์ Case Study (5 ขั้นตอน)</h3>
+
+    <div class="step-box">
+      <div class="step-num red">1</div>
+      <div>
+        <strong>อ่านโจทย์ผ่านรอบแรก — จับ "ใคร ทำอะไร ทำไม"</strong><br>
+        อ่านทั้งโจทย์ให้จบก่อน 1 รอบ จับใจความว่า: <b>ใคร</b>เป็นเจ้าของ/ใช้ระบบ (Stakeholders), <b>ระบบนี้ทำอะไร</b> (ชื่อ + ประเภทแอป/เว็บ), <b>ทำไม</b>ต้องสร้าง (ปัญหาที่แก้)
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num red">2</div>
+      <div>
+        <strong>อ่านรอบ 2 — ขีดเส้นใต้ & จำแนก 6 หมวด</strong><br>
+        อ่านทีละประโยค ขีดเส้นใต้คำสำคัญ แล้วเขียนตัวย่อกำกับไว้ข้างหน้าแต่ละประโยค:
+        <ul style="margin-top:4px;">
+          <li><span class="tag fr">FR</span> = กริยาสั่งงาน (register, log in, search, add to cart, pay, send, notify, generate report)</li>
+          <li><span class="tag nfr">NFR</span> = ตัวเลข/คุณภาพ (within 2 seconds, 1000 concurrent users, 99.9% uptime, SSL, encrypted, senior-friendly)</li>
+          <li><span class="tag domain">Domain</span> = กฎเฉพาะทาง (PDPA, HIPAA, อีเมล @kmutnb.ac.th, FIFO queue)</li>
+          <li><span class="tag constraint">Constraint</span> = ข้อจำกัดตายตัว (Flutter, Laravel, budget ≤ 200,000, within 3 months)</li>
+          <li><span class="tag stakeholder">Stakeholder</span> = คนหรือหน่วยงาน (owner, student, staff, doctor, patient, payment provider)</li>
+          <li><span class="tag vision">Vision</span> = ปัญหาที่แก้ + จุดเด่น (ใช้เขียน Moore's Template)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num red">3</div>
+      <div>
+        <strong>ดูว่าข้อสอบถามอะไร — อ่านคำสั่งท้ายโจทย์ก่อนเขียน</strong><br>
+        ข้อสอบจะบอกชัดเจนว่าต้องการอะไร เช่น <code>Identify 3 FR, 2 NFR, 1 Constraint</code> อย่าเขียนมากกว่าหรือน้อยกว่าที่ถาม
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num red">4</div>
+      <div>
+        <strong>เขียนคำตอบเป็นข้อๆ — ใช้ Template ภาษาอังกฤษ</strong><br>
+        ใช้โครงสร้างประโยคสำเร็จรูปจากด้านล่างเพื่อเก็บ +5 คะแนนพิเศษ<br>
+        <em style="color:#059669;">✅ เขียนเป็นข้อ 1. 2. 3. อย่าเขียนเป็นย่อหน้ายาว — อาจารย์ตรวจง่ายกว่า</em>
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num red">5</div>
+      <div>
+        <strong>ตรวจทานก่อนส่ง — เช็คว่าครบตามจำนวนที่ถาม</strong><br>
+        นับจำนวนข้อ FR / NFR / Stakeholder ว่าตรงกับที่โจทย์ระบุหรือไม่ ตรวจสอบว่าไม่มีข้อใดซ้ำกัน
+      </div>
+    </div>
+
+    <h3 style="margin-top:16px;">🔍 เทคนิคจำแนก FR vs NFR vs Domain vs Constraint (สังเกตคำ)</h3>
+    <table>
+      <tr>
+        <th>ประเภท</th>
+        <th>🔑 คำ/สัญญาณที่จะเจอในโจทย์</th>
+        <th>ตัวอย่างประโยคในโจทย์</th>
+      </tr>
+      <tr>
+        <td><span class="tag fr">FR</span><br>Functional</td>
+        <td>กริยาสั่งงาน: <b>allow, enable, shall, must, register, log in, search, display, calculate, notify, send, generate, book, pay</b></td>
+        <td>"Users can register using email"<br>"The system displays a menu list"<br>"Send a confirmation email"</td>
+      </tr>
+      <tr>
+        <td><span class="tag nfr">NFR</span><br>Non-Functional</td>
+        <td>ตัวเลข + คุณภาพ: <b>within X seconds, concurrent users, uptime, encrypted, SSL, intuitive, user-friendly, senior-friendly, backup</b></td>
+        <td>"Respond within 2 seconds"<br>"Support 1,000 concurrent users"<br>"Encrypted using AES-256"</td>
+      </tr>
+      <tr>
+        <td><span class="tag domain">Domain</span></td>
+        <td>กฎเฉพาะทาง: <b>comply with, regulation, PDPA, HIPAA, policy, standard, university email</b>, กฎทางธุรกิจ</td>
+        <td>"Must comply with PDPA"<br>"Login with @kmutnb.ac.th only"</td>
+      </tr>
+      <tr>
+        <td><span class="tag constraint">Constraint</span></td>
+        <td>ข้อจำกัดตายตัว: <b>developed using, framework, budget, cost, within X months, platform, language</b></td>
+        <td>"Built with Flutter"<br>"Budget not exceeding 200,000 Baht"<br>"Completed within 3 months"</td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top:14px;">✍️ Template ประโยคภาษาอังกฤษสำเร็จรูป (ลอกไปเขียนได้เลย)</h3>
+    <table>
+      <tr><th>ประเภท</th><th>โครงสร้างประโยค (เติม [...] ตามโจทย์)</th></tr>
+      <tr>
+        <td><span class="tag fr">FR</span></td>
+        <td>
+          <code>The system shall allow [user] to [action].</code><br>
+          <code>The system must [calculate / display / send / generate] [object].</code><br>
+          <code>[User] shall be able to [action] through [channel].</code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag nfr">NFR</span></td>
+        <td>
+          <code>The system must respond to user actions within [X] seconds.</code><br>
+          <code>The system shall support at least [X] concurrent users.</code><br>
+          <code>All [data type] must be encrypted using [SSL/TLS / AES-256].</code><br>
+          <code>The interface must be [intuitive / senior-friendly / accessible].</code><br>
+          <code>The system must maintain at least [X]% uptime per month.</code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag domain">Domain</span></td>
+        <td>
+          <code>The system must comply with [PDPA / HIPAA / regulation name].</code><br>
+          <code>The system must integrate with [existing system / university SSO].</code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag constraint">Constraint</span></td>
+        <td>
+          <code>The application must be developed using [framework / language].</code><br>
+          <code>The total project cost must not exceed [budget].</code><br>
+          <code>The project must be completed within [X] months.</code><br>
+          <code>The application must run on [Android / iOS / Web].</code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag stakeholder">Stakeholder</span></td>
+        <td>
+          <code>[Stakeholder Name] is responsible for [role description].</code><br>
+          <code>As an [internal/external] stakeholder, [Name] [does what].</code>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2: Cheat Sheet จำแนก Requirements                     -->
+  <!-- ============================================================ -->
+  <div class="page-break"></div>
+  <div id="sec2" class="card green">
+    <span class="section-label green">📋 Cheat Sheet</span>
+    <h2>2. ตารางจำแนก Requirements 4 ประเภท</h2>
+    
+    <table>
+      <tr>
+        <th style="width:22%;">ประเภท</th>
+        <th style="width:38%;">คำอธิบาย (ไทย) & Definition (EN)</th>
+        <th style="width:40%;">ตัวอย่างที่พบบ่อยในข้อสอบ</th>
+      </tr>
+      <tr>
+        <td><span class="tag fr">Functional Requirement (FR)</span></td>
+        <td>
+          <b>EN:</b> What the system <u>should do</u> — specific services, functions, and behaviors.<br>
+          <b>TH:</b> ระบบต้อง<u>ทำอะไร</u>ได้บ้าง — ฟังก์ชันและบริการเฉพาะ
+        </td>
+        <td>
+          • สมัครสมาชิก / ล็อกอิน (Register / Login)<br>
+          • ค้นหา / แสดงรายการสินค้า (Search / Display catalog)<br>
+          • เพิ่มลงตะกร้า / คำนวณราคา (Add to cart / Calculate total)<br>
+          • ชำระเงินออนไลน์ (Online payment)<br>
+          • ส่งอีเมลยืนยัน / แจ้งเตือน (Email/SMS notification)<br>
+          • สร้างรายงานยอดขาย (Generate sales report)
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag nfr">Non-Functional Requirement (NFR)</span></td>
+        <td>
+          <b>EN:</b> How <u>well</u> the system performs — quality attributes and properties.<br>
+          <b>TH:</b> ระบบทำงาน<u>ดีแค่ไหน</u> — ประสิทธิภาพ ความปลอดภัย ความง่าย
+        </td>
+        <td>
+          • <b>Performance:</b> ≤2 sec response, ≥500 concurrent users<br>
+          • <b>Usability:</b> ทำรายการเสร็จใน 5 นาที, senior-friendly<br>
+          • <b>Security:</b> SSL/TLS, AES-256, PDPA compliance<br>
+          • <b>Reliability:</b> Uptime ≥99.5%, daily backup at 2AM
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag domain">Domain Requirement</span></td>
+        <td>
+          <b>EN:</b> Business rules, industry regulations, or organizational policies.<br>
+          <b>TH:</b> กฎเกณฑ์เฉพาะทางธุรกิจ กฎหมาย หรือนโยบายองค์กร
+        </td>
+        <td>
+          • ปฏิบัติตาม PDPA / HIPAA<br>
+          • ล็อกอินได้เฉพาะอีเมล @kmutnb.ac.th<br>
+          • ระบบรองรับ 2 ภาษา (Thai & English)<br>
+          • ระยะยืมหนังสือ 14 วัน (Business rule)
+        </td>
+      </tr>
+      <tr>
+        <td><span class="tag constraint">Constraint</span></td>
+        <td>
+          <b>EN:</b> Hard limits on technology, budget, time, or platform.<br>
+          <b>TH:</b> ข้อจำกัดตายตัวทางเทคนิค งบประมาณ เวลา แพลตฟอร์ม
+        </td>
+        <td>
+          • พัฒนาด้วย Flutter / Laravel PHP<br>
+          • รองรับ Android & iOS<br>
+          • งบไม่เกิน 200,000 - 350,000 บาท<br>
+          • เสร็จภายใน 2-4 เดือน
+        </td>
+      </tr>
+    </table>
+
+    <div class="callout orange" style="margin-top:12px;">
+      <div class="callout-title">⚠️ ข้อควรระวัง: FR vs NFR แยกยังไง?</div>
+      <b>FR</b> = ถ้าขาด feature นี้ระบบ<u>ไม่ทำงาน</u> (เช่น ถ้าไม่มี Login ใช้ระบบไม่ได้)<br>
+      <b>NFR</b> = ถ้าขาดระบบ<u>ยังทำงานได้</u> แต่คุณภาพแย่ (เช่น ช้ามากแต่ยังโหลดได้)<br>
+      <b>Domain</b> = ถ้าขาดอาจ<u>ผิดกฎหมาย</u>หรือผิดนโยบายองค์กร<br>
+      <b>Constraint</b> = ถ้าฝืน<u>ทำไม่ได้</u> เพราะเป็นข้อจำกัดจากภายนอก (เงิน/เวลา/เทคโนโลยี)
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3: Moore's Vision Template                            -->
+  <!-- ============================================================ -->
+  <div id="sec3" class="card purple">
+    <span class="section-label purple">🎯 Product Vision</span>
+    <h2>3. แม่แบบ Moore's Vision Template</h2>
+    <p>ข้อสอบมักให้ Case Study แล้วให้เขียน Product Vision ตาม Template นี้:</p>
+
+    <div class="vision-box">
+      <span class="label">FOR</span> [กลุ่มผู้ใช้เป้าหมาย / Target Customer]<br>
+      <span class="label">WHO</span> [ปัญหาหรือความต้องการ / Statement of Need]<br>
+      <span class="label">THE / OUR PRODUCT</span> [ชื่อผลิตภัณฑ์ + ประเภท / Product Name & Category]<br>
+      <span class="label">THAT</span> [ประโยชน์หลักที่แก้ปัญหา / Key Benefit]<br>
+      <span class="label">UNLIKE</span> [ทางเลือกเดิมหรือคู่แข่ง / Competitive Alternative]<br>
+      <span class="label">OUR PRODUCT</span> [จุดเด่นที่เหนือกว่า / Primary Differentiation]
+    </div>
+
+    <h4>🔑 วิธีเขียน Product Vision จากโจทย์ Case Study:</h4>
+    <ol>
+      <li><b>FOR</b> — หาคำว่า "for students", "for patients", "for customers" ในโจทย์</li>
+      <li><b>WHO</b> — หาประโยคที่บอกปัญหา: "who struggle with...", "who need to...", "long queue", "inefficient"</li>
+      <li><b>OUR PRODUCT</b> — ใส่ชื่อระบบ + ประเภท เช่น "PizzaFriend - Mobile Ordering App"</li>
+      <li><b>THAT</b> — ดึง FR เด่นๆ 2-3 อัน: "enables online ordering, secure payment, and real-time tracking"</li>
+      <li><b>UNLIKE</b> — นึกว่าก่อนมีแอปนี้ ทำยังไง: "manual phone-call", "walk-in queue", "LINE groups"</li>
+      <li><b>OUR PRODUCT</b> — สรุปจุดเด่น: "offers a 5-minute seamless experience with cross-platform access"</li>
+    </ol>
+
+    <h4 style="margin-top:10px;">ตัวอย่าง: iLearn System</h4>
+    <div class="vision-box">
+      <span class="label">FOR</span> teachers and educators<br>
+      <span class="label">WHO</span> need a way to help students access web-based learning resources and applications<br>
+      <span class="label">THE</span> iLearn System IS A configurable open learning environment<br>
+      <span class="label">THAT</span> allows teachers to assign and manage learning resources per course and class<br>
+      <span class="label">UNLIKE</span> traditional VLEs such as Moodle that focus on document management<br>
+      <span class="label">OUR PRODUCT</span> focuses on age-appropriate learning by integrating videos, simulations, and web resources
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 4-8: CASE STUDIES                                     -->
+  <!-- ============================================================ -->
+  <div class="page-break"></div>
+  
+  <!-- CASE 1: FreshMart -->
+  <div id="sec4" class="card">
+    <span class="section-label">📦 Case Study 1</span>
+    <h2>FreshMart — E-commerce Website (เว็บขายของชำออนไลน์)</h2>
+    
+    <div class="callout blue">
+      <div class="callout-title">📖 แปลโจทย์</div>
+      <b>FreshMart</b> เป็นร้านขายของชำออนไลน์แห่งใหม่ของ<b>คุณสุพรรษา</b> ต้องการส่งมอบ<b>ผักสด ผลไม้ และของใช้ประจำวัน</b>ถึงมือลูกค้าใน<b>กรุงเทพฯ</b> ต้องการเว็บไซต์ที่ใช้งานง่ายเพื่อสั่งซื้อออนไลน์และจัดส่งอย่างรวดเร็ว
+    </div>
+
+    <h4><span class="tag fr">FR</span> Functional Requirements</h4>
+    <ol class="two-lang">
+      <li><b>The system shall allow customers to register and log in using email and password.</b><br><span class="th">→ ลงทะเบียนและเข้าสู่ระบบด้วยอีเมลและรหัสผ่าน</span></li>
+      <li><b>The system shall display products categorized into sections (vegetables, fruits, bakery).</b><br><span class="th">→ แสดงสินค้าแบ่งตามหมวดหมู่อย่างชัดเจน</span></li>
+      <li><b>Customers shall be able to add, edit, and remove items from a shopping cart.</b><br><span class="th">→ เพิ่ม แก้ไข และลบสินค้าในตะกร้าได้</span></li>
+      <li><b>The system shall calculate and display the total price of cart items.</b><br><span class="th">→ คำนวณและแสดงยอดราคารวมในตะกร้า</span></li>
+      <li><b>Customers shall select available delivery time slots for orders.</b><br><span class="th">→ เลือกรอบเวลาจัดส่งได้</span></li>
+      <li><b>The system shall accept payments via credit cards, debit cards, and mobile banking.</b><br><span class="th">→ ชำระเงินผ่านบัตรเครดิต บัตรเดบิต และ Mobile Banking</span></li>
+      <li><b>The system shall send an order confirmation email with delivery details.</b><br><span class="th">→ ส่งอีเมลยืนยันคำสั่งซื้อพร้อมรายละเอียดจัดส่ง</span></li>
+    </ol>
+
+    <h4><span class="tag nfr">NFR</span> Non-Functional Requirements</h4>
+    <ul class="two-lang">
+      <li><b>Usability:</b> First-time users can complete an order in &lt;10 minutes. <span class="th">→ ลูกค้าใหม่สั่งซื้อเสร็จใน 10 นาที</span></li>
+      <li><b>Performance:</b> Respond within 3 seconds; support ≥500 concurrent users. <span class="th">→ ตอบสนอง 3 วินาที รองรับ 500 คนพร้อมกัน</span></li>
+      <li><b>Reliability:</b> ≥99.9% uptime; automated daily backup at 2:00 AM. <span class="th">→ เสถียร 99.9% สำรองข้อมูลทุกวันตี 2</span></li>
+      <li><b>Security:</b> Customer data encrypted using SSL/TLS. <span class="th">→ เข้ารหัสข้อมูลด้วย SSL/TLS</span></li>
+    </ul>
+
+    <h4><span class="tag domain">Domain</span> Domain Requirements</h4>
+    <ul class="two-lang">
+      <li><b>Must comply with Thailand's PDPA.</b> <span class="th">→ ปฏิบัติตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล</span></li>
+      <li><b>Must support bilingual display (Thai and English).</b> <span class="th">→ รองรับ 2 ภาษา</span></li>
+    </ul>
+
+    <h4><span class="tag constraint">Constraint</span> Constraints</h4>
+    <ul class="two-lang">
+      <li><b>Framework:</b> Laravel PHP | <b>Server:</b> Linux-based in Thailand</li>
+      <li><b>Budget:</b> ≤200,000 Baht | <b>Timeline:</b> 3 months</li>
+    </ul>
+  </div>
+
+  <!-- CASE 2: KMUTNB Cafeteria -->
+  <div id="sec5" class="card green">
+    <span class="section-label green">🎓 Case Study 2</span>
+    <h2>KMUTNB University Cafeteria — Mobile App (แอปสั่งอาหาร มจพ.)</h2>
+
+    <div class="callout green">
+      <div class="callout-title">📖 แปลโจทย์</div>
+      โรงอาหาร<b>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)</b> ต้องการพัฒนา<b>แอปมือถือสั่งอาหาร</b>สำหรับนักศึกษา ล็อกอินด้วยอีเมลมหาวิทยาลัย ดูเมนู เลือกอาหาร ชำระเงินผ่าน Mobile Banking / Digital Wallet ร้านค้าได้รับแจ้งเตือนทันที นักศึกษาเห็นเวลารับอาหาร รองรับ 1,000 คนพร้อมกัน
+    </div>
+
+    <h4><span class="tag fr">FR</span> Functional Requirements</h4>
+    <ol class="two-lang">
+      <li><b>Students must log in using their university email (<code>@kmutnb.ac.th</code>).</b><br><span class="th">→ ล็อกอินด้วยอีเมล มจพ.</span></li>
+      <li><b>Students can browse menus, select food items, and add to cart.</b><br><span class="th">→ ดูเมนู เลือกอาหาร ใส่ตะกร้า</span></li>
+      <li><b>The system must calculate total prices and display order summary.</b><br><span class="th">→ คำนวณราคารวมและแสดงสรุปคำสั่งซื้อ</span></li>
+      <li><b>Students can pay via mobile banking or digital wallets.</b><br><span class="th">→ ชำระผ่าน Mobile Banking / Digital Wallet</span></li>
+      <li><b>The system must immediately notify cafeteria staff on new orders.</b><br><span class="th">→ แจ้งเตือนร้านค้าทันทีเมื่อมีออเดอร์ใหม่</span></li>
+      <li><b>Display estimated pickup time for students.</b><br><span class="th">→ แสดงเวลาประมาณการรับอาหาร</span></li>
+    </ol>
+
+    <h4><span class="tag nfr">NFR</span> Non-Functional Requirements</h4>
+    <ul class="two-lang">
+      <li><b>Performance:</b> Support ≥1,000 concurrent users without lag. <span class="th">→ รองรับ 1,000 คนพร้อมกันช่วงเที่ยง</span></li>
+      <li><b>Usability:</b> User-friendly for quick learning. <span class="th">→ ใช้งานง่าย เรียนรู้ได้เร็ว</span></li>
+    </ul>
+
+    <h4><span class="tag domain">Domain</span> Domain Requirements</h4>
+    <ul class="two-lang">
+      <li><b>Must integrate with university SSO / account system.</b> <span class="th">→ เชื่อมต่อระบบบัญชีผู้ใช้มหาวิทยาลัย</span></li>
+      <li><b>Comply with university data privacy policies.</b> <span class="th">→ ปฏิบัติตามนโยบายความเป็นส่วนตัวของ มจพ.</span></li>
+    </ul>
+
+    <h4><span class="tag constraint">Constraint</span> Constraints</h4>
+    <ul>
+      <li><b>Platform:</b> Android &amp; iOS | <b>Timeline:</b> 2 months</li>
+    </ul>
+  </div>
+
+  <!-- CASE 3: PizzaFriend -->
+  <div id="sec6" class="card orange">
+    <span class="section-label orange">🍕 Case Study 3</span>
+    <h2>PizzaFriend — Mobile App (แอปสั่งพิซซ่าคุณพลอย)</h2>
+
+    <div class="callout orange">
+      <div class="callout-title">📖 แปลโจทย์</div>
+      <b>คุณพลอย</b>เจ้าของร้านพิซซ่าย่านมหาวิทยาลัย พบว่านักศึกษา<b>ต้องรอคิวนานมากช่วงพักเที่ยง</b> จึงสร้างแอป <b>"PizzaFriend"</b> ให้ลงทะเบียน/ล็อกอิน ดูเมนูพร้อมรูป เลือกขนาด แป้ง ท็อปปิ้ง คำนวณเงิน ชำระผ่านโอนเงิน/บัตรเครดิต ส่งใบเสร็จอีเมล มีรายงานยอดขาย/สินค้าขายดี ลูกค้าใหม่สั่งเสร็จใน 5 นาที โหลดเมนูใน 2 วินาที รองรับ 300 คน ปฏิบัติตาม PDPA พัฒนาด้วย Flutter ให้เสร็จใน 3 เดือน
+    </div>
+
+    <h4><span class="tag fr">FR</span> Functional Requirements</h4>
+    <ol class="two-lang">
+      <li><b>Register and log in using email and password.</b> <span class="th">→ ลงทะเบียนและล็อกอิน</span></li>
+      <li><b>Display pizza menu with photos, descriptions, and prices.</b> <span class="th">→ แสดงเมนูพร้อมรูปและราคา</span></li>
+      <li><b>Select pizza sizes, crusts, toppings, and add to cart.</b> <span class="th">→ เลือกขนาด แป้ง ท็อปปิ้ง</span></li>
+      <li><b>Calculate total costs and display order summary.</b> <span class="th">→ คำนวณราคารวม</span></li>
+      <li><b>Payment via mobile banking transfers and credit cards.</b> <span class="th">→ ชำระเงินผ่านโอนเงินและบัตรเครดิต</span></li>
+      <li><b>Send order confirmation receipt via email.</b> <span class="th">→ ส่งใบเสร็จทางอีเมล</span></li>
+      <li><b>Generate daily sales reports and best-selling item analytics.</b> <span class="th">→ รายงานยอดขาย/สินค้าขายดี</span></li>
+    </ol>
+
+    <h4><span class="tag nfr">NFR</span> Non-Functional Requirements</h4>
+    <ul class="two-lang">
+      <li><b>Usability:</b> First-time order completed within 5 minutes. <span class="th">→ สั่งครั้งแรกเสร็จใน 5 นาที</span></li>
+      <li><b>Performance:</b> Menu loads ≤2 sec; support 300 concurrent users. <span class="th">→ โหลด 2 วินาที รองรับ 300 คน</span></li>
+      <li><b>Security:</b> Encrypt financial data; comply with PDPA. <span class="th">→ เข้ารหัสข้อมูลเงิน ปฏิบัติตาม PDPA</span></li>
+    </ul>
+
+    <h4><span class="tag domain">Domain</span> Domain | <span class="tag constraint">Constraint</span> Constraints</h4>
+    <ul>
+      <li><span class="tag domain">Domain</span> Daily sales tracking &amp; promotion analytics for pizza store management</li>
+      <li><span class="tag constraint">Constraint</span> <b>Framework:</b> Flutter | <b>Platform:</b> Android &amp; iOS | <b>Timeline:</b> 3 months</li>
+    </ul>
+
+    <h4><span class="tag vision">Vision</span> Product Vision (Moore's Template)</h4>
+    <div class="vision-box">
+      <span class="label">FOR</span> university students and busy lunch-time customers<br>
+      <span class="label">WHO</span> need a fast and convenient way to order customized pizza without waiting in long queues<br>
+      <span class="label">OUR PRODUCT</span> PizzaFriend — Mobile Pizza Ordering App<br>
+      <span class="label">THAT</span> allows users to customize pizzas, pay online, and track orders with fast pickup times<br>
+      <span class="label">UNLIKE</span> traditional walk-in counter ordering and phone-call ordering<br>
+      <span class="label">OUR PRODUCT</span> offers a seamless 5-minute ordering flow with Flutter-powered cross-platform accessibility
+    </div>
+  </div>
+
+  <!-- CASE 4: ReadSmart -->
+  <div id="sec7" class="card purple">
+    <span class="section-label purple">📖 Case Study 4</span>
+    <h2>ReadSmart — Online Bookstore (ร้านหนังสือออนไลน์)</h2>
+
+    <div class="callout purple">
+      <div class="callout-title">📖 แปลโจทย์</div>
+      <b>ReadSmart</b> เป็นร้านขายหนังสือออนไลน์ทั้ง<b>หนังสือเล่มและ E-book</b> ลูกค้าสามารถค้นหา อ่านรีวิว สั่งซื้อ หรือดาวน์โหลด E-book โจทย์ข้อนี้เน้นการวิเคราะห์ <b>Stakeholders & Roles</b>
+    </div>
+
+    <h4><span class="tag stakeholder">Stakeholder</span> Stakeholders & Roles</h4>
+    <table>
+      <tr>
+        <th>Stakeholder</th>
+        <th>Type</th>
+        <th>Role & Responsibilities</th>
+      </tr>
+      <tr>
+        <td><b>Customer</b> (End User)</td>
+        <td>External / Primary</td>
+        <td>Search, browse, purchase, download e-books, and write reviews.<br><span class="th">→ ค้นหา ซื้อ ดาวน์โหลด อ่าน และรีวิวหนังสือ</span></td>
+      </tr>
+      <tr>
+        <td><b>Store Manager</b></td>
+        <td>Internal / Business</td>
+        <td>Manage inventory, product listings, promotions, and order fulfillment.<br><span class="th">→ จัดการสต็อก เพิ่มรายการ จัดโปรโมชัน ดูแลคำสั่งซื้อ</span></td>
+      </tr>
+      <tr>
+        <td><b>Software Developer</b></td>
+        <td>Internal / Technical</td>
+        <td>Design, develop, and implement frontend/backend features.<br><span class="th">→ เขียนโปรแกรมระบบทั้งหน้าบ้านและหลังบ้าน</span></td>
+      </tr>
+      <tr>
+        <td><b>UX/UI Designer</b></td>
+        <td>Internal / Technical</td>
+        <td>Design user interfaces and experiences for web &amp; mobile.<br><span class="th">→ ออกแบบหน้าจอและประสบการณ์ใช้งาน</span></td>
+      </tr>
+      <tr>
+        <td><b>Payment Provider</b></td>
+        <td>External / Third-party</td>
+        <td>Provide secure online payment gateway processing.<br><span class="th">→ ให้บริการระบบชำระเงินออนไลน์</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- CASE 5: EasyClinic -->
+  <div class="page-break"></div>
+  <div id="sec8" class="card red">
+    <span class="section-label red">🏥 Case Study 5</span>
+    <h2>EasyClinic — Appointment Booking System (ระบบจองคิวคลินิก)</h2>
+
+    <div class="callout red">
+      <div class="callout-title">📖 แปลโจทย์</div>
+      คลินิกเอกชน <b>EasyClinic</b> ประสบปัญหาคนไข้<b>โทรจองคิวแล้วไม่มาตามนัด (No-show)</b> ทำให้เสียโอกาส จึงต้องการ<b>ระบบจองคิวออนไลน์</b>ผ่านเว็บและแอป ลงทะเบียนด้วยเบอร์โทร/เลขบัตรประชาชน เลือกแผนก/หมอ/วันเวลา ส่ง SMS/Email แจ้งเตือนล่วงหน้า 1 วันและ 1 ชม. แพทย์มี Dashboard ดูตาราง เจ้าหน้าที่อัปเดตสถานะ "มาแล้ว"/"ไม่มา" มีรายงานสถิติรายวัน เข้ารหัสตาม HIPAA/สธ. รองรับผู้สูงอายุ (Senior-friendly) เสร็จใน 3 เดือน
+    </div>
+
+    <h4><span class="tag stakeholder">Stakeholder</span> Stakeholders & Roles</h4>
+    <table>
+      <tr><th>Stakeholder</th><th>Role (EN + TH)</th></tr>
+      <tr><td><b>Patient</b> (End User)</td><td>Register (Phone/ID), select doctor & time slot, receive SMS/Email reminders. <span class="th">→ จองคิว เลือกหมอ รับแจ้งเตือน</span></td></tr>
+      <tr><td><b>Doctor</b></td><td>View & adjust appointment schedules via Doctor Dashboard. <span class="th">→ ดูตารางนัดและปรับเวลา</span></td></tr>
+      <tr><td><b>Clinic Staff</b> (Receptionist)</td><td>Monitor bookings, mark "Arrived" / "No-show". <span class="th">→ อัปเดตสถานะคนไข้</span></td></tr>
+      <tr><td><b>Clinic Owner</b> (Sponsor)</td><td>Provide budget, define policies, review daily visit statistics. <span class="th">→ กำหนดนโยบายและดูรายงาน</span></td></tr>
+      <tr><td><b>Health Authorities</b></td><td>Enforce HIPAA / Ministry of Public Health privacy compliance. <span class="th">→ บังคับใช้มาตรฐานความเป็นส่วนตัว</span></td></tr>
+    </table>
+
+    <h4><span class="tag fr">FR</span> Functional Requirements</h4>
+    <ol class="two-lang">
+      <li><b>Allow patients to register using phone number or national ID.</b> <span class="th">→ ลงทะเบียนด้วยเบอร์โทร/บัตรประชาชน</span></li>
+      <li><b>Patients select medical specialty, doctor, date/time slot.</b> <span class="th">→ เลือกแผนก/หมอ/วันเวลา</span></li>
+      <li><b>Send automated SMS and email reminders 1 day and 1 hour prior.</b> <span class="th">→ แจ้งเตือนล่วงหน้า 1 วัน และ 1 ชม.</span></li>
+      <li><b>Provide doctor dashboard to view and manage schedules.</b> <span class="th">→ Dashboard สำหรับแพทย์จัดการตาราง</span></li>
+      <li><b>Staff can mark patient status ("Arrived" / "No-show").</b> <span class="th">→ อัปเดตสถานะ มาแล้ว / ไม่มาตามนัด</span></li>
+      <li><b>Generate daily service reports and visit statistics.</b> <span class="th">→ รายงานสถิติผู้ป่วยรายวัน</span></li>
+    </ol>
+
+    <h4><span class="tag nfr">NFR</span> Non-Functional | <span class="tag domain">Domain</span> Domain | <span class="tag constraint">Constraint</span> Constraints</h4>
+    <ul>
+      <li><span class="tag nfr">NFR</span> <b>Usability:</b> Senior-friendly UI — elderly patients can use without training. <span class="th">→ ผู้สูงอายุใช้ได้โดยไม่ต้องสอน</span></li>
+      <li><span class="tag nfr">NFR</span> <b>Security:</b> Patient health data encrypted per HIPAA / MoPH standards. <span class="th">→ เข้ารหัสข้อมูลตาม HIPAA</span></li>
+      <li><span class="tag domain">Domain</span> Healthcare privacy compliance (HIPAA / Ministry of Public Health).</li>
+      <li><span class="tag constraint">Constraint</span> <b>Platform:</b> Web + Android + iOS | <b>Timeline:</b> 3 months (before flu season).</li>
+    </ul>
+
+    <h4><span class="tag vision">Vision</span> Product Vision (Moore's Template)</h4>
+    <div class="vision-box">
+      <span class="label">FOR</span> clinic patients and healthcare providers<br>
+      <span class="label">WHO</span> suffer from inefficient phone-based scheduling and appointment no-shows<br>
+      <span class="label">OUR PRODUCT</span> EasyClinic — Online Appointment Booking &amp; Queue Management System<br>
+      <span class="label">THAT</span> provides automated slot booking, doctor schedule visibility, and proactive SMS/email reminders<br>
+      <span class="label">UNLIKE</span> manual phone-call reservations and walk-in queuing<br>
+      <span class="label">OUR PRODUCT</span> offers a senior-friendly, HIPAA-compliant platform across Web, Android, and iOS
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 9: Agile & Scrum Theory                               -->
+  <!-- ============================================================ -->
+  <div class="page-break"></div>
+  <div id="sec9" class="card">
+    <span class="section-label">⚡ ทฤษฎี</span>
+    <h2>9. Agile Manifesto & Scrum Framework (3-5-3)</h2>
+
+    <h3>9.1 Agile Manifesto — 4 Core Values</h3>
+    <table>
+      <tr><th>#</th><th>ให้ความสำคัญกว่า (Value More)</th><th>มากกว่า (Over)</th></tr>
+      <tr><td>1</td><td><b>Individuals and Interactions</b><br><span class="th">คนและการมีปฏิสัมพันธ์</span></td><td>Processes and Tools<br><span class="th">กระบวนการและเครื่องมือ</span></td></tr>
+      <tr><td>2</td><td><b>Working Software</b><br><span class="th">ซอฟต์แวร์ที่ทำงานได้จริง</span></td><td>Comprehensive Documentation<br><span class="th">เอกสารที่ครบถ้วน</span></td></tr>
+      <tr><td>3</td><td><b>Customer Collaboration</b><br><span class="th">ความร่วมมือกับลูกค้า</span></td><td>Contract Negotiation<br><span class="th">การต่อรองสัญญา</span></td></tr>
+      <tr><td>4</td><td><b>Responding to Change</b><br><span class="th">การตอบสนองต่อการเปลี่ยนแปลง</span></td><td>Following a Plan<br><span class="th">การทำตามแผน</span></td></tr>
+    </table>
+
+    <div class="callout blue" style="margin-top:10px;">
+      <div class="callout-title">💡 ข้อสอบมักถาม: ทำไม "Responding to Change" ถึงสำคัญกว่า "Following a Plan"?</div>
+      <b>แนวตอบ EN:</b> In modern software development, business environments, user demands, and technology change rapidly. While having a plan is important, blindly adhering to an outdated plan leads to delivering products that no longer meet customer needs. By embracing change, Agile teams continuously adapt, pivot based on stakeholder feedback, and deliver maximum customer value at every iteration.<br>
+      <b>แนวตอบ TH:</b> เพราะในยุคปัจจุบัน ความต้องการของลูกค้าและเทคโนโลยีเปลี่ยนแปลงเร็ว การยึดตามแผนที่ล้าสมัยจะทำให้ซอฟต์แวร์ไม่ตอบโจทย์ผู้ใช้ การเปิดรับการเปลี่ยนแปลงทำให้ทีมปรับตัวตาม Feedback ได้ทัน ส่งมอบคุณค่าสูงสุด
+    </div>
+
+    <hr class="divider">
+
+    <h3>9.2 Scrum Framework — โครงสร้าง 3-5-3</h3>
+
+    <!-- 3 ROLES -->
+    <h4>👥 3 Roles (บทบาท)</h4>
+    <table>
+      <tr><th style="width:25%;">Role</th><th>Responsibilities (EN + TH)</th></tr>
+      <tr>
+        <td><b>Product Owner (PO)</b></td>
+        <td>
+          <b>EN:</b> Maximizes business value of the product. Creates, maintains, and prioritizes the <b>Product Backlog</b>. Decides which features to build first and accepts/rejects completed work.<br>
+          <span class="th">TH: กำหนดทิศทางผลิตภัณฑ์ สร้างและจัดลำดับ Product Backlog ตัดสินใจว่าทำฟีเจอร์ใดก่อน-หลัง ตรวจรับงาน</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Scrum Master (SM)</b></td>
+        <td>
+          <b>EN:</b> Acts as a <b>servant leader</b> and facilitator. Ensures the team follows Scrum practices. <b>Removes impediments/blockers</b> and protects the team from external distractions.<br>
+          <span class="th">TH: ผู้นำรับใช้ ดูแลให้ทีมทำงานตามหลัก Scrum กำจัดอุปสรรค ปกป้องทีมจากสิ่งรบกวน</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Developers</b><br>(Dev Team)</td>
+        <td>
+          <b>EN:</b> A <b>cross-functional, self-organizing</b> team (3–9 people: developers, testers, designers). Turns selected Backlog items into a working <b>Increment</b> each Sprint.<br>
+          <span class="th">TH: ทีมข้ามสายงาน บริหารตัวเอง แปลง Backlog เป็นโค้ดที่ทำงานได้จริง</span>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 5 EVENTS -->
+    <h4>⏱️ 5 Events (กิจกรรม)</h4>
+    <table>
+      <tr><th style="width:25%;">Event</th><th>Purpose (EN + TH)</th></tr>
+      <tr>
+        <td><b>1. Sprint</b></td>
+        <td>
+          <b>EN:</b> A fixed <b>time-boxed</b> period (1–4 weeks) during which the team creates a usable, potentially shippable Increment.<br>
+          <span class="th">TH: กรอบเวลาคงที่ 1–4 สัปดาห์ เพื่อสร้างชิ้นงานที่พร้อมใช้</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>2. Sprint Planning</b></td>
+        <td>
+          <b>EN:</b> Meeting at the start of the Sprint. PO presents backlog items, team selects items and defines the <b>Sprint Goal</b> and <b>Sprint Backlog</b>.<br>
+          <span class="th">TH: ประชุมต้น Sprint วาง Sprint Goal เลือก Backlog items</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>3. Daily Scrum</b><br>(Stand-up)</td>
+        <td>
+          <b>EN:</b> A <b>15-minute daily</b> synchronization meeting. Each member answers 3 questions:<br>
+          &bull; <em>What did I do yesterday?</em><br>
+          &bull; <em>What will I do today?</em><br>
+          &bull; <em>Are there any impediments?</em><br>
+          <span class="th">TH: ประชุมสั้น 15 นาทีทุกวัน ตอบ 3 คำถาม เมื่อวานทำอะไร / วันนี้ทำอะไร / มีอุปสรรคไหม</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>4. Sprint Review</b></td>
+        <td>
+          <b>EN:</b> End-of-Sprint meeting to <b>demonstrate (demo)</b> the working Increment to stakeholders and gather feedback. Product Backlog may be adapted based on feedback.<br>
+          <span class="th">TH: สาธิตชิ้นงานจริงให้ Stakeholders ดู รับ Feedback</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>5. Sprint Retrospective</b></td>
+        <td>
+          <b>EN:</b> An <b>internal team</b> meeting after Sprint to reflect on processes, tools, and collaboration. Identify improvements for the next Sprint.<br>
+          <span class="th">TH: ทบทวนกระบวนการภายในทีม หาข้อดี ข้อเสีย วางแผนปรับปรุงรอบถัดไป</span>
+        </td>
+      </tr>
+    </table>
+
+    <div class="callout blue" style="margin-top:10px;">
+      <div class="callout-title">💡 ข้อสอบมักถาม: Daily Scrum vs Sprint Retrospective ต่างกันอย่างไร?</div>
+      <b>Daily Scrum</b> = ประชุมสั้น 15 นาที<u>ทุกวัน</u> เน้น<u>ติดตามงาน</u>ว่าแต่ละคนทำอะไรอยู่ มีอุปสรรคอะไร<br>
+      <b>Sprint Retrospective</b> = ประชุม<u>ครั้งเดียวตอนจบ Sprint</u> เน้น<u>ทบทวนกระบวนการทำงาน</u>ของทีม (ไม่ใช่ตัวงาน) เพื่อปรับปรุงการทำงานรอบถัดไป
+    </div>
+
+    <!-- 3 ARTIFACTS -->
+    <h4>📦 3 Artifacts (ผลผลิต)</h4>
+    <table>
+      <tr><th style="width:25%;">Artifact</th><th>Description (EN + TH)</th></tr>
+      <tr>
+        <td><b>Product Backlog</b></td>
+        <td>
+          <b>EN:</b> An ordered, evolving list of <b>all</b> known requirements, features, and fixes for the product. Owned and prioritized by the Product Owner.<br>
+          <span class="th">TH: รายการ Requirements และฟีเจอร์ทั้งหมดที่จัดลำดับความสำคัญ ดูแลโดย PO</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Sprint Backlog</b></td>
+        <td>
+          <b>EN:</b> The set of Product Backlog items selected for the current Sprint plus a plan for delivering them.<br>
+          <span class="th">TH: Backlog items ที่เลือกมาทำใน Sprint ปัจจุบัน พร้อมแผนการพัฒนา</span>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Increment</b></td>
+        <td>
+          <b>EN:</b> The usable, working software produced at the end of a Sprint that meets the <b>Definition of Done (DoD)</b>. It is potentially shippable.<br>
+          <span class="th">TH: ชิ้นงานซอฟต์แวร์ที่เสร็จสมบูรณ์ ทำงานได้จริง ผ่านเกณฑ์ DoD</span>
+        </td>
+      </tr>
+    </table>
+
+    <hr class="divider">
+
+    <h3>9.3 เปรียบเทียบ Waterfall vs. Agile</h3>
+    <table>
+      <tr><th>มิติ</th><th>Waterfall (ดั้งเดิม)</th><th>Agile / Scrum (สมัยใหม่)</th></tr>
+      <tr><td><b>แนวคิด</b></td><td>Plan-driven (ทำตามแผนตายตัว)</td><td>Change-driven (ปรับเปลี่ยนได้ตลอด)</td></tr>
+      <tr><td><b>การส่งมอบ</b></td><td>ส่งทั้งระบบตอนจบ (Big Bang)</td><td>ส่งทีละ Sprint (Working Software ทุกรอบ)</td></tr>
+      <tr><td><b>ลูกค้า</b></td><td>คุยเฉพาะช่วงแรก + ส่งมอบตอนจบ</td><td>ร่วมงานและรับ Feedback ทุก Sprint</td></tr>
+      <tr><td><b>ความเสี่ยง</b></td><td>สูง ถ้า Requirement เปลี่ยน</td><td>ต่ำ ตรวจพบปัญหาเร็ว</td></tr>
+      <tr><td><b>เอกสาร</b></td><td>เอกสารครบถ้วนก่อนเขียนโค้ด</td><td>เอกสารเท่าที่จำเป็น เน้น Working Software</td></tr>
+    </table>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 10: MOCK EXAM                                         -->
+  <!-- ============================================================ -->
+  <div class="page-break"></div>
+  <div id="sec10" class="card green">
+    <span class="section-label green">✍️ Mock Exam</span>
+    <h2>10. ชุดเก็งแนวข้อสอบ 5 ข้อ — พร้อมเฉลย 2 ภาษา (30 คะแนน)</h2>
+
+    <div class="callout green">
+      <div class="callout-title">💡 Tip เก็บ +5 คะแนนพิเศษ</div>
+      ลอกโครงสร้างประโยคภาษาอังกฤษด้านล่างไปเขียนตอบ → ปรับ [...] ตาม Case Study ในข้อสอบจริง = ได้คะแนนเต็มพร้อม +5 คะแนนทันที
+    </div>
+
+    <!-- Q1 -->
+    <div style="background:#f0f9ff;padding:14px;border-radius:8px;margin:12px 0;border:1px solid #bfdbfe;">
+      <h4>📝 ข้อ 1: Requirement Analysis (6 คะแนน)</h4>
+      <p><b>โจทย์:</b> Read the case study and identify: (a) 3 Functional Requirements, (b) 2 Non-Functional Requirements, (c) 1 Domain Requirement, (d) 1 Constraint.</p>
+      
+      <b>แนวตอบ (English):</b>
+      <p style="margin:6px 0 2px;"><b>(a) Functional Requirements:</b></p>
+      <ol>
+        <li>The system shall allow users to register and authenticate using their email or phone number.</li>
+        <li>The system shall allow customers to browse catalogs, select items, and add them to a cart.</li>
+        <li>The system shall calculate total prices, support online payment, and send an automated receipt.</li>
+      </ol>
+      <p style="margin:6px 0 2px;"><b>(b) Non-Functional Requirements:</b></p>
+      <ol>
+        <li><em>Performance:</em> The system must respond within 2 seconds and support at least 500 concurrent users.</li>
+        <li><em>Usability:</em> The interface must be intuitive, allowing new users to complete their task within 5 minutes.</li>
+      </ol>
+      <p style="margin:6px 0 2px;"><b>(c) Domain Requirement:</b></p>
+      <ul><li>The system must comply with Thailand's PDPA (Personal Data Protection Act).</li></ul>
+      <p style="margin:6px 0 2px;"><b>(d) Constraint:</b></p>
+      <ul><li>The application must be developed using Flutter framework for Android and iOS, within 3 months.</li></ul>
+    </div>
+
+    <!-- Q2 -->
+    <div style="background:#f0fdf4;padding:14px;border-radius:8px;margin:12px 0;border:1px solid #bbf7d0;">
+      <h4>📝 ข้อ 2: Stakeholder Identification & Roles (6 คะแนน)</h4>
+      <p><b>โจทย์:</b> Identify at least 3 internal and 2 external stakeholders and explain each stakeholder's role.</p>
+      
+      <b>แนวตอบ (English):</b>
+      <p style="margin:4px 0;"><b>Internal Stakeholders:</b></p>
+      <ol>
+        <li><b>Product Owner / Business Sponsor:</b> Defines business requirements, manages budget, and prioritizes the Product Backlog.</li>
+        <li><b>Software Developers / Testers:</b> Design, code, integrate, and test system functionalities.</li>
+        <li><b>Store / Operations Manager:</b> Manages day-to-day operations, catalogs, and reviews reports.</li>
+      </ol>
+      <p style="margin:4px 0;"><b>External Stakeholders:</b></p>
+      <ol>
+        <li><b>End Users / Customers:</b> Use the system to browse, order, book, and provide feedback.</li>
+        <li><b>Regulatory Authorities (PDPA / MoPH):</b> Enforce legal guidelines on data privacy and security.</li>
+      </ol>
+    </div>
+
+    <!-- Q3 -->
+    <div style="background:#fef3c7;padding:14px;border-radius:8px;margin:12px 0;border:1px solid #fde68a;">
+      <h4>📝 ข้อ 3: Product Vision using Moore's Template (6 คะแนน)</h4>
+      <p><b>โจทย์:</b> Formulate a complete Product Vision statement for the given case study.</p>
+      
+      <b>แนวตอบ (English):</b>
+      <div class="vision-box" style="background:white;">
+        <span class="label">FOR</span> [Target customers, e.g., university students and busy lunch-time customers]<br>
+        <span class="label">WHO</span> [Need, e.g., need a fast way to order food without waiting in long queues]<br>
+        <span class="label">OUR PRODUCT</span> [Product name & type, e.g., PizzaFriend — Mobile Ordering App]<br>
+        <span class="label">THAT</span> [Key benefits, e.g., enables menu customization, secure payment, and real-time order tracking]<br>
+        <span class="label">UNLIKE</span> [Alternative, e.g., manual in-person queueing and phone-call orders]<br>
+        <span class="label">OUR PRODUCT</span> [Differentiation, e.g., delivers a seamless 5-minute ordering experience on cross-platform mobile]
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div style="background:#ede9fe;padding:14px;border-radius:8px;margin:12px 0;border:1px solid #c4b5fd;">
+      <h4>📝 ข้อ 4: Scrum Roles & Artifacts (6 คะแนน)</h4>
+      <p><b>โจทย์:</b> Describe the responsibilities of Product Owner, Scrum Master, and Developers. Explain Product Backlog and Increment.</p>
+      
+      <b>แนวตอบ (English):</b>
+      <p><b>Scrum Roles:</b></p>
+      <ul>
+        <li><b>Product Owner:</b> Maximizes business value. Manages and prioritizes the Product Backlog based on business importance.</li>
+        <li><b>Scrum Master:</b> Servant leader and facilitator. Coaches the team in Scrum practices and removes impediments.</li>
+        <li><b>Developers:</b> Self-organizing, cross-functional team that builds a potentially shippable Increment each Sprint.</li>
+      </ul>
+      <p><b>Artifacts:</b></p>
+      <ul>
+        <li><b>Product Backlog:</b> An ordered, evolving list of all requirements, features, and fixes needed for the product.</li>
+        <li><b>Increment:</b> The usable working software at the end of a Sprint that meets the Definition of Done (DoD).</li>
+      </ul>
+    </div>
+
+    <!-- Q5 -->
+    <div style="background:#fce7f3;padding:14px;border-radius:8px;margin:12px 0;border:1px solid #fbcfe8;">
+      <h4>📝 ข้อ 5: Scrum Events & Agile Values (6 คะแนน)</h4>
+      <p><b>โจทย์:</b> Explain Daily Scrum vs Sprint Retrospective. Why does Agile value "Responding to Change" over "Following a Plan"?</p>
+      
+      <b>แนวตอบ (English):</b>
+      <p><b>1. Daily Scrum vs Sprint Retrospective:</b></p>
+      <ul>
+        <li><b>Daily Scrum:</b> A 15-minute <u>daily</u> synchronization meeting where developers inspect progress toward the Sprint Goal, plan the next day's work, and identify impediments.</li>
+        <li><b>Sprint Retrospective:</b> An end-of-Sprint meeting where the Scrum Team reflects on <u>team processes</u>, tools, and collaboration to identify actionable improvements for the next Sprint.</li>
+      </ul>
+      <p><b>2. Responding to Change over Following a Plan:</b></p>
+      <ul>
+        <li>In modern software engineering, business environments, user demands, and technology change rapidly.</li>
+        <li>Blindly adhering to an outdated plan leads to delivering products that no longer meet customer needs.</li>
+        <li>By embracing change, Agile teams continuously adapt based on stakeholder feedback and deliver maximum customer value at every iteration.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div style="text-align:center;padding:16px;color:#9ca3af;font-size:.8rem;margin-top:10px;">
+    📘 SE Midterm Exam Cheatsheet — สร้างจาก mid.png + Practice-ReqEng.pdf + Lecture Notes<br>
+    🖨️ พิมพ์ด้วย Ctrl+P → เลือก Layout = Portrait, Margins = Narrow → Print
+  </div>
+
+  <!-- SECOND PRINT BUTTON AT BOTTOM -->
+  <div class="print-btn-wrap no-print" style="margin-bottom:30px;">
+    <button class="print-btn" onclick="window.print()">🖨️ พิมพ์เอกสารนี้ (Ctrl+P)</button>
+  </div>
+
+</div>
+</body>
+</html>

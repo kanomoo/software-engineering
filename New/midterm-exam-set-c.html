@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SE Midterm Exam Studio (ชุด C — เน้นเจาะลึกบทที่ 4 Requirements Engineering) — ฉบับขาวคลีน A4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,3,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Clean Light Theme as Default */
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.92);
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --accent-blue: #0284c7;
+      --accent-indigo: #4338ca;
+      --accent-purple: #7e22ce;
+      --accent-emerald: #047857;
+      --accent-amber: #b45309;
+      --accent-rose: #be123c;
+      --border-color: #cbd5e1;
+      --border-light: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+      --shadow-glow: 0 0 15px rgba(2, 132, 199, 0.12);
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-tertiary: #334155;
+      --bg-card: rgba(30, 41, 59, 0.9);
+      --bg-glass: rgba(15, 23, 42, 0.85);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #818cf8;
+      --accent-purple: #c084fc;
+      --accent-emerald: #34d399;
+      --accent-amber: #fbbf24;
+      --accent-rose: #fb7185;
+      --border-color: #334155;
+      --border-light: rgba(255, 255, 255, 0.1);
+      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.3);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.4);
+      --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Prompt', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    code, pre {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: var(--bg-glass);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-pill {
+      background: linear-gradient(135deg, #7e22ce, #0284c7);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .site-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .site-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: inherit;
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: var(--bg-tertiary);
+      border-color: var(--accent-purple);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7e22ce, #4338ca);
+      color: white;
+      border: none;
+      box-shadow: 0 2px 8px rgba(126, 34, 206, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #6b21a8, #3730a3);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 180px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 7px 10px 7px 32px;
+      font-size: 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      outline: none;
+      font-family: inherit;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-purple);
+      box-shadow: 0 0 0 2px rgba(126, 34, 206, 0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #ffffff, #faf5ff);
+      border: 1px solid var(--border-color);
+      border-left: 5px solid var(--accent-purple);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    [data-theme="dark"] .hero-banner {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+      border-left-color: var(--accent-purple);
+    }
+
+    .hero-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .hero-desc {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      max-width: 960px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .hero-tag {
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+
+    .hero-tag.highlight {
+      background: rgba(126, 34, 206, 0.1);
+      color: var(--accent-purple);
+      border-color: rgba(126, 34, 206, 0.3);
+      font-weight: 600;
+    }
+
+    /* Section Styles */
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 28px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-primary);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent-purple);
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 14px 0;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    [data-theme="dark"] .table-container {
+      background: var(--bg-secondary);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-bottom: 2px solid var(--border-color);
+      border-right: 1px solid var(--border-light);
+    }
+
+    [data-theme="dark"] th {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-light);
+      border-right: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    td:last-child, th:last-child {
+      border-right: none;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(241, 245, 249, 0.4);
+    }
+
+    [data-theme="dark"] tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Scenario Card */
+    .scenario-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin: 12px 0;
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    [data-theme="dark"] .scenario-box {
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .scenario-box.en {
+      font-family: 'Inter', sans-serif;
+      border-left: 4px solid var(--accent-purple);
+      background: #faf5ff;
+      color: #3b0764;
+    }
+
+    [data-theme="dark"] .scenario-box.en {
+      background: rgba(126, 34, 206, 0.15);
+      color: #f3e8ff;
+    }
+
+    .scenario-box.th {
+      border-left: 4px solid var(--accent-indigo);
+      background: #f5f3ff;
+      color: #312e81;
+      margin-top: 10px;
+    }
+
+    [data-theme="dark"] .scenario-box.th {
+      background: rgba(99, 102, 241, 0.1);
+      color: #ede9fe;
+    }
+
+    /* Question & Model Answer Structure */
+    .exam-question-card {
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    [data-theme="dark"] .exam-question-card {
+      background: var(--bg-card);
+    }
+
+    .q-number-tag {
+      background: #7e22ce;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .q-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .q-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .answer-toggle-btn {
+      width: 100%;
+      text-align: left;
+      padding: 10px 16px;
+      background: #f1f5f9;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: #0f172a;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      transition: background 0.15s;
+    }
+
+    [data-theme="dark"] .answer-toggle-btn {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+
+    .answer-toggle-btn:hover {
+      background: #e2e8f0;
+      border-color: var(--accent-purple);
+    }
+
+    [data-theme="dark"] .answer-toggle-btn:hover {
+      background: rgba(126, 34, 206, 0.2);
+    }
+
+    .answer-content {
+      display: none;
+      padding: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-top: none;
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    }
+
+    [data-theme="dark"] .answer-content {
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .answer-content.show {
+      display: block;
+    }
+
+    .answer-subheading {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent-purple);
+      margin: 16px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px dashed var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .bilingual-pair {
+      margin-bottom: 10px;
+      padding: 10px 14px;
+      background: #f8fafc;
+      border-radius: 6px;
+      border: 1px solid var(--border-light);
+      border-left: 3px solid var(--accent-purple);
+    }
+
+    [data-theme="dark"] .bilingual-pair {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .bilingual-pair .en {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #0f172a;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    [data-theme="dark"] .bilingual-pair .en {
+      color: #f8fafc;
+    }
+
+    .bilingual-pair .th {
+      font-size: 0.88rem;
+      color: #475569;
+    }
+
+    [data-theme="dark"] .bilingual-pair .th {
+      color: #cbd5e1;
+    }
+
+    .scoring-tip {
+      font-size: 0.82rem;
+      color: #92400e;
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-top: 8px;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    [data-theme="dark"] .scoring-tip {
+      color: var(--accent-amber);
+      background: rgba(251, 191, 36, 0.08);
+      border-color: rgba(251, 191, 36, 0.3);
+    }
+
+    /* Print Styles */
+    @page {
+      size: A4 portrait;
+      margin: 12mm 15mm 12mm 15mm;
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 9.5pt !important;
+        line-height: 1.45 !important;
+        padding: 0 !important;
+      }
+
+      header, .header-controls, .search-box, .answer-toggle-btn, .btn, .no-print {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .hero-banner {
+        background: #ffffff !important;
+        border: 1.5pt solid #000000 !important;
+        color: #000000 !important;
+        padding: 10px 14px !important;
+        margin-bottom: 14px !important;
+      }
+
+      .hero-title {
+        color: #000000 !important;
+        font-size: 14pt !important;
+        font-weight: bold !important;
+      }
+
+      .section-title {
+        color: #000000 !important;
+        font-size: 12pt !important;
+        font-weight: bold !important;
+        border-bottom: 1.5pt solid #000000 !important;
+        margin: 18px 0 10px !important;
+        page-break-after: avoid;
+      }
+
+      .card, .exam-question-card {
+        background: #ffffff !important;
+        border: 1pt solid #475569 !important;
+        box-shadow: none !important;
+        margin-bottom: 14px !important;
+        padding: 12px 14px !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .q-number-tag {
+        background: #000000 !important;
+        color: #ffffff !important;
+        font-size: 7.5pt !important;
+        padding: 2px 8px !important;
+      }
+
+      .scenario-box {
+        background: #f8fafc !important;
+        color: #000000 !important;
+        border: 0.75pt solid #64748b !important;
+        padding: 10px 12px !important;
+        font-size: 8.5pt !important;
+      }
+
+      .answer-content {
+        display: block !important;
+        background: #ffffff !important;
+        border: none !important;
+        padding: 4px 0 0 0 !important;
+      }
+
+      .bilingual-pair {
+        background: #fafafa !important;
+        border: 0.5pt solid #cbd5e1 !important;
+        border-left: 2.5pt solid #000000 !important;
+        margin-bottom: 6px !important;
+        padding: 6px 10px !important;
+      }
+
+      .bilingual-pair .en {
+        color: #000000 !important;
+        font-weight: bold !important;
+      }
+
+      .bilingual-pair .th {
+        color: #222222 !important;
+      }
+
+      .table-container {
+        border: 1pt solid #000000 !important;
+        background: #ffffff !important;
+      }
+
+      th {
+        background: #e2e8f0 !important;
+        color: #000000 !important;
+        font-weight: bold !important;
+        border: 0.75pt solid #000000 !important;
+      }
+
+      td {
+        border: 0.5pt solid #64748b !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo-area">
+          <span class="badge-pill">ข้อสอบชุด C</span>
+          <div>
+            <h1 class="site-title">SE Midterm Mock Exam — Set C (เน้นเจาะลึกบทที่ 4 Requirements Engineering)</h1>
+            <p class="site-subtitle">ชุดข้อสอบเจาะลึก Ch 4 ทุกมิติ: FR/NFR Metrics, Ambiguity Fix, Scenarios 5 ขั้น, Form/Tabular Specs, V-C-C-R-V & Change</p>
+          </div>
+        </div>
+
+        <div class="header-controls">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาโจทย์ / คีย์เวิร์ด..." onkeyup="filterContent()">
+          </div>
+
+          <a href="practice-reqeng-guide.html" class="btn" style="background: rgba(2, 132, 199, 0.1); color: var(--accent-blue); border-color: rgba(2, 132, 199, 0.3); font-weight: 600; text-decoration: none;">🧭 คู่มือแกะโจทย์ & สูตรตอบ</a>
+          <a href="midterm-cheatsheet-68.html" class="btn">📖 ชุด A (Cheatsheet)</a>
+          <a href="midterm-exam-set-b.html" class="btn">🎯 ชุด B (Mock 2)</a>
+          <button class="btn" onclick="toggleAllAnswers(true)">👁️ แสดงเฉลยทั้งหมด</button>
+          <button class="btn" onclick="toggleAllAnswers(false)">🙈 ซ่อนเฉลย (ฝึกทำ)</button>
+          <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
+          <button class="btn" onclick="toggleTheme()" id="themeBtn">🌙 สลับธีมมืด</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 20px;">
+
+    <!-- Hero Announcement Banner -->
+    <div class="hero-banner">
+      <h2 class="hero-title">🔬 ข้อสอบชุด C : Special Focus — Chapter 4 Requirements Engineering Mastery</h2>
+      <p class="hero-desc">
+        ชุดนี้เน้นเจาะลึก <strong>Chapter 4 (Requirements Engineering)</strong> แบบเข้มข้นสูงสุด 100% ครอบคลุมทั้งการแก้ความคลุมเครือ (Requirements Ambiguity), การกำหนดตัวชี้วัด NFR (Measurable Metrics), การเขียน Scenario ครบ 5 องค์ประกอบ, เทมเพลต Form-Based / Tabular Specs, เกณฑ์การตรวจสอบ V-C-C-R-V, และกระบวนการ Traceability ในการจัดการการเปลี่ยนแปลง
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag highlight">📌 เจาะลึกบทที่ 4 ล้วนๆ 100%</span>
+        <span class="hero-tag">💡 โจทย์ EN + แปลไทย + เฉลย 2 ภาษา</span>
+        <span class="hero-tag">🖨️ จัดหน้าขาวคลีนสำหรับ Print A4</span>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 5 CORE PRACTICE EXAM QUESTIONS (SET C)     -->
+    <!-- ========================================== -->
+
+    <!-- QUESTION 1: SMART LIBRARY RFID & AI LOAN KIOSK -->
+    <div class="exam-question-card" data-searchable>
+      <span class="q-number-tag">EXAM QUESTION 1 : FULL 4-WAY CLASSIFICATION (CASE: SMART LIBRARY)</span>
+      <h3 class="q-title">Question 1: Comprehensive Requirements Classification for "ReadSmart" University Library & AI Kiosk System</h3>
+      <div class="q-meta">
+        <span><strong>หัวข้อ:</strong> Chapter 4 (FR, NFR Breakdown, Domain, Constraints) & Practice-ReqEng Standard</span>
+        <span>• <strong>คะแนนโดยประมาณ:</strong> 25 คะแนน</span>
+      </div>
+
+      <div class="scenario-box en">
+        <strong>[English Problem Scenario]: "ReadSmart" University AI Library & Self-Checkout System</strong><br>
+        KMUTNB Central Library is introducing an automated smart library borrowing and inventory system named <strong>"ReadSmart"</strong>.
+        Students and faculty members can authenticate at self-service kiosks using either their RFID student ID card or facial recognition.
+        The kiosk RFID multi-tag scanner must allow users to place up to 10 books on the scanning tray simultaneously and check out all items within 5 seconds without manual barcode scanning.
+        The system must automatically calculate loan due dates (14 days for students, 30 days for faculty), print e-receipts, and send return reminder push notifications via the Line Official Account 3 days before the due date.
+        If a book is overdue, the system shall compute late fines at 5 Baht/day and restrict further borrowing privileges until all outstanding fines are paid via PromptPay QR code.
+        The kiosk user interface must be accessible for visually impaired users with an integrated text-to-speech audio guide.
+        System transaction response time must be under 1.5 seconds under a load of 500 concurrent active users.
+        The system must integrate seamlessly with the Library of Congress Classification (LCC) / Dewey Decimal catalog database and comply with Thailand's PDPA regarding biometric data storage.
+        The kiosk client software must be developed in React and Electron, deployed on touch kiosks running Windows 11 IoT, with a budget not exceeding 350,000 Baht, and delivered within 3.5 months.
+      </div>
+
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> หอสมุดกลาง มจพ. ต้องการพัฒนาระบบยืม-คืนหนังสืออัจฉริยะ <strong>"ReadSmart"</strong> นักศึกษาและอาจารย์สามารถยืนยันตัวตนที่ตู้ Kiosk ด้วยบัตรนักศึกษา RFID หรือระบบสแกนใบหน้า ถาดสแกน RFID ต้องอ่านหนังสือพร้อมกันได้สูงสุด 10 เล่มและทำรายการยืมเสร็จใน 5 วินาทีโดยไม่ต้องยิงบาร์โค้ดทีละเล่ม ระบบต้องคำนวณวันครบกำหนดคืนอัตโนมัติ (นักศึกษา 14 วัน / อาจารย์ 30 วัน) ส่ง e-receipt และแจ้งเตือนล่วงหน้า 3 วันผ่าน LINE Official หากเกินกำหนด ต้องคำนวณค่าปรับวันละ 5 บาท และระงับสิทธิ์การยืมจนกว่าจะสแกนจ่ายผ่าน PromptPay QR Code หน้าจอมีระบบอ่านออกเสียงสำหรับผู้บกพร่องทางการมองเห็น ระบบต้องตอบสนองใน 1.5 วินาที รองรับผู้ใช้พร้อมกัน 500 คน เชื่อมต่อระบบฐานข้อมูลบรรณานุกรมดิวอี้/LCC ข้อมูลชีวมิติสอดคล้องกับ PDPA พัฒนาด้วย React และ Electron บน Windows 11 IoT งบไม่เกิน 350,000 บาท เสร็จใน 3.5 เดือน
+      </div>
+
+      <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
+        <span>💡 ดูเฉลยและหลักการตอบ (Model Answer & Scoring Guide)</span>
+        <span>▼</span>
+      </button>
+
+      <div class="answer-content">
+        <div class="answer-subheading">1. Functional Requirements (ความต้องการเชิงหน้าที่ — What the system shall do)</div>
+        <div class="bilingual-pair">
+          <div class="en">• The system shall authenticate users via RFID student/staff identity cards or facial recognition.</div>
+          <div class="th">ระบบต้องยืนยันตัวตนผู้ใช้งานผ่านบัตรประจำตัว RFID หรือการสแกนใบหน้าได้</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• The system shall scan and identify up to 10 books simultaneously on the RFID tray during a single checkout session.</div>
+          <div class="th">ระบบต้องสามารถสแกนและระบุรายการหนังสือบนถาด RFID ได้พร้อมกันสูงสุด 10 เล่มในการยืมครั้งเดียว</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• The system shall automatically calculate due dates (14 days for students, 30 days for faculty) and send Line push reminders 3 days before due date.</div>
+          <div class="th">ระบบต้องคำนวณวันกำหนดส่งคืนอัตโนมัติตามประเภทสมาชิก และส่งข้อความแจ้งเตือนล่วงหน้า 3 วันผ่าน LINE Official</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• The system shall calculate overdue fines at 5 Baht/day and process fine settlements via PromptPay QR Code.</div>
+          <div class="th">ระบบต้องคำนวณค่าปรับกรณีคืนหนังสือเกินกำหนดวันละ 5 บาท และรองรับการชำระค่าปรับผ่าน PromptPay QR Code</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• The system shall suspend borrowing privileges automatically for accounts with unpaid overdue fines.</div>
+          <div class="th">ระบบต้องระงับสิทธิ์การยืมหนังสือชั่วคราวโดยอัตโนมัติหากผู้ใช้งานมียอดค่าปรับค้างชำระ</div>
+        </div>
+
+        <div class="answer-subheading">2. Non-Functional Requirements (ความต้องการเชิงคุณลักษณะ — How the system should perform)</div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Usability (Product):</strong> The kiosk must complete the multi-book checkout transaction within 5 seconds, and provide an integrated Text-to-Speech audio guide for visually impaired users.</div>
+          <div class="th"><strong>ด้านความง่ายในการใช้งาน (Usability):</strong> ตู้ Kiosk ต้องประมวลผลการยืมหนังสือเสร็จสิ้นภายใน 5 วินาที และมีระบบอ่านออกเสียง (Text-to-Speech) สำหรับผู้บกพร่องทางการมองเห็น</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Performance (Product):</strong> The system transaction response time shall be under 1.5 seconds during peak concurrent usage of 500 users.</div>
+          <div class="th"><strong>ด้านประสิทธิภาพ (Performance):</strong> เวลาตอบสนองของระบบต้องไม่เกิน 1.5 วินาที เมื่อมีผู้ใช้งานพร้อมกัน 500 คน</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Security & Privacy (External/Legislative):</strong> User facial recognition biometric data must be encrypted and managed strictly in compliance with Thailand's PDPA laws.</div>
+          <div class="th"><strong>ด้านความปลอดภัยและกฎหมาย (Security/External):</strong> ข้อมูลสแกนใบหน้า (Biometric Data) ต้องได้รับการเข้ารหัสและจัดเก็บตามกฎหมาย PDPA</div>
+        </div>
+
+        <div class="answer-subheading">3. Domain Requirements (ความต้องการเฉพาะด้านโดเมน)</div>
+        <div class="bilingual-pair">
+          <div class="en">• The system must integrate with the university library's Dewey Decimal Classification (DDC) / Library of Congress Classification (LCC) catalog database.</div>
+          <div class="th">ระบบต้องเชื่อมต่อกับฐานข้อมูลระบบจัดหมวดหมู่หนังสือแบบดิวอี้ (DDC) หรือรัฐสภาอเมริกัน (LCC) ของหอสมุดมหาวิทยาลัย</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• The system must support standardized RFID ISO 28560 data models for library item tagging.</div>
+          <div class="th">ระบบต้องรองรับมาตรฐานการเข้ารหัสข้อมูลแท็ก RFID สำหรับห้องสมุดตามมาตรฐานสากล (ISO 28560)</div>
+        </div>
+
+        <div class="answer-subheading">4. Constraints (ข้อจำกัดของโครงการ)</div>
+        <div class="bilingual-pair">
+          <div class="en">• Kiosk client application must be built using React and Electron running on Windows 11 IoT Enterprise.</div>
+          <div class="th">โปรแกรมตู้ Kiosk ต้องพัฒนาด้วย React และ Electron บนระบบปฏิบัติการ Windows 11 IoT Enterprise</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• Total project budget must not exceed 350,000 Baht.</div>
+          <div class="th">งบประมาณการพัฒนาทั้งหมดต้องไม่เกิน 350,000 บาท</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• The system must be fully deployed and accepted within 3.5 months.</div>
+          <div class="th">ระบบต้องพัฒนา ติดตั้ง และตรวจรับมอบให้แล้วเสร็จภายในเวลาไม่เกิน 3.5 เดือน</div>
+        </div>
+
+        <div class="scoring-tip">⭐ <strong>เทคนิคการตอบ:</strong> NFR ต้องระบุตัวเลขที่วัดผลได้ชัดเจน (5 seconds, 1.5 seconds, 500 users) ห้ามเขียนแค่ "ระบบต้องเร็ว"</div>
+      </div>
+    </div>
+
+    <!-- QUESTION 2: FIXING AMBIGUITY & NFR METRICS -->
+    <div class="exam-question-card" data-searchable>
+      <span class="q-number-tag">EXAM QUESTION 2 : REQUIREMENTS AMBIGUITY & TESTABLE METRICS</span>
+      <h3 class="q-title">Question 2: Resolving Requirements Ambiguity & Converting Vague Goals into Verifiable NFR Metrics</h3>
+      <div class="q-meta">
+        <span><strong>หัวข้อ:</strong> Chapter 4 (Requirements Imprecision, Non-Functional Metrics & Testability)</span>
+        <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
+      </div>
+
+      <div class="scenario-box en">
+        <strong>[Problem Prompt]:</strong><br>
+        (a) Explain the fundamental difference between a <strong>"User Goal"</strong> and a <strong>"Verifiable Non-Functional Requirement"</strong>.<br>
+        (b) The following 4 requirement statements written by a client are <strong>vague, imprecise, and unverifiable</strong>. Analyze the flaw in each statement and <strong>rewrite each into a precise, verifiable requirement using quantitative metrics</strong>:
+        <ol style="margin-left: 20px; margin-top: 6px;">
+          <li><em>"The mobile application shall be extremely fast and responsive for all users."</em></li>
+          <li><em>"The system should be intuitive and user-friendly for elderly patients."</em></li>
+          <li><em>"The medical database shall never crash and recover immediately if a power failure occurs."</em></li>
+          <li><em>"The search feature shall search all information across the university."</em></li>
+        </ol>
+      </div>
+
+      <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
+        <span>💡 ดูเฉลยและหลักการตอบ (Model Answer & Scoring Guide)</span>
+        <span>▼</span>
+      </button>
+
+      <div class="answer-content">
+        <div class="answer-subheading">(a) ความแตกต่างระหว่าง "User Goal" และ "Verifiable Non-Functional Requirement"</div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Goal (เป้าหมาย):</strong> A general intention or aspiration of the user/client (e.g., "The system should be user-friendly"). It expresses what the customer desires in broad terms, but cannot be objectively tested or verified by a software tester.</div>
+          <div class="th"><strong>User Goal:</strong> ความตั้งใจหรือความปรารถนาทั่วไปของลูกค้า เช่น "ระบบต้องใช้ง่ายและรวดเร็ว" ซึ่งมีประโยชน์ในการสื่อสารเป้าหมายภาพรวม แต่ <strong>ไม่สามารถนำไปเขียน Test Case เพื่อทดสอบวัดผลได้</strong></div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Verifiable Non-Functional Requirement (ข้อกำหนดที่ตรวจสอบได้):</strong> A requirement statement structured using measurable, quantitative operational metrics (e.g., speed in seconds, training time in hours, error rate). A software engineer or QA tester can write an objective test pass/fail criterion to verify whether the system satisfies the specification.</div>
+          <div class="th"><strong>Verifiable NFR:</strong> ข้อกำหนดที่ระบุเป็น <strong>ตัวเลขหรือเกณฑ์ชี้วัดเชิงปริมาณ (Metrics)</strong> ที่ชัดเจน ทำให้นักทดสอบระบบสามารถระบุได้แน่นอนว่าระบบ "ผ่าน (Pass)" หรือ "ไม่ผ่าน (Fail)" ตามข้อกำหนด</div>
+        </div>
+
+        <div class="answer-subheading">(b) การแก้ไขข้อกำหนดที่คลุมเครือให้เป็นเกณฑ์ที่วัดผลได้จริง (4 Rewrite Cases)</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ข้อความเดิมที่คลุมเครือ (Vague Statement)</th>
+                <th>จุดอ่อน/ความคลุมเครือ (Flaw / Ambiguity)</th>
+                <th>ข้อกำหนดที่เขียนใหม่แบบวัดผลได้ (Verifiable Rewrite with Metrics)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. "The mobile application shall be extremely fast and responsive for all users."</strong></td>
+                <td>คำว่า <code>extremely fast</code> และ <code>responsive</code> เป็นความรู้สึกส่วนบุคคล ไม่มีตัวเลขวัดเวลาหรือจำนวนผู้ใช้</td>
+                <td><strong>Rewrite:</strong><br>
+                  • <em>The mobile application UI shall render search results within <strong>1.5 seconds</strong> under 4G/5G network conditions.</em><br>
+                  • <em>The server shall maintain response times under <strong>2.0 seconds</strong> for up to <strong>1,000 concurrent active users</strong>.</em>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2. "The system should be intuitive and user-friendly for elderly patients."</strong></td>
+                <td>คำว่า <code>intuitive</code> และ <code>user-friendly</code> ทดสอบไม่ได้ ไม่รู้ว่าวัดจากอะไร</td>
+                <td><strong>Rewrite:</strong><br>
+                  • <em>Elderly users (&ge; 60 years) shall be able to complete a doctor appointment booking within <strong>3 minutes</strong> after <strong>10 minutes of initial instruction</strong>, with an operational error rate not exceeding <strong>5%</strong>.</em>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3. "The medical database shall never crash and recover immediately if a power failure occurs."</strong></td>
+                <td>คำว่า <code>never crash</code> เป็นไปไม่ได้ในทางวิศวกรรม (Unrealistic) และ <code>immediately</code> ไม่ระบุหน่วยเวลา</td>
+                <td><strong>Rewrite:</strong><br>
+                  • <em>The system shall achieve <strong>99.95% availability</strong> during clinic hours (Mean Time To Failure: <strong>MTTF &gt; 5,000 hours</strong>).</em><br>
+                  • <em>In the event of a power outage, the database shall restore to the last consistent checkpoint with a Mean Time To Recovery: <strong>MTTR &le; 30 seconds</strong>, with <strong>zero data loss</strong> (RPO = 0).</em>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>4. "The search feature shall search all information across the university."</strong></td>
+                <td>คำว่า <code>search all information</code> มีความกำกวม (Ambiguous) ไม่ชัดเจนว่าค้นหาเอกสาร, ทะเบียนนักศึกษา, คลังพัสดุ หรือข้อมูลบุคคล</td>
+                <td><strong>Rewrite:</strong><br>
+                  • <em>The search engine shall search across the <strong>University Central Student Database, Library Catalog, and Course Syllabus Repository</strong> using keywords matching title, author, or student ID, returning relevant indexed results within <strong>1.0 second</strong>.</em>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="scoring-tip">⭐ <strong>เกณฑ์การให้คะแนน:</strong> คะแนนเต็มจะให้เมื่อระบุทั้ง (1) ตัวชี้วัดเชิงปริมาณ (Seconds, Hours, %, Users) และ (2) เงื่อนไขในการทดสอบที่ชัดเจน</div>
+      </div>
+    </div>
+
+    <!-- QUESTION 3: STAKEHOLDERS & SCENARIO DESIGN -->
+    <div class="exam-question-card" data-searchable>
+      <span class="q-number-tag">EXAM QUESTION 3 : STAKEHOLDER ELICITATION & 5-PART SCENARIO DESIGN</span>
+      <h3 class="q-title">Question 3: Stakeholder Analysis, Elicitation Pitfalls & Scenario Specification</h3>
+      <div class="q-meta">
+        <span><strong>หัวข้อ:</strong> Chapter 4 (Elicitation Challenges, Interviews vs Ethnography, 5 Scenario Elements)</span>
+        <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
+      </div>
+
+      <div class="scenario-box en">
+        <strong>[Problem Prompt]: "TeleMed Care" Remote Consultation & E-Prescription System</strong><br>
+        (a) Identify at least <strong>6 key Stakeholders</strong> (Internal and External) and their roles for the "TeleMed Care" system.<br>
+        (b) Explain why relying solely on <strong>Interviews</strong> often leads to incomplete requirements, and how <strong>Ethnography</strong> solves this problem.<br>
+        (c) Write a complete <strong>User Scenario</strong> for a patient conducting a video consultation and receiving an electronic prescription. Your scenario MUST explicitly include all <strong>5 mandatory components</strong>:
+        <ol style="margin-left: 20px; margin-top: 4px;">
+          <li>Starting situation / Initial state</li>
+          <li>Normal flow of events</li>
+          <li>What can go wrong (Exception / Error handling)</li>
+          <li>Other concurrent activities</li>
+          <li>State on completion</li>
+        </ol>
+      </div>
+
+      <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
+        <span>💡 ดูเฉลยและหลักการตอบ (Model Answer & Scoring Guide)</span>
+        <span>▼</span>
+      </button>
+
+      <div class="answer-content">
+        <div class="answer-subheading">(a) ตารางวิเคราะห์ผู้มีส่วนได้ส่วนเสีย 6 กลุ่ม (TeleMed Care Stakeholders & Roles)</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>ประเภท</th>
+                <th>บทบาทหน้าที่และความต้องการในระบบ (Role & Responsibility)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Consulting Doctors</strong></td>
+                <td><span class="badge-pill" style="font-size: 0.7rem;">Internal</span></td>
+                <td>ตรวจรักษาผ่านวิดีโอคอล ดูประวัติการรักษาในอดีต สั่งจ่ายยาอิเล็กทรอนิกส์ (E-Prescription) และบันทึกคำวินิจฉัย</td>
+              </tr>
+              <tr>
+                <td><strong>2. Clinic Nurses & Triage Staff</strong></td>
+                <td><span class="badge-pill" style="font-size: 0.7rem;">Internal</span></td>
+                <td>คัดกรองอาการผู้ป่วยเบื้องต้น ตรวจสอบคิวออนไลน์ และจัดห้องตรวจเสมือนจริงให้แพทย์</td>
+              </tr>
+              <tr>
+                <td><strong>3. Patients (End Users)</strong></td>
+                <td><span class="badge-pill" style="font-size: 0.7rem; background: #7e22ce;">External</span></td>
+                <td>จองคิวนัดหมาย เข้ารับการตรวจผ่านวิดีโอบนสมาร์ตโฟน ชำระเงินค่ารักษา และเลือกรับยาที่บ้านหรือร้านยาใกล้บ้าน</td>
+              </tr>
+              <tr>
+                <td><strong>4. Partner Pharmacists (ร้านยาเครือข่าย)</strong></td>
+                <td><span class="badge-pill" style="font-size: 0.7rem; background: #7e22ce;">External</span></td>
+                <td>รับใบสั่งยาอิเล็กทรอนิกส์ ตรวจสอบการแพ้ยา จัดเตรียมยา และยืนยันการส่งมอบยาให้ผู้ป่วยหรือไรเดอร์</td>
+              </tr>
+              <tr>
+                <td><strong>5. Hospital IT Security Administrator</strong></td>
+                <td><span class="badge-pill" style="font-size: 0.7rem;">Internal</span></td>
+                <td>ดูแลระบบเซิร์ฟเวอร์ จัดการการเข้ารหัสการสื่อสารวิดีโอ (End-to-End Encryption) และสำรองข้อมูลเวชระเบียน</td>
+              </tr>
+              <tr>
+                <td><strong>6. Healthcare Regulators (อย. / แพทยสภา / PDPA)</strong></td>
+                <td><span class="badge-pill" style="font-size: 0.7rem; background: #7e22ce;">External</span></td>
+                <td>ตรวจสอบมาตรฐานการให้บริการแพทย์ทางไกล (Telemedicine Compliance) และการคุ้มครองข้อมูลสุขภาพผู้ป่วย</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="answer-subheading">(b) ทำไมการสัมภาษณ์เพียงอย่างเดียวจึงไม่พอ? และ Ethnography เข้ามาช่วยอย่างไร?</div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Why Interviews are Incomplete:</strong><br>
+          1. <em>Domain Jargon:</em> Stakeholders use specialized technical language that requirements engineers misunderstand.<br>
+          2. <em>Tacit Knowledge (ความรู้ฝังลึก):</em> Users are so familiar with their daily work that they forget to mention critical habits, workarounds, and implicit rules.<br>
+          3. <em>Organizational Politics:</em> Interviewees often describe "how work ought to be done according to rules" rather than "how work is actually done".</div>
+          <div class="th"><strong>เหตุผลที่การสัมภาษณ์มักได้ข้อมูลไม่ครบ:</strong> ผู้ใช้มี "ความรู้ความเคยชิน (Tacit Knowledge)" ที่คิดว่าเป็นเรื่องธรรมดาจึงลืมเล่า, การใช้ศัพท์เฉพาะทางที่เข้าใจไม่ตรงกัน, และผู้ปฏิบัติงานมักบอกขั้นตอนตามอุดมคติในคู่มือมากกว่าวิธีที่ทำจริง</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• How Ethnography Solves This:</strong> Ethnographers immerse themselves in the actual work environment, observing daily workflows without relying on user verbal descriptions. This reveals implicit social dynamics, practical workarounds, and inter-departmental interactions.</div>
+          <div class="th"><strong>วิธีที่ Ethnography แก้ปัญหา:</strong> นักวิเคราะห์เข้าไปสังเกตการณ์ในสถานที่จริงด้วยตาตนเอง ทำให้มองเห็นขั้นตอนจริง วิธีแก้ปัญหาเฉพาะหน้า และปฏิสัมพันธ์ระหว่างแผนกที่ไม่มีเขียนไว้ในเอกสารใดๆ</div>
+        </div>
+
+        <div class="answer-subheading">(c) การเขียน Scenario ที่สมบูรณ์ตามหลัก 5 องค์ประกอบ (Scenario: Online Consultation & E-Prescription)</div>
+        <div class="scenario-box" style="background: #ffffff; border: 1.5px solid var(--accent-purple);">
+          <strong>Scenario Name:</strong> Patient Remote Video Consultation and Electronic Prescription Dispatch<br><br>
+          
+          <strong>1. Starting Situation (สถานะเริ่มต้น):</strong><br>
+          คนไข้ (นายสมชาย) ล็อกอินเข้าสู่ระบบ TeleMed Care ผ่านแอปพลิเคชันมือถือ โดยมีนัดหมายเวลา 10:00 น. กับ นพ.วิชัย สถานะในระบบแสดง "Waiting in Virtual Lobby" และประวัติการรักษาเดิมถูกโหลดขึ้นสู่หน้าจอของแพทย์เรียบร้อยแล้ว<br><br>
+
+          <strong>2. Normal Flow of Events (ลำดับขั้นตอนปกติ):</strong><br>
+          1. เมื่อถึงเวลานัด แพทย์กดปุ่ม "Start Consultation" ระบบเชื่อมต่อสัญญาณวิดีโอคอลแบบเข้ารหัสระหว่างแพทย์และคนไข้<br>
+          2. แพทย์ซักถามอาการ บันทึกผลการตรวจลงใน Clinical Notes และเลือกสั่งจ่ายยา Paracetamol และ Amoxicillin จากฐานข้อมูลยา<br>
+          3. ระบบตรวจสอบประวัติการแพ้ยาของคนไข้และแสดงผล "No Known Allergy Conflict"<br>
+          4. แพทย์ลงลายมือชื่อดิจิทัล (Digital Signature) ยืนยันใบสั่งยา และกด "End Consultation"<br>
+          5. ระบบแจ้งยอดค่ารักษาพยาบาล 450 บาท คนไข้สแกนชำระผ่าน PromptPay บนหน้าจอสำเร็จ<br>
+          6. ระบบส่งใบสั่งยาอิเล็กทรอนิกส์ไปยังร้านขายยาเครือข่ายที่อยู่ใกล้บ้านคนไข้ที่สุดเพื่อจัดเตรียมยา<br><br>
+
+          <strong>3. What Can Go Wrong / Exception Flow (กรณีเกิดข้อผิดพลาด):</strong><br>
+          • <em>Network Disconnection:</em> หากสัญญาณอินเทอร์เน็ตของคนไข้หลุดเกิน 30 วินาที ระบบจะส่ง SMS แจ้งเตือนพร้อมลิงก์สำรองสำหรับเชื่อมต่อใหม่ทันที และระบบจะบันทึกวิดีโอช่วงก่อนหน้าไว้ชั่วคราว<br>
+          • <em>Allergy Alert:</em> หากแพทย์สั่งยาที่คนไข้มีประวัติแพ้ ระบบจะส่งเสียงเตือนและล็อกปุ่มส่งใบสั่งยา จนกว่าแพทย์จะยืนยันเปลี่ยนตัวยาหรือระบุเหตุผลความจำเป็นทางการแพทย์<br><br>
+
+          <strong>4. Concurrent Activities (กิจกรรมอื่นที่ดำเนินอยู่คู่ขนาน):</strong><br>
+          ขณะที่แพทย์กำลังตรวจคนไข้ ระบบจะทำการบันทึก Log การสนทนาเพื่อการตรวจสอบย้อนหลัง และระบบจัดการคิวจะส่งข้อความแจ้งเตือนคนไข้คิวถัดไปว่า "เหลืออีก 1 คิวล่วงหน้า กรุณาเตรียมตัว"<br><br>
+
+          <strong>5. State on Completion (สถานะเมื่อสิ้นสุดขั้นตอน):</strong><br>
+          การนัดหมายเปลี่ยนสถานะเป็น "Completed", ใบสั่งยาถูกส่งเข้าคิวร้านขายยาเรียบร้อย, ใบเสร็จรับเงินถูกส่งไปยังอีเมลคนไข้ และประวัติการรักษาถูกอัปเดตลงสู่เวชระเบียนกลาง
+        </div>
+
+        <div class="scoring-tip">⭐ <strong>ข้อสอบชอบออก:</strong> ต้องระบุหัวข้อให้ครบทั้ง 5 ส่วน (Starting, Normal, What can go wrong, Concurrent, Completion) ห้ามขาดส่วนใดส่วนหนึ่ง</div>
+      </div>
+    </div>
+
+    <!-- QUESTION 4: FORM-BASED & TABULAR SPECS -->
+    <div class="exam-question-card" data-searchable>
+      <span class="q-number-tag">EXAM QUESTION 4 : STRUCTURED FORM & TABULAR SPECIFICATIONS</span>
+      <h3 class="q-title">Question 4: Form-Based Structured Specification & Decision Tabular Specification</h3>
+      <div class="q-meta">
+        <span><strong>หัวข้อ:</strong> Chapter 4 (Structured Specification Formats, Condition-Action Tables)</span>
+        <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
+      </div>
+
+      <div class="scenario-box en">
+        <strong>[Problem Prompt]: Automated ICU Patient Vital Sign Monitoring & Alarm Dispatch</strong><br>
+        (a) Write a <strong>Structured Form-Based Requirement Specification</strong> for an automated patient risk escalation function in an Intensive Care Unit (ICU) system.<br>
+        (b) Construct a <strong>Tabular Condition-Action Specification</strong> defining automated alert levels and nursing responses based on Patient Heart Rate (HR) and Blood Oxygen Saturation (SpO2).
+      </div>
+
+      <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
+        <span>💡 ดูเฉลยและหลักการตอบ (Model Answer & Scoring Guide)</span>
+        <span>▼</span>
+      </button>
+
+      <div class="answer-content">
+        <div class="answer-subheading">(a) แบบฟอร์มระบุความต้องการแบบมีโครงสร้าง (Form-Based Specification: ICU Risk Alert)</div>
+        <div class="table-container">
+          <table>
+            <tbody>
+              <tr>
+                <th style="width: 24%;">Field</th>
+                <th>Specification Content (EN / TH)</th>
+              </tr>
+              <tr>
+                <td><strong>Function (ฟังก์ชัน)</strong></td>
+                <td><code>ICU_Monitor: Assess_Patient_Risk_Level</code> (ประเมินระดับความเสี่ยงสัญญาณชีพผู้ป่วยวิกฤต)</td>
+              </tr>
+              <tr>
+                <td><strong>Description (คำอธิบาย)</strong></td>
+                <td>Continuously monitors real-time streaming vitals (Heart Rate and SpO2) and triggers appropriate visual/audible alarms and emergency pager notifications to on-duty nurses.<br>(ตรวจสอบสัญญาณชีพอัตราการเต้นหัวใจและระดับออกซิเจนในเลือดแบบ Real-time และส่งสัญญาณแจ้งเตือนระดับวิกฤตไปยังพยาบาลประจำตึก)</td>
+              </tr>
+              <tr>
+                <td><strong>Inputs (ข้อมูลเข้า)</strong></td>
+                <td>Current Heart Rate (<code>HR</code> in bpm), Blood Oxygen Saturation (<code>SpO2</code> in %), Patient Bed Number (<code>Bed_ID</code>).</td>
+              </tr>
+              <tr>
+                <td><strong>Source (แหล่งที่มา)</strong></td>
+                <td>Bedside Multi-parameter Monitor Sensor Hub. (ชุดเซนเซอร์ตรวจวัดสัญญาณชีพข้างเตียง)</td>
+              </tr>
+              <tr>
+                <td><strong>Outputs (ผลลัพธ์)</strong></td>
+                <td><code>Alarm_Level</code> (Normal, Warning, Critical), <code>Audible_Tone</code> (Frequency/Volume), <code>Pager_Alert_Msg</code>.</td>
+              </tr>
+              <tr>
+                <td><strong>Destination (ปลายทาง)</strong></td>
+                <td>Central Nursing Station Dashboard, Bedside LED Strobe Light, and Duty Nurse Mobile Pager.</td>
+              </tr>
+              <tr>
+                <td><strong>Action (การทำงาน)</strong></td>
+                <td>
+                  1. Compare <code>HR</code> and <code>SpO2</code> against predefined clinical safety thresholds.<br>
+                  2. If <code>SpO2 &lt; 90%</code> OR <code>HR &gt; 130 bpm</code> OR <code>HR &lt; 45 bpm</code>: Set <code>Alarm_Level = Critical</code>, sound continuous high-pitch siren, flash red LED strobe, and dispatch emergency pager alert within 1 second.<br>
+                  3. If <code>90% &le; SpO2 &le; 94%</code> OR <code>110 &lt; HR &le; 130 bpm</code>: Set <code>Alarm_Level = Warning</code>, sound intermittent chime, flash amber LED.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Requires / Pre-condition</strong></td>
+                <td>Patient sensor leads are firmly attached with valid impedance signal &gt; 95%. (สายเซนเซอร์เชื่อมต่อแนบสนิท)</td>
+              </tr>
+              <tr>
+                <td><strong>Post-condition</strong></td>
+                <td>The alarm event timestamp and peak vital values are permanently committed to the ICU Audit Trail Log. (บันทึกลง Log)</td>
+              </tr>
+              <tr>
+                <td><strong>Side Effects</strong></td>
+                <td>None. (ไม่มีผลข้างเคียงต่อระบบอื่น)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="answer-subheading">(b) การเขียนความต้องการแบบตารางเงื่อนไข-การกระทำ (Tabular Condition-Action Specification)</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Condition: Heart Rate (HR)</th>
+                <th>Condition: Oxygen Saturation (SpO2)</th>
+                <th>System Alarm Level</th>
+                <th>Action & Output Response</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>50 &le; HR &le; 100 bpm</code></td>
+                <td><code>SpO2 &ge; 95%</code></td>
+                <td><span class="badge-pill" style="background: #059669; font-size: 0.75rem;">NORMAL</span></td>
+                <td>Green status light on; Log vitals every 5 minutes; No audible tone.</td>
+              </tr>
+              <tr>
+                <td><code>101 &le; HR &le; 130 bpm</code> OR <code>45 &le; HR &lt; 50 bpm</code></td>
+                <td><code>90% &le; SpO2 &le; 94%</code></td>
+                <td><span class="badge-pill" style="background: #d97706; font-size: 0.75rem;">WARNING</span></td>
+                <td>Amber LED flashing; Intermittent chime tone; Display warning on central nursing dashboard.</td>
+              </tr>
+              <tr>
+                <td><code>HR &gt; 130 bpm</code> OR <code>HR &lt; 45 bpm</code></td>
+                <td><code>Any SpO2 level</code></td>
+                <td><span class="badge-pill" style="background: #dc2626; font-size: 0.75rem;">CRITICAL</span></td>
+                <td>Red LED strobe; Continuous 85dB alarm; Dispatch emergency pager to all on-duty nurses within 1s.</td>
+              </tr>
+              <tr>
+                <td><code>Any HR level</code></td>
+                <td><code>SpO2 &lt; 90%</code></td>
+                <td><span class="badge-pill" style="background: #dc2626; font-size: 0.75rem;">CRITICAL</span></td>
+                <td>Red LED strobe; Continuous 85dB alarm; Auto-escalate to emergency resuscitation team alert.</td>
+              </tr>
+              <tr>
+                <td><code>HR Sensor Disconnected</code></td>
+                <td><code>Any SpO2 level</code></td>
+                <td><span class="badge-pill" style="background: #475569; font-size: 0.75rem;">LEAD_OFF</span></td>
+                <td>Blue strobe light; Low-pitch intermittent beep; Display "Lead Detached: Bed X" message.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="scoring-tip">⭐ <strong>เทคนิคการทำข้อสอบ:</strong> ใน Form-based ต้องมีครบทุกช่อง (Function, Description, Inputs, Outputs, Action, Pre/Post conditions) และในตารางต้องครอบคลุมทุกเงื่อนไขรวมถึงกรณีข้อยกเว้น (Sensor detached)</div>
+      </div>
+    </div>
+
+    <!-- QUESTION 5: VALIDATION V-C-C-R-V & TRACEABILITY CHANGE MANAGEMENT -->
+    <div class="exam-question-card" data-searchable>
+      <span class="q-number-tag">EXAM QUESTION 5 : VALIDATION CHECKS & TRACEABILITY CHANGE MANAGEMENT</span>
+      <h3 class="q-title">Question 5: Requirements Validation Checks (V-C-C-R-V), Traceability Policies & Change Management</h3>
+      <div class="q-meta">
+        <span><strong>หัวข้อ:</strong> Chapter 4 (5 Validation Checks, Traceability Matrix, 3 Change Stages)</span>
+        <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
+      </div>
+
+      <div class="scenario-box en">
+        <strong>[Problem Prompt]:</strong><br>
+        (a) Detail the <strong>5 Key Requirements Checking Criteria (Validity, Consistency, Completeness, Realism, Verifiability)</strong> with an example of an error for each.<br>
+        (b) Define <strong>Traceability</strong> and explain the three types of traceability information maintained in requirements management: <strong>Source Traceability</strong>, <strong>Requirements Traceability</strong>, and <strong>Design Traceability</strong>.<br>
+        (c) Illustrate and explain the <strong>3 Stages of Requirements Change Management</strong>.
+      </div>
+
+      <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
+        <span>💡 ดูเฉลยและหลักการตอบ (Model Answer & Scoring Guide)</span>
+        <span>▼</span>
+      </button>
+
+      <div class="answer-content">
+        <div class="answer-subheading">(a) 5 เกณฑ์การตรวจสอบความต้องการ (V-C-C-R-V) พร้อมตัวอย่างข้อผิดพลาด</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>เกณฑ์การตรวจสอบ (Check)</th>
+                <th>นิยามและเป้าหมาย (Definition & Goal)</th>
+                <th>ตัวอย่างข้อผิดพลาดที่ตรวจพบ (Example Error Detected)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Validity<br><small>(ความสมเหตุสมผล)</small></strong></td>
+                <td>ระบบมีฟังก์ชันที่ตรงกับความต้องการและวิธีปฏิบัติงานจริงของลูกค้าหรือไม่</td>
+                <td>ระบุให้แพทย์ต้องพิมพ์ชื่อยาทุกตัวด้วยตนเอง ทั้งที่งานจริงต้องการเมนูคลิกเลือกยาสำเร็จรูปเพื่อความรวดเร็ว</td>
+              </tr>
+              <tr>
+                <td><strong>2. Consistency<br><small>(ความสอดคล้องกัน)</small></strong></td>
+                <td>ไม่มีข้อกำหนดใดในเอกสารที่ขัดแย้งหรือค้านกันเอง</td>
+                <td>หน้า 5 ระบุว่า "ระบบต้องไม่อนุญาตให้บุคคลภายนอกเข้าถึงเวชระเบียน" แต่หน้า 20 ระบุว่า "อนุญาตให้นักวิจัยภายนอกดาวน์โหลดไฟล์ข้อมูลคนไข้ได้อิสระ"</td>
+              </tr>
+              <tr>
+                <td><strong>3. Completeness<br><small>(ความสมบูรณ์ครบถ้วน)</small></strong></td>
+                <td>ระบุบริการ ฟังก์ชัน ข้อจำกัด และกรณีเกิดข้อผิดพลาด (Exception Handling) ครบทุกกรณี</td>
+                <td>ระบุขั้นตอนการจ่ายเงินผ่าน QR Code ครบถ้วน แต่ไม่ได้ระบุว่าจะทำอย่างไรหากระบบธนาคารล่มหรือเงินถูกตัดแต่ระบบไม่ปลดล็อกตู้</td>
+              </tr>
+              <tr>
+                <td><strong>4. Realism<br><small>(ความเป็นไปได้จริง)</small></strong></td>
+                <td>สามารถพัฒนาได้จริงภายใต้งบประมาณ เทคโนโลยี และกรอบเวลาที่มีอยู่</td>
+                <td>ระบุให้ระบบจดจำใบหน้าทำงานแม่นยำ 100% ในที่มืดสนิทด้วยกล้องเว็บแคมธรรมดาราคาถูก ภายใต้งบ 10,000 บาท</td>
+              </tr>
+              <tr>
+                <td><strong>5. Verifiability<br><small>(ความสามารถในการทดสอบได้)</small></strong></td>
+                <td>ทุกข้อกำหนดต้องเขียนขึ้นเพื่อให้สามารถออกแบบชุดทดสอบเพื่อวัดผลผ่าน/ไม่ผ่านได้อย่างชัดเจน</td>
+                <td>เขียนว่า "ระบบต้องใช้งานง่ายและสวยงาม" (ทดสอบไม่ได้) ➔ ต้องแก้เป็น "ผู้ใช้ใหม่ 90% ทำรายการเสร็จใน 2 นาทีโดยไม่ผิดพลาด"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="answer-subheading">(b) การสืบย้อนความต้องการ (Traceability) 3 รูปแบบ</div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Definition of Traceability:</strong> The ability to discover the relationship between requirements, their sources, and system design components throughout the project lifecycle.</div>
+          <div class="th"><strong>ความหมายของ Traceability:</strong> ความสามารถในการติดตามความเชื่อมโยงระหว่างความต้องการ แหล่งที่มาของความต้องการ และชิ้นส่วนการออกแบบของระบบ เพื่อช่วยในการวิเคราะห์ผลกระทบเมื่อเกิดการเปลี่ยนแปลง</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>1. Source Traceability:</strong> Links requirements to the specific stakeholders, business goals, or regulations that originally requested them (Who proposed this requirement?).</div>
+          <div class="th"><strong>การสืบย้อนแหล่งที่มา (Source):</strong> เชื่อมโยง Requirement กลับไปยังตัวบุคคล, ลูกค้า, หรือกฎหมายที่เป็นต้นกำเนิดของข้อกำหนดนั้น</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>2. Requirements Traceability (Req-to-Req):</strong> Links dependent requirements to each other (Which requirements are affected if requirement X changes?).</div>
+          <div class="th"><strong>การสืบย้อนระหว่างความต้องการ (Req-to-Req):</strong> บันทึกความสัมพันธ์ระหว่าง Requirement ด้วยกันเอง เพื่อดูว่าถ้าแก้ข้อนี้ จะกระทบกับข้อกำหนดอื่นข้อใดบ้าง</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>3. Design Traceability:</strong> Links requirements to the specific architectural components, modules, source code files, and test cases that implement them.</div>
+          <div class="th"><strong>การสืบย้อนสู่งานออกแบบ (Design):</strong> เชื่อมโยง Requirement แต่ละข้อไปยังโมดูลสถาปัตยกรรม, ซอร์สโค้ดไฟล์, และ Test Cases ที่สร้างขึ้นเพื่อตอบสนองข้อกำหนดนั้น</div>
+        </div>
+
+        <div class="answer-subheading">(c) 3 ขั้นตอนกระบวนการจัดการการเปลี่ยนแปลง (Requirements Change Management Process)</div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>Stage 1: Problem Analysis and Change Specification</strong><br>
+          An incoming change request is evaluated to verify if the reported problem is genuine. A formal proposed change specification is drafted.</div>
+          <div class="th"><strong>ขั้นที่ 1 วิเคราะห์ปัญหาและระบุรายละเอียดการเปลี่ยนแปลง:</strong> ตรวจสอบว่าคำขอแก้ไขที่แจ้งเข้ามามีเหตุผลสมควรจริงหรือไม่ และร่างข้อกำหนดการเปลี่ยนแปลงอย่างเป็นทางการ</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>Stage 2: Change Analysis and Costing</strong><br>
+          Using Traceability links, the change impact on system architecture, code, test cases, schedule, and cost is thoroughly assessed. The Change Control Board (CCB) decides whether to accept, reject, or defer the change.</div>
+          <div class="th"><strong>ขั้นที่ 2 วิเคราะห์ผลกระทบและประเมินค่าใช้จ่าย:</strong> ใช้ข้อมูล Traceability ตรวจสอบผลกระทบต่องานส่วนอื่น งบประมาณ และเวลาส่งมอบ เพื่อให้คณะกรรมการ (CCB) ตัดสินใจอนุมัติหรือปฏิเสธ</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>Stage 3: Change Implementation</strong><br>
+          The requirements specification document, software design models, source code, and associated unit/system test suites are modified and re-verified.</div>
+          <div class="th"><strong>ขั้นที่ 3 ดำเนินการปรับแก้ระบบ:</strong> แก้ไขเอกสาร Requirements, ปรับงานออกแบบสถาปัตยกรรม, แก้ไข Source Code และรัน Regression Test ซ้ำเพื่อรับรองความถูกต้อง</div>
+        </div>
+
+        <div class="scoring-tip">⭐ <strong>สรุปสูตรจำ:</strong> เกณฑ์ 5 ข้อท่อง <strong>V-C-C-R-V</strong> / สืบย้อน 3 ด้านท่อง <strong>Source - Req - Design</strong> / เปลี่ยนแปลง 3 ขั้นท่อง <strong>Problem Spec ➔ Analysis & Cost ➔ Implementation</strong></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Script -->
+  <script>
+    function toggleAnswer(btn) {
+      const content = btn.nextElementSibling;
+      const arrow = btn.querySelector('span:last-child');
+      if (content.classList.contains('show')) {
+        content.classList.remove('show');
+        if (arrow) arrow.textContent = '▼';
+      } else {
+        content.classList.add('show');
+        if (arrow) arrow.textContent = '▲';
+      }
+    }
+
+    function toggleAllAnswers(show) {
+      document.querySelectorAll('.answer-content').forEach(el => {
+        if (show) {
+          el.classList.add('show');
+        } else {
+          el.classList.remove('show');
+        }
+      });
+      document.querySelectorAll('.answer-toggle-btn span:last-child').forEach(arrow => {
+        arrow.textContent = show ? '▲' : '▼';
+      });
+    }
+
+    function filterContent() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const items = document.querySelectorAll('[data-searchable]');
+
+      items.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        if (text.includes(query)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const btn = document.getElementById('themeBtn');
+      if (current === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        btn.textContent = '🌙 สลับธีมมืด';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ สลับธีมสว่าง';
+      }
+    }
+  </script>
+</body>
+</html>

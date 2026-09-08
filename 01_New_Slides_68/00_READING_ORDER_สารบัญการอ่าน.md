@@ -1,15 +1,15 @@
 # 📖 ลำดับการอ่านสไลด์เรียน ภาคการศึกษา 2568 (Reading Order)
 
-โฟลเดอร์นี้จัดเรียงลำดับไฟล์สไลด์ PDF ทั้งหมด 12 ชุด ตามลำดับเนื้อหาของหลักสูตรวิศวกรรมซอฟต์แวร์ (ตั้งแต่ต้นเทอมสู่ปลายเทอม) เพื่อให้อ่านเข้าใจง่าย ต่อเนื่อง และเชื่อมโยงกันอย่างเป็นระบบ
+โฟลเดอร์นี้รวบรวมไฟล์สไลด์ PDF ทั้งหมด 11 ชุดของเทอม 2568 (New Curriculum) โดยจัดเรียงลำดับเนื้อหาตามสัปดาห์และบทเรียน เพื่อให้อ่านเข้าใจง่ายและต่อเนื่อง
 
 ---
 
-## 🧭 แผนผังลำดับเนื้อหา (Curriculum Roadmap)
+## 🧭 แผนผังลำดับเนื้อหาเทอม 2568 (Curriculum Roadmap)
 
 ```text
 [01] บทนำ & จรรยาบรรณวิศวกรซอฟต์แวร์
        ↓
-[02 - 03] กระบวนการพัฒนาซอฟต์แวร์ (Waterfall, Incremental, Reuse)
+[02 - 03] กระบวนการพัฒนาซอฟต์แวร์ (Waterfall, Incremental, Reuse & CMMI)
        ↓
 [04 - 05] วิศวกรรมความต้องการ (Requirements Elicitation & Specification)
        ↓
@@ -18,8 +18,6 @@
 [08 - 09] ระเบียบวิธีแบบ Agile & Scrum Framework และ Burndown Chart
        ↓
 [10 - 11] การทดสอบซอฟต์แวร์ (Testing QA, White-Box & Cyclomatic Complexity)
-       ↓
-[12] การประเมินขนาดและต้นทุนซอฟต์แวร์ (COCOMO & Function Point Analysis)
 ```
 
 ---
@@ -39,11 +37,17 @@
 | **09** | `09_Scrum_Burndown_Chart.pdf` | **Burndown Chart** | การวิเคราะห์กราฟ Burndown Chart, Ideal Line vs Actual Effort, ปัญหา Scope Creep และการวัด Team Velocity |
 | **10** | `10_Week9_Software_Testing_and_QA.pdf` | **การทดสอบซอฟต์แวร์ (Week 9)** | ระดับการทดสอบ (Unit, Integration, System, Acceptance), TDD, Black-Box (Equivalence Partitioning, BVA) |
 | **11** | `11_Week10_Testing_Metrics_Cyclomatic.pdf` | **การวัดผลเชิงโครงสร้าง (Week 10)** | White-Box Testing, Flow Graph, Basis Path Testing, สูตร Cyclomatic Complexity $V(G) = E - N + 2$ |
-| **12** | `12_Cost_Estimation_COCOMO_and_FPA.pdf` | **การประเมินราคาซอฟต์แวร์** | Function Point Analysis (FP = UFP × VAF), 14 GSCs, การนับ DET/RET/FTR, โมเดล COCOMO I & II และการแปลง FP สู่ LOC |
+
+---
+
+## 📌 สไลด์อ้างอิงเพิ่มเติม (Cost Estimation)
+- สไลด์เดิมเรื่องการประมาณการราคาและขนาดซอฟต์แวร์ (COCOMO Model และ Function Point Analysis) ถูกจัดเก็บไว้ที่:
+  `02_Old_Slides_Textbook/se_chapter4_Software_Cost_Estimation.pdf`
+  (ใช้อ้างอิงสำหรับการบ้านใน `04_Work_and_Homework/Sw cost estimation` และเนื้อหาใน `Wiki/Lecture 11`)
 
 ---
 
 ## 💡 คำแนะนำในการอ่านและเตรียมสอบ
 - สำหรับการเตรียมสอบกลางภาค (Midterm): ควรอ่านลำดับที่ **01 ถึง 09** อย่างละเอียด
-- สำหรับการเตรียมสอบปลายภาค (Final): เน้นลำดับที่ **10 ถึง 12** ซึ่งมีสูตรคำนวณและข้อสอบข้อเขียนเชิงตัวเลข
+- สำหรับการเตรียมสอบปลายภาค (Final): เน้นลำดับที่ **10 ถึง 11** ร่วมกับสไลด์ Cost Estimation ในหมวด Old
 - สามารถเปิดเว็บข้อสอบจำลองและเฉลยเพื่อซ้อมทำควบคู่ได้ที่ **`03_Exams_and_Cheatsheets/Exam_Hub.html`**

@@ -22,7 +22,7 @@ software-engineering/
 
 ## 📖 รายละเอียดแต่ละหมวดหมู่
 
-### 1. `01_New_Slides_68/` — สไลด์เรียนล่าสุด (ปี 2568 เรียงลำดับ 01-12)
+### 1. `01_New_Slides_68/` — สไลด์เรียนล่าสุด (ปี 2568 เรียงลำดับ 01-11)
 รวบรวมไฟล์สไลด์ PDF ภาคเรียนปัจจุบัน พร้อมจัดลำดับการอ่านตั้งแต่ต้นเทอมถึงปลายเทอม (ดูรายละเอียดหัวข้อได้ใน [00_READING_ORDER_สารบัญการอ่าน.md](file:///c:/Project/software-engineering/01_New_Slides_68/00_READING_ORDER_%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99.md)):
 - `01_Ch1_Introduction.pdf` — บทนำวิศวกรรมซอฟต์แวร์ จรรยาบรรณวิชาชีพ และระบบพื้นฐาน
 - `02_Ch2_SW_Processes.pdf` — แบบจำลองกระบวนการพัฒนา (Waterfall, Incremental, Reuse)
@@ -35,12 +35,12 @@ software-engineering/
 - `09_Scrum_Burndown_Chart.pdf` — การวิเคราะห์กราฟ Burndown Chart และการวัด Team Velocity
 - `10_Week9_Software_Testing_and_QA.pdf` — การทดสอบซอฟต์แวร์ (Black-Box, White-Box & TDD)
 - `11_Week10_Testing_Metrics_Cyclomatic.pdf` — Flow Graph, Basis Path และ Cyclomatic Complexity
-- `12_Cost_Estimation_COCOMO_and_FPA.pdf` — การประเมินราคาและขนาด (COCOMO & Function Point Analysis)
 
-### 2. `02_Old_Slides_Textbook/` — สไลด์เดิม 10 บท และตำรามาตรฐาน
+### 2. `02_Old_Slides_Textbook/` — สไลด์เดิม 10 บท, ตำรามาตรฐาน และสไลด์อ้างอิง
 รวบรวมเอกสารอ้างอิงและตำราหลักมาตรฐานสากล:
-- `1. Software Products.pdf` ถึง `10. DevOps and Code Management.pdf` (สไลด์ 10 บทครบครัน)
+- `1. Software Products.pdf` ถึง `10. DevOps and Code Management.pdf` (สไลด์หลักสูตรเดิม 10 บทครบครัน)
 - `Software Engineering - Ian Sommerville.pdf` — ตำราหลักเล่มเต็มของ Ian Sommerville ฉบับที่ 10
+- `se_chapter4_Software_Cost_Estimation.pdf` — สไลด์การประมาณการต้นทุนซอฟต์แวร์ (COCOMO & FPA) ใช้อ้างอิงการบ้าน `work/Sw cost estimation` และ `Wiki/Lecture 11`
 
 ### 3. `03_Exams_and_Cheatsheets/` — คลังข้อสอบจำลองและสรุปเข้ม
 รวมเครื่องมือเตรียมสอบทั้งรูปแบบเว็บและเอกสาร:

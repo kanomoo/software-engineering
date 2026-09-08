@@ -1,6 +1,12 @@
-﻿# 📚 Software Engineering (SE) Midterm Comprehensive Wiki (ฉบับปี 68)
+# 📚 Software Engineering (SE) Midterm Comprehensive Wiki (ฉบับปี 68)
 > **แหล่งข้อมูลอ้างอิง:** สกัดและเรียบเรียงจากคลังเอกสาร **`New_68`** ครบถ้วน 100% 
 > (Ch1 Introduction, Ch2 SW Processes, Ch4 Req Eng, Homework 1 PizzaFriend, Homework 2 EasyClinic, เอกสารการบ้าน และบันทึกท้ายคาบ)
+
+> [!IMPORTANT] 🎯 ประกาศสอบกลางภาค และโอกาสคว้าคะแนนโบนัส +5 คะแนน!
+> - **วันและเวลาสอบ:** อังคารที่ 19 ส.ค. 68 เวลา 09:00 น. | **รูปแบบ:** Open Book (เปิดตำราได้)
+> - **ข้อสอบ:** 5 ข้อ 30 คะแนน (โจทย์เป็นภาษาอังกฤษ)
+> - **⭐ สิทธิ์รับคะแนนพิเศษ:** หากตอบเป็นภาษาอังกฤษทุกข้อ **บวกเพิ่มคะแนนเก็บทันที 5 คะแนน! (+5 English Bonus)**
+> - 👉 **อ่านแนวข้อสอบ, เทมเพลตวิเคราะห์ Case Study, สรุป Scrum, และคลังประโยคสำเร็จรูปได้ที่:** `Wiki/03_Exams_and_Guides/Midterm_Exam_Scope_and_Strategy_68.md`
 
 ---
 

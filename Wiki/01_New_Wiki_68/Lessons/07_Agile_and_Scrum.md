@@ -16,6 +16,12 @@ type: lecture
 
 # Lecture 5: Agile Software Engineering & Scrum Framework
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** ⚡ **หลักสูตรใหม่ 2568 (New 68)** ผสมผสานหลักสูตรเดิม
+> - **สไลด์ต้นฉบับ:** `01_New_Slides_68/07_Agile_and_Scrum_Framework.pdf`, ⭐ `01_New_Slides_68/08_Scrum_Burndown_Chart.pdf` ร่วมกับ `02_Old_Slides_Textbook/02_Agile_Software_Engineering.pdf`
+> - **เป้าหมายการประเมิน:** ⭐ ออกข้อสอบกลางภาค (Midterm Exam) เน้น Scrum Roles/Events/Artifacts, User Stories (INVEST), DoD, และการอ่านกราฟ Burndown Chart
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **2. Agile Software Engineering.pdf**, **3. Features, scenarios and stories.pdf** และเอกสารเชิงปฏิบัติการ **Scrum Framework Workshop** ครอบคลุม 6 หัวข้อหลัก:
 > 1. [[#1. ปรัชญาเอไจล์และคำประกาศ Agile Manifesto (Agile Philosophy & Manifesto)]]

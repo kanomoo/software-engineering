@@ -42,7 +42,7 @@
 - สไลด์ Use Case Modeling ดั้งเดิมของอาจารย์ถูกจัดเก็บไว้ที่:
   - `02_Old_Slides_Textbook/11_Classic_Slide_UseCase_Diagrams_usecaseDia2.pdf`
   - `02_Old_Slides_Textbook/12_Classic_Slide_UseCase_Textual_Specs_l3.pdf`
-  (ใช้อ้างอิงร่วมกับงานใน `04_Work_and_Homework` และเนื้อหาใน `Wiki/Lecture 4`)
+  (ใช้อ้างอิงร่วมกับงานใน `04_Work_and_Homework` และเนื้อหาใน `Wiki/02_Old_Wiki_Textbook/Lessons/11_Classic_Slide_UseCase_Diagrams.md` และ `12_Classic_Slide_UseCase_Textual_Specs.md`)
 
 ---
 

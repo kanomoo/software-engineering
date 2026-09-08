@@ -16,6 +16,12 @@ type: lecture
 
 # Lecture 8: Security, Privacy & Reliable Programming
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** 🏛️ **หลักสูตรเดิมและสไลด์คลาสสิก (Security, Privacy & Reliable Code)**
+> - **สไลด์ต้นฉบับ:** `02_Old_Slides_Textbook/07_Security_and_Privacy.pdf` และ `02_Old_Slides_Textbook/08_Reliable_Programming.pdf`
+> - **เป้าหมายการประเมิน:** 📚 ใช้เป็นแนวทางปฏิบัติด้านความมั่นคงปลอดภัย (CIA, OWASP, PDPA/GDPR) และการเขียนโปรแกรมเชิงป้องกัน
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **7. Security and Privacy.pdf** และ **8. Reliable Programming.pdf** ครอบคลุม 6 หัวข้อหลัก:
 > 1. [[#1. ความปลอดภัยทางซอฟต์แวร์ และหลักการ CIA Triad (Security Engineering)]]

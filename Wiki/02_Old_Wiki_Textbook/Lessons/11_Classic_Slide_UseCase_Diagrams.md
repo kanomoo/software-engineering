@@ -14,6 +14,12 @@ type: lecture
 
 # Lecture 4: Use Case Modeling & Textual Specifications
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** 🏛️ **หลักสูตรเดิมและสไลด์คลาสสิก (Classic Modeling & Workshop)**
+> - **สไลด์ต้นฉบับ:** `02_Old_Slides_Textbook/11_Classic_Slide_UseCase_Diagrams_usecaseDia2.pdf` และ `12_Classic_Slide_UseCase_Textual_Specs_l3.pdf`
+> - **เป้าหมายการประเมิน:** 🛠️ ใช้สำหรับส่งงานการบ้านภาคปฏิบัติ (Workshop 12 โฟลเดอร์ใน `04_Work_and_Homework`) และการสร้างสเปกระบบ
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **usecaseDia-2.pdf**, **Lecture-010925.pdf** และแบบฝึกหัดในโฟลเดอร์ **work/** (Library, ATM, Elevator) ครอบคลุม 6 หัวข้อหลัก:
 > 1. [[#1. นิยามและจุดประสงค์ของ Use Case Diagram (What is a Use-Case Diagram)]]

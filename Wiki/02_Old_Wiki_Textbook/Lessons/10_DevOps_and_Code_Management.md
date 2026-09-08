@@ -16,6 +16,12 @@ type: lecture
 
 # Lecture 10: DevOps, CI/CD & Code Management
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** 🏛️ **หลักสูตรเดิมและสไลด์คลาสสิก (Operations & Automation)**
+> - **สไลด์ต้นฉบับ:** `02_Old_Slides_Textbook/10_DevOps_and_Code_Management.pdf`
+> - **เป้าหมายการประเมิน:** 📚 ใช้เป็นความรู้หลักสำหรับกระบวนการบิลด์ ดีพลอยอัตโนมัติ (CI/CD) และการบริหารกิ่ง Git
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **10. DevOps and Code Management.pdf** ครอบคลุม 5 หัวข้อหลัก:
 > 1. [[#1. วัฒนธรรม DevOps และกรอบการทำงาน CALMS Model]]

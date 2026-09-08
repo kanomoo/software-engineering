@@ -14,6 +14,12 @@ type: lecture
 
 # Lecture 1: Introduction to Software Engineering, Products & Ethics
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** ⚡ **หลักสูตรใหม่ 2568 (New 68)** ผสมผสานหลักสูตรเดิม
+> - **สไลด์ต้นฉบับ:** `01_New_Slides_68/01_Ch1_Introduction.pdf` และ `02_Old_Slides_Textbook/01_Software_Products.pdf`
+> - **เป้าหมายการประเมิน:** ⭐ ออกข้อสอบกลางภาค (Midterm Exam) เน้นคุณลักษณะ 4 ประการ, จรรยาบรรณ 8 ข้อ และกรณีศึกษา
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **New slide/Ch1 Introduction.pdf**, **1. Software Products.pdf** และตำราอ้างอิง **Ian Sommerville (Ch 1 & 3)** ครอบคลุม 10 หัวข้อหลัก:
 > 1. [[#1. นิยามและภาพรวมของวิศวกรรมซอฟต์แวร์ (What is Software Engineering)]]

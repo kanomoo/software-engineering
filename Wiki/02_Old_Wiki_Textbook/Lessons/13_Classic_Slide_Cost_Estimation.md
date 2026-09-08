@@ -18,6 +18,12 @@ type: lecture
 
 # Lecture 11: Software Cost Estimation & Metrics
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** 🏛️ **หลักสูตรเดิมและสไลด์คลาสสิก (Cost Estimation & Quantitative Metrics)**
+> - **สไลด์ต้นฉบับ:** `02_Old_Slides_Textbook/13_Classic_Slide_Cost_Estimation_se_chapter4.pdf`
+> - **เป้าหมายการประเมิน:** 🛠️ ใช้สำหรับส่งงานการบ้านภาคปฏิบัติ (`04_Work_and_Homework/Sw cost estimation`) และการคำนวณ COCOMO, FPA (EI, EO, EQ, ILF, EIF, 14 GSC, VAF)
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **se_chapter4.pdf** และแบบฝึกหัดใน **work/Sw cost estimation** ครอบคลุม 6 หัวข้อหลัก:
 > 1. [[#1. พื้นฐานการประมาณการซอฟต์แวร์ (Software Estimation Foundations)]]

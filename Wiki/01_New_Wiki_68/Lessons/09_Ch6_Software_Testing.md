@@ -16,6 +16,12 @@ type: lecture
 
 # Lecture 9: Software Testing & Quality Assurance
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** ⚡ **หลักสูตรใหม่ 2568 (New 68 Core)** ผสมผสานหลักสูตรเดิม
+> - **สไลด์ต้นฉบับ:** `01_New_Slides_68/09_Ch6_Software_Testing.pdf`, `10_Week9_Software_Testing_and_QA.pdf`, ⭐ `11_Week10_Testing_Metrics_Cyclomatic.pdf` ร่วมกับ `02_Old_Slides_Textbook/09_Testing.pdf`
+> - **เป้าหมายการประเมิน:** ⭐ ออกข้อสอบปลายภาค (Final Exam) เน้น V&V, TDD, Black-box (EP & BVA), และสูตรคำนวณ Cyclomatic Complexity ($V(G)=E-N+2$)
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **9. Testing.pdf** และ **Ian Sommerville (Ch 8)** ครอบคลุม 5 หัวข้อหลัก:
 > 1. [[#1. ระดับของการทดสอบซอฟต์แวร์ 4 ระดับ (Software Testing Levels)]]

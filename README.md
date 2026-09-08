@@ -66,10 +66,18 @@ software-engineering/
 - `Homework_2_EasyClinic_Stakeholders.pdf`
 - `homework.txt`, `h1.1.jpg`, `h1.2.jpg` และภาพส่งงาน
 
-### 5. `Wiki/` — Obsidian Mega-Wiki
-คลังความรู้เชิงลึก 11 เลกเชอร์สำหรับเปิดอ่านผ่าน **Obsidian**:
-- ครอบคลุมตั้งแต่ Software Products, Agile, Modeling, Architecture, Cloud, Testing จนถึง Cost Estimation (COCOMO, FPA)
-- เปิดดูสารบัญรวมได้ที่ **`Wiki/Software Engineering Index.md`**
+### 5. `Wiki/` — Obsidian Mega-Wiki (จัดระเบียบ 4 โฟลเดอร์สอดคล้องกับสไลด์)
+คลังความรู้เชิงลึกระดับตำราสำหรับเปิดอ่านผ่าน **Obsidian** จัดโฟลเดอร์ล้อตามโฟลเดอร์หลัก:
+- 🌟 **`01_New_Wiki_68/`** — รวบรวมเนื้อหาปี 2568 ทั้งหมด:
+  - `00_New_Curriculum_68_Master_Wiki.md` — สรุปภาพรวมหลักสูตรใหม่สไลด์ 01-11 ทั้ง Midterm & Final
+  - `Lessons/` — บทเรียนแยกตามชื่อสไลด์ 01 ถึง 11 (อ่านเทียบกับ `01_New_Slides_68/` ได้ทันที)
+  - `Midterm_68/` — `SE-Midterm-Wiki-68.md` รวมสรุปเตรียมสอบกลางภาคปี 68
+  - `Work_and_Practice_68/` — คู่มือโจทย์ `06_Practice_ReqEng_Guide.md` และ `Homework_68_Solutions.md`
+- 🏛️ **`02_Old_Wiki_Textbook/`** — รวบรวมเนื้อหาสไลด์เดิม 10 บท + สไลด์คลาสสิก 3 ชุด (`Lessons/01` ถึง `13`) และตำราหลัก
+- 📝 **`03_Exams_and_Guides/`** — คลังแนวข้อสอบจำลองชุด B, ชุด C และคู่มือเตรียมสอบทั่วไป
+- 🔧 **`04_Work_and_Workshops/`** — เวิร์กช็อป Use Case ATM, ระบบลิฟต์, ห้องสมุด และ Sw Cost Estimation
+- 🌐 **`Software Engineering Index.md`** — Super Hub ดัชนีสารบัญรวม ลิงก์ตรงสู่ทุกโฟลเดอร์และบทเรียน
+- 📊 **`Progress Checklist.md`** — เช็คลิสต์ติดตามความก้าวหน้าการอ่าน
 
 ---
-*จัดระเบียบและปรับปรุงโครงสร้างล่าสุด: กันยายน 2569*
+*จัดระเบียบและปรับปรุงโครงสร้างล่าสุด: กันยายน 2568*

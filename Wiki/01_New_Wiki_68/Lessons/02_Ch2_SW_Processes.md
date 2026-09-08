@@ -16,6 +16,12 @@ type: lecture
 
 # Lecture 2: Software Processes & Process Improvement
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** ⚡ **หลักสูตรใหม่ 2568 (New 68 Core)**
+> - **สไลด์ต้นฉบับ:** `01_New_Slides_68/02_Ch2_SW_Processes.pdf` และ `01_New_Slides_68/03_Ch2_Processes_Supplementary_l1.pdf`
+> - **เป้าหมายการประเมิน:** ⭐ ออกข้อสอบกลางภาค (Midterm Exam) เน้น Waterfall vs Incremental vs Reuse, V-Model, และระดับ CMMI 1-5
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **New slide/Ch2 SW Processes.pdf** และ **Ian Sommerville (Ch 2)** ครอบคลุม 6 หัวข้อหลัก:
 > 1. [[#1. นิยามของกระบวนการซอฟต์แวร์ (Software Process Definition)]]

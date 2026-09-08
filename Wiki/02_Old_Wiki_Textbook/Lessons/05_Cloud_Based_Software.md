@@ -16,6 +16,12 @@ type: lecture
 
 # Lecture 7: Cloud-Based Software & Infrastructure
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** 🏛️ **หลักสูตรเดิมและสไลด์คลาสสิก (Cloud, Containers & Infrastructure)**
+> - **สไลด์ต้นฉบับ:** `02_Old_Slides_Textbook/05_Cloud_Based_Software.pdf`
+> - **เป้าหมายการประเมิน:** 📚 ใช้เป็นความรู้หลักสำหรับการวางระบบ Cloud, Multi-tenancy และโครงสร้างพื้นฐานแอปพลิเคชัน
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **5. Cloud-based software.pdf** ครอบคลุม 6 หัวข้อหลัก:
 > 1. [[#1. นิยามและโมเดลการให้บริการ Cloud Computing (IaaS, PaaS, SaaS)]]

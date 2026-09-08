@@ -16,6 +16,12 @@ type: lecture
 
 # Lecture 6: Software Architecture & Microservices
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** 🏛️ **หลักสูตรเดิมและสไลด์คลาสสิก (Architecture & Enterprise Systems)**
+> - **สไลด์ต้นฉบับ:** `02_Old_Slides_Textbook/04_Software_Architecture.pdf` และ `02_Old_Slides_Textbook/06_Microservices_Architecture.pdf`
+> - **เป้าหมายการประเมิน:** 📚 ใช้เป็นความรู้หลักสำหรับการออกแบบสถาปัตยกรรมระดับองค์กร และอ้างอิงโปรเจกต์ซอฟต์แวร์
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียน
 > บทเรียนนี้สรุปเนื้อหาอย่างละเอียดจากสไลด์ **4. Software Architecture.pdf**, **6. Microservices architecture.pdf** และ **Ian Sommerville (Ch 6)** ครอบคลุม 6 หัวข้อหลัก:
 > 1. [[#1. ความสำคัญของสถาปัตยกรรมซอฟต์แวร์ และมุมมอง 4+1 View Model]]

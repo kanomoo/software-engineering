@@ -1,186 +1,140 @@
 ---
 tags:
   - software-engineering
-  - index
-  - mega-guide
+  - master-index
+  - super-hub
+  - new-curriculum-68
+  - old-curriculum-classic
 created: 2026-08-03
-updated: 2026-08-03
-type: index
+updated: 2026-09-08
+type: master-index
 ---
 
-# Software Engineering - Comprehensive Master Index
+# 📚 Software Engineering Master Hub: ศูนย์รวมคลังความรู้และดัชนีวิชาวิศวกรรมซอฟต์แวร์
 
-> [!SUMMARY] คลังความรู้ Software Engineering ระดับสมบูรณ์แบบ (LLM Wiki System)
-> สารบัญดัชนี (Master Index) รวบรวม **"Mega Guides"** สำหรับหลักสูตรวิศวกรรมซอฟต์แวร์ (Software Engineering) เนื้อหาทั้งหมดถูกสรุปและวิเคราะห์อย่างละเอียดจากสไลด์บทเรียนทั้งหมด (`New slide`, สไลด์ 1-10, เอกสารบรรยายกรณีศึกษา, usecaseDia-2, se_chapter4, Workshop/Homework ในโฟลเดอร์ `work`) และอ้างอิงตำรามาตรฐาน **Software Engineering - Ian Sommerville (10th Edition)** 
+> [!SUMMARY] ระบบคลังความรู้แยกโฟลเดอร์สอดคล้องกับสไลด์: หลักสูตรใหม่ 2568 ⚡ สไลด์เดิม 🏛️ ข้อสอบ 🎯 งาน/การบ้าน 🛠️
+> สารบัญหลัก (Super Index) จัดหมวดหมู่โฟลเดอร์ใน `Wiki/` ให้ล้อตามโฟลเดอร์หลักของโปรเจกต์ (`01_New_Slides_68`, `02_Old_Slides_Textbook`, `03_Exams_and_Cheatsheets`, `04_Work_and_Homework`) โดยแยกบทเรียน งาน และ Midterm ไว้อย่างเป็นระเบียบ และรวมเนื้อหาทั้งหมดของปี 68 ไว้ใน **`01_New_Wiki_68/`** เพื่อให้อ่านเทียบกับสไลด์ได้ง่ายที่สุด
 
 ```mermaid
 flowchart TD
-    root["SOFTWARE ENGINEERING KNOWLEDGE BASE"]
-    
-    subgraph P1 ["Part 1: Foundations & Processes"]
-        L1["Lecture 1: Intro to SE, Products & Ethics"]
-        L2["Lecture 2: SW Processes & Improvement (CMMI)"]
-    end
+    HUB["🌐 SOFTWARE ENGINEERING WIKI HUB"]
 
-    subgraph P2 ["Part 2: Requirements & Modeling"]
-        L3["Lecture 3: Requirements Eng & Elicitation"]
-        L4["Lecture 4: Use Case Modeling & Specs"]
-    end
+    N["🌟 01_New_Wiki_68/<br/>(หลักสูตรใหม่ 2568 ทั้งหมด)"]
+    O["🏛️ 02_Old_Wiki_Textbook/<br/>(สไลด์เดิม 10 บท & คลาสสิก)"]
+    E["📝 03_Exams_and_Guides/<br/>(คลังข้อสอบ & คู่มือ)"]
+    W["🔧 04_Work_and_Workshops/<br/>(เวิร์กช็อป & งานคลาสสิก)"]
 
-    subgraph P3 ["Part 3: Agile & Architecture"]
-        L5["Lecture 5: Agile SE, Scrum & User Stories"]
-        L6["Lecture 6: Software Architecture & Microservices"]
-    end
+    HUB --> N
+    HUB --> O
+    HUB --> E
+    HUB --> W
 
-    subgraph P4 ["Part 4: Cloud & Engineering Practice"]
-        L7["Lecture 7: Cloud-Based Software & Infrastructure"]
-        L8["Lecture 8: Security, Privacy & Reliable Prog"]
-    end
+    N --> NL["📖 Lessons/ (เรียง 01-11 ตาม New Slides)"]
+    N --> NM["🎯 Midterm_68/ (SE-Midterm-Wiki-68)"]
+    N --> NW["🛠️ Work_and_Practice_68/ (Practice ReqEng & HW)"]
 
-    subgraph P5 ["Part 5: Quality, Operations & Metrics"]
-        L9["Lecture 9: Software Testing & QA"]
-        L10["Lecture 10: DevOps, CI/CD & Code Mgmt"]
-        L11["Lecture 11: SW Cost Estimation & Metrics"]
-    end
+    O --> OL["📖 Lessons/ (เรียง 01-13 ตาม Old Slides)"]
 
-    root --> P1
-    root --> P2
-    root --> P3
-    root --> P4
-    root --> P5
-
-    style root fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style HUB fill:#e1f5fe,stroke:#0288d1,stroke-width:3px
+    style N fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style O fill:#ede7f6,stroke:#512da8,stroke-width:2px
+    style E fill:#fff8e1,stroke:#f57f17,stroke-width:2px
+    style W fill:#ffebee,stroke:#c62828,stroke-width:2px
 ```
 
 ---
 
-# 📚 Part 1: Foundations & Processes (รากฐานและกระบวนการพัฒนา)
-
-รากฐานสำคัญของวิศวกรรมซอฟต์แวร์ นิยาม คุณลักษณะซอฟต์แวร์ที่ดี โมเดลกระบวนการพัฒนา และระดับความน่าเชื่อถือขององค์กร
-
-- 🔹 **[[Lecture 1 - Introduction to Software Engineering, Products & Ethics]]**
-  - นิยาม Software Engineering, ประสิทธิภาพและต้นทุนระบบ
-  - คุณลักษณะ 4 ประการของซอฟต์แวร์ที่ดี (Maintainability, Dependability, Efficiency, Acceptability)
-  - กิจกรรมพื้นฐาน 4 ประการ & ประเภทแอปพลิเคชัน 7 มิติ
-  - Project-based SE vs Product Software Engineering
-  - รูปแบบการประมวลผล (Stand-alone, Hybrid, Software as a Service)
-  - Product Vision & Moore's Vision Template (FOR, WHO, PRODUCT, THAT, UNLIKE, OUR PRODUCT)
-  - บทบาทหน้าที่ของ Product Manager (PM) & Technical Interactions 6 ด้าน
-  - จริยธรรมทางวิศวกรรมซอฟต์แวร์ และ ACM/IEEE Code of Ethics 8 ประการ
-  - กรณีศึกษา 4 ระบบใหญ่: Personal Insulin Pump, Mentcare, Weather Station, iLearn
-
-- 🔹 **[[Lecture 2 - Software Processes & Process Improvement]]**
-  - Software Process Framework, Plan-driven vs Agile Processes
-  - Software Process Models: Waterfall Model, Incremental Development, Integration and Configuration (Reuse-oriented SE)
-  - กิจกรรมในกระบวนการ: Specification, Design & Implementation, Validation (V-Model), Evolution
-  - การรับมือความเปลี่ยนแปลง (Coping with Change): Change Anticipation, Change Tolerance, System Prototyping, Incremental Delivery
-  - กระบวนการปรับปรุงซอฟต์แวร์ (Process Improvement Cycle): Measurement, Analysis, Change
-  - SEI Capability Maturity Model (CMMI Levels 1-5: Initial, Managed, Defined, Quantitatively Managed, Optimizing)
+## 🧭 ทางลัดเปิดเอกสาร Master Wiki
+* 🌟 **คู่มือสรุปภาพรวมหลักสูตรใหม่ 2568 (ฉบับสมบูรณ์):** **[[01_New_Wiki_68/00_New_Curriculum_68_Master_Wiki|00_New_Curriculum_68_Master_Wiki]]**
+* 🏛️ **คู่มือสรุปภาพรวมหลักสูตรเดิมและสไลด์คลาสสิก (ฉบับสมบูรณ์):** **[[02_Old_Wiki_Textbook/00_Old_Curriculum_Master_Wiki|00_Old_Curriculum_Master_Wiki]]**
+* 🎯 **สรุปเข้มข้อสอบกลางภาค 2568:** **[[01_New_Wiki_68/Midterm_68/SE-Midterm-Wiki-68|SE-Midterm-Wiki-68]]**
+* 📊 **ดัชนีตรวจความก้าวหน้าการเรียน:** **[[Progress Checklist]]**
 
 ---
 
-# 🎯 Part 2: Requirements & Modeling (การวิเคราะห์ความต้องการและการจำลองระบบ)
+# 🔄 ตารางวิเคราะห์และเปรียบเทียบ Old vs New Curriculum Matrix
 
-เจาะลึกกระบวนการค้นหา วิเคราะห์ และจัดทำข้อกำหนดความต้องการ พร้อมการเขียนแผนภาพ Use Case และสเปกข้อความอย่างละเอียด
+ตารางนี้ช่วยให้นักศึกษาเลือกอ่านไฟล์ Wiki ให้ตรงกับสไลด์ PDF ในแต่ละโฟลเดอร์:
 
-- 🔹 **[[Lecture 3 - Requirements Engineering, Elicitation & Case Studies]]**
-  - ระดับความ abstraกต์ของความต้องการ: User Requirements vs System Requirements (Davis Abstraction Level & Target Readers Matrix)
-  - จำแนก Non-Functional Requirements เชิงลึกตาม Ian Sommerville: Product, Organisational, External Requirements (9+ หมวดย่อย)
-  - กระบวนการ RE Spiral Model: Elicitation & Analysis, Specification, Validation, Change Management
-  - เทคนิคการเก็บรวบรวมความต้องการ 6 เทคนิค + Ethnography & Focused Ethnography (Air Traffic Control) และ iLearn Scenarios
-  - รูปแบบการจัดทำสเปกข้อกำหนด 5 Notations, Natural Language Guidelines (`shall` vs `should`), Form-based Specs (Insulin Pump) & Tabular Specs
-  - โครงสร้างเอกสารข้อกำหนด SRS (IEEE 830 / Sommerville 10 หัวข้อ) และกลุ่มผู้ใช้งาน
-  - การตรวจสอบความถูกต้อง (Requirements Validation): 5 Core Checks (Validity, Consistency, Completeness, Realism, Verifiability) & Review Checklist
-  - การบริหารการเปลี่ยนแปลงและการติดตาม (Requirements Change Management & Traceability Matrices: Source, Requirement, Design)
-  - กรณีศึกษาและแบบฝึกหัด 10 ระบบจริง: FreshMart, KMUTNB Cafeteria, PizzaFriend, ReadSmart, EasyClinic, Mentcare, Insulin Pump, iLearn, BookNest, ParkEasy & StudyMate
-
-- 🔹 **[[Lecture 4 - Use Case Modeling & Textual Specifications]]**
-  - องค์ประกอบ UML Use Case Diagram: Actors, Use Cases, System Boundary, Communication Links
-  - ความสัมพันธ์ใน Use Case Diagram: Association, Include (`<<include>>`), Extend (`<<extend>>`), Generalisation
-  - ขั้นตอนการเขียน Use Case Diagram 8 ขั้นตอน & Scenario vs Use Case
-  - ตารางสเปก Use Case ภาษาเขียน (Textual Use Case Specifications): Summary, Actors, Preconditions, Basic Sequence, Exceptions, Postconditions
-  - สเปก Use Case 14 ข้อสมบูรณ์จาก BookNest และกรณีศึกษา ATM, Library System, Elevator System
-  - ข้อผิดพลาดที่พบบ่อย (Common Mistakes) & แนวปฏิบัติที่ดีที่สุด (Best Practices)
-
----
-
-# ⚡ Part 3: Agile & Architecture (วิธีการแบบเอไจล์และสถาปัตยกรรมซอฟต์แวร์)
-
-เทคนิคการพัฒนาซอฟต์แวร์ยุคใหม่ด้วย Scrum Framework การบริหาร Features/User Stories และแบบรูปสถาปัตยกรรมระดับองค์กร
-
-- 🔹 **[[Lecture 5 - Agile Software Engineering & Scrum Framework]]**
-  - Agile Principles & Agile Manifesto (4 ค่านิยม 12 หลักการ)
-  - Scrum Framework ละเอียด: Roles (PO, Scrum Master, Developers), Events (Sprint, Sprint Planning, Daily Scrum, Review, Retrospective), Artifacts (Product Backlog, Sprint Backlog, Increment)
-  - Extreme Programming (XP) practices: Pair Programming, Test-Driven Development, Refactoring, CI
-  - Personas, Scenarios & User Stories (`As a... I want... So that...`)
-  - Acceptance Criteria & Definition of Done (DoD)
-  - Story Mapping & Velocity Estimation
-
-- 🔹 **[[Lecture 6 - Software Architecture & Microservices]]**
-  - ความสำคัญของ Software Architecture และ Architectural Views (4+1 View Model)
-  - Architectural Patterns: Layered, Repository, Client-Server, Pipe & Filter, MVC
-  - Microservices vs Monolith Architecture: เปรียบเทียบข้อดี ข้อเสีย และเงื่อนไขการเลือกใช้
-  - การออกแบบ Microservices: Service Decomposition, Database per Service, RESTful APIs
-  - Microservices Infrastructure Patterns: API Gateway, Service Discovery, Event-Driven Architecture, Distributed Transactions & Saga Pattern
+| หัวข้อบทเรียน | สไลด์ใหม่ (New 68) | สไลด์เดิม (Old & Classic) | ไฟล์ Wiki หลักสูตรใหม่ (`01_New_Wiki_68/`) | ไฟล์ Wiki หลักสูตรเดิม (`02_Old_Wiki_Textbook/`) | การนำไปใช้ในการสอบ |
+|:---|:---|:---|:---|:---|:---|
+| **บทนำ & จรรยาบรรณวิศวกร** | `01_Ch1_Introduction.pdf` | `01_Software_Products.pdf` | `Lessons/01_Ch1_Introduction.md` | `Lessons/01_Software_Products.md` | ⭐ สอบ Midterm |
+| **กระบวนการพัฒนา & CMMI** | `02_Ch2_SW_Processes.pdf`<br/>`03_Ch2_Processes_Supp.pdf` | (กระจายในบทเดิม) | `Lessons/02_Ch2_SW_Processes.md` | - | ⭐ สอบ Midterm |
+| **วิศวกรรมความต้องการ** | `04_Ch4_Requirements_Eng.pdf`<br/>`05_Ch4_Requirements_Cases.pdf` | (กระจายในบทเดิม) | `Lessons/04_Ch4_Requirements_Eng.md` | - | ⭐ สอบ Midterm |
+| **โจทย์ฝึกซ้อม Requirements** | ⭐ `06_Practice_ReqEng.pdf` | - | `Work_and_Practice_68/06_Practice_ReqEng_Guide.md` | - | ⭐ ออกสอบ Midterm 100% |
+| **Agile & Scrum Framework** | `07_Agile_and_Scrum_Framework.pdf` | `02_Agile_Software_Engineering.pdf` | `Lessons/07_Agile_and_Scrum.md` | `Lessons/02_Agile_Software_Engineering.md` | ⭐ สอบ Midterm |
+| **Burndown Chart & Velocity** | ⭐ `08_Scrum_Burndown_Chart.pdf` | *(ไม่มีในสไลด์เดิม)* | `Lessons/08_Scrum_Burndown_Chart.md` | - | ⭐ ออกสอบ Midterm |
+| **Features & User Stories** | - | `03_Features_Scenarios_and_Stories.pdf` | - | `Lessons/03_Features_Scenarios_and_Stories.md` | 📚 อ้างอิงการออกแบบ |
+| **สถาปัตยกรรมซอฟต์แวร์** | *(สอนในโปรเจกต์)* | `04_Software_Architecture.pdf`<br/>`06_Microservices_Architecture.pdf` | - | `Lessons/04_Software_Architecture.md`<br/>`Lessons/06_Microservices_Architecture.md` | 📚 อ้างอิงสถาปัตยกรรม |
+| **คลาวด์และคอนเทนเนอร์** | *(สอนในโปรเจกต์)* | `05_Cloud_Based_Software.pdf` | - | `Lessons/05_Cloud_Based_Software.md` | 📚 อ้างอิงระบบ Cloud |
+| **ความปลอดภัย & Reliable** | *(สอนในโปรเจกต์)* | `07_Security_and_Privacy.pdf`<br/>`08_Reliable_Programming.pdf` | - | `Lessons/07_Security_and_Privacy.md`<br/>`Lessons/08_Reliable_Programming.md` | 📚 อ้างอิงโปรเจกต์ |
+| **การทดสอบซอฟต์แวร์ & QA** | `09_Ch6_Software_Testing.pdf`<br/>`10_Week9_Software_Testing_QA.pdf` | `09_Testing.pdf` | `Lessons/09_Ch6_Software_Testing.md`<br/>`Lessons/10_Week9_Software_Testing_QA.md` | `Lessons/09_Testing.md` | ⭐ สอบ Final |
+| **Cyclomatic Complexity** | ⭐ `11_Week10_Testing_Metrics.pdf` | *(ไม่มีในสไลด์เดิม)* | `Lessons/11_Week10_Testing_Metrics.md` | - | ⭐ ออกสอบ Final คำนวณ |
+| **DevOps & CI/CD** | *(สอนในโปรเจกต์)* | `10_DevOps_and_Code_Management.pdf` | - | `Lessons/10_DevOps_and_Code_Management.md` | 📚 อ้างอิง Git & CI/CD |
+| **Use Case Diagrams & Specs** | (ใช้ใน Workshop) | `11_Classic_Slide_UseCase_Dia.pdf`<br/>`12_Classic_Slide_UseCase_Specs.pdf` | - | `Lessons/11_Classic_Slide_UseCase_Diagrams.md`<br/>`Lessons/12_Classic_Slide_UseCase_Textual_Specs.md` | 🛠️ ทำการบ้าน Workshop |
+| **Cost Estimation (COCOMO/FPA)** | (ใช้ใน Workshop) | `13_Classic_Slide_Cost_Estimation.pdf` | - | `Lessons/13_Classic_Slide_Cost_Estimation.md` | 🛠️ ทำการบ้าน Sw Cost |
 
 ---
 
-# ☁️ Part 4: Cloud & Engineering Practice (คลาวด์ ความปลอดภัย และการเขียนโปรแกรมที่น่าเชื่อถือ)
+# 🌟 โฟลเดอร์ที่ 1: `01_New_Wiki_68/` (ศูนย์รวมหลักสูตรใหม่ 2568)
 
-โครงสร้างพื้นฐานคลาวด์ คอนเทนเนอร์ การรักษาความปลอดภัย และการเขียนโปรแกรมทนทานต่อความผิดพลาด
+รวบรวมเนื้อหาปี 2568 ทั้งหมด เรียงชื่อไฟล์ให้สอดคล้องกับ `01_New_Slides_68/`:
 
-- 🔹 **[[Lecture 7 - Cloud-Based Software & Infrastructure]]**
-  - นิยามและสถาปัตยกรรม Cloud Computing (IaaS, PaaS, SaaS)
-  - Virtualization vs Containerization (Docker Architecture & Benefits)
-  - Multi-tenancy Architecture Strategies (Shared DB vs Separate DB)
-  - Serverless Computing & Function-as-a-Service (FaaS)
-  - Cloud Scalability (Vertical vs Horizontal Scaling) & Elasticity
-  - โมเดลค่าใช้จ่ายในระบบ Cloud (Pay-as-you-go, Reserved)
+### 📘 สรุปภาพรวมหลักสูตรใหม่:
+* **[[01_New_Wiki_68/00_New_Curriculum_68_Master_Wiki|00_New_Curriculum_68_Master_Wiki.md]]** — สรุปเนื้อหาปี 68 สไลด์ 01-11 ทั้ง Midterm & Final
 
-- 🔹 **[[Lecture 8 - Security, Privacy & Reliable Programming]]**
-  - Security Engineering Concepts: Confidentiality, Integrity, Availability (CIA Triad)
-  - Threat Modeling & OWASP Top 10 Vulnerabilities
-  - Privacy Compliance: พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) & GDPR หลักการและการปฏิบัติตามกฎหมาย
-  - Cryptography: Symmetric Encryption (AES-256) vs Asymmetric Encryption (RSA/ECC), TLS/SSL
-  - Reliable Programming: Fault Tolerance, Exception Handling Patterns, Defensive Programming, Assertions, Memory Safety & Thread Safety
+### 📖 หมวดบทเรียน (Lessons/):
+1. **[[01_New_Wiki_68/Lessons/01_Ch1_Introduction|01_Ch1_Introduction.md]]** — สอดคล้องกับ `01_Ch1_Introduction.pdf` (นิยาม SE, คุณลักษณะ 4 ประการ, จรรยาบรรณ 8 ข้อ)
+2. **[[01_New_Wiki_68/Lessons/02_Ch2_SW_Processes|02_Ch2_SW_Processes.md]]** — สอดคล้องกับ `02_Ch2_SW_Processes.pdf` และ `03_Processes_Supp` (Waterfall, Incremental, Reuse, CMMI 5 ระดับ)
+3. **[[01_New_Wiki_68/Lessons/04_Ch4_Requirements_Eng|04_Ch4_Requirements_Eng.md]]** — สอดคล้องกับ `04_Ch4` และ `05_Cases` (User vs System Req, FR/NFR, shall vs should, VCCRV)
+4. **[[01_New_Wiki_68/Lessons/07_Agile_and_Scrum|07_Agile_and_Scrum.md]]** — สอดคล้องกับ `07_Agile_and_Scrum_Framework.pdf` (Agile Manifesto, Scrum Roles, Events, Artifacts, User Stories)
+5. **[[01_New_Wiki_68/Lessons/08_Scrum_Burndown_Chart|08_Scrum_Burndown_Chart.md]]** — สอดคล้องกับ `08_Scrum_Burndown_Chart.pdf` (การอ่านกราฟ Actual vs Ideal, Scope Creep, การคิด Velocity)
+6. **[[01_New_Wiki_68/Lessons/09_Ch6_Software_Testing|09_Ch6_Software_Testing.md]]** — สอดคล้องกับ `09_Ch6_Software_Testing.pdf` (ภาพรวมการทดสอบซอฟต์แวร์ฉบับอาจารย์)
+7. **[[01_New_Wiki_68/Lessons/10_Week9_Software_Testing_QA|10_Week9_Software_Testing_QA.md]]** — สอดคล้องกับ `10_Week9_Software_Testing_and_QA.pdf` (V&V, 4 ระดับการทดสอบ, TDD, Equivalence Partitioning & BVA)
+8. **[[01_New_Wiki_68/Lessons/11_Week10_Testing_Metrics|11_Week10_Testing_Metrics.md]]** — สอดคล้องกับ `11_Week10_Testing_Metrics_Cyclomatic.pdf` (Control Flow Graph, Basis Path, สูตร $V(G)=E-N+2=P+1$)
 
----
+### 🎯 หมวดข้อสอบกลางภาคปี 68 (Midterm_68/):
+* **[[01_New_Wiki_68/Midterm_68/SE-Midterm-Wiki-68|SE-Midterm-Wiki-68.md]]** — สรุปเตรียมสอบ Midterm 68 ครบทุกบทและบันทึกเฉลยข้อสอบ
 
-# 🧪 Part 5: Quality, Operations & Metrics (การทดสอบ เดฟออปส์ และการประเมินราคาซอฟต์แวร์)
-
-กระบวนการประกันคุณภาพ การทดสอบ CI/CD และการประเมินขนาดและต้นทุนซอฟต์แวร์ด้วยโมเดลคณิตศาสตร์
-
-- 🔹 **[[Lecture 9 - Software Testing & Quality Assurance]]**
-  - ระดับการทดสอบซอฟต์แวร์: Unit Testing, Integration Testing, System Testing, Acceptance Testing
-  - Test-Driven Development (TDD) Cycle (Red -> Green -> Refactor)
-  - เทคนิคการออกแบบ Test Case: Black-box Testing vs White-box Testing
-  - Equivalence Partitioning & Boundary Value Analysis (BVA)
-  - วัดผลด้วย Code Coverage Metrics (Statement, Branch, Path Coverage)
-
-- 🔹 **[[Lecture 10 - DevOps, CI-CD & Code Management]]**
-  - DevOps Culture & CALMS Model (Culture, Automation, Lean, Measurement, Sharing)
-  - Continuous Integration & Continuous Delivery/Deployment (CI/CD Pipelines)
-  - Git Version Control & Branching Strategies (GitFlow vs Trunk-Based Development)
-  - Infrastructure as Code (IaC) & Configuration Management
-  - System Monitoring, Logging & Observability
-
-- 🔹 **[[Lecture 11 - Software Cost Estimation & Metrics]]**
-  - การประมาณการขนาด (Size), ค่าใช้จ่าย (Cost), และกำลังคน (Effort)
-  - เทคนิคการวัดขนาด: LOC, DSI (Delivered Source Instruction)
-  - โมเดลการประมาณการ: LaBolle Model, Wolverton Model (Top-down, Similarity, Bottom-up), Walston & Felix Model ($E = 5.2 \times \text{KDSI}^{0.91}$)
-  - COCOMO Model (Constructive Cost Model): Basic, Intermediate, Advanced COCOMO
-  - Function Point Analysis (FPA) สมบูรณ์แบบ:
-    - 5 ประเภทฟังก์ชัน: EI, EO, EQ, ILF, EIF
-    - การวัดความซับซ้อนด้วย DET, RET, FTR และเปิดตาราง Complexity-Weight
-    - การคำนวณ Unadjusted Function Point (UFP)
-    - ปัจจัยคุณลักษณะของระบบ 14 ปัจจัย (General System Characteristics: GSCs, DI 0-5)
-    - สูตรการคำนวณ $VAF = 0.65 + (0.01 \times \text{Total DI})$
-    - สูตรการคำนวณ $FP = UFP \times VAF$
-    - การแปลง FP เป็น LOC สำหรับภาษาต่าง ๆ (Java, C++, C, Perl, Access, HTML)
-    - การคำนวณ Productivity ($\text{Output Size} / \text{Effort}$)
-    - ตัวอย่างโจทย์คำนวณและการแสดงวิธีทำอย่างละเอียด
+### 🛠️ หมวดงานและแบบฝึกหัดปี 68 (Work_and_Practice_68/):
+* **[[01_New_Wiki_68/Work_and_Practice_68/06_Practice_ReqEng_Guide|06_Practice_ReqEng_Guide.md]]** — สอดคล้องกับ `06_Practice_ReqEng.pdf` (คู่มือวิเคราะห์โจทย์คลินิก Mentcare และข้อกำหนด)
+* **[[01_New_Wiki_68/Work_and_Practice_68/Homework_68_Solutions|Homework_68_Solutions.md]]** — เฉลยการบ้าน 1 PizzaFriend, การบ้าน 2 EasyClinic Stakeholders, การบ้านจริยธรรม 4 ด้าน และคำถามท้ายคาบ
 
 ---
 
-## 📌 เอกสารประกอบและสถานะ
-ดูความก้าวหน้าการจัดทำเนื้อหาได้ที่ **[[Progress Checklist]]**
+# 🏛️ โฟลเดอร์ที่ 2: `02_Old_Wiki_Textbook/` (สไลด์เดิมและตำราคลาสสิก)
+
+รวบรวมเนื้อหาสไลด์เดิม 13 ชุด และตำรา Ian Sommerville 10th Ed.:
+
+### 📘 สรุปภาพรวมหลักสูตรเดิม:
+* **[[02_Old_Wiki_Textbook/00_Old_Curriculum_Master_Wiki|00_Old_Curriculum_Master_Wiki.md]]** — สรุปภาพรวมสไลด์เดิม 13 บทครบถ้วน
+
+### 📖 หมวดบทเรียน (Lessons/):
+* **[[02_Old_Wiki_Textbook/Lessons/01_Software_Products|01_Software_Products.md]]** — สอดคล้องกับ `01_Software_Products.pdf` (Moore's Product Vision Template, PM Roles)
+* **[[02_Old_Wiki_Textbook/Lessons/02_Agile_Software_Engineering|02_Agile_Software_Engineering.md]]** — สอดคล้องกับ `02_Agile_Software_Engineering.pdf` (Extreme Programming, Pair Programming)
+* **[[02_Old_Wiki_Textbook/Lessons/03_Features_Scenarios_and_Stories|03_Features_Scenarios_and_Stories.md]]** — สอดคล้องกับ `03_Features_Scenarios_and_Stories.pdf` (Personas, Scenarios, User Stories)
+* **[[02_Old_Wiki_Textbook/Lessons/04_Software_Architecture|04_Software_Architecture.md]]** — สอดคล้องกับ `04_Software_Architecture.pdf` (4+1 View Model, 5 Architectural Patterns)
+* **[[02_Old_Wiki_Textbook/Lessons/05_Cloud_Based_Software|05_Cloud_Based_Software.md]]** — สอดคล้องกับ `05_Cloud_Based_Software.pdf` (IaaS/PaaS/SaaS, Docker vs VM, Multi-tenancy)
+* **[[02_Old_Wiki_Textbook/Lessons/06_Microservices_Architecture|06_Microservices_Architecture.md]]** — สอดคล้องกับ `06_Microservices_Architecture.pdf` (Microservices, API Gateway, Saga Pattern)
+* **[[02_Old_Wiki_Textbook/Lessons/07_Security_and_Privacy|07_Security_and_Privacy.md]]** — สอดคล้องกับ `07_Security_and_Privacy.pdf` (CIA Triad, OWASP Top 10, PDPA/GDPR)
+* **[[02_Old_Wiki_Textbook/Lessons/08_Reliable_Programming|08_Reliable_Programming.md]]** — สอดคล้องกับ `08_Reliable_Programming.pdf` (Defensive Programming, Exception Handling)
+* **[[02_Old_Wiki_Textbook/Lessons/09_Testing|09_Testing.md]]** — สอดคล้องกับ `09_Testing.pdf` (Sommerville Testing Core)
+* **[[02_Old_Wiki_Textbook/Lessons/10_DevOps_and_Code_Management|10_DevOps_and_Code_Management.md]]** — สอดคล้องกับ `10_DevOps_and_Code_Management.pdf` (CALMS, GitFlow vs Trunk-Based)
+* **[[02_Old_Wiki_Textbook/Lessons/11_Classic_Slide_UseCase_Diagrams|11_Classic_Slide_UseCase_Diagrams.md]]** — สอดคล้องกับ `11_Classic_Slide_UseCase_Diagrams_usecaseDia2.pdf`
+* **[[02_Old_Wiki_Textbook/Lessons/12_Classic_Slide_UseCase_Textual_Specs|12_Classic_Slide_UseCase_Textual_Specs.md]]** — สอดคล้องกับ `12_Classic_Slide_UseCase_Textual_Specs_l3.pdf`
+* **[[02_Old_Wiki_Textbook/Lessons/13_Classic_Slide_Cost_Estimation|13_Classic_Slide_Cost_Estimation.md]]** — สอดคล้องกับ `13_Classic_Slide_Cost_Estimation_se_chapter4.pdf` (COCOMO & FPA)
+
+---
+
+# 📝 โฟลเดอร์ที่ 3: `03_Exams_and_Guides/` (แนวข้อสอบและคู่มือคลาสสิก)
+
+* **[[03_Exams_and_Guides/Midterm-Exam-Guide-Classic|Midterm-Exam-Guide-Classic.md]]** — รวมแนวข้อสอบจำลองชุด B, ชุด C และโจทย์วิเคราะห์ขั้นสูง
+* 🌐 **[Exam_Hub.html](file:///home/few/Projects/software-engineering/03_Exams_and_Cheatsheets/Exam_Hub.html)** — หน้า Dashboard เปิดเว็บข้อสอบแบบ Interactive ทุกชุด
+
+---
+
+# 🔧 โฟลเดอร์ที่ 4: `04_Work_and_Workshops/` (เวิร์กช็อปและงานคลาสสิก)
+
+* **[[04_Work_and_Workshops/ATM_and_Elevator_Workshop|ATM_and_Elevator_Workshop.md]]** — เวิร์กช็อป Use Case ระบบตู้ ATM และระบบควบคุมลิฟต์
+* **[[04_Work_and_Workshops/Library_System_Workshop|Library_System_Workshop.md]]** — เวิร์กช็อป Use Case ระบบห้องสมุดกลาง มจพ.
+* **[[04_Work_and_Workshops/Software_Cost_Estimation_Workshop|Software_Cost_Estimation_Workshop.md]]** — เวิร์กช็อปคำนวณ Sw Cost Estimation (COCOMO & Function Point Analysis)

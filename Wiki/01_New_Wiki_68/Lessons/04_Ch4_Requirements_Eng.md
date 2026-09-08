@@ -17,6 +17,12 @@ type: lecture
 
 # Lecture 3: Requirements Engineering, Elicitation, Specification & Case Studies
 
+> [!INFO] 🏷️ หมวดหมู่หลักสูตรและการใช้งาน (Curriculum Classification)
+> - **สถานะหลักสูตร:** ⚡ **หลักสูตรใหม่ 2568 (New 68 Core - ข้อสอบใหญ่)**
+> - **สไลด์ต้นฉบับ:** `01_New_Slides_68/04_Ch4_Requirements_Engineering.pdf`, `05_Ch4_Requirements_Cases_l2.pdf` และ ⭐ `06_Practice_ReqEng.pdf`
+> - **เป้าหมายการประเมิน:** ⭐ ออกข้อสอบกลางภาค 100% (Midterm Exam) เน้น User vs System Req, FR/NFR 4 ด้าน, V-C-C-R-V, shall vs should และโจทย์คลินิก Mentcare
+> - **ดูสรุปภาพรวมสองแกน:** [[01_New_Curriculum_68_Wiki]] และ [[02_Old_Curriculum_Classic_Wiki]]
+
 > [!SUMMARY] ภาพรวมบทเรียนและคลังความรู้ฉบับสมบูรณ์ (Master Mega-Guide)
 > บทเรียนนี้สรุปและสังเคราะห์เนื้อหาอย่างละเอียดจาก **Lecture-010925.pdf**, **Lecture2.pdf**, **Lecture3.pdf**, **Ch4 Req Eng.pdf** (Ian Sommerville Ch 4 Official Slides) และ **Practice-ReqEng.pdf** (ชุดโจทย์และกรณีศึกษาปฏิบัติการ) ครอบคลุม 8 มิติสำคัญของวิศวกรรมความต้องการ:
 > 1. [[#1. แนวคิดพื้นฐานและระดับความ abstraกต์ของความต้องการ (Fundamental RE Concepts & Abstraction)]]

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="th" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SE Midterm Exam Studio & Cheatsheet (ปี 68) — ฉบับขาวคลีนสำหรับอ่านและ Print</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,3,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,3,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       /* Clean Light Theme as Default */
@@ -29,8 +32,8 @@
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
       --shadow-glow: 0 0 15px rgba(2, 132, 199, 0.12);
     }
 
@@ -51,8 +54,8 @@
       --accent-rose: #fb7185;
       --border-color: #334155;
       --border-light: rgba(255, 255, 255, 0.1);
-      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.3);
-      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.4);
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
       --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.15);
     }
 
@@ -71,7 +74,8 @@
       padding-bottom: 80px;
     }
 
-    code, pre {
+    code,
+    pre {
       font-family: 'JetBrains Mono', monospace;
     }
 
@@ -345,11 +349,35 @@
       letter-spacing: 0.5px;
     }
 
-    .badge-blue { background: rgba(2, 132, 199, 0.1); color: var(--accent-blue); border: 1px solid rgba(2, 132, 199, 0.3); }
-    .badge-purple { background: rgba(126, 34, 206, 0.1); color: var(--accent-purple); border: 1px solid rgba(126, 34, 206, 0.3); }
-    .badge-emerald { background: rgba(4, 120, 87, 0.1); color: var(--accent-emerald); border: 1px solid rgba(4, 120, 87, 0.3); }
-    .badge-amber { background: rgba(180, 83, 9, 0.1); color: var(--accent-amber); border: 1px solid rgba(180, 83, 9, 0.3); }
-    .badge-rose { background: rgba(190, 18, 60, 0.1); color: var(--accent-rose); border: 1px solid rgba(190, 18, 60, 0.3); }
+    .badge-blue {
+      background: rgba(2, 132, 199, 0.1);
+      color: var(--accent-blue);
+      border: 1px solid rgba(2, 132, 199, 0.3);
+    }
+
+    .badge-purple {
+      background: rgba(126, 34, 206, 0.1);
+      color: var(--accent-purple);
+      border: 1px solid rgba(126, 34, 206, 0.3);
+    }
+
+    .badge-emerald {
+      background: rgba(4, 120, 87, 0.1);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(4, 120, 87, 0.3);
+    }
+
+    .badge-amber {
+      background: rgba(180, 83, 9, 0.1);
+      color: var(--accent-amber);
+      border: 1px solid rgba(180, 83, 9, 0.3);
+    }
+
+    .badge-rose {
+      background: rgba(190, 18, 60, 0.1);
+      color: var(--accent-rose);
+      border: 1px solid rgba(190, 18, 60, 0.3);
+    }
 
     /* Tables */
     .table-container {
@@ -393,7 +421,8 @@
       vertical-align: top;
     }
 
-    td:last-child, th:last-child {
+    td:last-child,
+    th:last-child {
       border-right: none;
     }
 
@@ -410,12 +439,14 @@
     }
 
     /* Lists */
-    ul.check-list, ol.num-list {
+    ul.check-list,
+    ol.num-list {
       padding-left: 20px;
       margin: 10px 0;
     }
 
-    ul.check-list li, ol.num-list li {
+    ul.check-list li,
+    ol.num-list li {
       margin-bottom: 6px;
       color: var(--text-secondary);
       font-size: 0.92rem;
@@ -707,7 +738,14 @@
         padding: 0 !important;
       }
 
-      header, .header-controls, .tab-bar, .search-box, .answer-toggle-btn, .btn, .no-print, .flashcard-hint {
+      header,
+      .header-controls,
+      .tab-bar,
+      .search-box,
+      .answer-toggle-btn,
+      .btn,
+      .no-print,
+      .flashcard-hint {
         display: none !important;
       }
 
@@ -754,7 +792,8 @@
         page-break-after: avoid;
       }
 
-      .card, .exam-question-card {
+      .card,
+      .exam-question-card {
         background: #ffffff !important;
         border: 1pt solid #475569 !important;
         box-shadow: none !important;
@@ -916,6 +955,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -933,12 +973,23 @@
         <div class="header-controls">
           <div class="search-box">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาเนื้อหา / คีย์เวิร์ด..." onkeyup="filterContent()">
+            <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาเนื้อหา / คีย์เวิร์ด..."
+              onkeyup="filterContent()">
           </div>
 
-          <a href="practice-reqeng-guide.html" class="btn" style="background: rgba(2, 132, 199, 0.1); color: var(--accent-blue); border-color: rgba(2, 132, 199, 0.3); font-weight: 600; text-decoration: none;">🧭 คู่มือแกะโจทย์ & สูตรตอบ</a>
+          <a href="midterm-thai-exam-answers.html" class="btn"
+            style="background: rgba(4, 120, 87, 0.1); color: var(--accent-emerald); border-color: rgba(4, 120, 87, 0.3); font-weight: 700; text-decoration: none;">📝
+            เฉลยไทย 5 ข้อ + 4 Stakeholders</a>
+          <a href="practice-reqeng-exam-breakdown.html" class="btn"
+            style="background: rgba(190, 18, 60, 0.1); color: var(--accent-rose); border-color: rgba(190, 18, 60, 0.3); font-weight: 700; text-decoration: none;">📑
+            ถอดรหัส PDF 68 & แปลไทย</a>
+          <a href="practice-reqeng-guide.html" class="btn"
+            style="background: rgba(2, 132, 199, 0.1); color: var(--accent-blue); border-color: rgba(2, 132, 199, 0.3); font-weight: 600; text-decoration: none;">🧭
+            คู่มือแกะโจทย์ & สูตรตอบ</a>
           <a href="midterm-exam-set-b.html" class="btn">🎯 ชุด B (Mock 2)</a>
-          <a href="midterm-exam-set-c.html" class="btn" style="background: rgba(126, 34, 206, 0.1); color: var(--accent-purple); border-color: rgba(126, 34, 206, 0.3); font-weight: 600; text-decoration: none;">🔬 ชุด C (เน้นบท 4)</a>
+          <a href="midterm-exam-set-c.html" class="btn"
+            style="background: rgba(126, 34, 206, 0.1); color: var(--accent-purple); border-color: rgba(126, 34, 206, 0.3); font-weight: 600; text-decoration: none;">🔬
+            ชุด C (เน้นบท 4)</a>
           <button class="btn" onclick="toggleAllAnswers(true)">👁️ แสดงเฉลยทั้งหมด</button>
           <button class="btn" onclick="toggleAllAnswers(false)">🙈 ซ่อนเฉลย (ฝึกทำ)</button>
           <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
@@ -963,10 +1014,11 @@
     <div class="hero-banner">
       <h2 class="hero-title">🚀 SE Midterm Mastery (หลักสูตรปี 68 โดยเฉพาะ — ธีมขาว Clean Print)</h2>
       <p class="hero-desc">
-        เนื้อหาชุดนี้วิเคราะห์และสกัดจาก <strong>New_68</strong> ครบถ้วน 100%: 
-        <strong>Ch1 Introduction</strong>, <strong>Ch2 SW Processes</strong>, <strong>Ch4 Req Eng</strong>, 
-        <strong>Homework 1 (PizzaFriend)</strong>, <strong>Homework 2 (EasyClinic)</strong>, 
-        <strong>การบ้านจริยธรรม & เปรียบเทียบ Process</strong>, และแนวข้อสอบแม่แบบตาม <strong>Practice-ReqEng.pdf</strong>
+        เนื้อหาชุดนี้วิเคราะห์และสกัดจาก <strong>New_68</strong> ครบถ้วน 100%:
+        <strong>Ch1 Introduction</strong>, <strong>Ch2 SW Processes</strong>, <strong>Ch4 Req Eng</strong>,
+        <strong>Homework 1 (PizzaFriend)</strong>, <strong>Homework 2 (EasyClinic)</strong>,
+        <strong>การบ้านจริยธรรม & เปรียบเทียบ Process</strong>, และแนวข้อสอบแม่แบบตาม
+        <strong>Practice-ReqEng.pdf</strong>
       </p>
       <div class="hero-tags">
         <span class="hero-tag highlight">📌 ข้อสอบเป็นภาษาอังกฤษ อนุโลมตอบภาษาไทยได้</span>
@@ -982,13 +1034,18 @@
     <div id="tab-exam-section" class="tab-content-block">
       <h2 class="section-title">🎯 5 ข้อสอบแม่แบบ Midterm (ออกแบบตาม Practice-ReqEng.pdf)</h2>
       <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 0.9rem;">
-        *ข้อสอบออกเป็นภาษาอังกฤษ ผู้สอนอนุโลมให้ตอบเป็นภาษาไทยได้ ด้านล่างนี้มีทั้งโจทย์ภาษาอังกฤษ คำแปลไทย และเฉลยสมบูรณ์แบบ 2 ภาษา (EN/TH)*
+        *ข้อสอบออกเป็นภาษาอังกฤษ ผู้สอนอนุโลมให้ตอบเป็นภาษาไทยได้ ด้านล่างนี้มีทั้งโจทย์ภาษาอังกฤษ คำแปลไทย
+        และเฉลยสมบูรณ์แบบ 2 ภาษา (EN/TH)*
       </p>
 
       <!-- QUESTION 1 -->
       <div class="exam-question-card" data-searchable>
         <span class="q-number-tag">EXAM QUESTION 1 : SCENARIO REQUIREMENT CLASSIFICATION</span>
-        <h3 class="q-title">Question 1: Requirements Identification and Categorization (Functional, Non-Functional, Domain & Constraints)</h3>
+        <h3 class="q-title">Question 1: Requirements Identification and Categorization (Functional, Non-Functional,
+          Domain & Constraints)<br><small
+            style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]:
+            การระบุและจำแนกประเภทความต้องการ (ความต้องการเชิงหน้าที่, เชิงคุณลักษณะ, เชิงโดเมน
+            และข้อจำกัดโครงการ)</small></h3>
         <div class="q-meta">
           <span><strong>หัวข้อ:</strong> Chapter 4 & Practice-ReqEng (PizzaFriend / FreshMart Model)</span>
           <span>• <strong>คะแนนโดยประมาณ:</strong> 20 - 25 คะแนน</span>
@@ -996,19 +1053,33 @@
 
         <div class="scenario-box en">
           <strong>[English Problem Scenario]: "SmartCampus" University Express Delivery & Locker System</strong><br>
-          KMUTNB University plans to launch a campus-wide smart parcel delivery system called "SmartCampus" to solve the issue of misplaced packages and long waiting lines at the mailroom.
-          Students and staff must register and log in using their university email. When a parcel arrives at the campus mail hub, staff can scan the tracking barcode and assign it to an automated smart locker.
-          The system must immediately send an SMS and email notification to the recipient containing a secure 6-digit pickup OTP code and a QR code.
+          KMUTNB University plans to launch a campus-wide smart parcel delivery system called "SmartCampus" to solve the
+          issue of misplaced packages and long waiting lines at the mailroom.
+          Students and staff must register and log in using their university email. When a parcel arrives at the campus
+          mail hub, staff can scan the tracking barcode and assign it to an automated smart locker.
+          The system must immediately send an SMS and email notification to the recipient containing a secure 6-digit
+          pickup OTP code and a QR code.
           Recipients can open their assigned locker by scanning the QR code or typing their OTP at the locker kiosk.
-          The system must calculate storage fees if a package is left in a locker for more than 48 hours and accept payments via Mobile Banking QR Code before releasing the door.
+          The system must calculate storage fees if a package is left in a locker for more than 48 hours and accept
+          payments via Mobile Banking QR Code before releasing the door.
           The kiosk UI must be intuitive, allowing users to collect their parcel within 30 seconds.
-          The system must handle at least 800 concurrent users during peak rush hours (12:00-13:30) with a response time under 2 seconds.
-          All student personal data and contact records must comply strictly with Thailand's Personal Data Protection Act (PDPA).
-          The mobile client must be built using Flutter to support both iOS and Android, and the server must integrate with the university's Active Directory student database. The entire project must be completed within 3 months with a budget not exceeding 250,000 Baht.
+          The system must handle at least 800 concurrent users during peak rush hours (12:00-13:30) with a response time
+          under 2 seconds.
+          All student personal data and contact records must comply strictly with Thailand's Personal Data Protection
+          Act (PDPA).
+          The mobile client must be built using Flutter to support both iOS and Android, and the server must integrate
+          with the university's Active Directory student database. The entire project must be completed within 3 months
+          with a budget not exceeding 250,000 Baht.
         </div>
 
         <div class="scenario-box th">
-          <strong>[คำแปลโจทย์ภาษาไทย]:</strong> มหาวิทยาลัยต้องการพัฒนาระบบรับส่งพัสดุและตู้ล็อกเกอร์อัจฉริยะ "SmartCampus" นักศึกษา/บุคลากรต้องล็อกอินด้วยอีเมลสถาบัน เมื่อพัสดุมาถึงเจ้าหน้าที่จะสแกนบาร์โค้ดเพื่อนำเข้าตู้ ระบบต้องส่ง SMS และ Email พร้อมรหัส OTP 6 หลัก และ QR Code ให้ผู้รับทันที ผู้รับสามารถสแกน QR หรือกด OTP ที่หน้าตู้เพื่อเปิดรับของได้ หากฝากเกิน 48 ชม. ระบบต้องคำนวณค่าปรับและรองรับการจ่ายเงินผ่าน Mobile Banking QR Code ก่อนเปิดตู้ หน้าจอใช้งานง่ายรับของได้ใน 30 วินาที รองรับผู้ใช้พร้อมกัน 800 คน ตอบสนองใน 2 วินาที ข้อมูลต้องปลอดภัยตาม PDPA พัฒนาด้วย Flutter รองรับ iOS/Android ต่อระบบ Active Directory มหาลัย และเสร็จใน 3 เดือน งบไม่เกิน 250,000 บาท
+          <strong>[คำแปลโจทย์ภาษาไทย]:</strong> มหาวิทยาลัยต้องการพัฒนาระบบรับส่งพัสดุและตู้ล็อกเกอร์อัจฉริยะ
+          "SmartCampus" นักศึกษา/บุคลากรต้องล็อกอินด้วยอีเมลสถาบัน
+          เมื่อพัสดุมาถึงเจ้าหน้าที่จะสแกนบาร์โค้ดเพื่อนำเข้าตู้ ระบบต้องส่ง SMS และ Email พร้อมรหัส OTP 6 หลัก และ QR
+          Code ให้ผู้รับทันที ผู้รับสามารถสแกน QR หรือกด OTP ที่หน้าตู้เพื่อเปิดรับของได้ หากฝากเกิน 48 ชม.
+          ระบบต้องคำนวณค่าปรับและรองรับการจ่ายเงินผ่าน Mobile Banking QR Code ก่อนเปิดตู้ หน้าจอใช้งานง่ายรับของได้ใน 30
+          วินาที รองรับผู้ใช้พร้อมกัน 800 คน ตอบสนองใน 2 วินาที ข้อมูลต้องปลอดภัยตาม PDPA พัฒนาด้วย Flutter รองรับ
+          iOS/Android ต่อระบบ Active Directory มหาลัย และเสร็จใน 3 เดือน งบไม่เกิน 250,000 บาท
         </div>
 
         <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -1017,82 +1088,111 @@
         </button>
 
         <div class="answer-content">
-          <div class="answer-subheading">1. Functional Requirements (ความต้องการเชิงหน้าที่ — What the system shall do)</div>
+          <div class="answer-subheading">1. Functional Requirements (ความต้องการเชิงหน้าที่ — What the system shall do)
+          </div>
           <div class="bilingual-pair">
-            <div class="en">• The system shall allow students and staff to register and log in using their university email.</div>
+            <div class="en">• The system shall allow students and staff to register and log in using their university
+              email.</div>
             <div class="th">ระบบต้องอนุญาตให้นักศึกษาและบุคลากรลงทะเบียนและเข้าสู่ระบบด้วยอีเมลของมหาวิทยาลัยได้</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• The system shall allow mailroom staff to scan parcel barcodes and assign them to specific smart lockers.</div>
-            <div class="th">ระบบต้องให้เจ้าหน้าที่สแกนบาร์โค้ดพัสดุและระบุตู้ล็อกเกอร์อัจฉริยะสำหรับจัดเก็บพัสดุได้</div>
+            <div class="en">• The system shall allow mailroom staff to scan parcel barcodes and assign them to specific
+              smart lockers.</div>
+            <div class="th">ระบบต้องให้เจ้าหน้าที่สแกนบาร์โค้ดพัสดุและระบุตู้ล็อกเกอร์อัจฉริยะสำหรับจัดเก็บพัสดุได้
+            </div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• The system shall automatically send an SMS and email notification with a 6-digit OTP and QR code to the recipient upon parcel deposition.</div>
-            <div class="th">ระบบต้องส่งการแจ้งเตือนทาง SMS และอีเมลพร้อมรหัส OTP 6 หลัก และ QR Code ไปยังผู้รับทันทีเมื่อพัสดุเข้าตู้</div>
+            <div class="en">• The system shall automatically send an SMS and email notification with a 6-digit OTP and
+              QR code to the recipient upon parcel deposition.</div>
+            <div class="th">ระบบต้องส่งการแจ้งเตือนทาง SMS และอีเมลพร้อมรหัส OTP 6 หลัก และ QR Code
+              ไปยังผู้รับทันทีเมื่อพัสดุเข้าตู้</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• The system shall verify the QR code or OTP at the locker kiosk to unlock the assigned locker door.</div>
+            <div class="en">• The system shall verify the QR code or OTP at the locker kiosk to unlock the assigned
+              locker door.</div>
             <div class="th">ระบบต้องตรวจสอบความถูกต้องของ QR Code หรือรหัส OTP ที่ตู้คีออสเพื่อปลดล็อกเปิดประตูตู้</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• The system shall calculate overtime storage fees if a package is stored for over 48 hours.</div>
+            <div class="en">• The system shall calculate overtime storage fees if a package is stored for over 48 hours.
+            </div>
             <div class="th">ระบบต้องคำนวณค่าธรรมเนียมการฝากเกินเวลาโดยอัตโนมัติหากฝากพัสดุไว้นานเกิน 48 ชั่วโมง</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• The system shall accept payments via Mobile Banking (PromptPay QR Code) before releasing the locker door.</div>
-            <div class="th">ระบบต้องรองรับการชำระเงินผ่าน Mobile Banking (สแกน PromptPay QR Code) ก่อนปลดล็อกตู้ในกรณีมีค่าปรับ</div>
+            <div class="en">• The system shall accept payments via Mobile Banking (PromptPay QR Code) before releasing
+              the locker door.</div>
+            <div class="th">ระบบต้องรองรับการชำระเงินผ่าน Mobile Banking (สแกน PromptPay QR Code)
+              ก่อนปลดล็อกตู้ในกรณีมีค่าปรับ</div>
           </div>
 
-          <div class="answer-subheading">2. Non-Functional Requirements (ความต้องการเชิงคุณลักษณะ — How the system should perform)</div>
+          <div class="answer-subheading">2. Non-Functional Requirements (ความต้องการเชิงคุณลักษณะ — How the system
+            should perform)</div>
           <div class="bilingual-pair">
-            <div class="en"><strong>• Usability:</strong> The kiosk interface must be intuitive, allowing users to complete parcel pickup within 30 seconds without prior training.</div>
-            <div class="th"><strong>ด้านการใช้งาน (Usability):</strong> หน้าจอใช้งานง่าย สามารถทำรายการรับพัสดุเสร็จสิ้นได้ภายใน 30 วินาทีโดยไม่ต้องฝึกอบรม</div>
+            <div class="en"><strong>• Usability:</strong> The kiosk interface must be intuitive, allowing users to
+              complete parcel pickup within 30 seconds without prior training.</div>
+            <div class="th"><strong>ด้านการใช้งาน (Usability):</strong> หน้าจอใช้งานง่าย
+              สามารถทำรายการรับพัสดุเสร็จสิ้นได้ภายใน 30 วินาทีโดยไม่ต้องฝึกอบรม</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>• Performance:</strong> The system shall respond to user inputs and QR scans within 2 seconds.</div>
-            <div class="th"><strong>ด้านประสิทธิภาพ (Performance):</strong> ระบบต้องตอบสนองต่อการสั่งการและการสแกน QR Code ภายในเวลาไม่เกิน 2 วินาที</div>
+            <div class="en"><strong>• Performance:</strong> The system shall respond to user inputs and QR scans within
+              2 seconds.</div>
+            <div class="th"><strong>ด้านประสิทธิภาพ (Performance):</strong> ระบบต้องตอบสนองต่อการสั่งการและการสแกน QR
+              Code ภายในเวลาไม่เกิน 2 วินาที</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>• Capacity / Scalability:</strong> The system must support at least 800 concurrent users during peak hours without performance degradation.</div>
-            <div class="th"><strong>ด้านการรองรับผู้ใช้ (Capacity):</strong> ระบบต้องรองรับผู้ใช้งานพร้อมกันอย่างน้อย 800 คนในช่วงเวลาเร่งด่วนโดยระบบไม่ช้าหรือล่ม</div>
+            <div class="en"><strong>• Capacity / Scalability:</strong> The system must support at least 800 concurrent
+              users during peak hours without performance degradation.</div>
+            <div class="th"><strong>ด้านการรองรับผู้ใช้ (Capacity):</strong> ระบบต้องรองรับผู้ใช้งานพร้อมกันอย่างน้อย
+              800 คนในช่วงเวลาเร่งด่วนโดยระบบไม่ช้าหรือล่ม</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>• Security:</strong> Customer personal data and OTP credentials must be encrypted during transmission and storage.</div>
-            <div class="th"><strong>ด้านความปลอดภัย (Security):</strong> ข้อมูลส่วนบุคคลและรหัส OTP ต้องได้รับการเข้ารหัสอย่างปลอดภัยขณะส่งผ่านเครือข่ายและจัดเก็บ</div>
+            <div class="en"><strong>• Security:</strong> Customer personal data and OTP credentials must be encrypted
+              during transmission and storage.</div>
+            <div class="th"><strong>ด้านความปลอดภัย (Security):</strong> ข้อมูลส่วนบุคคลและรหัส OTP
+              ต้องได้รับการเข้ารหัสอย่างปลอดภัยขณะส่งผ่านเครือข่ายและจัดเก็บ</div>
           </div>
 
           <div class="answer-subheading">3. Domain Requirements (ความต้องการเฉพาะด้านโดเมน)</div>
           <div class="bilingual-pair">
-            <div class="en">• The system must integrate with the university's Active Directory authentication service for student/staff credential verification.</div>
-            <div class="th">ระบบต้องเชื่อมต่อกับระบบฐานข้อมูล Active Directory ของมหาวิทยาลัยเพื่อยืนยันสถานะนักศึกษาและบุคลากร</div>
+            <div class="en">• The system must integrate with the university's Active Directory authentication service
+              for student/staff credential verification.</div>
+            <div class="th">ระบบต้องเชื่อมต่อกับระบบฐานข้อมูล Active Directory
+              ของมหาวิทยาลัยเพื่อยืนยันสถานะนักศึกษาและบุคลากร</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• The system must strictly comply with Thailand's Personal Data Protection Act (PDPA) regarding parcel recipient data handling and retention.</div>
-            <div class="th">ระบบต้องปฏิบัติตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) ของประเทศไทย ในการเก็บรักษาและทำลายข้อมูลผู้รับพัสดุ</div>
+            <div class="en">• The system must strictly comply with Thailand's Personal Data Protection Act (PDPA)
+              regarding parcel recipient data handling and retention.</div>
+            <div class="th">ระบบต้องปฏิบัติตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) ของประเทศไทย
+              ในการเก็บรักษาและทำลายข้อมูลผู้รับพัสดุ</div>
           </div>
 
           <div class="answer-subheading">4. Constraints (ข้อจำกัดของโครงการ)</div>
           <div class="bilingual-pair">
-            <div class="en">• The mobile application must be developed using the Flutter framework to support both iOS and Android from a single codebase.</div>
-            <div class="th">ทีมพัฒนาต้องใช้ Flutter Framework เพื่อให้แอปพลิเคชันรองรับทั้ง iOS และ Android ด้วย Source Code ชุดเดียวกัน</div>
+            <div class="en">• The mobile application must be developed using the Flutter framework to support both iOS
+              and Android from a single codebase.</div>
+            <div class="th">ทีมพัฒนาต้องใช้ Flutter Framework เพื่อให้แอปพลิเคชันรองรับทั้ง iOS และ Android ด้วย Source
+              Code ชุดเดียวกัน</div>
           </div>
           <div class="bilingual-pair">
             <div class="en">• Total project development cost must not exceed 250,000 Baht.</div>
             <div class="th">งบประมาณในการพัฒนาทั้งหมดต้องไม่เกิน 250,000 บาท</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• The system must be fully developed, tested, and deployed ready for launch within 3 months.</div>
+            <div class="en">• The system must be fully developed, tested, and deployed ready for launch within 3 months.
+            </div>
             <div class="th">ระบบต้องพัฒนา ทดสอบ และเปิดให้บริการจริงได้ภายในระยะเวลาไม่เกิน 3 เดือน</div>
           </div>
 
-          <div class="scoring-tip">⭐ <strong>เทคนิคการทำข้อสอบ:</strong> เขียนแยกเป็น 4 หัวข้อชัดเจนตามนี้ ใช้คำว่า "ระบบต้อง..." หรือ "The system shall..." และระบุตัวเลขที่วัดผลได้ (Testable metric) ใน NFR</div>
+          <div class="scoring-tip">⭐ <strong>เทคนิคการทำข้อสอบ:</strong> เขียนแยกเป็น 4 หัวข้อชัดเจนตามนี้ ใช้คำว่า
+            "ระบบต้อง..." หรือ "The system shall..." และระบุตัวเลขที่วัดผลได้ (Testable metric) ใน NFR</div>
         </div>
       </div>
 
       <!-- QUESTION 2 -->
       <div class="exam-question-card" data-searchable>
         <span class="q-number-tag">EXAM QUESTION 2 : STAKEHOLDERS & ELICITATION TECHNIQUES</span>
-        <h3 class="q-title">Question 2: Stakeholder Identification, Roles Definition & Elicitation Techniques</h3>
+        <h3 class="q-title">Question 2: Stakeholder Identification, Roles Definition & Elicitation Techniques<br><small
+            style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]:
+            การระบุผู้มีส่วนได้ส่วนเสีย, การกำหนดบทบาทหน้าที่ และเทคนิคการรวบรวมความต้องการ</small></h3>
         <div class="q-meta">
           <span><strong>หัวข้อ:</strong> Chapter 4 & Homework 2 (EasyClinic / ReadSmart Model)</span>
           <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
@@ -1100,8 +1200,21 @@
 
         <div class="scenario-box en">
           <strong>[Problem Prompt]:</strong><br>
-          (a) Based on the <strong>"EasyClinic" Online Appointment Booking System</strong> (or Mentcare Case Study), identify at least <strong>6 key Stakeholders</strong> (Internal and External) and define their precise <strong>Roles</strong> in the project.<br>
-          (b) Compare and explain when a requirements engineer should use <strong>Interviews (Closed vs. Open)</strong>, <strong>Ethnography</strong>, and <strong>Scenarios / User Stories</strong> for eliciting requirements.
+          (a) Based on the <strong>"EasyClinic" Online Appointment Booking System</strong> (or Mentcare Case Study),
+          identify at least <strong>6 key Stakeholders</strong> (Internal and External) and define their precise
+          <strong>Roles</strong> in the project.<br>
+          (b) Compare and explain when a requirements engineer should use <strong>Interviews (Closed vs. Open)</strong>,
+          <strong>Ethnography</strong>, and <strong>Scenarios / User Stories</strong> for eliciting requirements.
+        </div>
+
+        <div class="scenario-box th">
+          <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+          (a) จากกรณีศึกษาระบบจองคิวนัดหมายออนไลน์ <strong>"EasyClinic"</strong> (หรือระบบ Mentcare) จงระบุ
+          <strong>ผู้มีส่วนได้ส่วนเสียหลักอย่างน้อย 6 กลุ่ม</strong> (ทั้งภายในและภายนอกองค์กร) พร้อมทั้งอธิบาย
+          <strong>บทบาทหน้าที่ (Roles & Responsibilities)</strong> ของแต่ละกลุ่มในโครงการอย่างชัดเจน<br>
+          (b) จงเปรียบเทียบและอธิบายว่าวิศวกรความต้องการควรเลือกใช้ <strong>การสัมภาษณ์ (คำถามปลายปิด vs
+            ปลายเปิด)</strong>, <strong>การสังเกตเชิงชาติพันธุ์วรรณา (Ethnography)</strong>, และ <strong>Scenarios /
+            User Stories</strong> ในสถานการณ์ใดบ้างเพื่อรวบรวมความต้องการได้อย่างมีประสิทธิภาพ
         </div>
 
         <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -1110,7 +1223,8 @@
         </button>
 
         <div class="answer-content">
-          <div class="answer-subheading">(a) ตารางวิเคราะห์ผู้มีส่วนได้ส่วนเสียและบทบาทหน้าที่ (Stakeholders & Roles)</div>
+          <div class="answer-subheading">(a) ตารางวิเคราะห์ผู้มีส่วนได้ส่วนเสียและบทบาทหน้าที่ (Stakeholders & Roles)
+          </div>
           <div class="table-container">
             <table>
               <thead>
@@ -1123,44 +1237,54 @@
               <tbody>
                 <tr>
                   <td><span class="card-badge badge-blue">Internal</span></td>
-                  <td><strong>1. Clinic Owner / Sponsor</strong><br><small>(เจ้าของคลินิก / ผู้สนับสนุนโครงการ)</small></td>
+                  <td><strong>1. Clinic Owner / Sponsor</strong><br><small>(เจ้าของคลินิก / ผู้สนับสนุนโครงการ)</small>
+                  </td>
                   <td>กำหนดเป้าหมายทางธุรกิจ งบประมาณ กรอบเวลา (3 เดือน) และตรวจสอบรายงานรายได้และสถิติการใช้บริการ</td>
                 </tr>
                 <tr>
                   <td><span class="card-badge badge-blue">Internal</span></td>
                   <td><strong>2. Doctors</strong><br><small>(แพทย์ผู้ตรวจ)</small></td>
-                  <td>เข้าถึง Dashboard เพื่อดูตารางนัดหมายผู้ป่วย กำหนดเวลาตรวจ และปรับเปลี่ยนเวลาตรวจเมื่อมีเหตุจำเป็น</td>
+                  <td>เข้าถึง Dashboard เพื่อดูตารางนัดหมายผู้ป่วย กำหนดเวลาตรวจ และปรับเปลี่ยนเวลาตรวจเมื่อมีเหตุจำเป็น
+                  </td>
                 </tr>
                 <tr>
                   <td><span class="card-badge badge-blue">Internal</span></td>
-                  <td><strong>3. Clinic Staff / Receptionists</strong><br><small>(เจ้าหน้าที่หน้าเคาน์เตอร์)</small></td>
+                  <td><strong>3. Clinic Staff / Receptionists</strong><br><small>(เจ้าหน้าที่หน้าเคาน์เตอร์)</small>
+                  </td>
                   <td>ตรวจสอบคิวผู้ป่วย อัปเดตสถานะ (มาถึงแล้ว / ไม่มาตามนัด - No-show) และจัดการคิวเร่งด่วน</td>
                 </tr>
                 <tr>
                   <td><span class="card-badge badge-blue">Internal</span></td>
-                  <td><strong>4. Development Team & UX Designers</strong><br><small>(ทีมพัฒนาระบบและออกแบบ UI)</small></td>
-                  <td>ออกแบบ วิเคราะห์ พัฒนาระบบให้รองรับ Mobile & Web และออกแบบหน้าจอให้ผู้สูงอายุใช้งานง่าย (Senior-friendly)</td>
+                  <td><strong>4. Development Team & UX Designers</strong><br><small>(ทีมพัฒนาระบบและออกแบบ UI)</small>
+                  </td>
+                  <td>ออกแบบ วิเคราะห์ พัฒนาระบบให้รองรับ Mobile & Web และออกแบบหน้าจอให้ผู้สูงอายุใช้งานง่าย
+                    (Senior-friendly)</td>
                 </tr>
                 <tr>
                   <td><span class="card-badge badge-purple">External</span></td>
                   <td><strong>5. Patients (End Users)</strong><br><small>(ผู้ป่วย / ผู้ใช้งานทั่วไป)</small></td>
-                  <td>ลงทะเบียนด้วยเบอร์โทร/บัตรประชาชน เลือกแผนกและหมอ จองคิว และรับการแจ้งเตือนนัดหมายผ่าน SMS/Email</td>
+                  <td>ลงทะเบียนด้วยเบอร์โทร/บัตรประชาชน เลือกแผนกและหมอ จองคิว และรับการแจ้งเตือนนัดหมายผ่าน SMS/Email
+                  </td>
                 </tr>
                 <tr>
                   <td><span class="card-badge badge-purple">External</span></td>
-                  <td><strong>6. Third-party SMS/Email Gateway Provider</strong><br><small>(ผู้ให้บริการ SMS/Email Gateway)</small></td>
+                  <td><strong>6. Third-party SMS/Email Gateway Provider</strong><br><small>(ผู้ให้บริการ SMS/Email
+                      Gateway)</small></td>
                   <td>ให้บริการเชื่อมต่อ API สำหรับส่งข้อความเตือนนัดหมายอัตโนมัติล่วงหน้า 1 วัน และ 1 ชั่วโมง</td>
                 </tr>
                 <tr>
                   <td><span class="card-badge badge-purple">External</span></td>
-                  <td><strong>7. Regulators / Legal Authorities (PDPA / HIPAA)</strong><br><small>(หน่วยงานกำกับดูแลทางกฎหมายและสาธารณสุข)</small></td>
-                  <td>กำหนดและตรวจสอบมาตรฐานความปลอดภัย การเข้ารหัสข้อมูลสุขภาพผู้ป่วย และการคุ้มครองข้อมูลส่วนบุคคล</td>
+                  <td><strong>7. Regulators / Legal Authorities (PDPA /
+                      HIPAA)</strong><br><small>(หน่วยงานกำกับดูแลทางกฎหมายและสาธารณสุข)</small></td>
+                  <td>กำหนดและตรวจสอบมาตรฐานความปลอดภัย การเข้ารหัสข้อมูลสุขภาพผู้ป่วย และการคุ้มครองข้อมูลส่วนบุคคล
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <div class="answer-subheading">(b) การเปรียบเทียบเทคนิคการรวบรวมความต้องการ (Requirement Elicitation Techniques)</div>
+          <div class="answer-subheading">(b) การเปรียบเทียบเทคนิคการรวบรวมความต้องการ (Requirement Elicitation
+            Techniques)</div>
           <div class="table-container">
             <table>
               <thead>
@@ -1174,34 +1298,46 @@
               <tbody>
                 <tr>
                   <td><strong>1. Interviewing</strong><br>• Closed (คำถามปลายปิด)<br>• Open (คำถามปลายเปิด)</td>
-                  <td>พูดคุยซักถามผู้มีส่วนได้ส่วนเสียโดยตรง<br>• ปลายปิด: คำถามมีชุดคำตอบแน่นอน<br>• ปลายเปิด: สำรวจประเด็นกว้างๆ ไม่จำกัดคำตอบ</td>
-                  <td><strong>ข้อดี:</strong> ได้ภาพรวมความเข้าใจที่ดี รวดเร็ว<br><strong>ข้อจำกัด:</strong> ผู้ใช้อาจลืมบอกขั้นตอนที่เป็นความเคยชิน และศัพท์เฉพาะทาง (Domain Jargon) เข้าใจยาก</td>
+                  <td>พูดคุยซักถามผู้มีส่วนได้ส่วนเสียโดยตรง<br>• ปลายปิด: คำถามมีชุดคำตอบแน่นอน<br>• ปลายเปิด:
+                    สำรวจประเด็นกว้างๆ ไม่จำกัดคำตอบ</td>
+                  <td><strong>ข้อดี:</strong> ได้ภาพรวมความเข้าใจที่ดี รวดเร็ว<br><strong>ข้อจำกัด:</strong>
+                    ผู้ใช้อาจลืมบอกขั้นตอนที่เป็นความเคยชิน และศัพท์เฉพาะทาง (Domain Jargon) เข้าใจยาก</td>
                   <td>ใช้ในช่วงเริ่มต้นโครงการเพื่อทำความเข้าใจภาพรวมของระบบและเป้าหมายของ Stakeholder แต่ละกลุ่ม</td>
                 </tr>
                 <tr>
                   <td><strong>2. Ethnography (การสังเกตพฤติกรรม)</strong></td>
                   <td>นักวิเคราะห์เข้าไปฝังตัวสังเกตการณ์การทำงานจริงในสถานที่จริง โดยที่ผู้ปฏิบัติงานไม่ต้องอธิบาย</td>
-                  <td><strong>ข้อดี:</strong> เห็นการทำงานจริง (Social & Organizational factors) ที่ไม่ได้เขียนในคู่มือ<br><strong>ข้อจำกัด:</strong> ไม่สามารถบอกฟีเจอร์ใหม่ที่ระบบควรมีได้ (เห็นแค่อดีต/ปัจจุบัน)</td>
-                  <td>ใช้เมื่อต้องการทำความเข้าใจกระบวนการทำงานที่ซับซ้อน เช่น การรับคนไข้หน้าเคาน์เตอร์คลินิก หรือการควบคุมการบิน</td>
+                  <td><strong>ข้อดี:</strong> เห็นการทำงานจริง (Social & Organizational factors)
+                    ที่ไม่ได้เขียนในคู่มือ<br><strong>ข้อจำกัด:</strong> ไม่สามารถบอกฟีเจอร์ใหม่ที่ระบบควรมีได้
+                    (เห็นแค่อดีต/ปัจจุบัน)</td>
+                  <td>ใช้เมื่อต้องการทำความเข้าใจกระบวนการทำงานที่ซับซ้อน เช่น การรับคนไข้หน้าเคาน์เตอร์คลินิก
+                    หรือการควบคุมการบิน</td>
                 </tr>
                 <tr>
                   <td><strong>3. Scenarios & User Stories</strong></td>
-                  <td>การจำลองเรื่องราวจริงทีละขั้นตอน (Starting state -> Normal flow -> What can go wrong -> Concurrent activities -> End state)</td>
-                  <td><strong>ข้อดี:</strong> Stakeholder เห็นภาพชัดเจน ร่วมแสดงความคิดเห็นได้ง่าย<br><strong>ข้อจำกัด:</strong> อาจเก็บรายละเอียดทางเทคนิคเชิงลึกได้ไม่ครบ</td>
+                  <td>การจำลองเรื่องราวจริงทีละขั้นตอน (Starting state -> Normal flow -> What can go wrong -> Concurrent
+                    activities -> End state)</td>
+                  <td><strong>ข้อดี:</strong> Stakeholder เห็นภาพชัดเจน
+                    ร่วมแสดงความคิดเห็นได้ง่าย<br><strong>ข้อจำกัด:</strong> อาจเก็บรายละเอียดทางเทคนิคเชิงลึกได้ไม่ครบ
+                  </td>
                   <td>ใช้เพื่อทบทวนความต้องการกับผู้ใช้จริง และใช้ออกแบบขั้นตอนการใช้งานระบบใน Agile / Sprint</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <div class="scoring-tip">⭐ <strong>เทคนิคการตอบ:</strong> จำแนก Stakeholder เป็น Internal และ External เสมอ และในการอธิบาย Ethnography ให้เน้นย้ำว่า "ค้นพบวิธีที่คนทำงานจริง ไม่ใช่วิธีที่คู่มือบอกว่าควรทำ" (How people actually work vs ought to work)</div>
+          <div class="scoring-tip">⭐ <strong>เทคนิคการตอบ:</strong> จำแนก Stakeholder เป็น Internal และ External เสมอ
+            และในการอธิบาย Ethnography ให้เน้นย้ำว่า "ค้นพบวิธีที่คนทำงานจริง ไม่ใช่วิธีที่คู่มือบอกว่าควรทำ" (How
+            people actually work vs ought to work)</div>
         </div>
       </div>
 
       <!-- QUESTION 3 -->
       <div class="exam-question-card" data-searchable>
         <span class="q-number-tag">EXAM QUESTION 3 : PROCESS MODELS COMPARISON & SELECTION</span>
-        <h3 class="q-title">Question 3: Software Process Models Comparison and Lifecycle Selection</h3>
+        <h3 class="q-title">Question 3: Software Process Models Comparison and Lifecycle Selection<br><small
+            style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]:
+            การเปรียบเทียบโมเดลกระบวนการพัฒนาซอฟต์แวร์ และการเลือกรุ่นจำลองให้เหมาะสมกับโครงการ</small></h3>
         <div class="q-meta">
           <span><strong>หัวข้อ:</strong> Chapter 2 & Homework txt (Waterfall vs Incremental vs Reuse-Oriented)</span>
           <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
@@ -1209,14 +1345,36 @@
 
         <div class="scenario-box en">
           <strong>[Problem Prompt]:</strong><br>
-          (a) Compare the three major software process models: <strong>Waterfall Model</strong>, <strong>Incremental Development Model</strong>, and <strong>Reuse-oriented Software Engineering (Integration and Configuration)</strong> across: Main Concept, Key Advantages, Disadvantages/Risks, and Project Suitability.<br>
+          (a) Compare the three major software process models: <strong>Waterfall Model</strong>, <strong>Incremental
+            Development Model</strong>, and <strong>Reuse-oriented Software Engineering (Integration and
+            Configuration)</strong> across: Main Concept, Key Advantages, Disadvantages/Risks, and Project
+          Suitability.<br>
           (b) A software company is awarded three projects:
           <ol style="margin-left: 20px; margin-top: 6px;">
             <li><strong>Project A:</strong> An Embedded Insulin Pump Controller (Safety-critical medical system).</li>
-            <li><strong>Project B:</strong> An E-commerce Food Delivery Startup App requiring rapid market feedback.</li>
+            <li><strong>Project B:</strong> An E-commerce Food Delivery Startup App requiring rapid market feedback.
+            </li>
             <li><strong>Project C:</strong> An Enterprise Inventory Management System using SAP/COTS components.</li>
           </ol>
           Identify and justify the most suitable process model for each project.
+        </div>
+
+        <div class="scenario-box th">
+          <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+          (a) จงเปรียบเทียบโมเดลกระบวนการพัฒนาซอฟต์แวร์หลัก 3 โมเดล ได้แก่ <strong>Waterfall Model</strong>,
+          <strong>Incremental Development Model</strong>, และ <strong>Reuse-oriented Software Engineering (Integration
+            and Configuration)</strong> ใน 4 มิติ: แนวคิดหลัก, ข้อดีสำคัญ, ข้อเสีย/ความเสี่ยง,
+          และความเหมาะสมกับประเภทโครงการ<br>
+          (b) บริษัทซอฟต์แวร์แห่งหนึ่งได้รับสัญญาพัฒนา 3 โครงการ:
+          <ol style="margin-left: 20px; margin-top: 6px;">
+            <li><strong>โครงการ A:</strong> ระบบควบคุมปั๊มฉีดอินซูลินแบบสมองกลฝังตัว (ระบบการแพทย์ที่มีความปลอดภัยวิกฤต
+              - Safety-critical)</li>
+            <li><strong>โครงการ B:</strong> แอปพลิเคชันสั่งอาหารออนไลน์สำหรับธุรกิจ Startup
+              ที่ต้องการเสียงตอบรับจากตลาดอย่างรวดเร็ว</li>
+            <li><strong>โครงการ C:</strong> ระบบจัดการสินค้าคงคลังระดับองค์กรที่ใช้คอมโพเนนต์สำเร็จรูปของ SAP/COTS</li>
+          </ol>
+          จงเลือกโมเดลกระบวนการพัฒนาที่เหมาะสมที่สุดสำหรับแต่ละโครงการ
+          พร้อมให้เหตุผลสนับสนุนทางวิศวกรรมซอฟต์แวร์อย่างชัดเจน
         </div>
 
         <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -1241,7 +1399,8 @@
                   <td><strong>แนวคิดหลัก (Core Concept)</strong></td>
                   <td>ทำงานเป็นขั้นตอนตามลำดับ (Sequential / Plan-driven) แต่ละเฟสต้องเสร็จสมบูรณ์ก่อนเริ่มเฟสถัดไป</td>
                   <td>แบ่งระบบเป็นส่วนย่อย (Increments) ทยอยพัฒนา ส่งมอบ และประเมินผลทีละเวอร์ชันร่วมกับผู้ใช้</td>
-                  <td>นำซอฟต์แวร์หรือคอมโพเนนต์สำเร็จรูปที่มีอยู่แล้ว (COTS / Web Services) มาปรับแต่งและประกอบเข้าด้วยกัน</td>
+                  <td>นำซอฟต์แวร์หรือคอมโพเนนต์สำเร็จรูปที่มีอยู่แล้ว (COTS / Web Services)
+                    มาปรับแต่งและประกอบเข้าด้วยกัน</td>
                 </tr>
                 <tr>
                   <td><strong>ข้อดี (Advantages)</strong></td>
@@ -1279,9 +1438,12 @@
                 </tr>
                 <tr>
                   <td><strong>ความเหมาะสม (Project Suitability)</strong></td>
-                  <td>ระบบขนาดใหญ่ที่มีความต้องการนิ่งและชัดเจนมาก, ระบบ Safety-critical, โครงการที่แบ่งพัฒนาหลายทีม/หลายไซต์</td>
-                  <td>ระบบธุรกิจทั่วไป, เว็บ/แอปพลิเคชันที่ต้องการเปิดตัวไวและปรับปรุงตามความต้องการของผู้ใช้อย่างต่อเนื่อง</td>
-                  <td>ระบบมาตรฐานทั่วไปในตลาดที่มีโซลูชันสำเร็จรูปพร้อมใช้อยู่แล้ว เช่น ระบบ ERP, CRM, E-commerce พื้นฐาน</td>
+                  <td>ระบบขนาดใหญ่ที่มีความต้องการนิ่งและชัดเจนมาก, ระบบ Safety-critical,
+                    โครงการที่แบ่งพัฒนาหลายทีม/หลายไซต์</td>
+                  <td>ระบบธุรกิจทั่วไป,
+                    เว็บ/แอปพลิเคชันที่ต้องการเปิดตัวไวและปรับปรุงตามความต้องการของผู้ใช้อย่างต่อเนื่อง</td>
+                  <td>ระบบมาตรฐานทั่วไปในตลาดที่มีโซลูชันสำเร็จรูปพร้อมใช้อยู่แล้ว เช่น ระบบ ERP, CRM, E-commerce
+                    พื้นฐาน</td>
                 </tr>
               </tbody>
             </table>
@@ -1289,31 +1451,55 @@
 
           <div class="answer-subheading">(b) การเลือก Process Model ให้เหมาะสมกับโจทย์แต่ละข้อและเหตุผลประกอบ</div>
           <div class="bilingual-pair">
-            <div class="en"><strong>• Project A (Insulin Pump Controller): Selection -> Waterfall Model (Plan-driven)</strong><br>
-            <em>Justification:</em> The insulin pump is a safety-critical embedded system where software bugs can cause severe injury or death. It requires complete, formal, and upfront specification, rigorous verification, and exhaustive safety analysis before implementation begins. Requirement changes are minimal.</div>
-            <div class="th"><strong>เหตุผลภาษาไทย:</strong> เป็นระบบความปลอดภัยวิกฤต (Safety-critical system) ข้อผิดพลาดอาจทำให้คนไข้เสียชีวิตได้ จึงต้องมี Specification ที่สมบูรณ์แบบตั้งแต่ต้น มีการทดสอบความปลอดภัยอย่างเข้มงวด และ Requirement มีความคงที่ ไม่ควรปรับเปลี่ยนระหว่างทาง จึงเหมาะกับ Waterfall Model</div>
+            <div class="en"><strong>• Project A (Insulin Pump Controller): Selection -> Waterfall Model
+                (Plan-driven)</strong><br>
+              <em>Justification:</em> The insulin pump is a safety-critical embedded system where software bugs can
+              cause severe injury or death. It requires complete, formal, and upfront specification, rigorous
+              verification, and exhaustive safety analysis before implementation begins. Requirement changes are
+              minimal.
+            </div>
+            <div class="th"><strong>เหตุผลภาษาไทย:</strong> เป็นระบบความปลอดภัยวิกฤต (Safety-critical system)
+              ข้อผิดพลาดอาจทำให้คนไข้เสียชีวิตได้ จึงต้องมี Specification ที่สมบูรณ์แบบตั้งแต่ต้น
+              มีการทดสอบความปลอดภัยอย่างเข้มงวด และ Requirement มีความคงที่ ไม่ควรปรับเปลี่ยนระหว่างทาง จึงเหมาะกับ
+              Waterfall Model</div>
           </div>
 
           <div class="bilingual-pair">
-            <div class="en"><strong>• Project B (E-commerce Food Delivery Startup App): Selection -> Incremental Development Model (Agile)</strong><br>
-            <em>Justification:</em> The market demands rapid delivery and continuous customer feedback. It is impractical to specify all requirements upfront. Developing in small increments allows early delivery of core ordering features and rapid accommodation of evolving business needs.</div>
-            <div class="th"><strong>เหตุผลภาษาไทย:</strong> ธุรกิจ Startup ต้องการความรวดเร็วในการนำสินค้าเข้าสู่ตลาด (Time-to-market) และไม่สามารถระบุความต้องการได้ครบตั้งแต่แรก การทำแบบ Incremental ช่วยให้ปล่อยฟีเจอร์สั่งอาหารหลักออกมาก่อน แล้วนำ Feedback จากผู้ใช้มาปรับปรุงในเวอร์ชันถัดไปได้ทันที</div>
+            <div class="en"><strong>• Project B (E-commerce Food Delivery Startup App): Selection -> Incremental
+                Development Model (Agile)</strong><br>
+              <em>Justification:</em> The market demands rapid delivery and continuous customer feedback. It is
+              impractical to specify all requirements upfront. Developing in small increments allows early delivery of
+              core ordering features and rapid accommodation of evolving business needs.
+            </div>
+            <div class="th"><strong>เหตุผลภาษาไทย:</strong> ธุรกิจ Startup ต้องการความรวดเร็วในการนำสินค้าเข้าสู่ตลาด
+              (Time-to-market) และไม่สามารถระบุความต้องการได้ครบตั้งแต่แรก การทำแบบ Incremental
+              ช่วยให้ปล่อยฟีเจอร์สั่งอาหารหลักออกมาก่อน แล้วนำ Feedback จากผู้ใช้มาปรับปรุงในเวอร์ชันถัดไปได้ทันที</div>
           </div>
 
           <div class="bilingual-pair">
-            <div class="en"><strong>• Project C (Enterprise Inventory Management using SAP/COTS): Selection -> Reuse-oriented Software Engineering</strong><br>
-            <em>Justification:</em> Enterprise inventory management has standard business logic available in mature off-the-shelf COTS packages. Using reuse-oriented development saves substantial time and cost by configuring existing components rather than developing from scratch.</div>
-            <div class="th"><strong>เหตุผลภาษาไทย:</strong> ระบบจัดการสินค้าคงคลังองค์กรเป็นกระบวนการมาตรฐานที่มีซอฟต์แวร์สำเร็จรูป (COTS เช่น SAP) รองรับอยู่แล้ว การใช้ Reuse-oriented ช่วยประหยัดเวลาและงบประมาณอย่างมาก เพียงแค่นำมา Config ให้เข้ากับธุรกิจโดยไม่ต้องเขียนใหม่ทั้งหมด</div>
+            <div class="en"><strong>• Project C (Enterprise Inventory Management using SAP/COTS): Selection ->
+                Reuse-oriented Software Engineering</strong><br>
+              <em>Justification:</em> Enterprise inventory management has standard business logic available in mature
+              off-the-shelf COTS packages. Using reuse-oriented development saves substantial time and cost by
+              configuring existing components rather than developing from scratch.
+            </div>
+            <div class="th"><strong>เหตุผลภาษาไทย:</strong>
+              ระบบจัดการสินค้าคงคลังองค์กรเป็นกระบวนการมาตรฐานที่มีซอฟต์แวร์สำเร็จรูป (COTS เช่น SAP) รองรับอยู่แล้ว
+              การใช้ Reuse-oriented ช่วยประหยัดเวลาและงบประมาณอย่างมาก เพียงแค่นำมา Config
+              ให้เข้ากับธุรกิจโดยไม่ต้องเขียนใหม่ทั้งหมด</div>
           </div>
 
-          <div class="scoring-tip">⭐ <strong>เกณฑ์การให้คะแนน:</strong> ให้คะแนนคู่กันทั้ง "การเลือกรุ่นจำลองที่ถูกต้อง" และ "เหตุผลสนับสนุนที่สอดคล้องกับลักษณะของระบบ" (System Nature & Criticality)</div>
+          <div class="scoring-tip">⭐ <strong>เกณฑ์การให้คะแนน:</strong> ให้คะแนนคู่กันทั้ง "การเลือกรุ่นจำลองที่ถูกต้อง"
+            และ "เหตุผลสนับสนุนที่สอดคล้องกับลักษณะของระบบ" (System Nature & Criticality)</div>
         </div>
       </div>
 
       <!-- QUESTION 4 -->
       <div class="exam-question-card" data-searchable>
         <span class="q-number-tag">EXAM QUESTION 4 : ATTRIBUTES, FUNDAMENTALS & ETHICS</span>
-        <h3 class="q-title">Question 4: Essential Software Attributes, Cost Distribution & ACM/IEEE Ethics Case Study</h3>
+        <h3 class="q-title">Question 4: Essential Software Attributes, Cost Distribution & ACM/IEEE Ethics Case
+          Study<br><small style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]:
+            คุณลักษณะสำคัญของซอฟต์แวร์ที่ดี, โครงสร้างต้นทุนทาง SE และกรณีศึกษาจริยธรรม ACM/IEEE</small></h3>
         <div class="q-meta">
           <span><strong>หัวข้อ:</strong> Chapter 1 & Homework Ethics (Attributes, Costs, ACM/IEEE 8 Principles)</span>
           <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
@@ -1321,9 +1507,28 @@
 
         <div class="scenario-box en">
           <strong>[Problem Prompt]:</strong><br>
-          (a) Define and explain the <strong>4 Essential Attributes of Good Software</strong> according to Ian Sommerville.<br>
-          (b) Explain the typical <strong>Cost Distribution of Software Engineering</strong> (Development vs. Testing vs. Evolution).<br>
-          (c) <strong>Ethics Dilemma Scenario:</strong> You are a Senior Software Engineer working for a medical device company. Your project manager instructs you to bypass the final 40% of safety validation tests and release a critical patient monitoring system immediately to fulfill a government contract deadline. If you refuse, you may be terminated. Based on the <strong>ACM/IEEE Code of Ethics</strong>, explain how you should act and which principles apply.
+          (a) Define and explain the <strong>4 Essential Attributes of Good Software</strong> according to Ian
+          Sommerville.<br>
+          (b) Explain the typical <strong>Cost Distribution of Software Engineering</strong> (Development vs. Testing
+          vs. Evolution).<br>
+          (c) <strong>Ethics Dilemma Scenario:</strong> You are a Senior Software Engineer working for a medical device
+          company. Your project manager instructs you to bypass the final 40% of safety validation tests and release a
+          critical patient monitoring system immediately to fulfill a government contract deadline. If you refuse, you
+          may be terminated. Based on the <strong>ACM/IEEE Code of Ethics</strong>, explain how you should act and which
+          principles apply.
+        </div>
+
+        <div class="scenario-box th">
+          <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+          (a) จงนิยามและอธิบาย <strong>4 คุณลักษณะสำคัญของซอฟต์แวร์ที่ดี (4 Essential Attributes of Good
+            Software)</strong> ตามหลักการของ Ian Sommerville<br>
+          (b) จงอธิบาย <strong>โครงสร้างการกระจายตัวของต้นทุนในวิศวกรรมซอฟต์แวร์ (Software Engineering Costs)</strong>
+          ระหว่าง ค่าพัฒนา (Development) vs ค่าทดสอบ (Testing) vs ค่าวิวัฒนาการบำรุงรักษา (Evolution)<br>
+          (c) <strong>สถานการณ์ข้อพิพาททางจริยธรรม:</strong> ท่านเป็นวิศวกรซอฟต์แวร์อาวุโสในบริษัทผลิตเครื่องมือแพทย์
+          ผู้จัดการโครงการสั่งให้ท่าน "ข้ามการทดสอบความปลอดภัย 40% สุดท้าย"
+          แล้วปล่อยระบบมอนิเตอร์ผู้ป่วยวิกฤตทันทีเพื่อให้ทันเส้นตายสัญญาภาครัฐ หากท่านปฏิเสธ ท่านอาจถูกเลิกจ้าง ตามหลัก
+          <strong>จรรยาบรรณวิชาชีพ ACM/IEEE Code of Ethics</strong> ท่านควรตัดสินใจอย่างไร
+          และมีหลักการข้อใดบ้างที่นำมาใช้อ้างอิง?
         </div>
 
         <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -1332,7 +1537,8 @@
         </button>
 
         <div class="answer-content">
-          <div class="answer-subheading">(a) 4 คุณลักษณะสำคัญของซอฟต์แวร์ที่ดี (4 Essential Attributes of Good Software)</div>
+          <div class="answer-subheading">(a) 4 คุณลักษณะสำคัญของซอฟต์แวร์ที่ดี (4 Essential Attributes of Good Software)
+          </div>
           <div class="table-container">
             <table>
               <thead>
@@ -1345,23 +1551,32 @@
               <tbody>
                 <tr>
                   <td><strong>1. Maintainability</strong><br><small>(ความสามารถในการบำรุงรักษา)</small></td>
-                  <td>Software should be written in such a way that it can evolve to meet the changing needs of customers.</td>
-                  <td>ซอฟต์แวร์ต้องเขียนและออกแบบให้ง่ายต่อการแก้ไข ปรับปรุง และเพิ่มเติมฟังก์ชันตามการเปลี่ยนแปลงของธุรกิจในอนาคต โค้ดต้องอ่านง่าย มีโครงสร้างที่ดี</td>
+                  <td>Software should be written in such a way that it can evolve to meet the changing needs of
+                    customers.</td>
+                  <td>ซอฟต์แวร์ต้องเขียนและออกแบบให้ง่ายต่อการแก้ไข ปรับปรุง
+                    และเพิ่มเติมฟังก์ชันตามการเปลี่ยนแปลงของธุรกิจในอนาคต โค้ดต้องอ่านง่าย มีโครงสร้างที่ดี</td>
                 </tr>
                 <tr>
-                  <td><strong>2. Dependability & Security</strong><br><small>(ความเชื่อถือได้และความปลอดภัย)</small></td>
-                  <td>Includes reliability, security, and safety. Software should not cause physical or economic damage in system failure.</td>
-                  <td>ระบบต้องทำงานถูกต้อง น่าเชื่อถือ ปลอดภัยจากการโจมตี และไม่ก่อให้เกิดความเสียหายต่อชีวิต ทรัพย์สิน หรือเศรษฐกิจเมื่อระบบขัดข้อง</td>
+                  <td><strong>2. Dependability & Security</strong><br><small>(ความเชื่อถือได้และความปลอดภัย)</small>
+                  </td>
+                  <td>Includes reliability, security, and safety. Software should not cause physical or economic damage
+                    in system failure.</td>
+                  <td>ระบบต้องทำงานถูกต้อง น่าเชื่อถือ ปลอดภัยจากการโจมตี และไม่ก่อให้เกิดความเสียหายต่อชีวิต ทรัพย์สิน
+                    หรือเศรษฐกิจเมื่อระบบขัดข้อง</td>
                 </tr>
                 <tr>
                   <td><strong>3. Efficiency</strong><br><small>(ประสิทธิภาพในการใช้ทรัพยากร)</small></td>
-                  <td>Software should not make wasteful use of system resources such as memory and processor cycles (responsiveness, processing time).</td>
-                  <td>ซอฟต์แวร์ต้องไม่สิ้นเปลืองทรัพยากรระบบ เช่น CPU, RAM, Network Bandwidth และต้องมีเวลาตอบสนองที่รวดเร็ว (Response time)</td>
+                  <td>Software should not make wasteful use of system resources such as memory and processor cycles
+                    (responsiveness, processing time).</td>
+                  <td>ซอฟต์แวร์ต้องไม่สิ้นเปลืองทรัพยากรระบบ เช่น CPU, RAM, Network Bandwidth
+                    และต้องมีเวลาตอบสนองที่รวดเร็ว (Response time)</td>
                 </tr>
                 <tr>
                   <td><strong>4. Acceptability</strong><br><small>(การยอมรับจากผู้ใช้งาน)</small></td>
-                  <td>Software must be acceptable to the users: understandable, usable, and compatible with other systems they use.</td>
-                  <td>ซอฟต์แวร์ต้องได้รับการยอมรับจากผู้ใช้จริง ใช้งานง่าย (Usable) ไม่ซับซ้อน เข้ากันได้กับอุปกรณ์และระบบเดิมที่มีอยู่</td>
+                  <td>Software must be acceptable to the users: understandable, usable, and compatible with other
+                    systems they use.</td>
+                  <td>ซอฟต์แวร์ต้องได้รับการยอมรับจากผู้ใช้จริง ใช้งานง่าย (Usable) ไม่ซับซ้อน
+                    เข้ากันได้กับอุปกรณ์และระบบเดิมที่มีอยู่</td>
                 </tr>
               </tbody>
             </table>
@@ -1369,51 +1584,86 @@
 
           <div class="answer-subheading">(b) โครงสร้างต้นทุนของวิศวกรรมซอฟต์แวร์ (Software Engineering Costs)</div>
           <div class="bilingual-pair">
-            <div class="en">• Development vs Testing: Roughly <strong>60% of software costs are development costs</strong>, and <strong>40% are testing costs</strong>.</div>
-            <div class="th">• ต้นทุนการพัฒนาซอฟต์แวร์แบ่งเป็น: ค่าใช้จ่ายในการพัฒนาประมาณ 60% และค่าใช้จ่ายในการทดสอบระบบ (Testing) ประมาณ 40%</div>
+            <div class="en">• Development vs Testing: Roughly <strong>60% of software costs are development
+                costs</strong>, and <strong>40% are testing costs</strong>.</div>
+            <div class="th">• ต้นทุนการพัฒนาซอฟต์แวร์แบ่งเป็น: ค่าใช้จ่ายในการพัฒนาประมาณ 60%
+              และค่าใช้จ่ายในการทดสอบระบบ (Testing) ประมาณ 40%</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en">• Custom Software Evolution: For custom software, <strong>evolution (maintenance) costs often exceed development costs</strong> by several times throughout the software lifespan.</div>
-            <div class="th">• ซอฟต์แวร์ที่สร้างเฉพาะงาน (Custom Software): ต้นทุนการปรับปรุงบำรุงรักษา (Evolution/Maintenance) มักจะสูงกว่าต้นทุนการพัฒนาแรกเริ่มหลายเท่าตัว</div>
+            <div class="en">• Custom Software Evolution: For custom software, <strong>evolution (maintenance) costs
+                often exceed development costs</strong> by several times throughout the software lifespan.</div>
+            <div class="th">• ซอฟต์แวร์ที่สร้างเฉพาะงาน (Custom Software): ต้นทุนการปรับปรุงบำรุงรักษา
+              (Evolution/Maintenance) มักจะสูงกว่าต้นทุนการพัฒนาแรกเริ่มหลายเท่าตัว</div>
           </div>
 
           <div class="answer-subheading">(c) การวิเคราะห์กรณีศึกษาจริยธรรมตามหลัก ACM/IEEE Code of Ethics</div>
-          <div class="scenario-box" style="border-left: 4px solid var(--accent-rose); background: #fff1f2; color: #9f1239;">
+          <div class="scenario-box"
+            style="border-left: 4px solid var(--accent-rose); background: #fff1f2; color: #9f1239;">
             <strong>แนวทางการตัดสินใจและการตอบข้อสอบ:</strong><br>
-            วิศวกรซอฟต์แวร์ <strong>"ต้องปฏิเสธคำสั่งปล่อยระบบและไม่ยินยอมให้ข้ามการทดสอบความปลอดภัย"</strong> โดยเด็ดขาด เนื่องจากเป็นระบบการแพทย์ที่มีผลต่อชีวิตมนุษย์
+            วิศวกรซอฟต์แวร์ <strong>"ต้องปฏิเสธคำสั่งปล่อยระบบและไม่ยินยอมให้ข้ามการทดสอบความปลอดภัย"</strong>
+            โดยเด็ดขาด เนื่องจากเป็นระบบการแพทย์ที่มีผลต่อชีวิตมนุษย์
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>1. Principle 1: PUBLIC (Public Interest):</strong> Software engineers shall act consistently with the public interest. The health, safety, and welfare of patients override any business deadline or profit.</div>
-            <div class="th"><strong>ด้านความรับผิดชอบต่อสาธารณะ (Public):</strong> ต้องคำนึงถึงความปลอดภัยและชีวิตของประชาชนเป็นอันดับแรก การปล่อยซอฟต์แวร์ที่ไม่ผ่านการทดสอบอาจส่งผลให้ผู้ป่วยเสียชีวิต</div>
+            <div class="en"><strong>1. Principle 1: PUBLIC (Public Interest):</strong> Software engineers shall act
+              consistently with the public interest. The health, safety, and welfare of patients override any business
+              deadline or profit.</div>
+            <div class="th"><strong>ด้านความรับผิดชอบต่อสาธารณะ (Public):</strong>
+              ต้องคำนึงถึงความปลอดภัยและชีวิตของประชาชนเป็นอันดับแรก
+              การปล่อยซอฟต์แวร์ที่ไม่ผ่านการทดสอบอาจส่งผลให้ผู้ป่วยเสียชีวิต</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>2. Principle 3: PRODUCT (Product Quality):</strong> Engineers shall ensure high professional standards. Knowingly releasing defective or untested safety-critical software directly violates professional duty.</div>
-            <div class="th"><strong>ด้านคุณภาพของผลิตภัณฑ์ (Product):</strong> วิศวกรต้องส่งมอบงานที่มีมาตรฐานการทดสอบที่สมบูรณ์ ไม่ปล่อยผ่านระบบที่มีความเสี่ยงร้ายแรง</div>
+            <div class="en"><strong>2. Principle 3: PRODUCT (Product Quality):</strong> Engineers shall ensure high
+              professional standards. Knowingly releasing defective or untested safety-critical software directly
+              violates professional duty.</div>
+            <div class="th"><strong>ด้านคุณภาพของผลิตภัณฑ์ (Product):</strong>
+              วิศวกรต้องส่งมอบงานที่มีมาตรฐานการทดสอบที่สมบูรณ์ ไม่ปล่อยผ่านระบบที่มีความเสี่ยงร้ายแรง</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>3. Principle 4: JUDGMENT (Integrity):</strong> Engineers must maintain integrity and professional independence. You must not allow managerial pressure to override ethical judgment.</div>
-            <div class="th"><strong>ด้านดุลยพินิจและความซื่อสัตย์ (Judgment):</strong> ต้องรักษาความเป็นอิสระทางวิชาชีพ ไม่ยอมโอนอ่อนต่อแรงกดดันจากผู้จัดการเมื่อขัดต่อหลักความปลอดภัย</div>
+            <div class="en"><strong>3. Principle 4: JUDGMENT (Integrity):</strong> Engineers must maintain integrity and
+              professional independence. You must not allow managerial pressure to override ethical judgment.</div>
+            <div class="th"><strong>ด้านดุลยพินิจและความซื่อสัตย์ (Judgment):</strong> ต้องรักษาความเป็นอิสระทางวิชาชีพ
+              ไม่ยอมโอนอ่อนต่อแรงกดดันจากผู้จัดการเมื่อขัดต่อหลักความปลอดภัย</div>
           </div>
 
-          <div class="scoring-tip">⭐ <strong>เทคนิคการตอบ:</strong> อ้างอิงคำว่า "Public Interest must be primary" และระบุหลักการ ACM/IEEE 4 ด้านหลัก (Public, Product, Judgment, Client/Employer)</div>
+          <div class="scoring-tip">⭐ <strong>เทคนิคการตอบ:</strong> อ้างอิงคำว่า "Public Interest must be primary"
+            และระบุหลักการ ACM/IEEE 4 ด้านหลัก (Public, Product, Judgment, Client/Employer)</div>
         </div>
       </div>
 
       <!-- QUESTION 5 -->
       <div class="exam-question-card" data-searchable>
         <span class="q-number-tag">EXAM QUESTION 5 : SPECIFICATION, VALIDATION & CHANGE MANAGEMENT</span>
-        <h3 class="q-title">Question 5: Structured Specification, Requirements Validation Checks & Change Management</h3>
+        <h3 class="q-title">Question 5: Structured Specification, Requirements Validation Checks & Change
+          Management<br><small style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]:
+            การเขียนข้อกำหนดแบบมีโครงสร้าง, เกณฑ์การตรวจสอบความถูกต้องของ Requirements
+            และกระบวนการจัดการการเปลี่ยนแปลง</small></h3>
         <div class="q-meta">
-          <span><strong>หัวข้อ:</strong> Chapter 4 (Form-based Specs, Tabular Specs, 5 Validation Checks, Change Process)</span>
+          <span><strong>หัวข้อ:</strong> Chapter 4 (Form-based Specs, Tabular Specs, 5 Validation Checks, Change
+            Process)</span>
           <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
         </div>
 
         <div class="scenario-box en">
           <strong>[Problem Prompt]:</strong><br>
-          (a) Write a <strong>Structured Form-Based Requirement Specification</strong> for an automated medication dosage calculation function (like the Insulin Pump / Mentcare system).<br>
-          (b) Construct a <strong>Tabular Specification</strong> illustrating decision rules for calculating doses based on blood sugar levels.<br>
-          (c) List and explain the <strong>5 Key Requirements Checking Criteria</strong> used during requirements validation.<br>
+          (a) Write a <strong>Structured Form-Based Requirement Specification</strong> for an automated medication
+          dosage calculation function (like the Insulin Pump / Mentcare system).<br>
+          (b) Construct a <strong>Tabular Specification</strong> illustrating decision rules for calculating doses based
+          on blood sugar levels.<br>
+          (c) List and explain the <strong>5 Key Requirements Checking Criteria</strong> used during requirements
+          validation.<br>
           (d) Draw/explain the <strong>3 Stages of Requirements Change Management</strong>.
+        </div>
+
+        <div class="scenario-box th">
+          <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+          (a) จงเขียน <strong>แบบฟอร์มระบุข้อกำหนดความต้องการแบบมีโครงสร้าง (Form-Based Specification)</strong>
+          สำหรับฟังก์ชันคำนวณปริมาณการสั่งจ่ายยาอัตโนมัติ (เช่น ระบบ Insulin Pump หรือ Mentcare)<br>
+          (b) จงสร้าง <strong>ตารางระบุข้อกำหนดความต้องการ (Tabular Specification)</strong>
+          แสดงกฎการตัดสินใจคำนวณขนาดยาตามระดับน้ำตาลในเลือด<br>
+          (c) จงระบุและอธิบาย <strong>5 เกณฑ์สำคัญในการตรวจสอบความถูกต้องของ Requirements (Requirements Checking
+            Criteria)</strong> ในขั้นตอน Requirements Validation<br>
+          (d) จงวาดผังและอธิบาย <strong>3 ขั้นตอนหลักของกระบวนการจัดการการเปลี่ยนแปลงความต้องการ (Requirements Change
+            Management Process)</strong>
         </div>
 
         <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -1422,7 +1672,8 @@
         </button>
 
         <div class="answer-content">
-          <div class="answer-subheading">(a) แบบฟอร์มระบุความต้องการแบบมีโครงสร้าง (Form-Based Specification: Insulin Pump / Med System)</div>
+          <div class="answer-subheading">(a) แบบฟอร์มระบุความต้องการแบบมีโครงสร้าง (Form-Based Specification: Insulin
+            Pump / Med System)</div>
           <div class="table-container">
             <table>
               <tbody>
@@ -1432,23 +1683,28 @@
                 </tr>
                 <tr>
                   <td><strong>Function (ฟังก์ชัน)</strong></td>
-                  <td><code>Compute Insulin Dose: Safe Sugar Level</code> (คำนวณปริมาณอินซูลินที่ระดับน้ำตาลปลอดภัย)</td>
+                  <td><code>Compute Insulin Dose: Safe Sugar Level</code> (คำนวณปริมาณอินซูลินที่ระดับน้ำตาลปลอดภัย)
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Description (คำอธิบาย)</strong></td>
-                  <td>Computes the dose of insulin to be delivered when current measured blood sugar is in safe range (3 - 7 units).<br>(คำนวณปริมาณยาอินซูลินที่จะฉีดเมื่อระดับน้ำตาลอยู่ในเกณฑ์ปลอดภัย 3 ถึง 7 หน่วย)</td>
+                  <td>Computes the dose of insulin to be delivered when current measured blood sugar is in safe range (3
+                    - 7 units).<br>(คำนวณปริมาณยาอินซูลินที่จะฉีดเมื่อระดับน้ำตาลอยู่ในเกณฑ์ปลอดภัย 3 ถึง 7 หน่วย)</td>
                 </tr>
                 <tr>
                   <td><strong>Inputs (ข้อมูลเข้า)</strong></td>
-                  <td>Current sugar reading (<code>r2</code>), previous two readings (<code>r0</code>, <code>r1</code>).<br>(ค่าน้ำตาลปัจจุบัน r2 และค่าบันทึก 2 ครั้งก่อนหน้า r0, r1)</td>
+                  <td>Current sugar reading (<code>r2</code>), previous two readings (<code>r0</code>,
+                    <code>r1</code>).<br>(ค่าน้ำตาลปัจจุบัน r2 และค่าบันทึก 2 ครั้งก่อนหน้า r0, r1)</td>
                 </tr>
                 <tr>
                   <td><strong>Source (แหล่งที่มา)</strong></td>
-                  <td>Current reading from Blood Sensor; historical readings from Memory Log. (เซนเซอร์วัดระดับน้ำตาลและหน่วยความจำ)</td>
+                  <td>Current reading from Blood Sensor; historical readings from Memory Log.
+                    (เซนเซอร์วัดระดับน้ำตาลและหน่วยความจำ)</td>
                 </tr>
                 <tr>
                   <td><strong>Outputs (ผลลัพธ์)</strong></td>
-                  <td><code>CompDose</code> — the dose of insulin in units to be delivered. (ปริมาณอินซูลินที่ต้องสั่งจ่าย)</td>
+                  <td><code>CompDose</code> — the dose of insulin in units to be delivered.
+                    (ปริมาณอินซูลินที่ต้องสั่งจ่าย)</td>
                 </tr>
                 <tr>
                   <td><strong>Destination (ปลายทาง)</strong></td>
@@ -1458,16 +1714,19 @@
                   <td><strong>Action (การทำงาน)</strong></td>
                   <td>
                     If sugar level is stable or falling: <code>CompDose = 0</code>.<br>
-                    If sugar is increasing and rate of increase is increasing: <code>CompDose = round((r2 - r1)/4)</code>. If rounded result is 0, set to <code>MinimumDose</code>.
+                    If sugar is increasing and rate of increase is increasing:
+                    <code>CompDose = round((r2 - r1)/4)</code>. If rounded result is 0, set to <code>MinimumDose</code>.
                   </td>
                 </tr>
                 <tr>
                   <td><strong>Pre-condition (เงื่อนไขก่อนเริ่ม)</strong></td>
-                  <td>The insulin reservoir contains at least the maximum allowed single dose. (มียาในหลอดบรรจุเพียงพอ)</td>
+                  <td>The insulin reservoir contains at least the maximum allowed single dose. (มียาในหลอดบรรจุเพียงพอ)
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Post-condition (เงื่อนไขหลังสิ้นสุด)</strong></td>
-                  <td><code>r0</code> is replaced by <code>r1</code>, and <code>r1</code> is replaced by <code>r2</code>. (เลื่อนอัปเดตประวัติค่าน้ำตาล)</td>
+                  <td><code>r0</code> is replaced by <code>r1</code>, and <code>r1</code> is replaced by
+                    <code>r2</code>. (เลื่อนอัปเดตประวัติค่าน้ำตาล)</td>
                 </tr>
                 <tr>
                   <td><strong>Side Effects (ผลข้างเคียง)</strong></td>
@@ -1477,7 +1736,8 @@
             </table>
           </div>
 
-          <div class="answer-subheading">(b) การเขียนความต้องการแบบตาราง (Tabular Specification: Condition-Action Table)</div>
+          <div class="answer-subheading">(b) การเขียนความต้องการแบบตาราง (Tabular Specification: Condition-Action Table)
+          </div>
           <div class="table-container">
             <table>
               <thead>
@@ -1512,43 +1772,59 @@
             </table>
           </div>
 
-          <div class="answer-subheading">(c) 5 เกณฑ์การตรวจสอบความถูกต้องของ Requirements (Requirements Checking Criteria)</div>
+          <div class="answer-subheading">(c) 5 เกณฑ์การตรวจสอบความถูกต้องของ Requirements (Requirements Checking
+            Criteria)</div>
           <div class="bilingual-pair">
-            <div class="en"><strong>1. Validity (ความสมเหตุสมผล):</strong> Does the system provide the exact functions that best support the customer's actual operational needs?</div>
+            <div class="en"><strong>1. Validity (ความสมเหตุสมผล):</strong> Does the system provide the exact functions
+              that best support the customer's actual operational needs?</div>
             <div class="th">ระบบมีฟังก์ชันที่สนับสนุนการทำงานจริงของลูกค้าอย่างเหมาะสมและตรงเป้าหมายหรือไม่</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>2. Consistency (ความสอดคล้องกัน):</strong> Are there any requirement conflicts or contradictory constraints between different specifications?</div>
-            <div class="th">ข้อกำหนดต่างๆ ไม่มีความขัดแย้งกันเองในระบบ เช่น กำหนด response time ขัดกับระบบความปลอดภัย</div>
+            <div class="en"><strong>2. Consistency (ความสอดคล้องกัน):</strong> Are there any requirement conflicts or
+              contradictory constraints between different specifications?</div>
+            <div class="th">ข้อกำหนดต่างๆ ไม่มีความขัดแย้งกันเองในระบบ เช่น กำหนด response time ขัดกับระบบความปลอดภัย
+            </div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>3. Completeness (ความสมบูรณ์ครบถ้วน):</strong> Are all necessary services, edge cases, and user constraints completely specified?</div>
-            <div class="th">ระบุฟังก์ชัน ข้อจำกัด และกรณีเกิดข้อผิดพลาด (Exception/Error handling) ไว้ครบถ้วนทุกกรณี</div>
+            <div class="en"><strong>3. Completeness (ความสมบูรณ์ครบถ้วน):</strong> Are all necessary services, edge
+              cases, and user constraints completely specified?</div>
+            <div class="th">ระบุฟังก์ชัน ข้อจำกัด และกรณีเกิดข้อผิดพลาด (Exception/Error handling) ไว้ครบถ้วนทุกกรณี
+            </div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>4. Realism (ความเป็นไปได้จริง):</strong> Can the requirements be realistically implemented within the available budget, technology, and schedule?</div>
+            <div class="en"><strong>4. Realism (ความเป็นไปได้จริง):</strong> Can the requirements be realistically
+              implemented within the available budget, technology, and schedule?</div>
             <div class="th">สามารถพัฒนาได้จริงภายใต้งบประมาณ เทคโนโลยี และกรอบเวลาที่มีอยู่</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>5. Verifiability (ความสามารถในการทดสอบได้):</strong> Can each requirement be objectively and measurably tested and verified?</div>
+            <div class="en"><strong>5. Verifiability (ความสามารถในการทดสอบได้):</strong> Can each requirement be
+              objectively and measurably tested and verified?</div>
             <div class="th">สามารถเขียน Test Case เพื่อตรวจสอบวัดผลได้อย่างเป็นรูปธรรม ไม่คลุมเครือ</div>
           </div>
 
-          <div class="answer-subheading">(d) 3 ขั้นตอนกระบวนการจัดการการเปลี่ยนแปลง (Requirements Change Management Process)</div>
+          <div class="answer-subheading">(d) 3 ขั้นตอนกระบวนการจัดการการเปลี่ยนแปลง (Requirements Change Management
+            Process)</div>
           <div class="bilingual-pair">
-            <div class="en"><strong>Step 1: Problem Analysis and Change Specification</strong> -> Analyze the identified problem or change request to verify its validity and define precise change proposals.</div>
-            <div class="th"><strong>ขั้นที่ 1 วิเคราะห์ปัญหาและระบุข้อกำหนดการเปลี่ยนแปลง:</strong> ตรวจสอบว่าปัญหาที่แจ้งมาถูกต้องหรือไม่ และร่างรายละเอียดการแก้ไข</div>
+            <div class="en"><strong>Step 1: Problem Analysis and Change Specification</strong> -> Analyze the identified
+              problem or change request to verify its validity and define precise change proposals.</div>
+            <div class="th"><strong>ขั้นที่ 1 วิเคราะห์ปัญหาและระบุข้อกำหนดการเปลี่ยนแปลง:</strong>
+              ตรวจสอบว่าปัญหาที่แจ้งมาถูกต้องหรือไม่ และร่างรายละเอียดการแก้ไข</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>Step 2: Change Analysis and Costing</strong> -> Assess the impact on system architecture, schedule, and cost using Traceability links to decide whether to accept the change.</div>
-            <div class="th"><strong>ขั้นที่ 2 วิเคราะห์ผลกระทบและประเมินค่าใช้จ่าย:</strong> ประเมินว่าส่งผลกระทบต่อโมดูลอื่น งบประมาณ และเวลาเท่าใด เพื่อตัดสินใจอนุมัติ</div>
+            <div class="en"><strong>Step 2: Change Analysis and Costing</strong> -> Assess the impact on system
+              architecture, schedule, and cost using Traceability links to decide whether to accept the change.</div>
+            <div class="th"><strong>ขั้นที่ 2 วิเคราะห์ผลกระทบและประเมินค่าใช้จ่าย:</strong>
+              ประเมินว่าส่งผลกระทบต่อโมดูลอื่น งบประมาณ และเวลาเท่าใด เพื่อตัดสินใจอนุมัติ</div>
           </div>
           <div class="bilingual-pair">
-            <div class="en"><strong>Step 3: Change Implementation</strong> -> Modify the requirements document, system design, code, and test cases accordingly.</div>
-            <div class="th"><strong>ขั้นที่ 3 ดำเนินการแก้ไข:</strong> ปรับแก้เอกสาร Requirements, งานออกแบบ, ซอร์สโค้ด และชุดทดสอบให้ตรงกัน</div>
+            <div class="en"><strong>Step 3: Change Implementation</strong> -> Modify the requirements document, system
+              design, code, and test cases accordingly.</div>
+            <div class="th"><strong>ขั้นที่ 3 ดำเนินการแก้ไข:</strong> ปรับแก้เอกสาร Requirements, งานออกแบบ, ซอร์สโค้ด
+              และชุดทดสอบให้ตรงกัน</div>
           </div>
 
-          <div class="scoring-tip">⭐ <strong>เทคนิคการจำ:</strong> เกณฑ์ 5 ข้อ ท่องจำด้วยคีย์เวิร์ด: <strong>V-C-C-R-V</strong> (Validity, Consistency, Completeness, Realism, Verifiability)</div>
+          <div class="scoring-tip">⭐ <strong>เทคนิคการจำ:</strong> เกณฑ์ 5 ข้อ ท่องจำด้วยคีย์เวิร์ด:
+            <strong>V-C-C-R-V</strong> (Validity, Consistency, Completeness, Realism, Verifiability)</div>
         </div>
       </div>
     </div>
@@ -1565,15 +1841,21 @@
           <h3 class="card-title">📖 Chapter 1: Introduction to Software Engineering</h3>
           <span class="card-badge badge-blue">Chapter 1</span>
         </div>
-        
-        <h4 style="color: var(--accent-blue); margin: 12px 0 6px;">1. นิยามและพื้นฐาน (Software Engineering Fundamentals)</h4>
+
+        <h4 style="color: var(--accent-blue); margin: 12px 0 6px;">1. นิยามและพื้นฐาน (Software Engineering
+          Fundamentals)</h4>
         <ul class="check-list">
-          <li><strong>Software:</strong> โปรแกรมคอมพิวเตอร์และเอกสารที่เกี่ยวข้อง (Documentation เช่น User manual, Requirement docs)</li>
-          <li><strong>Software Engineering (SE):</strong> สาขาวิชาวิศวกรรมที่เกี่ยวข้องกับ <em>ทุกแง่มุมของการผลิตซอฟต์แวร์</em> (All aspects of software production) ตั้งแต่การคิดความต้องการไปจนถึงการบำรุงรักษาหลังใช้งาน</li>
+          <li><strong>Software:</strong> โปรแกรมคอมพิวเตอร์และเอกสารที่เกี่ยวข้อง (Documentation เช่น User manual,
+            Requirement docs)</li>
+          <li><strong>Software Engineering (SE):</strong> สาขาวิชาวิศวกรรมที่เกี่ยวข้องกับ
+            <em>ทุกแง่มุมของการผลิตซอฟต์แวร์</em> (All aspects of software production)
+            ตั้งแต่การคิดความต้องการไปจนถึงการบำรุงรักษาหลังใช้งาน</li>
           <li><strong>CS vs SE vs System Engineering:</strong>
             <br>• <em>Computer Science:</em> เน้นทฤษฎีและพื้นฐานทางคอมพิวเตอร์ (Theory & Fundamentals)
-            <br>• <em>Software Engineering:</em> เน้นการลงมือปฏิบัติจริงเพื่อสร้างและส่งมอบซอฟต์แวร์ที่มีประโยชน์ (Practicalities of developing useful software)
-            <br>• <em>System Engineering:</em> ครอบคลุมภาพรวมระบบทั้งหมด ทั้ง Hardware, Software, Process engineering (SE เป็นส่วนย่อยของ System Engineering)
+            <br>• <em>Software Engineering:</em> เน้นการลงมือปฏิบัติจริงเพื่อสร้างและส่งมอบซอฟต์แวร์ที่มีประโยชน์
+            (Practicalities of developing useful software)
+            <br>• <em>System Engineering:</em> ครอบคลุมภาพรวมระบบทั้งหมด ทั้ง Hardware, Software, Process engineering
+            (SE เป็นส่วนย่อยของ System Engineering)
           </li>
           <li><strong>4 Fundamental Activities:</strong> ทุกกระบวนการพัฒนาซอฟต์แวร์ต้องมี 4 กิจกรรมนี้เสมอ:
             <br>1) <em>Software Specification</em> (การกำหนดความต้องการ)
@@ -1583,7 +1865,8 @@
           </li>
         </ul>
 
-        <h4 style="color: var(--accent-purple); margin: 16px 0 6px;">2. ประเภทของผลิตภัณฑ์ซอฟต์แวร์ (Software Products)</h4>
+        <h4 style="color: var(--accent-purple); margin: 16px 0 6px;">2. ประเภทของผลิตภัณฑ์ซอฟต์แวร์ (Software Products)
+        </h4>
         <div class="table-container">
           <table>
             <thead>
@@ -1611,27 +1894,40 @@
           </table>
         </div>
 
-        <h4 style="color: var(--accent-emerald); margin: 16px 0 6px;">3. จรรยาบรรณวิศวกรซอฟต์แวร์ (ACM/IEEE Code of Ethics - 8 Principles)</h4>
+        <h4 style="color: var(--accent-emerald); margin: 16px 0 6px;">3. จรรยาบรรณวิศวกรซอฟต์แวร์ (ACM/IEEE Code of
+          Ethics - 8 Principles)</h4>
         <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 8px;">
           วิศวกรซอฟต์แวร์ต้องมีความรับผิดชอบมากกว่าแค่ทักษะทางเทคนิค ต้องยึดมั่นในหลักการ 8 ข้อ:
         </p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px;">
-          <div class="pill-tag" style="padding: 8px;"><strong>1. PUBLIC:</strong> คำนึงถึงประโยชน์และความปลอดภัยของสาธารณะเป็นอันดับแรก</div>
-          <div class="pill-tag" style="padding: 8px;"><strong>2. CLIENT & EMPLOYER:</strong> ทำงานเพื่อประโยชน์สูงสุดของลูกค้า/นายจ้าง โดยไม่ขัดต่อสาธารณะ</div>
-          <div class="pill-tag" style="padding: 8px;"><strong>3. PRODUCT:</strong> ส่งมอบผลงานที่มีคุณภาพและมาตรฐานสูงสุดเท่าที่จะทำได้</div>
-          <div class="pill-tag" style="padding: 8px;"><strong>4. JUDGMENT:</strong> รักษาความซื่อสัตย์และดุลยพินิจที่เป็นอิสระทางวิชาชีพ</div>
-          <div class="pill-tag" style="padding: 8px;"><strong>5. MANAGEMENT:</strong> ผู้บริหารต้องส่งเสริมแนวทางการจัดการที่มีจริยธรรม</div>
-          <div class="pill-tag" style="padding: 8px;"><strong>6. PROFESSION:</strong> เชิดชูเกียรติ ชื่อเสียง และความน่าเชื่อถือของวิชาชีพ</div>
-          <div class="pill-tag" style="padding: 8px;"><strong>7. COLLEAGUES:</strong> ปฏิบัติต่อเพื่อนร่วมงานด้วยความยุติธรรมและเกื้อกูลกัน</div>
-          <div class="pill-tag" style="padding: 8px;"><strong>8. SELF:</strong> พัฒนาการเรียนรู้ตลอดชีวิต (Lifelong learning) และยึดมั่นจริยธรรม</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>1. PUBLIC:</strong>
+            คำนึงถึงประโยชน์และความปลอดภัยของสาธารณะเป็นอันดับแรก</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>2. CLIENT & EMPLOYER:</strong>
+            ทำงานเพื่อประโยชน์สูงสุดของลูกค้า/นายจ้าง โดยไม่ขัดต่อสาธารณะ</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>3. PRODUCT:</strong>
+            ส่งมอบผลงานที่มีคุณภาพและมาตรฐานสูงสุดเท่าที่จะทำได้</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>4. JUDGMENT:</strong>
+            รักษาความซื่อสัตย์และดุลยพินิจที่เป็นอิสระทางวิชาชีพ</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>5. MANAGEMENT:</strong>
+            ผู้บริหารต้องส่งเสริมแนวทางการจัดการที่มีจริยธรรม</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>6. PROFESSION:</strong> เชิดชูเกียรติ ชื่อเสียง
+            และความน่าเชื่อถือของวิชาชีพ</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>7. COLLEAGUES:</strong>
+            ปฏิบัติต่อเพื่อนร่วมงานด้วยความยุติธรรมและเกื้อกูลกัน</div>
+          <div class="pill-tag" style="padding: 8px;"><strong>8. SELF:</strong> พัฒนาการเรียนรู้ตลอดชีวิต (Lifelong
+            learning) และยึดมั่นจริยธรรม</div>
         </div>
 
         <h4 style="color: var(--accent-amber); margin: 16px 0 6px;">4. กรณีศึกษาประจำวิชา (4 Standard Case Studies)</h4>
         <ul class="check-list">
-          <li><strong>1. Personal Insulin Pump:</strong> ระบบสมองกลฝังตัว (Embedded Safety-critical System) คำนวณและฉีดอินซูลินอัตโนมัติตามระดับน้ำตาลในเลือด</li>
-          <li><strong>2. Mentcare System:</strong> ระบบข้อมูลผู้ป่วยสุขภาพจิตสำหรับคลินิก (Patient Information System) รองรับการทำงานแบบออฟไลน์/ออนไลน์และรายงานการรักษา</li>
-          <li><strong>3. Wilderness Weather Station:</strong> ระบบเก็บข้อมูลสภาพอากาศในพื้นที่ทุรกันดารผ่านเซนเซอร์และส่งข้อมูลผ่านดาวเทียม (Data Collection System)</li>
-          <li><strong>4. iLearn Digital Learning Environment:</strong> ระบบสภาพแวดล้อมการเรียนรู้ดิจิทัลแบบ Service-oriented เชื่อมต่อบริการการศึกษาหลากหลาย</li>
+          <li><strong>1. Personal Insulin Pump:</strong> ระบบสมองกลฝังตัว (Embedded Safety-critical System)
+            คำนวณและฉีดอินซูลินอัตโนมัติตามระดับน้ำตาลในเลือด</li>
+          <li><strong>2. Mentcare System:</strong> ระบบข้อมูลผู้ป่วยสุขภาพจิตสำหรับคลินิก (Patient Information System)
+            รองรับการทำงานแบบออฟไลน์/ออนไลน์และรายงานการรักษา</li>
+          <li><strong>3. Wilderness Weather Station:</strong>
+            ระบบเก็บข้อมูลสภาพอากาศในพื้นที่ทุรกันดารผ่านเซนเซอร์และส่งข้อมูลผ่านดาวเทียม (Data Collection System)</li>
+          <li><strong>4. iLearn Digital Learning Environment:</strong> ระบบสภาพแวดล้อมการเรียนรู้ดิจิทัลแบบ
+            Service-oriented เชื่อมต่อบริการการศึกษาหลากหลาย</li>
         </ul>
       </div>
 
@@ -1642,27 +1938,42 @@
           <span class="card-badge badge-purple">Chapter 2</span>
         </div>
 
-        <h4 style="color: var(--accent-blue); margin: 12px 0 6px;">1. โมเดลการพัฒนาซอฟต์แวร์หลัก (Software Process Models)</h4>
+        <h4 style="color: var(--accent-blue); margin: 12px 0 6px;">1. โมเดลการพัฒนาซอฟต์แวร์หลัก (Software Process
+          Models)</h4>
         <ul class="check-list">
-          <li><strong>Waterfall Model:</strong> โมเดลแบบวางแผนล่วงหน้า (Plan-driven) แบ่งเป็น 5 เฟสตามลำดับ: <em>Requirements -> Design -> Implementation & Unit Testing -> Integration & System Testing -> Operation & Maintenance</em></li>
-          <li><strong>Incremental Development:</strong> สลับทำงานพร้อมกัน (Interleaved) ระหว่าง Specification, Development, และ Validation เหมาะกับธุรกิจสมัยใหม่</li>
-          <li><strong>Reuse-Oriented (Integration & Configuration):</strong> เน้นการประกอบจากระบบที่มีอยู่ (COTS) มี 5 ขั้นตอน:
-            <br><code>Requirements Specification</code> ➔ <code>Software Discovery & Evaluation</code> ➔ <code>Requirements Refinement</code> ➔ <code>Application System Configuration</code> ➔ <code>Component Adaptation & Integration</code>
+          <li><strong>Waterfall Model:</strong> โมเดลแบบวางแผนล่วงหน้า (Plan-driven) แบ่งเป็น 5 เฟสตามลำดับ:
+            <em>Requirements -> Design -> Implementation & Unit Testing -> Integration & System Testing -> Operation &
+              Maintenance</em></li>
+          <li><strong>Incremental Development:</strong> สลับทำงานพร้อมกัน (Interleaved) ระหว่าง Specification,
+            Development, และ Validation เหมาะกับธุรกิจสมัยใหม่</li>
+          <li><strong>Reuse-Oriented (Integration & Configuration):</strong> เน้นการประกอบจากระบบที่มีอยู่ (COTS) มี 5
+            ขั้นตอน:
+            <br><code>Requirements Specification</code> ➔ <code>Software Discovery & Evaluation</code> ➔
+            <code>Requirements Refinement</code> ➔ <code>Application System Configuration</code> ➔
+            <code>Component Adaptation & Integration</code>
           </li>
         </ul>
 
-        <h4 style="color: var(--accent-emerald); margin: 16px 0 6px;">2. ลำดับขั้นการทดสอบ (Testing Stages) & V-Model</h4>
+        <h4 style="color: var(--accent-emerald); margin: 16px 0 6px;">2. ลำดับขั้นการทดสอบ (Testing Stages) & V-Model
+        </h4>
         <ul class="check-list">
-          <li><strong>1. Component Testing (Unit Testing):</strong> ทดสอบชิ้นส่วนย่อย/ฟังก์ชัน/ออบเจกต์แต่ละตัวอย่างเป็นอิสระ โดยโปรแกรมเมอร์</li>
-          <li><strong>2. System Testing:</strong> นำคอมโพเนนต์ทั้งหมดมาประกอบและทดสอบระบบในภาพรวม เพื่อดูคุณสมบัติร่วม (Emergent properties)</li>
-          <li><strong>3. Acceptance Testing / Customer Testing:</strong> ทดสอบด้วยข้อมูลจริงของลูกค้า เพื่อตรวจรับมอบงานว่าตรงตามความต้องการ</li>
+          <li><strong>1. Component Testing (Unit Testing):</strong>
+            ทดสอบชิ้นส่วนย่อย/ฟังก์ชัน/ออบเจกต์แต่ละตัวอย่างเป็นอิสระ โดยโปรแกรมเมอร์</li>
+          <li><strong>2. System Testing:</strong> นำคอมโพเนนต์ทั้งหมดมาประกอบและทดสอบระบบในภาพรวม เพื่อดูคุณสมบัติร่วม
+            (Emergent properties)</li>
+          <li><strong>3. Acceptance Testing / Customer Testing:</strong> ทดสอบด้วยข้อมูลจริงของลูกค้า
+            เพื่อตรวจรับมอบงานว่าตรงตามความต้องการ</li>
         </ul>
 
-        <h4 style="color: var(--accent-amber); margin: 16px 0 6px;">3. การรับมือกับการเปลี่ยนแปลง (Coping with Change) & SEI CMM Levels</h4>
+        <h4 style="color: var(--accent-amber); margin: 16px 0 6px;">3. การรับมือกับการเปลี่ยนแปลง (Coping with Change) &
+          SEI CMM Levels</h4>
         <ul class="check-list">
-          <li><strong>Change Anticipation:</strong> คาดการณ์การเปลี่ยนแปลงล่วงหน้า เช่น ทำ <em>System Prototype</em> ให้ลูกค้าดูก่อนเริ่มสร้างจริง</li>
-          <li><strong>Change Tolerance:</strong> ออกแบบกระบวนการให้รองรับการแก้ในราคาถูก เช่น ทำแบบ <em>Incremental Delivery</em></li>
-          <li><strong>Throw-away Prototyping:</strong> ตัวต้นแบบที่สร้างขึ้นเพื่อสำรวจ Requirement เมื่อเข้าใจแล้วต้อง "ทิ้งไป" ห้ามนำมาทำเป็นระบบจริงเพราะไม่มีโครงสร้างที่ดีพอ</li>
+          <li><strong>Change Anticipation:</strong> คาดการณ์การเปลี่ยนแปลงล่วงหน้า เช่น ทำ <em>System Prototype</em>
+            ให้ลูกค้าดูก่อนเริ่มสร้างจริง</li>
+          <li><strong>Change Tolerance:</strong> ออกแบบกระบวนการให้รองรับการแก้ในราคาถูก เช่น ทำแบบ <em>Incremental
+              Delivery</em></li>
+          <li><strong>Throw-away Prototyping:</strong> ตัวต้นแบบที่สร้างขึ้นเพื่อสำรวจ Requirement เมื่อเข้าใจแล้วต้อง
+            "ทิ้งไป" ห้ามนำมาทำเป็นระบบจริงเพราะไม่มีโครงสร้างที่ดีพอ</li>
           <li><strong>5 ระดับวุฒิภาวะกระบวนการ (SEI Capability Maturity Model - CMM):</strong>
             <br>• <strong>Level 1 (Initial):</strong> ควบคุมไม่ได้ ไม่มีแบบแผน (Ad-hoc)
             <br>• <strong>Level 2 (Repeatable / Managed):</strong> มีขั้นตอนการจัดการโปรเจกต์ที่ทำซ้ำได้
@@ -1680,7 +1991,8 @@
           <span class="card-badge badge-emerald">Chapter 4</span>
         </div>
 
-        <h4 style="color: var(--accent-blue); margin: 12px 0 6px;">1. การจำแนกประเภทความต้องการ (Requirements Classification)</h4>
+        <h4 style="color: var(--accent-blue); margin: 12px 0 6px;">1. การจำแนกประเภทความต้องการ (Requirements
+          Classification)</h4>
         <div class="table-container">
           <table>
             <thead>
@@ -1693,12 +2005,14 @@
             <tbody>
               <tr>
                 <td><strong>Functional Requirements</strong><br><small>(ความต้องการเชิงหน้าที่)</small></td>
-                <td>ระบุว่าระบบต้อง <strong>"ทำอะไรได้บ้าง"</strong> (What the system should do), บริการที่ระบบมี, การตอบสนองต่อ Input, และสิ่งที่ระบบ <em>ต้องไม่ทำ</em></td>
+                <td>ระบุว่าระบบต้อง <strong>"ทำอะไรได้บ้าง"</strong> (What the system should do), บริการที่ระบบมี,
+                  การตอบสนองต่อ Input, และสิ่งที่ระบบ <em>ต้องไม่ทำ</em></td>
                 <td>ระบบต้องล็อกอินได้, ระบบต้องคำนวณราคาสินค้า, ระบบต้องส่ง SMS แจ้งเตือน</td>
               </tr>
               <tr>
                 <td><strong>Non-Functional Requirements</strong><br><small>(ความต้องการเชิงคุณลักษณะ)</small></td>
-                <td>ระบุคุณสมบัติ ข้อจำกัด และประสิทธิภาพการทำงานของระบบ (How the system performs) มักกระทบต่อ Architecture ภาพรวม</td>
+                <td>ระบุคุณสมบัติ ข้อจำกัด และประสิทธิภาพการทำงานของระบบ (How the system performs) มักกระทบต่อ
+                  Architecture ภาพรวม</td>
                 <td>แบ่งเป็น 3 หมวด:<br>
                   • <em>Product:</em> Usability, Speed, Memory, Reliability<br>
                   • <em>Organisational:</em> Operational, Development standards<br>
@@ -1708,7 +2022,8 @@
               <tr>
                 <td><strong>Domain Requirements</strong><br><small>(ความต้องการเชิงโดเมน)</small></td>
                 <td>ข้อกำหนดเฉพาะทางที่เกิดจากสภาพแวดล้อมทางธุรกิจหรือสาขาอาชีพนั้นๆ โดยตรง</td>
-                <td>การเชื่อมต่อ Active Directory ของมหาลัย, การปฏิบัติตามกฎระเบียบสาธารณสุข HIPAA/PDPA, สูตรคำนวณภาษี</td>
+                <td>การเชื่อมต่อ Active Directory ของมหาลัย, การปฏิบัติตามกฎระเบียบสาธารณสุข HIPAA/PDPA, สูตรคำนวณภาษี
+                </td>
               </tr>
               <tr>
                 <td><strong>Constraints</strong><br><small>(ข้อจำกัดโครงการ)</small></td>
@@ -1721,15 +2036,21 @@
 
         <h4 style="color: var(--accent-purple); margin: 16px 0 6px;">2. User Requirements vs. System Requirements</h4>
         <ul class="check-list">
-          <li><strong>User Requirements:</strong> เขียนอธิบายด้วยภาษาธรรมชาติ (Natural language) และภาพรวมสำหรับลูกค้า/ผู้ใช้งานที่ไม่มีพื้นฐานเทคนิค</li>
-          <li><strong>System Requirements:</strong> เอกสารมีโครงสร้างที่ระบุรายละเอียดฟังก์ชัน บริการ และข้อจำกัดทางเทคนิคอย่างละเอียด เพื่อให้นักพัฒนาและสถาปนิกนำไปสร้างจริง</li>
+          <li><strong>User Requirements:</strong> เขียนอธิบายด้วยภาษาธรรมชาติ (Natural language)
+            และภาพรวมสำหรับลูกค้า/ผู้ใช้งานที่ไม่มีพื้นฐานเทคนิค</li>
+          <li><strong>System Requirements:</strong> เอกสารมีโครงสร้างที่ระบุรายละเอียดฟังก์ชัน บริการ
+            และข้อจำกัดทางเทคนิคอย่างละเอียด เพื่อให้นักพัฒนาและสถาปนิกนำไปสร้างจริง</li>
         </ul>
 
-        <h4 style="color: var(--accent-amber); margin: 16px 0 6px;">3. รูปแบบการเขียนเอกสาร Requirements Specification</h4>
+        <h4 style="color: var(--accent-amber); margin: 16px 0 6px;">3. รูปแบบการเขียนเอกสาร Requirements Specification
+        </h4>
         <ul class="check-list">
-          <li><strong>1. Natural Language:</strong> ใช้ประโยคภาษาคนทั่วไป ใช้คำว่า <code>shall</code> สำหรับข้อบังคับ (Mandatory) และ <code>should</code> สำหรับข้อแนะนำ (Desirable)</li>
-          <li><strong>2. Structured Natural Language (Form-Based):</strong> เขียนลงในเทมเพลตมาตรฐาน ระบุ Function, Description, Inputs, Outputs, Action, Pre/Post-conditions</li>
-          <li><strong>3. Tabular Specification:</strong> ตารางแสดงเงื่อนไข-การกระทำ (Condition-Action Table) เหมาะกับระบบที่มีเงื่อนไขการตัดสินใจซับซ้อน</li>
+          <li><strong>1. Natural Language:</strong> ใช้ประโยคภาษาคนทั่วไป ใช้คำว่า <code>shall</code> สำหรับข้อบังคับ
+            (Mandatory) และ <code>should</code> สำหรับข้อแนะนำ (Desirable)</li>
+          <li><strong>2. Structured Natural Language (Form-Based):</strong> เขียนลงในเทมเพลตมาตรฐาน ระบุ Function,
+            Description, Inputs, Outputs, Action, Pre/Post-conditions</li>
+          <li><strong>3. Tabular Specification:</strong> ตารางแสดงเงื่อนไข-การกระทำ (Condition-Action Table)
+            เหมาะกับระบบที่มีเงื่อนไขการตัดสินใจซับซ้อน</li>
           <li><strong>4. Graphical Notation:</strong> แผนภาพ UML เช่น Use Case Diagram และ Sequence Diagram</li>
         </ul>
       </div>
@@ -1748,7 +2069,11 @@
           <span class="card-badge badge-rose">Homework 1</span>
         </div>
         <div class="scenario-box th">
-          <strong>สถานการณ์ PizzaFriend:</strong> คุณพลอยเจ้าของร้านพิซซ่าใกล้มหาวิทยาลัย ต้องการแอป "PizzaFriend" ให้นักศึกษาไม่ต้องรอคิวนานช่วงพักเที่ยง ลูกค้าล็อกอินด้วยอีเมล เลือกเมนู ขนาด แป้ง ท็อปปิ้ง ใส่ตะกร้า คำนวณราคา จ่ายผ่าน Mobile Banking / บัตรเครดิต ได้รับใบเสร็จทางอีเมล แอปใช้งานง่ายสั่งเสร็จใน 5 นาที หน้าจอโหลดใน 2 วินาที รองรับพร้อมกัน 300 คน มีระบบรายงานยอดขายและเมนูยอดนิยม เก็บข้อมูลตาม PDPA เข้ารหัสการเงิน เขียนด้วย Flutter รองรับ iOS/Android เสร็จใน 3 เดือน
+          <strong>สถานการณ์ PizzaFriend:</strong> คุณพลอยเจ้าของร้านพิซซ่าใกล้มหาวิทยาลัย ต้องการแอป "PizzaFriend"
+          ให้นักศึกษาไม่ต้องรอคิวนานช่วงพักเที่ยง ลูกค้าล็อกอินด้วยอีเมล เลือกเมนู ขนาด แป้ง ท็อปปิ้ง ใส่ตะกร้า
+          คำนวณราคา จ่ายผ่าน Mobile Banking / บัตรเครดิต ได้รับใบเสร็จทางอีเมล แอปใช้งานง่ายสั่งเสร็จใน 5 นาที
+          หน้าจอโหลดใน 2 วินาที รองรับพร้อมกัน 300 คน มีระบบรายงานยอดขายและเมนูยอดนิยม เก็บข้อมูลตาม PDPA
+          เข้ารหัสการเงิน เขียนด้วย Flutter รองรับ iOS/Android เสร็จใน 3 เดือน
         </div>
         <div class="table-container">
           <table>
@@ -1774,7 +2099,8 @@
               <tr>
                 <td><strong>2. Non-Functional</strong></td>
                 <td>
-                  • <strong>Usability:</strong> แอปต้องใช้งานง่าย ลูกค้าใหม่สั่งพิซซ่าครั้งแรกได้เสร็จภายในเวลาไม่เกิน 5 นาที<br>
+                  • <strong>Usability:</strong> แอปต้องใช้งานง่าย ลูกค้าใหม่สั่งพิซซ่าครั้งแรกได้เสร็จภายในเวลาไม่เกิน 5
+                  นาที<br>
                   • <strong>Performance:</strong> ระบบตอบสนองต่อการคลิกเลือกเมนูภายในเวลาไม่เกิน 2 วินาที<br>
                   • <strong>Capacity:</strong> รองรับผู้ใช้งานพร้อมกันอย่างน้อย 300 คน โดยไม่ช้าหรือหยุดทำงาน<br>
                   • <strong>Security:</strong> ข้อมูลทางการเงินต้องถูกเข้ารหัสทุกครั้งที่มีการทำธุรกรรมผ่านแอป
@@ -1808,7 +2134,11 @@
           <span class="card-badge badge-emerald">Homework 2</span>
         </div>
         <div class="scenario-box th">
-          <strong>สถานการณ์ EasyClinic:</strong> คลินิกเอกชนประสบปัญหาคิวแน่น คนไข้โทรจองแล้วไม่มาตามนัด เสียโอกาสให้บริการ จึงสร้างระบบจองคิวออนไลน์ ผู้ป่วยลงทะเบียนด้วยเบอร์โทร/บัตรประชาชน เลือกแพทย์ วันเวลานัดหมาย ระบบส่ง SMS/Email เตือนล่วงหน้า 1 วันและ 1 ชม. แพทย์มี Dashboard ดูและปรับเวลาตรวจ เจ้าหน้าที่อัปเดตสถานะ "มาถึงแล้ว" / "ไม่มาตามนัด" มีรายงานสถิติรายวัน ข้อมูลสุขภาพเข้ารหัสตาม HIPAA/สธ. ใช้งานได้บน Web/Android/iOS ใช้ง่ายสำหรับผู้สูงอายุ เสร็จใน 3 เดือน
+          <strong>สถานการณ์ EasyClinic:</strong> คลินิกเอกชนประสบปัญหาคิวแน่น คนไข้โทรจองแล้วไม่มาตามนัด
+          เสียโอกาสให้บริการ จึงสร้างระบบจองคิวออนไลน์ ผู้ป่วยลงทะเบียนด้วยเบอร์โทร/บัตรประชาชน เลือกแพทย์
+          วันเวลานัดหมาย ระบบส่ง SMS/Email เตือนล่วงหน้า 1 วันและ 1 ชม. แพทย์มี Dashboard ดูและปรับเวลาตรวจ
+          เจ้าหน้าที่อัปเดตสถานะ "มาถึงแล้ว" / "ไม่มาตามนัด" มีรายงานสถิติรายวัน ข้อมูลสุขภาพเข้ารหัสตาม HIPAA/สธ.
+          ใช้งานได้บน Web/Android/iOS ใช้ง่ายสำหรับผู้สูงอายุ เสร็จใน 3 เดือน
         </div>
         <div class="table-container">
           <table>
@@ -1877,20 +2207,32 @@
           <span class="card-badge badge-amber">Lecture Q&A</span>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>Q1: What are the key challenges facing software engineering?</strong> (ความท้าทายสำคัญที่ SE เผชิญอยู่คืออะไร?)</div>
-          <div class="th"><strong>คำตอบ:</strong> ปัจจุบันซอฟต์แวร์มีความหลากหลายที่เพิ่มขึ้น (Increasing diversity), ต้องลดระยะเวลาส่งมอบงาน (Reduced delivery times), และต้องพัฒนาซอฟต์แวร์ที่เชื่อถือได้ (Developing trustworthy software)</div>
+          <div class="en"><strong>Q1: What are the key challenges facing software engineering?</strong>
+            (ความท้าทายสำคัญที่ SE เผชิญอยู่คืออะไร?)</div>
+          <div class="th"><strong>คำตอบ:</strong> ปัจจุบันซอฟต์แวร์มีความหลากหลายที่เพิ่มขึ้น (Increasing diversity),
+            ต้องลดระยะเวลาส่งมอบงาน (Reduced delivery times), และต้องพัฒนาซอฟต์แวร์ที่เชื่อถือได้ (Developing
+            trustworthy software)</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>Q2: What are the costs of software engineering?</strong> (ต้นทุนของวิศวกรรมซอฟต์แวร์มีอะไรบ้าง?)</div>
-          <div class="th"><strong>คำตอบ:</strong> แบ่งเป็น 2 ส่วนหลักๆ คือ ต้นทุนการพัฒนา 60% และต้นทุนการทดสอบระบบ 40% และสำหรับซอฟต์แวร์สั่งทำเฉพาะ ต้นทุนในการปรับปรุงแก้ไข (Evolution) มักสูงกว่าต้นทุนการพัฒนาแรกเริ่ม</div>
+          <div class="en"><strong>Q2: What are the costs of software engineering?</strong>
+            (ต้นทุนของวิศวกรรมซอฟต์แวร์มีอะไรบ้าง?)</div>
+          <div class="th"><strong>คำตอบ:</strong> แบ่งเป็น 2 ส่วนหลักๆ คือ ต้นทุนการพัฒนา 60% และต้นทุนการทดสอบระบบ 40%
+            และสำหรับซอฟต์แวร์สั่งทำเฉพาะ ต้นทุนในการปรับปรุงแก้ไข (Evolution) มักสูงกว่าต้นทุนการพัฒนาแรกเริ่ม</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>Q3: What are the best software engineering techniques and methods?</strong> (เทคนิคและวิธีวิศวกรรมซอฟต์แวร์ที่ดีที่สุดคืออะไร?)</div>
-          <div class="th"><strong>คำตอบ:</strong> ไม่มีวิธีใดดีที่สุดสำหรับทุกงาน (No universal best method) ขึ้นอยู่กับประเภทของระบบ เช่น การพัฒนาเกมควรพัฒนาด้วยการสร้างต้นแบบ (Prototyping) ในขณะที่ระบบความปลอดภัยวิกฤต (Safety-critical) ต้องมีการจัดทำรายละเอียดที่สมบูรณ์และวิเคราะห์ได้ (Analyzable specification)</div>
+          <div class="en"><strong>Q3: What are the best software engineering techniques and methods?</strong>
+            (เทคนิคและวิธีวิศวกรรมซอฟต์แวร์ที่ดีที่สุดคืออะไร?)</div>
+          <div class="th"><strong>คำตอบ:</strong> ไม่มีวิธีใดดีที่สุดสำหรับทุกงาน (No universal best method)
+            ขึ้นอยู่กับประเภทของระบบ เช่น การพัฒนาเกมควรพัฒนาด้วยการสร้างต้นแบบ (Prototyping)
+            ในขณะที่ระบบความปลอดภัยวิกฤต (Safety-critical) ต้องมีการจัดทำรายละเอียดที่สมบูรณ์และวิเคราะห์ได้ (Analyzable
+            specification)</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>Q4: What differences has the web made to software engineering?</strong> (เว็บสร้างความเปลี่ยนแปลงอย่างไรต่อ SE?)</div>
-          <div class="th"><strong>คำตอบ:</strong> ทำให้เกิดบริการซอฟต์แวร์รูปแบบใหม่ (Software Services / Cloud), เพิ่มความเป็นไปได้ในการพัฒนาระบบกระจายตัวสูง (Highly distributed service-based systems), และนำไปสู่ความก้าวหน้าด้านภาษาโปรแกรมและการนำซอฟต์แวร์กลับมาใช้ใหม่ (Software Reuse)</div>
+          <div class="en"><strong>Q4: What differences has the web made to software engineering?</strong>
+            (เว็บสร้างความเปลี่ยนแปลงอย่างไรต่อ SE?)</div>
+          <div class="th"><strong>คำตอบ:</strong> ทำให้เกิดบริการซอฟต์แวร์รูปแบบใหม่ (Software Services / Cloud),
+            เพิ่มความเป็นไปได้ในการพัฒนาระบบกระจายตัวสูง (Highly distributed service-based systems),
+            และนำไปสู่ความก้าวหน้าด้านภาษาโปรแกรมและการนำซอฟต์แวร์กลับมาใช้ใหม่ (Software Reuse)</div>
         </div>
       </div>
     </div>
@@ -1925,37 +2267,43 @@
 
         <div class="flashcard" onclick="this.classList.toggle('flipped')">
           <div class="q">❓ ความแตกต่างระหว่าง Functional และ Non-functional Requirements?</div>
-          <div class="a">✅ <strong>Functional = WHAT</strong> ระบบต้องทำอะไร<br><strong>Non-functional = HOW</strong> ระบบทำงานได้อย่างไร/ข้อจำกัด</div>
+          <div class="a">✅ <strong>Functional = WHAT</strong> ระบบต้องทำอะไร<br><strong>Non-functional = HOW</strong>
+            ระบบทำงานได้อย่างไร/ข้อจำกัด</div>
           <span class="flashcard-hint">แตะเพื่อดูคำตอบ 👆</span>
         </div>
 
         <div class="flashcard" onclick="this.classList.toggle('flipped')">
           <div class="q">❓ 5 เกณฑ์ตรวจสอบ Requirements (Requirements Checking) มีอะไรบ้าง?</div>
-          <div class="a">✅ <strong>Validity, Consistency, Completeness, Realism, Verifiability</strong> (V-C-C-R-V)</div>
+          <div class="a">✅ <strong>Validity, Consistency, Completeness, Realism, Verifiability</strong> (V-C-C-R-V)
+          </div>
           <span class="flashcard-hint">แตะเพื่อดูคำตอบ 👆</span>
         </div>
 
         <div class="flashcard" onclick="this.classList.toggle('flipped')">
           <div class="q">❓ ข้อเสียหลักของ Waterfall Model คืออะไร?</div>
-          <div class="a">✅ <strong>Inflexible partitioning</strong> ปรับเปลี่ยน Requirement ระหว่างทางได้ยากมาก และลูกค้าเห็นงานจริงตอนท้าย</div>
+          <div class="a">✅ <strong>Inflexible partitioning</strong> ปรับเปลี่ยน Requirement ระหว่างทางได้ยากมาก
+            และลูกค้าเห็นงานจริงตอนท้าย</div>
           <span class="flashcard-hint">แตะเพื่อดูคำตอบ 👆</span>
         </div>
 
         <div class="flashcard" onclick="this.classList.toggle('flipped')">
           <div class="q">❓ เหตุผลที่ไม่ควรนำ Throw-away Prototype ไปใช้จริง?</div>
-          <div class="a">✅ ขาดเอกสาร, โครงสร้างโค้ดเสื่อมเสียจากการแก้ไว, ไม่ได้ปรับแต่ง Non-functional (ความปลอดภัย/ความเร็ว)</div>
+          <div class="a">✅ ขาดเอกสาร, โครงสร้างโค้ดเสื่อมเสียจากการแก้ไว, ไม่ได้ปรับแต่ง Non-functional
+            (ความปลอดภัย/ความเร็ว)</div>
           <span class="flashcard-hint">แตะเพื่อดูคำตอบ 👆</span>
         </div>
 
         <div class="flashcard" onclick="this.classList.toggle('flipped')">
           <div class="q">❓ นิยามของ Ethnography ในการเก็บ Requirement คืออะไร?</div>
-          <div class="a">✅ <strong>การเข้าไปสังเกตการณ์การทำงานจริง</strong> ของผู้ใช้ เพื่อดูวิธีที่คนทำงานจริง (ไม่ใช่สิ่งที่คู่มือบอก)</div>
+          <div class="a">✅ <strong>การเข้าไปสังเกตการณ์การทำงานจริง</strong> ของผู้ใช้ เพื่อดูวิธีที่คนทำงานจริง
+            (ไม่ใช่สิ่งที่คู่มือบอก)</div>
           <span class="flashcard-hint">แตะเพื่อดูคำตอบ 👆</span>
         </div>
 
         <div class="flashcard" onclick="this.classList.toggle('flipped')">
           <div class="q">❓ 5 ลำดับขั้นของ SEI Capability Maturity Model (CMM) คืออะไร?</div>
-          <div class="a">✅ <strong>Level 1: Initial ➔ Level 2: Repeatable/Managed ➔ Level 3: Defined ➔ Level 4: Quantitatively Managed ➔ Level 5: Optimizing</strong></div>
+          <div class="a">✅ <strong>Level 1: Initial ➔ Level 2: Repeatable/Managed ➔ Level 3: Defined ➔ Level 4:
+              Quantitatively Managed ➔ Level 5: Optimizing</strong></div>
           <span class="flashcard-hint">แตะเพื่อดูคำตอบ 👆</span>
         </div>
       </div>
@@ -2059,4 +2407,5 @@
     }
   </script>
 </body>
+
 </html>

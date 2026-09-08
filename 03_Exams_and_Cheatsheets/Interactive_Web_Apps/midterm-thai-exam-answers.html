@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เฉลยข้อสอบเก็ง 5 ข้อหลัก (ภาษาไทย) + 4 โจทย์ฝึก Stakeholder พิเศษ — SE ปี 68</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-tertiary: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.96);
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --accent-blue: #0284c7;
+      --accent-indigo: #4338ca;
+      --accent-purple: #7e22ce;
+      --accent-emerald: #047857;
+      --accent-amber: #b45309;
+      --accent-rose: #be123c;
+      --border-color: #cbd5e1;
+      --border-light: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-tertiary: #334155;
+      --bg-card: rgba(30, 41, 59, 0.9);
+      --bg-glass: rgba(15, 23, 42, 0.85);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #818cf8;
+      --accent-purple: #c084fc;
+      --accent-emerald: #34d399;
+      --accent-amber: #fbbf24;
+      --accent-rose: #fb7185;
+      --border-color: #334155;
+      --border-light: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Prompt', 'Inter', -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      font-size: 15px;
+      padding-bottom: 80px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 100;
+      padding: 12px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--accent-emerald), var(--accent-blue));
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .logo-text h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .logo-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--bg-tertiary);
+      border-color: var(--accent-blue);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent-blue);
+      color: white;
+      border-color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin: 20px 0 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    [data-theme="dark"] .hero-banner {
+      background: linear-gradient(135deg, #1e293b 0%, #1e3a2f 100%);
+      border-color: #059669;
+    }
+
+    .hero-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent-emerald);
+      margin-bottom: 8px;
+    }
+
+    [data-theme="dark"] .hero-title {
+      color: #6ee7b7;
+    }
+
+    .hero-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .exam-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+      page-break-inside: avoid;
+    }
+
+    .q-tag {
+      display: inline-block;
+      background: var(--accent-indigo);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .q-tag.extra {
+      background: var(--accent-purple);
+    }
+
+    .q-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .q-sub {
+      font-size: 0.95rem;
+      color: var(--accent-blue);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .scenario-box {
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin: 12px 0 16px;
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .scenario-box.en {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid var(--accent-blue);
+    }
+
+    .scenario-box.th {
+      background: #fdf4ff;
+      border: 1px solid #f0abfc;
+      border-left: 4px solid var(--accent-purple);
+      color: #701a75;
+    }
+
+    [data-theme="dark"] .scenario-box.en {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    [data-theme="dark"] .scenario-box.th {
+      background: rgba(126, 34, 206, 0.15);
+      border-color: #c084fc;
+      color: #f5d0fe;
+    }
+
+    .answer-box {
+      background: #ffffff;
+      border: 1.5px solid #86efac;
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      margin-top: 14px;
+    }
+
+    [data-theme="dark"] .answer-box {
+      background: #1e293b;
+      border-color: #059669;
+    }
+
+    .answer-header {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-emerald);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 6px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 14px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: var(--bg-card);
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 9px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--bg-tertiary);
+      font-weight: 600;
+    }
+
+    .badge-internal {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+
+    .badge-external {
+      display: inline-block;
+      background: #fce7f3;
+      color: #9d174d;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+
+    .bullet-point {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .bullet-point strong {
+      color: var(--text-primary);
+    }
+
+    .tip-box {
+      background: #fffbeb;
+      border-left: 4px solid var(--accent-amber);
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      color: #92400e;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-top: 10px;
+    }
+
+    [data-theme="dark"] .tip-box {
+      background: rgba(180, 83, 9, 0.15);
+      color: #fde68a;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        font-size: 10pt !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        line-height: 1.4 !important;
+      }
+      header, .nav-actions, .no-print {
+        display: none !important;
+      }
+      .exam-card {
+        border: 1px solid #999999 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid !important;
+        margin-bottom: 18px !important;
+        padding: 12px !important;
+      }
+      .hero-banner {
+        border: 1px solid #777777 !important;
+        background: #f5f5f5 !important;
+        padding: 10px !important;
+      }
+      .scenario-box.en, .scenario-box.th, .answer-box {
+        border: 0.75pt solid #888888 !important;
+        background: #fafafa !important;
+        color: #000000 !important;
+      }
+      .badge-internal, .badge-external {
+        border: 0.5pt solid #333333 !important;
+        background: #eeeeee !important;
+        color: #000000 !important;
+      }
+      table, th, td {
+        border: 0.75pt solid #666666 !important;
+      }
+      th {
+        background: #ebebeb !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="logo-badge">SE 68 THAI ANSWERS</div>
+        <div class="logo-text">
+          <h1>เฉลยข้อสอบเก็ง 5 ข้อหลัก (ภาษาไทย) + 4 โจทย์ฝึก Stakeholder พิเศษ</h1>
+          <p>รวมคำตอบภาษาไทยละเอียดสมบูรณ์ 100% สำหรับนำเข้าห้องสอบและสั่งพิมพ์ A4</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="practice-reqeng-exam-breakdown.html" class="btn">📑 ถอดรหัส PDF 68</a>
+        <a href="midterm-cheatsheet-68.html" class="btn">📖 ชุด A (Cheatsheet)</a>
+        <a href="midterm-exam-set-b.html" class="btn">🎯 ชุด B (Mock 2)</a>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF ออก A4</button>
+        <button class="btn" onclick="toggleTheme()" id="themeBtn">🌙 สลับธีมมืด</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Announcement -->
+    <div class="hero-banner">
+      <h2 class="hero-title">📝 เอกสารเฉลยภาษาไทยพร้อมสอบ (Thai Exam Solutions Master Sheet)</h2>
+      <p class="hero-desc">
+        รวมเฉลย <strong>5 ข้อเก็งหลัก (30 คะแนน)</strong> ที่เขียนตอบเป็นภาษาไทยอย่างเป็นระเบียบ ถูกต้องตามเกณฑ์การตรวจของอาจารย์ 
+        พร้อมเพิ่ม <strong>โจทย์ข้อสอบ Stakeholder เพิ่มเติมอีก 4 ข้อ (New Cases)</strong> แปลไทย + เฉลยตารางวิเคราะห์บทบาทหน้าที่ครบทุกกลุ่ม!
+      </p>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- PART 1: 5 CORE EXAM QUESTIONS ANSWERED IN THAI          -->
+    <!-- ======================================================= -->
+    <h2 style="margin: 24px 0 16px; color: var(--accent-indigo); border-bottom: 2px solid var(--border-light); padding-bottom: 6px;">
+      🌟 ส่วนที่ 1: เฉลยเก็งข้อสอบ 5 ข้อหลัก (ตอบภาษาไทยระดับคะแนนเต็ม A+)
+    </h2>
+
+    <!-- QUESTION 1 -->
+    <div class="exam-card">
+      <span class="q-tag">ข้อที่ 1 : REQUIREMENT CLASSIFICATION (6 คะแนน)</span>
+      <h3 class="q-title">Question 1: Requirement Classification from Case Study</h3>
+      <div class="q-sub">[ภาษาไทย]: การจำแนกประเภทความต้องการ 4 ด้านจากกรณีศึกษา (เคส: PizzaFriend)</div>
+
+      <div class="scenario-box en">
+        <strong>[English Prompt]:</strong> "Read the provided case study scenario. Identify and classify at least 3 Functional Requirements, 2 Non-Functional Requirements, 1 Domain Requirement, and 1 Constraint."
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> "จงอ่านสถานการณ์กรณีศึกษาที่กำหนดให้ จากนั้นจงระบุและจำแนกประเภทความต้องการอย่างน้อย: 3 Functional Requirements, 2 Non-Functional Requirements, 1 Domain Requirement และ 1 Constraint"
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 แนวคำตอบภาษาไทยที่ต้องเขียนลงกระดาษข้อสอบ:</div>
+        
+        <div class="bullet-point">
+          <strong>1. ความต้องการเชิงหน้าที่ (Functional Requirements - FR) [ระบุ 3-4 ข้อ]:</strong>
+          <ul style="margin-left: 20px; margin-top: 4px;">
+            <li><strong>FR-1:</strong> ระบบต้องอนุญาตให้ลูกค้าลงทะเบียนและเข้าสู่ระบบด้วยอีเมลและรหัสผ่านได้</li>
+            <li><strong>FR-2:</strong> ระบบต้องแสดงรายการเมนูพิซซ่าทั้งหมดของร้าน พร้อมรูปภาพ ชื่อรายการ และราคาอย่างชัดเจน</li>
+            <li><strong>FR-3:</strong> ระบบต้องให้ลูกค้าสามารถเลือกขนาด แป้ง และปรับแต่งท็อปปิ้งของพิซซ่า แล้วเพิ่มลงในตะกร้าสินค้าได้</li>
+            <li><strong>FR-4:</strong> ระบบต้องคำนวณราคาสุทธิและแสดงสรุปรายการสั่งซื้อก่อนการชำระเงิน พร้อมส่งใบเสร็จยืนยันไปยังอีเมลลูกค้าเมื่อชำระเงินสำเร็จ</li>
+          </ul>
+        </div>
+
+        <div class="bullet-point" style="margin-top: 10px;">
+          <strong>2. ความต้องการเชิงคุณลักษณะ/คุณภาพ (Non-Functional Requirements - NFR) [ระบุ 2-3 ข้อ]:</strong>
+          <ul style="margin-left: 20px; margin-top: 4px;">
+            <li><strong>Usability (ความง่ายในการใช้งาน):</strong> แอปพลิเคชันต้องใช้งานง่าย โดยลูกค้าใหม่ต้องสามารถสั่งซื้อพิซซ่าครั้งแรกเสร็จสิ้นภายในเวลาไม่เกิน 5 นาที</li>
+            <li><strong>Performance (ประสิทธิภาพและความเร็ว):</strong> ระบบต้องโหลดและตอบสนองการคลิกเลือกเมนูของลูกค้าภายในเวลาไม่เกิน 2 วินาที และรองรับผู้ใช้งานพร้อมกัน (Concurrent Users) ได้อย่างน้อย 300 คนโดยระบบไม่ช้าลง</li>
+            <li><strong>Security (ความปลอดภัย):</strong> ข้อมูลการเงินและธุรกรรมการชำระเงินของลูกค้าทั้งหมดจะต้องได้รับการเข้ารหัส (Encryption) อย่างปลอดภัย</li>
+          </ul>
+        </div>
+
+        <div class="bullet-point" style="margin-top: 10px;">
+          <strong>3. ความต้องการเฉพาะด้านโดเมนธุรกิจ (Domain Requirements) [ระบุ 1-2 ข้อ]:</strong>
+          <ul style="margin-left: 20px; margin-top: 4px;">
+            <li><strong>Domain-1:</strong> ระบบต้องสามารถสร้างรายงานสรุปยอดขายประจำวัน (Daily Sales Report) และวิเคราะห์เมนูที่ลูกค้านิยมสั่งมากที่สุด เพื่อนำไปใช้วางแผนสต็อกวัตถุดิบและโปรโมชันร้านอาหาร</li>
+            <li><strong>Domain-2:</strong> ระบบต้องจัดเก็บและคุ้มครองข้อมูลส่วนบุคคลของลูกค้าตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล (PDPA) อย่างเคร่งครัด</li>
+          </ul>
+        </div>
+
+        <div class="bullet-point" style="margin-top: 10px;">
+          <strong>4. ข้อจำกัดของโครงการ (Constraints) [ระบุ 1-2 ข้อ]:</strong>
+          <ul style="margin-left: 20px; margin-top: 4px;">
+            <li><strong>Constraint-1 (ด้านเทคโนโลยี):</strong> แอปพลิเคชันต้องพัฒนาด้วย Flutter Framework เพื่อให้สามารถทำงานได้ทั้งบนระบบปฏิบัติการ iOS และ Android ด้วยชุดโค้ดเดียวกัน</li>
+            <li><strong>Constraint-2 (ด้านเวลา):</strong> โครงการพัฒนาทั้งหมดจะต้องเสร็จสิ้นและพร้อมเปิดให้บริการจริงภายในระยะเวลาไม่เกิน 3 เดือน</li>
+          </ul>
+        </div>
+
+        <div class="tip-box">⭐ <strong>เทคนิคการตอบ:</strong> แยกเป็น 4 หัวข้อชัดเจนแบบนี้ และใส่ตัวเลขตัวชี้วัด (5 นาที, 2 วินาที, 300 คน, 3 เดือน) ให้ครบตามที่โจทย์ระบุ จะได้คะแนนเต็ม 6/6!</div>
+      </div>
+    </div>
+
+    <!-- QUESTION 2 -->
+    <div class="exam-card">
+      <span class="q-tag">ข้อที่ 2 : STAKEHOLDER IDENTIFICATION & ROLES (6 คะแนน)</span>
+      <h3 class="q-title">Question 2: Stakeholder Identification & Role Definition</h3>
+      <div class="q-sub">[ภาษาไทย]: การระบุผู้มีส่วนได้ส่วนเสียและการอธิบายบทบาทหน้าที่ (เคส: EasyClinic)</div>
+
+      <div class="scenario-box en">
+        <strong>[English Prompt]:</strong> "Identify the key internal and external stakeholders for the given system and clearly describe the role and responsibility of each stakeholder."
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> "จงระบุกลุ่มผู้มีส่วนได้ส่วนเสียหลักทั้งภายใน (Internal) และภายนอก (External) สำหรับระบบที่กำหนด และอธิบายบทบาทหน้าที่ความรับผิดชอบของแต่ละกลุ่มอย่างชัดเจน"
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 ตารางคำตอบภาษาไทยที่สมบูรณ์ (EasyClinic Stakeholders):</div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 28%;">Stakeholder (ผู้มีส่วนได้ส่วนเสีย)</th>
+                <th style="width: 18%;">ประเภท (Type)</th>
+                <th style="width: 54%;">บทบาทหน้าที่และความรับผิดชอบในระบบ (Roles & Responsibilities)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. เจ้าของคลินิก<br><small>(Clinic Owner / Sponsor)</small></strong></td>
+                <td><span class="badge-internal">Internal</span></td>
+                <td>เป็นผู้อนุมัติงบประมาณและกำหนดทิศทางธุรกิจ ต้องการระบบเพื่อลดปัญหาคนไข้เบี้ยวนัด (No-show) และใช้ดูรายงานสถิติยอดผู้ป่วยเพื่อบริหารงาน</td>
+              </tr>
+              <tr>
+                <td><strong>2. ผู้ป่วย / ลูกค้า<br><small>(Patients / End Users)</small></strong></td>
+                <td><span class="badge-external">External</span></td>
+                <td>ลงทะเบียนด้วยเบอร์โทร/เลขบัตรประชาชน ค้นหาแพทย์เฉพาะทาง เลือกวันเวลานัดหมาย จองคิว และรับ SMS/Email แจ้งเตือนล่วงหน้า</td>
+              </tr>
+              <tr>
+                <td><strong>3. แพทย์<br><small>(Doctors / Clinicians)</small></strong></td>
+                <td><span class="badge-internal">Internal</span></td>
+                <td>เข้าใช้งานระบบ Dashboard เพื่อตรวจสอบตารางนัดหมายผู้ป่วยประจำวัน และปรับเปลี่ยนเวลาออกตรวจหรือชั่วโมงให้คำปรึกษาตามความจำเป็น</td>
+              </tr>
+              <tr>
+                <td><strong>4. เจ้าหน้าที่คลินิก / ประชาสัมพันธ์<br><small>(Clinic Staff / Receptionists)</small></strong></td>
+                <td><span class="badge-internal">Internal</span></td>
+                <td>ตรวจสอบคิวผู้ป่วยแบบ Real-time อัปเดตสถานะคนไข้หน้าเคาน์เตอร์ (เช่น "มาถึงแล้ว", "ไม่มาตามนัด") และจัดการคิวกรณีเร่งด่วน</td>
+              </tr>
+              <tr>
+                <td><strong>5. ทีมพัฒนาซอฟต์แวร์<br><small>(Software Development Team)</small></strong></td>
+                <td><span class="badge-internal">Internal</span></td>
+                <td>วิเคราะห์ความต้องการ ออกแบบหน้าจอที่ใช้งานง่ายสำหรับผู้สูงอายุ (Senior-friendly) พัฒนาระบบ และทดสอบบน Web, Android และ iOS</td>
+              </tr>
+              <tr>
+                <td><strong>6. ผู้ให้บริการส่ง SMS/Email ภายนอก<br><small>(Third-party Gateway Provider)</small></strong></td>
+                <td><span class="badge-external">External</span></td>
+                <td>เป็นระบบภายนอกที่ให้บริการเชื่อมต่อ API สำหรับส่งข้อความแจ้งเตือนนัดหมายอัตโนมัติก่อนถึงวันนัด 1 วันและ 1 ชั่วโมง</td>
+              </tr>
+              <tr>
+                <td><strong>7. หน่วยงานกำกับดูแลด้านสาธารณสุข<br><small>(Healthcare Regulatory Authorities)</small></strong></td>
+                <td><span class="badge-external">External</span></td>
+                <td>ตรวจสอบและบังคับใช้มาตรฐานการจัดเก็บข้อมูลสุขภาพและความปลอดภัยของเวชระเบียนตามกฎหมาย (HIPAA / แนวทางกระทรวงสาธารณสุข / PDPA)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUESTION 3 -->
+    <div class="exam-card">
+      <span class="q-tag">ข้อที่ 3 : PRODUCT VISION STATEMENT (6 คะแนน)</span>
+      <h3 class="q-title">Question 3: Product Vision Statement using Moore's Template</h3>
+      <div class="q-sub">[ภาษาไทย]: การเขียนวิสัยทัศน์ผลิตภัณฑ์ด้วยเทมเพลต Moore's Vision Template (เคส: KMUTNB Cafeteria App)</div>
+
+      <div class="scenario-box en">
+        <strong>[English Prompt]:</strong> "Construct a formal Product Vision statement for the project using Moore's Product Vision Template."
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> "จงเขียนแถลงการณ์วิสัยทัศน์ของผลิตภัณฑ์ (Product Vision Statement) ที่เป็นทางการสำหรับโครงการ โดยใช้โครงสร้างเทมเพลตของ Moore"
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 โครงสร้างเทมเพลตและคำตอบภาษาไทย:</div>
+        
+        <div class="bullet-point">
+          <strong>1. โครงสร้างแม่แบบ Moore's Vision Template 6 ท่อน:</strong>
+          <ul style="margin-left: 20px; margin-top: 4px; font-size: 0.9rem;">
+            <li><code>FOR</code> [กลุ่มลูกค้า/ผู้ใช้งานเป้าหมาย]</li>
+            <li><code>WHO</code> [ปัญหาที่พวกเขากำลังเผชิญ หรือโอกาสทางธุรกิจ]</li>
+            <li><code>THE</code> [ชื่อผลิตภัณฑ์/ระบบ] <code>IS A</code> [ประเภทหมวดหมู่ของผลิตภัณฑ์]</li>
+            <li><code>THAT</code> [คุณประโยชน์หลัก หรือเหตุผลสำคัญที่ต้องใช้งาน]</li>
+            <li><code>UNLIKE</code> [คู่แข่งหลัก หรือวิธีการทำงานแบบเดิมในปัจจุบัน]</li>
+            <li><code>OUR PRODUCT</code> [จุดเด่นที่แตกต่างและการมอบคุณค่าที่เหนือกว่า]</li>
+          </ul>
+        </div>
+
+        <div style="background: #f8fafc; border: 1.5px solid var(--accent-indigo); border-radius: var(--radius-sm); padding: 14px; margin-top: 10px;">
+          <strong>คำตอบภาษาไทยสำหรับระบบแอปสั่งอาหารโรงอาหาร มจพ. (KMUTNB Cafeteria App):</strong><br><br>
+          • <strong>FOR (สำหรับ):</strong> นักศึกษา อาจารย์ และบุคลากรของมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)<br>
+          • <strong>WHO (ผู้ซึ่ง):</strong> ประสบปัญหาการเสียเวลาต่อคิวสั่งอาหารยาวนานและความแออัดในช่วงเวลาพักกลางวัน<br>
+          • <strong>THE (แอป "KMUTNB Cafeteria"):</strong> เป็นแอปพลิเคชันมือถือสั่งอาหารล่วงหน้าและจัดการคิวดิจิทัลแบบข้ามแพลตฟอร์ม (Cross-platform)<br>
+          • <strong>THAT (ที่ช่วยให้):</strong> นักศึกษาสามารถดูเมนู สั่งอาหารล่วงหน้า ชำระเงินผ่าน Mobile Banking/Wallet และรับการแจ้งเตือนเวลารับอาหารได้อย่างแม่นยำ<br>
+          • <strong>UNLIKE (ซึ่งแตกต่างจาก):</strong> การเดินไปเข้าแถวรอคิวสั่งหน้าร้านและการจ่ายด้วยเงินสดแบบเดิม<br>
+          • <strong>OUR PRODUCT (ผลิตภัณฑ์ของเรา):</strong> เชื่อมต่อกับระบบล็อกอินอีเมลมหาวิทยาลัยโดยตรง รองรับผู้ใช้งานพร้อมกันได้มากกว่า 1,000 คน และช่วยลดเวลารอรับอาหารของนักศึกษาลงเหลือไม่เกิน 5 นาที
+        </div>
+      </div>
+    </div>
+
+    <!-- QUESTION 4 -->
+    <div class="exam-card">
+      <span class="q-tag">ข้อที่ 4 : PROCESS MODELS COMPARISON (6 คะแนน)</span>
+      <h3 class="q-title">Question 4: Comparison of Software Development Process Models</h3>
+      <div class="q-sub">[ภาษาไทย]: การเปรียบเทียบโมเดลกระบวนการพัฒนาซอฟต์แวร์ 3 รูปแบบหลัก (Waterfall, Incremental, Reuse-oriented)</div>
+
+      <div class="scenario-box en">
+        <strong>[English Prompt]:</strong> "Compare the Waterfall Model, Incremental Development, and Reuse-oriented Software Engineering in terms of their advantages, disadvantages, and project suitability."
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> "จงเปรียบเทียบโมเดล Waterfall, การพัฒนาแบบ Incremental, และวิศวกรรมซอฟต์แวร์แบบ Reuse-oriented ในด้านจุดเด่น ข้อจำกัด และความเหมาะสมกับประเภทโครงการ"
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 ตารางเปรียบเทียบคำตอบภาษาไทย (3 Models Comparison):</div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 20%;">มิติการเปรียบเทียบ</th>
+                <th style="width: 26%;">1. Waterfall Model (Plan-Driven)</th>
+                <th style="width: 27%;">2. Incremental Development</th>
+                <th style="width: 27%;">3. Reuse-oriented (Integration)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>ลักษณะการทำงาน<br>(Characteristics)</strong></td>
+                <td>ทำงานเป็นลำดับขั้นตายตัว (Sequential) ต้องทำเฟสก่อนหน้าให้เสร็จสมบูรณ์ 100% ก่อนเริ่มเฟสถัดไป</td>
+                <td>แบ่งระบบออกเป็นส่วนย่อยๆ แล้วพัฒนาสลับกับการทดสอบ (Interleaved) ส่งมอบงานทีละเวอร์ชัน</td>
+                <td>เน้นการนำชิ้นส่วนซอฟต์แวร์สำเร็จรูปที่มีอยู่แล้ว (COTS/Libraries) มาปรับแต่งและประกอบเข้าด้วยกัน</td>
+              </tr>
+              <tr>
+                <td><strong>ข้อดี / จุดเด่น<br>(Advantages)</strong></td>
+                <td>• โครงสร้างชัดเจน เข้าใจง่าย<br>• วางแผนงบประมาณ จัดการเอกสาร และกำหนดตารางเวลาได้ง่ายตั้งแต่ต้น</td>
+                <td>• ยืดหยุ่นสูง รองรับการเปลี่ยนแปลงความต้องการของลูกค้าได้ตลอดเวลา<br>• ลูกค้าได้เห็นและทดลองใช้ระบบจริงเร็ว</td>
+                <td>• ประหยัดเวลาพัฒนาอย่างมาก (Fast Time-to-market)<br>• ลดต้นทุนและความเสี่ยงเพราะใช้ของที่ผ่านการทดสอบมาแล้ว</td>
+              </tr>
+              <tr>
+                <td><strong>ข้อเสีย / ข้อจำกัด<br>(Disadvantages)</strong></td>
+                <td>• ปรับแก้ Requirement ย้อนหลังได้ยากมากและต้นทุนสูง<br>• ลูกค้าจะได้เห็นซอฟต์แวร์จริงตอนท้ายสุดของโครงการเท่านั้น</td>
+                <td>• มองเห็นความคืบหน้าของงานยากหากไม่มีเอกสารกำกับ (Process not visible)<br>• โครงสร้างระบบเสื่อมลงได้ง่ายถ้าไม่ทำ Refactoring</td>
+                <td>• ต้องยอมประนีประนอม Requirement ให้เข้ากับซอฟต์แวร์สำเร็จรูป<br>• ขาดการควบคุมการอัปเดตจากผู้พัฒนาภายนอก (Third-party)</td>
+              </tr>
+              <tr>
+                <td><strong>ความเหมาะสม<br>(Project Suitability)</strong></td>
+                <td>ระบบขนาดใหญ่ที่ Requirement นิ่งและชัดเจนมาก เช่น <strong>ระบบควบคุมความปลอดภัย, ระบบฝังตัว (Embedded), ระบบการบิน</strong></td>
+                <td>ระบบธุรกิจทั่วไป เว็บไซต์ แอปพลิเคชันมือถือ หรือซอฟต์แวร์ Startup ที่ความต้องการเปลี่ยนเร็ว</td>
+                <td>ระบบธุรกิจมาตรฐานทั่วไปที่มีซอฟต์แวร์ในตลาดรองรับอยู่แล้ว เช่น <strong>ระบบ E-commerce, ERP, CMS</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUESTION 5 -->
+    <div class="exam-card">
+      <span class="q-tag">ข้อที่ 5 : RE PROCESS & VALIDATION CHECKS (6 คะแนน)</span>
+      <h3 class="q-title">Question 5: Requirements Engineering Process & Validation Techniques</h3>
+      <div class="q-sub">[ภาษาไทย]: 4 กิจกรรมหลักของวิศวกรรมความต้องการ และ 5 เกณฑ์ตรวจสอบความถูกต้อง (V-C-C-R-V)</div>
+
+      <div class="scenario-box en">
+        <strong>[English Prompt]:</strong> "Explain the 4 generic activities of the Requirements Engineering process, and describe how requirements validation is conducted."
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> "จงอธิบาย 4 กิจกรรมหลักของกระบวนการวิศวกรรมความต้องการ (RE Process) และอธิบายว่าการตรวจสอบความถูกต้องของความต้องการ (Requirements Validation) ดำเนินการอย่างไร"
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 แนวคำตอบภาษาไทยอย่างละเอียด:</div>
+        
+        <div class="bullet-point">
+          <strong>(a) 4 กิจกรรมหลักของวิศวกรรมความต้องการ (4 Generic Activities of RE):</strong>
+          <ol style="margin-left: 20px; margin-top: 4px;">
+            <li><strong>1. Requirements Elicitation (การค้นหาและรวบรวมความต้องการ):</strong> วิศวกรซอฟต์แวร์ทำงานร่วมกับ Stakeholders เพื่อค้นหาปัญหา ความต้องการทางธุรกิจ และบริบทการทำงาน โดยใช้เทคนิคการสัมภาษณ์ (Interviews), การสังเกตการณ์ในสถานที่จริง (Ethnography), และการเขียน Scenarios</li>
+            <li><strong>2. Requirements Specification (การจัดทำเอกสารข้อกำหนด):</strong> นำความต้องการที่ได้มาเขียนบันทึกอย่างเป็นทางการให้อยู่ในรูปแบบที่เข้าใจตรงกัน เช่น ภาษาธรรมชาติแบบมีโครงสร้าง (Structured Natural Language), ตารางเงื่อนไข (Tabular Specs), หรือแผนภาพ UML Use Case</li>
+            <li><strong>3. Requirements Validation (การตรวจสอบความถูกต้องของข้อกำหนด):</strong> ตรวจสอบว่าความต้องการที่เขียนในเอกสารตรงกับความต้องการที่แท้จริงของลูกค้าหรือไม่ เพื่อป้องกันการเสียเงินและเวลาในการรื้องานแก้โค้ดภายหลัง</li>
+            <li><strong>4. Requirements Management (การจัดการการเปลี่ยนแปลงความต้องการ):</strong> วางกระบวนการรับมือกับการเปลี่ยนแปลงความต้องการที่เกิดขึ้นตลอดวงจรชีวิตของระบบ โดยใช้ระบบสืบย้อน (Traceability) และการประเมินต้นทุน/ผลกระทบ</li>
+          </ol>
+        </div>
+
+        <div class="bullet-point" style="margin-top: 12px;">
+          <strong>(b) 5 เกณฑ์การตรวจสอบความถูกต้อง (5 Validation Checks: V-C-C-R-V):</strong>
+          <ul style="margin-left: 20px; margin-top: 4px;">
+            <li><strong>1. Validity (ความสมเหตุสมผล):</strong> ฟังก์ชันตรงกับสิ่งที่ลูกค้าต้องการใช้ทำงานจริงหรือไม่</li>
+            <li><strong>2. Consistency (ความไม่ขัดแย้ง):</strong> ข้อกำหนดแต่ละข้อต้องสอดคล้องกัน ไม่มีข้อใดขัดแย้งกันเอง</li>
+            <li><strong>3. Completeness (ความสมบูรณ์ครบถ้วน):</strong> ระบุฟังก์ชัน ข้อจำกัด และกรณีเกิด Error ครบทุกกรณี</li>
+            <li><strong>4. Realism (ความเป็นไปได้จริง):</strong> สามารถสร้างได้จริงภายใต้งบประมาณ เทคโนโลยี และเวลาที่มีอยู่</li>
+            <li><strong>5. Verifiability (การทดสอบวัดผลได้):</strong> ข้อกำหนดต้องเขียนด้วยเกณฑ์ตัวเลขที่สามารถเขียน Test Case เพื่อทดสอบผ่าน/ไม่ผ่านได้</li>
+          </ul>
+        </div>
+
+        <div class="bullet-point" style="margin-top: 10px;">
+          <strong>(c) เทคนิคที่ใช้ในการตรวจเช็ก (Validation Techniques):</strong>
+          <ul style="margin-left: 20px; margin-top: 4px;">
+            <li><strong>Requirements Reviews:</strong> ทีมวิศวกรและลูกค้าร่วมกันตรวจทานเอกสารข้อกำหนดทีละข้อ</li>
+            <li><strong>System Prototyping:</strong> สร้างตัวต้นแบบให้ผู้ใช้ทดลองเล่นเพื่อขอ Feedback โดยตรง</li>
+            <li><strong>Test-case Generation:</strong> ทดลองเขียน Test Case จากข้อกำหนด ถ้าเขียน Test Case ไม่ได้แสดงว่าข้อกำหนดนั้นคลุมเครือ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- PART 2: 4 NEW STAKEHOLDER PRACTICE EXAM QUESTIONS       -->
+    <!-- ======================================================= -->
+    <h2 style="margin: 36px 0 16px; color: var(--accent-purple); border-bottom: 2px solid var(--border-light); padding-bottom: 6px;">
+      👥 ส่วนที่ 2: โจทย์ข้อสอบ Stakeholder เพิ่มเติม 4 ข้อใหม่ (New Case Studies + เฉลยไทย)
+    </h2>
+
+    <!-- STAKEHOLDER CASE 1 -->
+    <div class="exam-card">
+      <span class="q-tag extra">STAKEHOLDER CASE 1 : EV CHARGING NETWORK (โจทย์ใหม่ 1)</span>
+      <h3 class="q-title">Question 6: Stakeholder Identification for "VoltCharge" Smart EV Charging Network</h3>
+      <div class="q-sub">[ภาษาไทย]: การวิเคราะห์ผู้มีส่วนได้ส่วนเสียสำหรับระบบสถานีชาร์จรถยนต์ไฟฟ้าอัจฉริยะ "VoltCharge"</div>
+
+      <div class="scenario-box en">
+        <strong>[English Problem Scenario]:</strong><br>
+        A renewable energy company is developing <strong>"VoltCharge"</strong>, an automated IoT-enabled EV charging network across major highways in Thailand. EV drivers use a mobile app to find nearest charging stations, reserve charging plugs in advance, monitor battery charging percentage in real-time, and pay via PromptPay. Station field technicians monitor charger hardware status remotely. The energy provider manages dynamic electricity tariffs based on peak/off-peak grid loads. The Provincial Electricity Authority (PEA) regulates high-voltage grid connections and energy safety compliance.
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        บริษัทพลังงานทดแทนกำลังพัฒนาระบบเครือข่ายสถานีชาร์จรถยนต์ไฟฟ้าอัจฉริยะ <strong>"VoltCharge"</strong> บนถนนสายหลักทั่วประเทศ ผู้ขับขี่รถ EV ใช้แอปมือถือเพื่อค้นหาหัวชาร์จ จองคิวล่วงหน้า ดูเปอร์เซ็นต์แบตเตอรี่แบบ Real-time และจ่ายเงินผ่าน PromptPay ช่างเทคนิคประจำสถานีใช้ระบบเพื่อตรวจสอบสถานะความร้อนและไฟตกของหัวชาร์จจากระยะไกล ฝ่ายบริหารจัดการราคาค่าไฟฟ้าตามช่วงเวลา (Peak/Off-peak) และการไฟฟ้าส่วนภูมิภาค (กฟภ.) กำกับดูแลมาตรฐานความปลอดภัยและการเชื่อมต่อสายส่งแรงสูง
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 ตารางเฉลยการวิเคราะห์ Stakeholders (VoltCharge EV Network):</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>ประเภท (Type)</th>
+                <th>บทบาทหน้าที่และความรับผิดชอบในระบบ (Role & Responsibility)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. EV Drivers (ผู้ขับขี่รถยนต์ไฟฟ้า)</strong></td>
+                <td><span class="badge-external">External (End User)</span></td>
+                <td>ใช้แอปมือถือค้นหาสถานี จองหัวชาร์จล่วงหน้า ตรวจสอบสถานะการชาร์จแบตเตอรี่แบบ Real-time และชำระเงินค่าชาร์จผ่าน PromptPay</td>
+              </tr>
+              <tr>
+                <td><strong>2. Station Field Technicians (ช่างเทคนิคประจำสถานี)</strong></td>
+                <td><span class="badge-internal">Internal (Operator)</span></td>
+                <td>ตรวจสอบสถานะฮาร์ดแวร์ตู้ชาร์จ รับการแจ้งเตือนเมื่อระบบขัดข้อง/ความร้อนสูง และเข้าซ่อมบำรุงหัวชาร์จตามรอบ</td>
+              </tr>
+              <tr>
+                <td><strong>3. Grid Operations Manager (ผู้จัดการระบบพลังงาน)</strong></td>
+                <td><span class="badge-internal">Internal (Management)</span></td>
+                <td>กำหนดอัตราค่าบริการไฟฟ้าตามช่วงเวลา Peak/Off-peak ดูรายงานสถิติการใช้พลังงาน และวางแผนขยายสถานีชาร์จ</td>
+              </tr>
+              <tr>
+                <td><strong>4. Software Development Team (ทีมพัฒนาซอฟต์แวร์)</strong></td>
+                <td><span class="badge-internal">Internal</span></td>
+                <td>พัฒนาแอปพลิเคชันมือถือ เชื่อมต่อระบบ IoT สื่อสารกับตู้ชาร์จ (OCPP Protocol) และดูแลระบบความปลอดภัยของคลาวด์</td>
+              </tr>
+              <tr>
+                <td><strong>5. Payment Gateway Provider (ผู้ให้บริการชำระเงิน)</strong></td>
+                <td><span class="badge-external">External (Vendor)</span></td>
+                <td>ระบบธนาคาร/PromptPay ตัดเงินค่าบริการชาร์จไฟฟ้าแบบอัตโนมัติเมื่อสิ้นสุดรอบการชาร์จ</td>
+              </tr>
+              <tr>
+                <td><strong>6. Provincial Electricity Authority: PEA (การไฟฟ้าส่วนภูมิภาค)</strong></td>
+                <td><span class="badge-external">External (Regulator)</span></td>
+                <td>หน่วยงานกำกับดูแลมาตรฐานความปลอดภัยทางวิศวกรรมไฟฟ้า การเชื่อมต่อโครงข่ายสายส่ง และกฎหมายพลังงาน</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAKEHOLDER CASE 2 -->
+    <div class="exam-card">
+      <span class="q-tag extra">STAKEHOLDER CASE 2 : FOOD DELIVERY & RIDERS (โจทย์ใหม่ 2)</span>
+      <h3 class="q-title">Question 7: Stakeholder Identification for "FastBite" Food Delivery & Rider Platform</h3>
+      <div class="q-sub">[ภาษาไทย]: การวิเคราะห์ผู้มีส่วนได้ส่วนเสียสำหรับแพลตฟอร์มจัดส่งอาหารและจัดการไรเดอร์ "FastBite"</div>
+
+      <div class="scenario-box en">
+        <strong>[English Problem Scenario]:</strong><br>
+        A startup is launching <strong>"FastBite"</strong>, an on-demand food delivery platform connecting hungry customers, partner restaurants, and motorcycle delivery riders. Customers order food, customize options, track rider GPS locations in real-time, and rate food quality. Restaurant owners use a tablet POS app to receive orders, update menu availability, and print kitchen dockets. Delivery riders receive route notifications, confirm food pickup, navigate via GPS, and earn delivery fees. The customer support team resolves order disputes, and Department of Internal Trade enforces consumer pricing transparency.
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        บริษัทสตาร์ทอัพกำลังเปิดตัว <strong>"FastBite"</strong> แพลตฟอร์มสั่งอาหารเดลิเวอรีที่เชื่อมต่อลูกค้า ร้านอาหารพันธมิตร และไรเดอร์ส่งอาหาร ลูกค้าสั่งอาหาร ปรับแต่งเมนู ติดตามพิกัด GPS ของไรเดอร์แบบสดๆ และให้คะแนนความพึงพอใจ เจ้าของร้านอาหารใช้แท็บเล็ตรับออเดอร์ ปิดเมนูที่ของหมด และพิมพ์ใบสั่งอาหารเข้าครัว ไรเดอร์รับแจ้งเตือนงาน วิ่งรับส่งอาหารตาม GPS และรับค่ารอบ ฝ่ายบริการลูกค้าจัดการข้อร้องเรียน และกรมการค้าภายในกำกับดูแลความเป็นธรรมด้านราคาและค่าบริการ
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 ตารางเฉลยการวิเคราะห์ Stakeholders (FastBite Platform):</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>ประเภท (Type)</th>
+                <th>บทบาทหน้าที่และความรับผิดชอบในระบบ (Role & Responsibility)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Hungry Customers (ลูกค้าผู้สั่งอาหาร)</strong></td>
+                <td><span class="badge-external">External (End User)</span></td>
+                <td>ค้นหาร้านอาหาร สั่งซื้อ ปรับแต่งเมนู ติดตามตำแหน่ง GPS ของไรเดอร์แบบ Real-time และให้คะแนนรีวิวร้านค้า/คนขับ</td>
+              </tr>
+              <tr>
+                <td><strong>2. Partner Restaurant Owners (เจ้าของร้านอาหาร)</strong></td>
+                <td><span class="badge-external">External (Partner)</span></td>
+                <td>ใช้แท็บเล็ตกดยืนยันรับออเดอร์ อัปเดตสต็อกเมนูอาหารที่หมด กำหนดเวลาปรุงอาหาร และตรวจสอบยอดเงินรายรับ</td>
+              </tr>
+              <tr>
+                <td><strong>3. Delivery Riders (คนขับไรเดอร์ส่งอาหาร)</strong></td>
+                <td><span class="badge-external">External (Gig Worker)</span></td>
+                <td>รับการแจ้งเตือนงานส่งอาหาร ยืนยันการรับสินค้าจากร้าน ขับขี่ส่งอาหารถึงมือลูกค้าตามแผนที่ GPS และตรวจสอบรายได้ค่ารอบ</td>
+              </tr>
+              <tr>
+                <td><strong>4. Customer Support Team (เจ้าหน้าที่บริการลูกค้า)</strong></td>
+                <td><span class="badge-internal">Internal (Operations)</span></td>
+                <td>ใช้ระบบแอดมินเพื่อไกล่เกลี่ยปัญหา จัดการข้อร้องเรียนกรณีส่งผิด ออเดอร์ล่าช้า หรือดำเนินการคืนเงิน (Refund)</td>
+              </tr>
+              <tr>
+                <td><strong>5. Platform Engineering Team (ทีมวิศวกรซอฟต์แวร์)</strong></td>
+                <td><span class="badge-internal">Internal</span></td>
+                <td>พัฒนาอัลกอริทึมจัดสรรคิวไรเดอร์ (Matching Algorithm) ดูแลระบบแผนที่ GPS และรักษาเสถียรภาพของเซิร์ฟเวอร์</td>
+              </tr>
+              <tr>
+                <td><strong>6. Department of Internal Trade (กรมการค้าภายใน)</strong></td>
+                <td><span class="badge-external">External (Regulator)</span></td>
+                <td>กำกับดูแลความเป็นธรรมของอัตราค่าบริการส่วนแบ่งยอดขาย (GP) และการแสดงราคาอาหารที่โปร่งใสต่อผู้บริโภค</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAKEHOLDER CASE 3 -->
+    <div class="exam-card">
+      <span class="q-tag extra">STAKEHOLDER CASE 3 : SMART HOSPITAL OPD & PHARMACY (โจทย์ใหม่ 3)</span>
+      <h3 class="q-title">Question 8: Stakeholder Identification for "MedSmart" Automated Hospital OPD & Pharmacy System</h3>
+      <div class="q-sub">[ภาษาไทย]: การวิเคราะห์ผู้มีส่วนได้ส่วนเสียสำหรับระบบผู้ป่วยนอกและห้องจ่ายยาอัตโนมัติ "MedSmart"</div>
+
+      <div class="scenario-box en">
+        <strong>[English Problem Scenario]:</strong><br>
+        A public hospital is modernizing its Outpatient Department (OPD) with <strong>"MedSmart"</strong>. Patients scan their national smart ID cards at self-check-in kiosks to measure blood pressure, obtain queue tickets, and view doctor queue numbers on digital signage. Physicians record clinical diagnoses and submit electronic prescriptions. Pharmacists review drug interactions using clinical decision support and dispatch prescriptions to automated robotic drug dispensing machines. The Medical Council of Thailand enforces clinical standards, and the hospital IT department manages data backups.
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        โรงพยาบาลรัฐกำลังยกระดับแผนกผู้ป่วยนอก (OPD) ด้วยระบบ <strong>"MedSmart"</strong> คนไข้เสียบบัตรประชาชนที่ตู้คีออสเพื่อวัดความดันอัตโนมัติ รับบัตรคิว และดูหน้าจอดิจิทัลเรียกคิวหน้าห้องตรวจ แพทย์บันทึกผลวินิจฉัยและสั่งยาอิเล็กทรอนิกส์ เภสัชกรตรวจสอบประวัติการแพ้ยาและส่งคำสั่งจัดยาไปยังหุ่นยนต์หยิบยาอัตโนมัติ แพทยสภากำกับดูแลมาตรฐานการรักษา และแผนก IT โรงพยาบาลดูแลการสำรองข้อมูลเวชระเบียน
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 ตารางเฉลยการวิเคราะห์ Stakeholders (MedSmart Hospital System):</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>ประเภท (Type)</th>
+                <th>บทบาทหน้าที่และความรับผิดชอบในระบบ (Role & Responsibility)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Outpatients (ผู้ป่วยแผนกผู้ป่วยนอก)</strong></td>
+                <td><span class="badge-external">External (End User)</span></td>
+                <td>เสียบบัตรประชาชนยืนยันตัวตนที่ตู้ Kiosk วัดความดัน รับบัตรคิว และติดตามสถานะเรียกคิวตรวจบนหน้าจอดิจิทัล</td>
+              </tr>
+              <tr>
+                <td><strong>2. Hospital Physicians (แพทย์ผู้ตรวจรักษา)</strong></td>
+                <td><span class="badge-internal">Internal (Clinician)</span></td>
+                <td>เรียกคิวคนไข้ ดูประวัติการรักษาเดิม บันทึกอาการและผลวินิจฉัย และสั่งจ่ายยาอิเล็กทรอนิกส์ (E-Prescription)</td>
+              </tr>
+              <tr>
+                <td><strong>3. Hospital Pharmacists (เภสัชกรประจำห้องยา)</strong></td>
+                <td><span class="badge-internal">Internal (Clinician)</span></td>
+                <td>ตรวจสอบคำสั่งจ่ายยา เช็กประวัติการแพ้ยาและการตีกันของยา และสั่งการหุ่นยนต์จัดยาอัตโนมัติพร้อมส่งมอบยาให้คนไข้</td>
+              </tr>
+              <tr>
+                <td><strong>4. Automated Pharmacy Robotics Vendor (บริษัทหุ่นยนต์จัดยา)</strong></td>
+                <td><span class="badge-external">External (Vendor)</span></td>
+                <td>จัดหา ดูแล และเชื่อมต่อระบบสั่งการตู้ยาอัตโนมัติ (Robotic Dispensing) เข้ากับฐานข้อมูลของโรงพยาบาล</td>
+              </tr>
+              <tr>
+                <td><strong>5. Hospital IT Security Administrator (เจ้าหน้าที่ไอทีโรงพยาบาล)</strong></td>
+                <td><span class="badge-internal">Internal</span></td>
+                <td>ดูแลเซิร์ฟเวอร์ระบบเวชระเบียนกลาง จัดการสิทธิ์การเข้าถึงข้อมูลของแพทย์/พยาบาล และสำรองข้อมูลทุกวัน</td>
+              </tr>
+              <tr>
+                <td><strong>6. Medical Council of Thailand: แพทยสภา (หน่วยงานวิชาชีพ)</strong></td>
+                <td><span class="badge-external">External (Regulator)</span></td>
+                <td>กำกับดูแลมาตรฐานจริยธรรมทางการแพทย์ ความถูกต้องของใบสั่งยา และการคุ้มครองข้อมูลความลับของผู้ป่วย</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAKEHOLDER CASE 4 -->
+    <div class="exam-card">
+      <span class="q-tag extra">STAKEHOLDER CASE 4 : DIGITAL EXAM & ANTI-CHEATING (โจทย์ใหม่ 4)</span>
+      <h3 class="q-title">Question 9: Stakeholder Identification for "UniExam Secure" Digital Exam & Proctoring Portal</h3>
+      <div class="q-sub">[ภาษาไทย]: การวิเคราะห์ผู้มีส่วนได้ส่วนเสียสำหรับระบบสอบออนไลน์และคุมสอบอัจฉริยะ "UniExam Secure"</div>
+
+      <div class="scenario-box en">
+        <strong>[English Problem Scenario]:</strong><br>
+        A university is implementing <strong>"UniExam Secure"</strong>, a high-stakes online examination system. Students log in via institutional single sign-on, complete timed exam papers with auto-save, and are monitored via webcam and AI-based gaze tracking. Course instructors create randomized question banks, configure grading rubrics, and publish final marks. Exam proctors monitor live video grids of student webcams to flag suspicious behavior. The Academic Affairs Office audits grading fairness and archives examination records according to Higher Education Commission regulations.
+      </div>
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        มหาวิทยาลัยกำลังนำระบบ <strong>"UniExam Secure"</strong> มาใช้จัดสอบออนไลน์ นักศึกษาเข้าสอบด้วยระบบ SSO ของมหาวิทยาลัย ทำข้อสอบแบบจับเวลาที่มีระบบบันทึกคำตอบอัตโนมัติ และถูกตรวจจับพฤติกรรมผ่านกล้องเว็บแคมด้วยระบบ AI อาจารย์ผู้สอนสร้างคลังข้อสอบแบบสุ่ม กำหนดเกณฑ์การให้คะแนน และประกาศผลสอบ กรรมการคุมสอบเฝ้าดูหน้าจอรวมกล้องของนักศึกษาเพื่อแจ้งเตือนพฤติกรรมทุจริต สำนักทะเบียนและวิชาการตรวจสอบความโปร่งใสและจัดเก็บผลการเรียนตามเกณฑ์ของกระทรวง อว.
+      </div>
+
+      <div class="answer-box">
+        <div class="answer-header">💡 ตารางเฉลยการวิเคราะห์ Stakeholders (UniExam Secure Portal):</div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>ประเภท (Type)</th>
+                <th>บทบาทหน้าที่และความรับผิดชอบในระบบ (Role & Responsibility)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. University Students (นักศึกษาผู้เข้าสอบ)</strong></td>
+                <td><span class="badge-internal">Internal (End User)</span></td>
+                <td>ล็อกอินเข้าสอบด้วยบัญชีมหาวิทยาลัย ทำข้อสอบตามเวลาที่กำหนด เปิดกล้องเว็บแคม และตรวจสอบคะแนนสอบ</td>
+              </tr>
+              <tr>
+                <td><strong>2. Course Instructors (อาจารย์ผู้สอน)</strong></td>
+                <td><span class="badge-internal">Internal (Examiner)</span></td>
+                <td>สร้างคลังข้อสอบ กำหนดเวลาสอบและเกณฑ์การตรวจ ตรวจข้อสอบอัตโนมัติ/อัตนัย และส่งผลคะแนนเข้าสู่ระบบทะเบียน</td>
+              </tr>
+              <tr>
+                <td><strong>3. Exam Proctors (กรรมการคุมสอบ)</strong></td>
+                <td><span class="badge-internal">Internal (Supervisor)</span></td>
+                <td>เฝ้าสังเกตการณ์ผ่านหน้าจอถ่ายทอดสดกล้องเว็บแคม ตรวจสอบการแจ้งเตือนจากระบบ AI และบันทึกรายงานกรณีสงสัยการทุจริต</td>
+              </tr>
+              <tr>
+                <td><strong>4. AI Proctoring Algorithm Vendor (บริษัทพัฒนาระบบตรวจจับ AI)</strong></td>
+                <td><span class="badge-external">External (Vendor)</span></td>
+                <td>ผู้พัฒนาโมเดล AI ตรวจจับการสบตา (Gaze Tracking) ตรวจจับเสียงพูด หรือการสลับหน้าจอ และส่งสัญญาณแจ้งเตือนกรรมการ</td>
+              </tr>
+              <tr>
+                <td><strong>5. Academic Affairs Office (สำนักทะเบียนและประเมินผล)</strong></td>
+                <td><span class="badge-internal">Internal (Management)</span></td>
+                <td>กำหนดนโยบายตารางสอบรวมของมหาวิทยาลัย ตรวจสอบความถูกต้องของเกรด และจัดเก็บหลักฐานการสอบย้อนหลัง</td>
+              </tr>
+              <tr>
+                <td><strong>6. Ministry of Higher Education: อว. (กระทรวงการอุดมศึกษาฯ)</strong></td>
+                <td><span class="badge-external">External (Regulator)</span></td>
+                <td>กำกับดูแลมาตรฐานคุณภาพการศึกษา การประเมินผลการเรียนรู้ที่โปร่งใส และการคุ้มครองสิทธิความเป็นส่วนตัวของนักศึกษา</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const btn = document.getElementById('themeBtn');
+      if (current === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        btn.textContent = '🌙 สลับธีมมืด';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ สลับธีมสว่าง';
+      }
+    }
+  </script>
+</body>
+</html>

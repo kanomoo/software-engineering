@@ -1,4 +1,4 @@
-# 📚 Software Engineering (SE) Midterm Comprehensive Wiki (ฉบับปี 68)
+﻿# 📚 Software Engineering (SE) Midterm Comprehensive Wiki (ฉบับปี 68)
 > **แหล่งข้อมูลอ้างอิง:** สกัดและเรียบเรียงจากคลังเอกสาร **`New_68`** ครบถ้วน 100% 
 > (Ch1 Introduction, Ch2 SW Processes, Ch4 Req Eng, Homework 1 PizzaFriend, Homework 2 EasyClinic, เอกสารการบ้าน และบันทึกท้ายคาบ)
 

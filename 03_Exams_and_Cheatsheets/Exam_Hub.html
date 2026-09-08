@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Exam & Study Hub | คลังข้อสอบและสรุปเข้ม 2568</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0a0d14;
+            --bg-card: rgba(18, 24, 38, 0.75);
+            --bg-card-hover: rgba(28, 38, 60, 0.85);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --primary: #38bdf8;
+            --primary-glow: rgba(56, 189, 248, 0.25);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.25);
+            --purple: #a855f7;
+            --purple-glow: rgba(168, 85, 247, 0.25);
+            --amber: #f59e0b;
+            --amber-glow: rgba(245, 158, 11, 0.25);
+            --rose: #f43f5e;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Sarabun', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-base);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2.5rem 1.5rem 4rem;
+            position: relative;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Glow Backgrounds */
+        .ambient-glow {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+        .glow-1 {
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #0284c7, transparent 70%);
+        }
+        .glow-2 {
+            top: 40%;
+            right: -150px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #7c3aed, transparent 70%);
+        }
+        .glow-3 {
+            bottom: -150px;
+            left: 25%;
+            width: 550px;
+            height: 550px;
+            background: radial-gradient(circle, #059669, transparent 70%);
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header section */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .badge-academic {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .header h1 {
+            font-family: 'Plus Jakarta Sans', 'Sarabun', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 800;
+            line-height: 1.25;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 720px;
+            margin: 0 auto 1.75rem;
+        }
+
+        /* Quick Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            max-width: 860px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .stat-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            text-align: center;
+            backdrop-filter: blur(16px);
+        }
+
+        .stat-value {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Category Filter Tabs */
+        .filter-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: #021220;
+            border-color: var(--primary);
+            font-weight: 600;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        /* Section Title */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .section-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
+        /* Grid Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hub-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+            backdrop-filter: blur(20px);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: var(--shadow-card);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .hub-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(56, 189, 248, 0.15);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tag-exam { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
+        .tag-answers { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .tag-cheatsheet { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .tag-guide { background: rgba(56, 189, 248, 0.15); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .tag-pdf { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+        .card-badge-format {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .card-title {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+            line-height: 1.55;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .card-action-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: transform 0.2s ease;
+        }
+
+        .hub-card:hover .card-action-icon {
+            transform: translateX(4px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .back-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            background: rgba(56, 189, 248, 0.08);
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: var(--transition);
+        }
+
+        .back-nav:hover {
+            background: rgba(56, 189, 248, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="badge-academic">🎓 Software Engineering 2568 (New Curriculum)</div>
+            <h1>Exam Simulation & Cheatsheet Hub</h1>
+            <p>ศูนย์รวมเว็บข้อสอบจำลอง Interactive, แนวข้อสอบภาษาไทยฉบับเจาะลึก, บทวิเคราะห์กรณีศึกษา และ Ultimate Cheatsheets สำหรับเตรียมสอบวิศวกรรมซอฟต์แวร์</p>
+            
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-value">5+</div>
+                    <div class="stat-label">ชุดเว็บข้อสอบ & เฉลย</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">ครอบคลุมเคส New_68</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">2 ชุด</div>
+                    <div class="stat-label">Cheatsheets สรุปเข้ม</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">Interactive</div>
+                    <div class="stat-label">พร้อมตัวจับเวลา & ซ่อนเฉลย</div>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-nav">
+                <button class="filter-btn active" onclick="filterCards('all')">ทั้งหมด (All Items)</button>
+                <button class="filter-btn" onclick="filterCards('exam')">📝 ข้อสอบจำลอง (Mock Exams)</button>
+                <button class="filter-btn" onclick="filterCards('answers')">💡 เฉลย & แนวตอบ (Solutions)</button>
+                <button class="filter-btn" onclick="filterCards('cheatsheet')">⚡ สรุปเข้ม (Cheatsheets)</button>
+                <button class="filter-btn" onclick="filterCards('doc')">📄 เอกสารประกอบ (Docs & PDFs)</button>
+            </div>
+        </header>
+
+        <!-- Section 1: Mock Exams & Interactive Breakdowns -->
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(244, 63, 94, 0.15); color: #fb7185;">🎯</div>
+            <div class="section-title">เว็บข้อสอบจำลอง Interactive & เจาะลึกรายข้อ</div>
+            <div class="section-desc">คลิกเพื่อเริ่มทำข้อสอบเสมือนจริงในเบราว์เซอร์</div>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Set B -->
+            <a href="Interactive_Web_Apps/midterm-exam-set-b.html" class="hub-card" data-category="exam">
+                <div class="card-top">
+                    <span class="card-tag tag-exam">Mock Exam</span>
+                    <span class="card-badge-format">Interactive Web</span>
+                </div>
+                <h3 class="card-title">ข้อสอบจำลอง Midterm ชุด B</h3>
+                <p class="card-desc">ข้อสอบจำลอง 5 ข้อใหญ่ครอบคลุม Mentcare Clinic, PizzaFriend, SCRUM Framework, Requirements Engineering และสถาปัตยกรรมซอฟต์แวร์</p>
+                <div class="card-footer">
+                    <span>5 ข้อหลัก • พร้อมสเกลคะแนน</span>
+                    <span class="card-action-icon">เปิดทำข้อสอบ &rarr;</span>
+                </div>
+            </a>
+
+            <!-- Set C -->
+            <a href="Interactive_Web_Apps/midterm-exam-set-c.html" class="hub-card" data-category="exam">
+                <div class="card-top">
+                    <span class="card-tag tag-exam">Mock Exam</span>
+                    <span class="card-badge-format">Interactive Web</span>
+                </div>
+                <h3 class="card-title">ข้อสอบจำลอง Midterm ชุด C</h3>
+                <p class="card-desc">ชุดข้อสอบเชิงวิเคราะห์ระดับสูง เน้นการประยุกต์ใช้ Agile, Function Point Estimation, Use Case Specification และโจทย์แก้ปัญหาทางวิศวกรรม</p>
+                <div class="card-footer">
+                    <span>โจทย์วิเคราะห์ขั้นสูง</span>
+                    <span class="card-action-icon">เปิดทำข้อสอบ &rarr;</span>
+                </div>
+            </a>
+
+            <!-- Practice ReqEng Breakdown -->
+            <a href="Interactive_Web_Apps/practice-reqeng-exam-breakdown.html" class="hub-card" data-category="exam">
+                <div class="card-top">
+                    <span class="card-tag tag-guide">In-Depth Breakdown</span>
+                    <span class="card-badge-format">Interactive Web</span>
+                </div>
+                <h3 class="card-title">เจาะลึกข้อสอบ Requirements Engineering</h3>
+                <p class="card-desc">วิเคราะห์ข้อสอบจริงทีละเปลาะ ถอดโครงสร้างคำถาม การเขียน User/System Requirements, Non-Functional Matrix และข้อควรระวัง</p>
+                <div class="card-footer">
+                    <span>ถอดรหัสข้อสอบ RE ละเอียด</span>
+                    <span class="card-action-icon">อ่านบทวิเคราะห์ &rarr;</span>
+                </div>
+            </a>
+
+            <!-- Practice ReqEng Guide -->
+            <a href="Interactive_Web_Apps/practice-reqeng-guide.html" class="hub-card" data-category="guide">
+                <div class="card-top">
+                    <span class="card-tag tag-guide">Methodology Guide</span>
+                    <span class="card-badge-format">Interactive Web</span>
+                </div>
+                <h3 class="card-title">คู่มือฝึกฝน Requirements Engineering</h3>
+                <p class="card-desc">คู่มือกระบวนการ RE Spiral Model, เทคนิคการสัมภาษณ์ผู้มีส่วนได้ส่วนเสีย และตัวอย่างการแปลงความต้องการเป็น SRS มาตรฐาน</p>
+                <div class="card-footer">
+                    <span>Step-by-Step Guide</span>
+                    <span class="card-action-icon">เปิดคู่มือ &rarr;</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Section 2: Solutions & Cheatsheets -->
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">💡</div>
+            <div class="section-title">เฉลยแนวตอบ & สรุปเข้ม Cheatsheets</div>
+            <div class="section-desc">อ่านทบทวนความรู้และตรวจคำตอบอย่างมั่นใจ</div>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Thai Answers -->
+            <a href="Interactive_Web_Apps/midterm-thai-exam-answers.html" class="hub-card" data-category="answers">
+                <div class="card-top">
+                    <span class="card-tag tag-answers">Full Solutions</span>
+                    <span class="card-badge-format">Interactive Web</span>
+                </div>
+                <h3 class="card-title">แนวตอบข้อสอบ Midterm ฉบับภาษาไทย</h3>
+                <p class="card-desc">เฉลยและตัวอย่างการเขียนคำตอบภาษาไทยระดับคะแนนเต็ม มีคำอธิบายเหตุผล กฎเกณฑ์การให้คะแนน และการตรวจทานคำตอบ</p>
+                <div class="card-footer">
+                    <span>เฉลยละเอียดภาษาไทย 100%</span>
+                    <span class="card-action-icon">ดูเฉลยแนวตอบ &rarr;</span>
+                </div>
+            </a>
+
+            <!-- Cheatsheet 68 -->
+            <a href="Interactive_Web_Apps/midterm-cheatsheet-68.html" class="hub-card" data-category="cheatsheet">
+                <div class="card-top">
+                    <span class="card-tag tag-cheatsheet">Ultimate 2568</span>
+                    <span class="card-badge-format">Interactive Web</span>
+                </div>
+                <h3 class="card-title">Midterm Cheatsheet 2568 (ฉบับสมบูรณ์)</h3>
+                <p class="card-desc">สรุปเข้มรวมสูตร นิยาม คีย์เวิร์ดสำคัญทั้งหมดจากสไลด์ New_68 จัดหมวดหมู่ 5 พาร์ทหลัก พร้อมระบบค้นหาคำสำคัญในตัว</p>
+                <div class="card-footer">
+                    <span>อัปเดตตรงตามสไลด์ 68</span>
+                    <span class="card-action-icon">เปิด Cheatsheet &rarr;</span>
+                </div>
+            </a>
+
+            <!-- Cheatsheet Classic -->
+            <a href="Interactive_Web_Apps/midterm-cheatsheet.html" class="hub-card" data-category="cheatsheet">
+                <div class="card-top">
+                    <span class="card-tag tag-cheatsheet">Foundation</span>
+                    <span class="card-badge-format">Interactive Web</span>
+                </div>
+                <h3 class="card-title">Midterm Cheatsheet (ฉบับมาตรฐาน)</h3>
+                <p class="card-desc">สรุปหลักการพื้นฐานวิศวกรรมซอฟต์แวร์ แบบจำลองกระบวนการ Waterfall, Incremental, V-Model และ Use Case Specifications</p>
+                <div class="card-footer">
+                    <span>ทบทวนเนื้อหาพื้นฐาน</span>
+                    <span class="card-action-icon">เปิดอ่าน &rarr;</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Section 3: Study Documents & Reference Guides -->
+        <div class="section-header">
+            <div class="section-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">📄</div>
+            <div class="section-title">เอกสาร PDF โจทย์ซ้อมสอบ & สรุปเนื้อหา</div>
+            <div class="section-desc">ไฟล์เอกสารสำหรับอ่านทบทวนและพิมพ์ฝึกทำ</div>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Practice-ReqEng.pdf -->
+            <a href="Practice-ReqEng.pdf" class="hub-card" data-category="doc" target="_blank">
+                <div class="card-top">
+                    <span class="card-tag tag-pdf">PDF Document</span>
+                    <span class="card-badge-format">134 KB</span>
+                </div>
+                <h3 class="card-title">Practice-ReqEng.pdf</h3>
+                <p class="card-desc">เอกสารโจทย์ฝึกหัดวิเคราะห์ความต้องการและการเขียน Use Case ข้อสอบจริงที่ใช้ในห้องเรียน</p>
+                <div class="card-footer">
+                    <span>เอกสารโจทย์ทางการ</span>
+                    <span class="card-action-icon">เปิดไฟล์ PDF &rarr;</span>
+                </div>
+            </a>
+
+            <!-- software_engineering_summary_th.pdf -->
+            <a href="software_engineering_summary_th.pdf" class="hub-card" data-category="doc" target="_blank">
+                <div class="card-top">
+                    <span class="card-tag tag-pdf">PDF Document</span>
+                    <span class="card-badge-format">104 KB</span>
+                </div>
+                <h3 class="card-title">software_engineering_summary_th.pdf</h3>
+                <p class="card-desc">สรุปย่อวิศวกรรมซอฟต์แวร์ภาษาไทย สรุปจุดสำคัญที่มักออกสอบกลางภาค</p>
+                <div class="card-footer">
+                    <span>สรุปย่อภาษาไทย</span>
+                    <span class="card-action-icon">เปิดไฟล์ PDF &rarr;</span>
+                </div>
+            </a>
+
+            <!-- Markdown Guides -->
+            <a href="SE-Midterm-Wiki-68.md" class="hub-card" data-category="doc">
+                <div class="card-top">
+                    <span class="card-tag tag-guide">Markdown Note</span>
+                    <span class="card-badge-format">60 KB</span>
+                </div>
+                <h3 class="card-title">SE-Midterm-Wiki-68.md</h3>
+                <p class="card-desc">โน้ตสรุปเตรียมสอบกลางภาคปี 68 สกัดเนื้อหาจากสไลด์ทุกชุดอย่างละเอียดในรูปแบบ Markdown รองรับ Obsidian</p>
+                <div class="card-footer">
+                    <span>เปิดอ่านโน้ตสรุป</span>
+                    <span class="card-action-icon">เปิดไฟล์ &rarr;</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Navigation back to root -->
+        <footer class="footer">
+            <p style="margin-bottom: 0.5rem;">📂 โครงสร้างโฟลเดอร์หลัก: <code>01_New_Slides_68</code> • <code>02_Old_Slides_Textbook</code> • <code>03_Exams_and_Cheatsheets</code> • <code>04_Work_and_Homework</code> • <code>Wiki</code></p>
+            <p>© 2026 Software Engineering Study System. Organized cleanly for high-efficiency learning.</p>
+        </footer>
+    </div>
+
+    <script>
+        function filterCards(category) {
+            // Update button styles
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter cards
+            const cards = document.querySelectorAll('.hub-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

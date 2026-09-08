@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คู่มือเจาะลึก Practice-ReqEng.pdf — ถอดรหัสโจทย์ แปลไทย และสูตรตอบข้อสอบ (ฉบับเข้าใจ 100%)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-tertiary: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.96);
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --accent-blue: #0284c7;
+      --accent-indigo: #4338ca;
+      --accent-purple: #7e22ce;
+      --accent-emerald: #047857;
+      --accent-amber: #b45309;
+      --accent-rose: #be123c;
+      --border-color: #cbd5e1;
+      --border-light: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-tertiary: #334155;
+      --bg-card: rgba(30, 41, 59, 0.9);
+      --bg-glass: rgba(15, 23, 42, 0.85);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #818cf8;
+      --accent-purple: #c084fc;
+      --accent-emerald: #34d399;
+      --accent-amber: #fbbf24;
+      --accent-rose: #fb7185;
+      --border-color: #334155;
+      --border-light: #1e293b;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Prompt', 'Inter', -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      font-size: 15px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      padding-bottom: 80px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 100;
+      padding: 14px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--accent-rose), var(--accent-purple));
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.5px;
+    }
+
+    .logo-text h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .logo-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--bg-tertiary);
+      border-color: var(--accent-blue);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent-blue);
+      color: white;
+      border-color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #0369a1;
+      border-color: #0369a1;
+      color: white;
+    }
+
+    /* Hero Callout */
+    .hero-banner {
+      background: linear-gradient(135deg, #eff6ff 0%, #fdf2f8 100%);
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 20px 0 30px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    [data-theme="dark"] .hero-banner {
+      background: linear-gradient(135deg, #1e293b 0%, #2d1e3a 100%);
+      border-color: #3b82f6;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-indigo);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    [data-theme="dark"] .hero-title {
+      color: #93c5fd;
+    }
+
+    .hero-desc {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    /* Section Cards */
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Beginner Tutorial Callouts */
+    .tutorial-box {
+      background: #f0fdf4;
+      border-left: 5px solid var(--accent-emerald);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] .tutorial-box {
+      background: rgba(4, 120, 87, 0.15);
+      border-left-color: var(--accent-emerald);
+    }
+
+    .warning-box {
+      background: #fffbeb;
+      border-left: 5px solid var(--accent-amber);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] .warning-box {
+      background: rgba(180, 83, 9, 0.15);
+      border-left-color: var(--accent-amber);
+    }
+
+    .danger-box {
+      background: #fff1f2;
+      border-left: 5px solid var(--accent-rose);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] .danger-box {
+      background: rgba(190, 18, 60, 0.15);
+      border-left-color: var(--accent-rose);
+    }
+
+    .info-box {
+      background: #eff6ff;
+      border-left: 5px solid var(--accent-blue);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+
+    [data-theme="dark"] .info-box {
+      background: rgba(2, 132, 199, 0.15);
+      border-left-color: var(--accent-blue);
+    }
+
+    /* Paragraph parser highlighting */
+    .annotated-text {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      line-height: 1.8;
+      font-size: 0.98rem;
+      margin: 14px 0;
+    }
+
+    [data-theme="dark"] .annotated-text {
+      background: #1e293b;
+    }
+
+    .tag-fr {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .tag-nfr {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .tag-domain {
+      background: #e0e7ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .tag-constraint {
+      background: #ffe4e6;
+      color: #be123c;
+      border: 1px solid #fecdd3;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .tag-stakeholder {
+      background: #f3e8ff;
+      color: #7e22ce;
+      border: 1px solid #e9d5ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* Grid layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card-mini {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      background: var(--bg-card);
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 10px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--bg-tertiary);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(0,0,0,0.015);
+    }
+
+    [data-theme="dark"] tr:nth-child(even) td {
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* Code & Formulas */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88em;
+      background: rgba(2, 132, 199, 0.08);
+      color: var(--accent-blue);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .formula-badge {
+      display: inline-block;
+      background: var(--accent-indigo);
+      color: white;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        font-size: 11pt;
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      header, .nav-actions, .no-print {
+        display: none !important;
+      }
+      .content-card {
+        border: 1px solid #cccccc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+        padding: 12px;
+      }
+      .hero-banner {
+        border: 1px solid #999999 !important;
+        background: #f4f4f4 !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: #000000 !important;
+      }
+      .tag-fr, .tag-nfr, .tag-domain, .tag-constraint, .tag-stakeholder {
+        border: 1px solid #333333 !important;
+        color: #000000 !important;
+        background: #f0f0f0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo-area">
+        <div class="logo-badge">PDF 68 GUIDE</div>
+        <div class="logo-text">
+          <h1>Practice-ReqEng.pdf ถอดรหัส & สูตรพิชิตข้อสอบ</h1>
+          <p>คู่มือแกะโจทย์ภาษาอังกฤษ แปลไทย อธิบาย Stakeholder และเฉลยครบทุกข้อ</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="midterm-thai-exam-answers.html" class="btn"
+          style="background: rgba(4, 120, 87, 0.1); color: var(--accent-emerald); border-color: rgba(4, 120, 87, 0.3); font-weight: 700; text-decoration: none;">📝
+          เฉลยไทย 5 ข้อ + 4 Stakeholders</a>
+        <a href="midterm-cheatsheet-68.html" class="btn">📖 ชุด A (Cheatsheet)</a>
+        <a href="midterm-exam-set-b.html" class="btn">🎯 ชุด B (ข้อสอบจำลอง)</a>
+        <a href="midterm-exam-set-c.html" class="btn">🔬 ชุด C (เน้นบท 4)</a>
+        <button class="btn btn-primary" onclick="window.print()">🖨️ Print พกเข้าห้องสอบ</button>
+        <button class="btn" onclick="toggleTheme()" id="themeBtn">🌙 สลับธีมมืด</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Announcement -->
+    <div class="hero-banner">
+      <h2 class="hero-title">📌 คู่มือฉบับ "เริ่มจาก 0" เพื่อทำคะแนนเต็มในข้อสอบ Practice-ReqEng</h2>
+      <p class="hero-desc">
+        เอกสารนี้เขียนขึ้นเพื่อตอบข้อสงสัยของคุณโดยเฉพาะ:
+        <strong>(1) โจทย์ภาษาอังกฤษยาวๆ ดูยังไง?</strong>
+        <strong>(2) Stakeholder คืออะไร ต้องกรอกแต่ละช่องอย่างไร?</strong>
+        <strong>(3) วิธีแยก 4 กล่อง (FR / NFR / Domain / Constraints)</strong> และ
+        <strong>(4) ถอดรหัสเฉลย 5 ข้อหลักทั้งหมดใน Practice-ReqEng.pdf แปลไทยพร้อมหลักการตอบที่อาจารย์ตรวจให้คะแนน!</strong>
+      </p>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- SECTION 1: HOW TO READ LONG PARAGRAPHS (วิธีแกะโจทย์ยาวๆ) -->
+    <!-- ======================================================= -->
+    <div class="content-card">
+      <h2 class="section-title">🔍 ตอนที่ 1: เจอโจทย์พารากราฟภาษาอังกฤษยาวๆ ต้องดูยังไง? (3-Step Scanner Engine)</h2>
+      
+      <p>
+        ในข้อสอบจริง อาจารย์จะให้ <strong>เนื้อเรื่องสถานการณ์ (Scenario)</strong> เป็นภาษาอังกฤษยาว 1 หน้ากระดาษมาให้อ่าน 
+        สิ่งที่นักศึกษา 90% พลาดคือ "พยายามอ่านและแปลทุกคำตั้งแต่ต้นจนจบ" ทำให้เสียเวลาและสับสน
+      </p>
+
+      <div class="tutorial-box">
+        <strong>⚡ กฎทอง 3 สเต็ปในการสแกนข้อสอบ (จำสูตรนี้ไปใช้ได้ทันที):</strong>
+        <ol style="margin-left: 22px; margin-top: 6px;">
+          <li><strong>Step 1 (ล่าประธาน + กริยา = FR):</strong> ประโยคไหนมีคำว่า <code>allow / can / able to / shall / register / search / add to cart / calculate / generate report</code> $\rightarrow$ <strong>นั่นคือ Functional Requirement (ระบบทำอะไรได้)</strong></li>
+          <li><strong>Step 2 (ล่าตัวเลข + คุณภาพ = NFR):</strong> ประโยคไหนมี <code>ตัวเลข, วินาที (seconds), ผู้ใช้พร้อมกัน (concurrent users), อัตราความพร้อมใช้งาน (99.9%), การเข้ารหัส (SSL/TLS), ใช้งานง่าย (user-friendly)</code> $\rightarrow$ <strong>นั่นคือ Non-Functional Requirement (ระบบต้องทำงานได้ดีแค่ไหน)</strong></li>
+          <li><strong>Step 3 (ล่ากฎหมายเฉพาะวงการ = Domain & ล่าข้อผูกมัด = Constraint):</strong>
+            <ul style="margin-left: 18px;">
+              <li>เจอ <code>PDPA / HIPAA / HStan-03 / สองภาษา (Thai & English) / เชื่อมระบบบัญชีมหาวิทยาลัย</code> $\rightarrow$ <strong>Domain Requirement</strong></li>
+              <li>เจอ <code>ภาษาโปรแกรม (Flutter, React, Laravel) / OS (Linux, Windows) / งบประมาณ (Baht) / กำหนดเวลา (Months)</code> $\rightarrow$ <strong>Constraint (ข้อจำกัด)</strong></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ประเภท Requirement</th>
+              <th>คำถามที่ใช้ถามตัวเอง</th>
+              <th>คีย์เวิร์ดภาษาอังกฤษที่สังเกตได้ทันที (Keywords)</th>
+              <th>สูตรประโยคในการเขียนตอบ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag-fr">1. Functional Requirement (FR)</span></td>
+              <td>ระบบต้อง <strong>"ทำอะไรได้บ้าง"</strong> ให้กับผู้ใช้? (ฟังก์ชัน/ปุ่ม/ระบบงาน)</td>
+              <td><code>allow, log in, register, browse, add to cart, calculate, send email, notify, view, search</code></td>
+              <td><code>The system shall allow [User] to [Action]...</code><br>(ระบบต้องอนุญาตให้ [ใคร] สามารถ [ทำอะไร]...)</td>
+            </tr>
+            <tr>
+              <td><span class="tag-nfr">2. Non-Functional Requirement (NFR)</span></td>
+              <td>ระบบต้องทำงาน <strong>"มีคุณภาพและเร็ว/เสถียรแค่ไหน"</strong>?</td>
+              <td><code>within X seconds, 1000 concurrent users, 99.9% uptime, SSL/TLS, encrypted, within 5 minutes</code></td>
+              <td><code>The system shall [perform with metric X under condition Y]...</code><br>(ระบบต้องตอบสนองภายใน [X วินาที / รองรับ Y คน]...)</td>
+            </tr>
+            <tr>
+              <td><span class="tag-domain">3. Domain Requirement</span></td>
+              <td>เป็น <strong>"กฎเกณฑ์เฉพาะทางของธุรกิจ/วงการนี้"</strong> หรือไม่?</td>
+              <td><code>PDPA, HIPAA, Medical standards, Thai & English support, University account sync, LCC/Dewey catalog</code></td>
+              <td><code>The system must comply with [Domain Law/Standard]...</code><br>(ระบบต้องสอดคล้องตามกฎระเบียบ [ของวงการนั้นๆ]...)</td>
+            </tr>
+            <tr>
+              <td><span class="tag-constraint">4. Constraint (ข้อจำกัด)</span></td>
+              <td>เป็น <strong>"กรอบกติกาบังคับตายตัว"</strong> ด้านเทคโนโลยี งบ หรือเวลาหรือไม่?</td>
+              <td><code>Framework (Flutter, Laravel), Server (Linux), Budget (X Baht), Deadline (within X months)</code></td>
+              <td><code>The system must be developed using [Tech] / completed within [Time] / under [Budget]</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- SECTION 2: STAKEHOLDER DEEP DIVE FROM ZERO (สอน Stakeholder) -->
+    <!-- ======================================================= -->
+    <div class="content-card">
+      <h2 class="section-title">👥 ตอนที่ 2: Stakeholder คืออะไร? ทำไมไม่รู้เรื่องเลย แล้วต้องตอบตารางยังไง?</h2>
+      
+      <div class="danger-box">
+        <strong>💡 เข้าใจ Stakeholder ใน 1 นาที (จำง่ายๆ):</strong><br>
+        <strong>Stakeholder (ผู้มีส่วนได้ส่วนเสีย)</strong> คือ <em>"มนุษย์หรือกลุ่มคน หรือองค์กร ทุกคนที่ได้รับผลกระทบ ได้ประโยชน์ เสียประโยชน์ หรือต้องเข้ามายุ่งเกี่ยวกับระบบนี้"</em><br>
+        จำไว้ว่า Stakeholder <strong>ไม่ได้มีแค่คนใช้โปรแกรม (User) เท่านั้น!</strong> แต่รวมถึงคนจ่ายเงิน คนคุมกฎหมาย โปรแกรมเมอร์ และคนขายของด้วย!
+      </div>
+
+      <h3 style="margin: 18px 0 10px; color: var(--accent-purple);">1. การแบ่งประเภท Stakeholder 2 ฝั่ง (Internal vs External)</h3>
+      <div class="grid-2">
+        <div class="card-mini" style="border-left: 4px solid var(--accent-blue);">
+          <h4 style="color: var(--accent-blue); margin-bottom: 8px;">🏢 1. Internal Stakeholders (คนในองค์กร)</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 8px;">
+            คือคนที่ทำงานอยู่ <strong>ข้างในบริษัท/คลินิก/มหาวิทยาลัย</strong> หรือเป็นทีมสร้างระบบ:
+          </p>
+          <ul style="margin-left: 18px; font-size: 0.88rem; line-height: 1.6;">
+            <li><strong>Project Sponsor / เจ้าของร้าน / ผู้บริหาร:</strong> คนจ่ายเงินอนุมัติโครงการ อยากได้ระบบเพื่อเพิ่มยอดขายหรือลดต้นทุน</li>
+            <li><strong>End Users ภายใน (พนักงาน, หมอ, พยาบาล, คนขับรถ):</strong> คนที่ต้องนั่งหน้าจอโปรแกรมเพื่อทำงานทุกวัน</li>
+            <li><strong>Software Developers / Designers / IT Admin:</strong> คนเขียนโค้ด ออกแบบหน้าจอ และดูแลเซิร์ฟเวอร์</li>
+          </ul>
+        </div>
+
+        <div class="card-mini" style="border-left: 4px solid var(--accent-purple);">
+          <h4 style="color: var(--accent-purple); margin-bottom: 8px;">🌍 2. External Stakeholders (คนนอกองค์กร)</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 8px;">
+            คือคนที่อยู่ <strong>ภายนอกองค์กร</strong> แต่มาเกี่ยวข้องหรือได้รับผลกระทบ:
+          </p>
+          <ul style="margin-left: 18px; font-size: 0.88rem; line-height: 1.6;">
+            <li><strong>Customers / Patients / Students (ลูกค้า/คนไข้/นักศึกษา):</strong> คนภายนอกที่โหลดแอปมาสั่งอาหาร จองคิว หรือยืมหนังสือ</li>
+            <li><strong>Regulators (หน่วยงานกำกับดูแล):</strong> กระทรวงสาธารณสุข, กฎหมาย PDPA, อย., แพทยสภา (ต้องตรวจสอบความถูกต้องตามกฎหมาย)</li>
+            <li><strong>Third-Party Vendors / Payment Providers:</strong> ธนาคาร, บริษัท PromptPay/บัตรเครดิต, ร้านขายยาคู่สัญญา</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin: 20px 0 10px; color: var(--accent-indigo);">2. ตาราง Stakeholder แต่ละช่องคืออะไร? ต้องเขียนอะไรลงไปบ้าง?</h3>
+      <p>เวลาข้อสอบให้เขียนตาราง Stakeholder ให้แบ่งเป็น 3 คอลัมน์มาตรฐานนี้เสมอ:</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 25%;">ช่องที่ 1: Stakeholder (ชื่อกลุ่มคน)</th>
+              <th style="width: 20%;">ช่องที่ 2: Category (ประเภท)</th>
+              <th style="width: 55%;">ช่องที่ 3: Role & Responsibility (บทบาทหน้าที่ในระบบ)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>เขียนชื่อบทบาทของคนนั้น</strong><br><small style="color: var(--text-muted);">(เช่น Clinic Owner, Doctor, Patient, Software Developer, Payment Provider)</small></td>
+              <td><strong>ระบุว่าเป็นคนในหรือคนนอก</strong><br>
+                • <code>Internal</code> (คนใน/ทีมงาน)<br>
+                • <code>External</code> (คนนอก/ลูกค้า/กฎหมาย)
+              </td>
+              <td><strong>เขียนว่าเขา "ทำอะไรกับระบบ" หรือ "ต้องการอะไรจากระบบ"</strong><br>
+                <div class="info-box" style="margin: 4px 0; padding: 8px 12px; font-size: 0.85rem;">
+                  <strong>สูตรการเขียนช่องนี้:</strong><br>
+                  • <em>ถ้าเป็นผู้ใช้:</em> ใช้ระบบเพื่อทำอะไร (เช่น จองคิว, สั่งซื้อ, ดูประวัติ)<br>
+                  • <em>ถ้าเป็นเจ้าของ:</em> ใช้ระบบดูรายงานยอดขาย และควบคุมทิศทางธุรกิจ<br>
+                  • <em>ถ้าเป็น Dev:</em> พัฒนา ออกแบบหน้าจอ และดูแลความปลอดภัยระบบ<br>
+                  • <em>ถ้าเป็นระบบจ่ายเงิน:</em> ประมวลผลธุรกรรมทางการเงินให้สำเร็จและปลอดภัย
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- SECTION 3: COMPLETE DISSECTION OF 5 CASES IN PDF        -->
+    <!-- ======================================================= -->
+    <div class="content-card">
+      <h2 class="section-title">📚 ตอนที่ 3: เฉลยเจาะลึก 5 กรณีศึกษาใน Practice-ReqEng.pdf (แปลไทย + ถอดรหัสคำตอบ)</h2>
+
+      <!-- CASE 1: FRESHMART -->
+      <div style="margin-bottom: 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 24px;">
+        <h3 style="color: var(--accent-blue); margin-bottom: 8px;">Case 1: "FreshMart" E-commerce Website (หน้า 1-2 ของ PDF)</h3>
+        
+        <div class="annotated-text">
+          <strong>[English Scenario]:</strong><br>
+          FreshMart is a new online grocery store aiming to deliver fresh vegetables, fruits, and daily essentials directly to customers in Bangkok. The store owner, Ms. Supansa, wants to launch an easy-to-use website for her customers to order products online and receive deliveries promptly.<br><br>
+          <strong>[คำแปลไทยแบบละเอียด]:</strong><br>
+          FreshMart เป็นร้านขายของชำออนไลน์แห่งใหม่ที่ต้องการส่งผักสด ผลไม้ และของใช้จำเป็นในชีวิตประจำวันตรงถึงลูกค้าในกรุงเทพฯ คุณสุพรรษาเจ้าของร้านต้องการเปิดตัวเว็บไซต์ที่ใช้งานง่าย เพื่อให้ลูกค้าสั่งซื้อสินค้าออนไลน์และได้รับการจัดส่งที่รวดเร็วตรงเวลา
+        </div>
+
+        <h4 style="margin: 12px 0 6px; color: var(--text-primary);">ถอดรหัสความต้องการทั้ง 4 ด้าน (Model Breakdown):</h4>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 25%;">ประเภท</th>
+                <th>ข้อกำหนดที่ถอดได้ (EN / TH)</th>
+                <th style="width: 25%;">เหตุผลที่จัดอยู่ในหมวดนี้</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag-fr">1. Functional Requirements (FR)</span></td>
+                <td>
+                  1. ลงทะเบียนและล็อกอินด้วย Email / Password<br>
+                  2. แสดงรายการสินค้าแยกหมวดหมู่ชัดเจน (ผัก, ผลไม้, เบเกอรี่)<br>
+                  3. เพิ่ม แก้ไข และลบสินค้าในตะกร้า (Cart Management)<br>
+                  4. คำนวณและแสดงราคารวมในตะกร้าสินค้า<br>
+                  5. เลือกรอบเวลาจัดส่ง (Delivery Time Slots)<br>
+                  6. รับชำระเงินผ่านบัตรเครดิต/เดบิต และ Mobile Banking<br>
+                  7. ส่งอีเมลยืนยันคำสั่งซื้อพร้อมรายละเอียดการจัดส่งอัตโนมัติ
+                </td>
+                <td>เป็นสิ่งที่ระบบ <strong>"ต้องทำหน้าที่ได้"</strong> (Functions & Features) ให้กับผู้ใช้งาน</td>
+              </tr>
+              <tr>
+                <td><span class="tag-nfr">2. Non-Functional Requirements (NFR)</span></td>
+                <td>
+                  • <strong>Usability:</strong> สั่งซื้อครั้งแรกเสร็จในเวลาไม่เกิน 10 นาที, Responsive รองรับ Mobile & Desktop<br>
+                  • <strong>Performance:</strong> ตอบสนองการค้นหา/เพิ่มสินค้าภายใน 3 วินาที, รองรับผู้ใช้พร้อมกัน 500 คน (Concurrent Users)<br>
+                  • <strong>Reliability:</strong> พร้อมใช้งาน 99.9% Uptime ในช่วงเวลาเร่งด่วน (เย็นและวันหยุด)<br>
+                  • <strong>Security:</strong> เข้ารหัสข้อมูลลูกค้าและการเงินด้วย SSL/TLS, Backup ฐานข้อมูลทุกวันเวลา 02:00 น.
+                </td>
+                <td>เป็นเกณฑ์ชี้วัด <strong>"คุณภาพ ประสิทธิภาพ และความปลอดภัย"</strong> ที่มีตัวเลขวัดผลได้ชัดเจน (3s, 500 users, 99.9%)</td>
+              </tr>
+              <tr>
+                <td><span class="tag-domain">3. Domain Requirements</span></td>
+                <td>
+                  1. ต้องปฏิบัติตามกฎหมายคุ้มครองข้อมูลส่วนบุคคลของไทย (PDPA)<br>
+                  2. ต้องรองรับการแสดงผลสินค้า 2 ภาษา (ภาษาไทย และ ภาษาอังกฤษ) เพื่อรองรับลูกค้าหลากหลายกลุ่มในกรุงเทพฯ
+                </td>
+                <td>เป็นกฎหมายเฉพาะของประเทศ (PDPA) และบริบทธุรกิจค้าปลีกในพื้นที่กรุงเทพฯ (Bilingual)</td>
+              </tr>
+              <tr>
+                <td><span class="tag-constraint">4. Constraints (ข้อจำกัด)</span></td>
+                <td>
+                  • Framework: ต้องพัฒนาด้วย Laravel PHP Framework (เพราะหาผู้เชี่ยวชาญในท้องถิ่นได้ง่าย)<br>
+                  • Hosting: ต้องรันบน Linux Server ที่ตั้งอยู่ในประเทศไทย<br>
+                  • Budget: งบประมาณพัฒนาต้องไม่เกิน 200,000 บาท<br>
+                  • Deadline: ต้องพัฒนาเสร็จและเปิดใช้งานได้ภายใน 3 เดือน
+                </td>
+                <td>เป็นข้อจำกัดตายตัวด้านเทคโนโลยี (Laravel, Linux), งบประมาณ (200k), และเวลา (3 เดือน)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CASE 2: KMUTNB CAFETERIA APP -->
+      <div style="margin-bottom: 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 24px;">
+        <h3 style="color: var(--accent-indigo); margin-bottom: 8px;">Case 2: KMUTNB Cafeteria Food Ordering Mobile App (หน้า 3-4 ของ PDF)</h3>
+        
+        <div class="annotated-text">
+          <strong>[English Scenario]:</strong><br>
+          The KMUTNB University Cafeteria recently decided to enhance their food ordering experience by developing a mobile application for students. They reached out to a software development team and clearly stated their needs: students should log in easily with their university email. Once logged in, students would browse a digital menu, selecting their meals and adding them to a cart. The app would instantly calculate the total price and display an order summary, allowing students to conveniently pay through mobile banking or digital wallets. Each time an order is placed, cafeteria staff would immediately receive notifications, enabling quick and efficient service. Moreover, students would always see a clear estimated pickup time for their meals. To ensure smooth operations, the university required that the app handle at least 1,000 concurrent users without performance degradation. Furthermore, user data security must strictly follow the university’s data privacy policies. Lastly, to ensure broad accessibility among students, the cafeteria requested that the app be compatible with both Android and iOS devices and be ready for use within two months.<br><br>
+          <strong>[คำแปลไทยแบบประโยคต่อประโยค]:</strong><br>
+          โรงอาหารมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.) ตัดสินใจยกระดับการสั่งอาหารโดยพัฒนาแอปมือถือสำหรับนักศึกษา โดยมีความต้องการดังนี้: นักศึกษาเข้าสู่ระบบด้วยอีเมลมหาวิทยาลัย เมื่อล็อกอินแล้วสามารถดูเมนูดิจิทัล เลือกอาหาร และเพิ่มลงตะกร้า แอปจะคำนวณราคารวมทันทีและแสดงสรุปคำสั่งซื้อ รองรับการจ่ายผ่าน Mobile Banking หรือกระเป๋าเงินดิจิทัล ทุกครั้งที่มีออเดอร์ เจ้าหน้าที่โรงอาหารจะได้รับการแจ้งเตือนทันที นักศึกษาจะเห็นเวลาประมาณการรับอาหารอย่างชัดเจน ระบบต้องรองรับผู้ใช้พร้อมกันอย่างน้อย 1,000 คนโดยไม่อืด ข้อมูลส่วนบุคคลต้องปลอดภัยตามระเบียบความเป็นส่วนตัวของมหาวิทยาลัย แอปต้องรองรับทั้ง Android และ iOS และพร้อมใช้งานภายใน 2 เดือน
+        </div>
+
+        <h4 style="margin: 12px 0 6px; color: var(--text-primary);">การจำแนกคำตอบ 4 ด้าน (Answer Breakdown):</h4>
+        <div class="grid-2">
+          <div class="card-mini">
+            <span class="tag-fr">Functional Requirements</span>
+            <ul style="margin-left: 18px; margin-top: 6px; font-size: 0.88rem; line-height: 1.6;">
+              <li>ล็อกอินด้วยอีเมลมหาวิทยาลัย (@kmutnb.ac.th)</li>
+              <li>ดูเมนูอาหาร และเพิ่มลงตะกร้าสินค้า</li>
+              <li>คำนวณราคารวมและแสดงสรุปก่อนชำระเงิน</li>
+              <li>ชำระเงินผ่าน Mobile Banking หรือ Digital Wallet</li>
+              <li>ส่ง Notification แจ้งเตือนพนักงานโรงอาหารทันทีที่มีออเดอร์ใหม่</li>
+              <li>แสดงเวลานัดรับอาหารโดยประมาณ (Estimated Pickup Time)</li>
+            </ul>
+          </div>
+
+          <div class="card-mini">
+            <span class="tag-nfr">Non-Functional Requirements</span>
+            <ul style="margin-left: 18px; margin-top: 6px; font-size: 0.88rem; line-height: 1.6;">
+              <li><strong>Performance:</strong> รองรับผู้ใช้งานพร้อมกันอย่างน้อย 1,000 คน (Concurrent Users) โดยระบบไม่หน่วง</li>
+              <li><strong>Security:</strong> ป้องกันข้อมูลส่วนบุคคลตามนโยบาย Data Privacy ของมหาวิทยาลัย</li>
+              <li><strong>Usability:</strong> ใช้งานง่าย นักศึกษาเรียนรู้การใช้งานพื้นฐานได้รวดเร็ว</li>
+            </ul>
+          </div>
+
+          <div class="card-mini">
+            <span class="tag-domain">Domain Requirements</span>
+            <ul style="margin-left: 18px; margin-top: 6px; font-size: 0.88rem; line-height: 1.6;">
+              <li>ต้องเชื่อมต่อกับระบบฐานข้อมูลบัญชีผู้ใช้ของมหาวิทยาลัย (University SSO / Active Directory)</li>
+              <li>ปฏิบัติตามกฎระเบียบและนโยบายความเป็นส่วนตัวของ มจพ. (University Data Privacy Policy)</li>
+            </ul>
+          </div>
+
+          <div class="card-mini">
+            <span class="tag-constraint">Constraints (ข้อจำกัด)</span>
+            <ul style="margin-left: 18px; margin-top: 6px; font-size: 0.88rem; line-height: 1.6;">
+              <li><strong>Platform:</strong> ต้องรันได้ทั้งระบบปฏิบัติการ Android และ iOS</li>
+              <li><strong>Timeline:</strong> พัฒนาและเปิดใช้งานได้ภายในระยะเวลาไม่เกิน 2 เดือน</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 3: PIZZAFRIEND (HOMEWORK 1 EXAM PROBLEM) -->
+      <div style="margin-bottom: 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 24px;">
+        <h3 style="color: var(--accent-rose); margin-bottom: 8px;">Case 3: "PizzaFriend" App ของคุณพลอย (หน้า 5-6 ของ PDF — ข้อเก็งออกสอบ 100%)</h3>
+        
+        <div class="warning-box">
+          <strong>🔥 โจทย์สั่งว่า:</strong> <em>"ให้ นศ. เขียน Functional Requirement, Non-Functional Requirement, Domain Application และ Constraints"</em><br>
+          นี่คือโจทย์แบบเดียวกับข้อสอบจริง! มาดูวิธีแกะทีละประโยคและคำตอบที่ถูกต้องสมบูรณ์แบบ:
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 45%;">ข้อความในโจทย์ (Scenario Sentences)</th>
+                <th style="width: 25%;">การวิเคราะห์ & ประเภท</th>
+                <th style="width: 30%;">คำตอบทางการที่ต้องเขียนลงกระดาษคำตอบ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><em>"แอปจะต้องให้ลูกค้าลงทะเบียนและล็อกอินด้วยอีเมลและรหัสผ่าน"</em></td>
+                <td><span class="tag-fr">FR (ฟังก์ชันระบบ)</span></td>
+                <td>The system shall allow customers to register and log in using an email and password. (ระบบต้องให้ลูกค้าลงทะเบียนและเข้าสู่ระบบด้วยอีเมล/รหัสผ่าน)</td>
+              </tr>
+              <tr>
+                <td><em>"เมื่อลูกค้าล็อกอินแล้ว พวกเขาจะเห็นเมนูพิซซ่าทั้งหมดของร้าน พร้อมรูปภาพและราคา"</em></td>
+                <td><span class="tag-fr">FR (ฟังก์ชันระบบ)</span></td>
+                <td>The system shall display the full pizza menu with clear photos and prices. (ระบบต้องแสดงรายการเมนูพิซซ่าพร้อมรูปภาพและราคา)</td>
+              </tr>
+              <tr>
+                <td><em>"ลูกค้าสามารถเลือกขนาด แป้ง และท็อปปิ้งของพิซซ่าที่ต้องการ แล้วใส่ในตะกร้าสินค้าได้ง่ายๆ"</em></td>
+                <td><span class="tag-fr">FR (ฟังก์ชันระบบ)</span></td>
+                <td>Customers shall be able to customize pizza (size, crust, toppings) and add items to the cart. (ลูกค้าสามารถเลือกขนาด แป้ง ท็อปปิ้ง และเพิ่มลงตะกร้า)</td>
+              </tr>
+              <tr>
+                <td><em>"แอปต้องคำนวณราคาทั้งหมดพร้อมแสดงสรุปรายการสั่งซื้อให้ดูอย่างชัดเจน"</em></td>
+                <td><span class="tag-fr">FR (ฟังก์ชันระบบ)</span></td>
+                <td>The system shall calculate the total price and display an order summary. (ระบบต้องคำนวณราคารวมและแสดงสรุปการสั่งซื้อ)</td>
+              </tr>
+              <tr>
+                <td><em>"ระบบต้องรองรับการชำระเงินทั้งแบบโอนผ่านแอปธนาคาร และการจ่ายผ่านบัตรเครดิต"</em></td>
+                <td><span class="tag-fr">FR (ฟังก์ชันระบบ)</span></td>
+                <td>The system shall support payments via mobile banking transfer and credit cards. (ระบบต้องรองรับการจ่ายเงินผ่าน Mobile Banking และบัตรเครดิต)</td>
+              </tr>
+              <tr>
+                <td><em>"เมื่อชำระเงินเรียบร้อย แอปต้องส่งใบเสร็จยืนยันการสั่งซื้อให้ลูกค้าผ่านอีเมลทันที"</em></td>
+                <td><span class="tag-fr">FR (ฟังก์ชันระบบ)</span></td>
+                <td>The system shall automatically send an order confirmation receipt via email. (ระบบต้องส่งใบเสร็จยืนยันคำสั่งซื้อทางอีเมลอัตโนมัติ)</td>
+              </tr>
+              <tr>
+                <td><em>"ลูกค้าใหม่ควรจะสามารถสั่งซื้อพิซซ่าครั้งแรกเสร็จภายในเวลาไม่เกิน 5 นาที"</em></td>
+                <td><span class="tag-nfr">NFR (Usability)</span></td>
+                <td><strong>Usability:</strong> First-time users shall be able to complete their order within 5 minutes. (ผู้ใช้ใหม่สั่งซื้อเสร็จใน 5 นาที)</td>
+              </tr>
+              <tr>
+                <td><em>"แอปต้องตอบสนองเร็ว ลูกค้าคลิกเมนูใดต้องแสดงผลไม่เกิน 2 วินาที"</em></td>
+                <td><span class="tag-nfr">NFR (Performance)</span></td>
+                <td><strong>Performance:</strong> The application shall load and respond to menu selections within 2 seconds. (ตอบสนองการคลิกเมนูใน 2 วินาที)</td>
+              </tr>
+              <tr>
+                <td><em>"แอปต้องสามารถรองรับลูกค้าที่สั่งพร้อมกันได้มากถึง 300 คนโดยไม่เกิดอาการช้า"</em></td>
+                <td><span class="tag-nfr">NFR (Scalability)</span></td>
+                <td><strong>Performance/Scalability:</strong> The system shall handle at least 300 concurrent users without slowdown. (รองรับผู้ใช้พร้อมกัน 300 คน)</td>
+              </tr>
+              <tr>
+                <td><em>"ระบบต้องเก็บข้อมูลลูกค้าอย่างปลอดภัยตามกฎหมาย PDPA ข้อมูลการเงินต้องเข้ารหัส"</em></td>
+                <td><span class="tag-nfr">NFR (Security)</span> & <span class="tag-domain">Domain</span></td>
+                <td><strong>Security:</strong> All financial transactions must be encrypted. Comply strictly with PDPA regulations. (เข้ารหัสข้อมูลการเงินและทำตาม PDPA)</td>
+              </tr>
+              <tr>
+                <td><em>"แอปต้องสามารถทำรายงานยอดขายประจำวันได้ รวมถึงรายงานสินค้าที่ลูกค้านิยมสั่งมากที่สุด"</em></td>
+                <td><span class="tag-domain">Domain Requirement</span></td>
+                <td><strong>Domain Application:</strong> The system shall generate daily sales reports and popular menu analysis for inventory management. (รายงานยอดขายประจำวันและเมนูยอดนิยมเพื่อบริหารสต็อก)</td>
+              </tr>
+              <tr>
+                <td><em>"ทีมพัฒนาต้องใช้ภาษา Flutter ในการเขียนแอป เพื่อรองรับทั้ง Android และ iOS ด้วยแอปเดียว"</em></td>
+                <td><span class="tag-constraint">Constraint (Tech)</span></td>
+                <td><strong>Constraint:</strong> The app must be developed using the Flutter framework to support both Android and iOS. (ใช้ Flutter รองรับ Android/iOS)</td>
+              </tr>
+              <tr>
+                <td><em>"แอปนี้จะต้องพร้อมให้บริการลูกค้าได้ภายในเวลาไม่เกิน 3 เดือนเท่านั้น"</em></td>
+                <td><span class="tag-constraint">Constraint (Time)</span></td>
+                <td><strong>Constraint:</strong> The system must be fully developed and ready to launch within 3 months. (เสร็จใน 3 เดือน)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CASE 4: READSMART ONLINE BOOKSTORE -->
+      <div style="margin-bottom: 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 24px;">
+        <h3 style="color: var(--accent-emerald); margin-bottom: 8px;">Case 4: "ReadSmart" Online Bookstore (หน้า 7-8 ของ PDF — การวิเคราะห์ Stakeholder)</h3>
+        
+        <div class="annotated-text">
+          <strong>[English Scenario]:</strong><br>
+          "ReadSmart" is an online bookstore that sells printed books and e-books. Customers can browse titles, read reviews, and place orders for home delivery or instant e-book download. The business wants to develop a new website and mobile app to improve customer experience and streamline internal operations.<br><br>
+          <strong>[คำแปลไทย]:</strong><br>
+          "ReadSmart" เป็นร้านหนังสือออนไลน์ที่จำหน่ายทั้งหนังสือเล่มและ E-book ลูกค้าสามารถค้นหารายชื่อหนังสือ อ่านรีวิว และสั่งซื้อเพื่อจัดส่งถึงบ้านหรือดาวน์โหลด E-book ได้ทันที ธุรกิจต้องการพัฒนาเว็บไซต์และแอปมือถือใหม่เพื่อเพิ่มความพึงพอใจของลูกค้าและเพิ่มประสิทธิภาพการทำงานภายใน
+        </div>
+
+        <h4 style="margin: 12px 0 6px; color: var(--text-primary);">ตารางวิเคราะห์ 5 Stakeholders ตามเฉลยใน PDF:</h4>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>ประเภท (Type)</th>
+                <th>Role & Responsibility (บทบาทหน้าที่ในระบบ)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Customer (End User)</strong></td>
+                <td><span class="tag-stakeholder">External</span></td>
+                <td>ใช้แพลตฟอร์มในการค้นหา ซื้อ ดาวน์โหลด E-book รีวิวหนังสือ และให้ข้อเสนอแนะด้านการใช้งาน (Uses platform to search, purchase, download, and review books).</td>
+              </tr>
+              <tr>
+                <td><strong>2. Store Manager</strong></td>
+                <td><span class="tag-stakeholder">Internal</span></td>
+                <td>ดูแลคลังสินค้า จัดการรายการสินค้า จัดโปรโมชัน ตรวจสอบการส่งออเดอร์ และกำหนดกฎเกณฑ์ทางธุรกิจ (Oversees inventory, manages product listings, promotions, and orders).</td>
+              </tr>
+              <tr>
+                <td><strong>3. Software Developer</strong></td>
+                <td><span class="tag-stakeholder">Internal</span></td>
+                <td>ออกแบบและพัฒนาระบบตามความต้องการที่ระบุ รับผิดชอบการเขียนโค้ดและฟังก์ชันการทำงาน (Designs and implements system according to specified requirements).</td>
+              </tr>
+              <tr>
+                <td><strong>4. UX/UI Designer</strong></td>
+                <td><span class="tag-stakeholder">Internal</span></td>
+                <td>ดูแลให้ระบบใช้งานง่าย สะดวกในการใช้งาน ออกแบบส่วนติดต่อผู้ใช้ (UI) สำหรับเว็บและมือถือ (Ensures system is intuitive and easy to use. Designs web/mobile interfaces).</td>
+              </tr>
+              <tr>
+                <td><strong>5. Payment Service Provider</strong></td>
+                <td><span class="tag-stakeholder">External</span></td>
+                <td>บริการภายนอกที่ดูแลการทำธุรกรรมออนไลน์ รับรองความปลอดภัยและความถูกต้องในการชำระเงิน (Third-party service handling secure and compliant online payment transactions).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CASE 5: EASYCLINIC APPOINTMENT BOOKING -->
+      <div style="margin-bottom: 10px;">
+        <h3 style="color: var(--accent-purple); margin-bottom: 8px;">Case 5: "EasyClinic" Appointment Booking System (หน้า 9-10 ของ PDF — Homework 2)</h3>
+        
+        <div class="annotated-text">
+          <strong>[โจทย์ภาษาไทย]:</strong><br>
+          คลินิกเอกชนชื่อ EasyClinic ประสบปัญหาการจัดการคิวผู้ป่วยหน้าคลินิก เนื่องจากมีผู้ป่วยจำนวนมากโทรเข้ามาจองคิว และบางรายไม่มาในเวลานัด ทำให้เสียโอกาสในการให้บริการ เจ้าของคลินิกจึงต้องการระบบออนไลน์ที่ช่วยให้ผู้ป่วยสามารถจองคิว ตรวจสอบเวลานัดหมาย และรับการแจ้งเตือนได้ผ่านมือถือ...
+        </div>
+
+        <h4 style="margin: 12px 0 6px; color: var(--text-primary);">ตารางวิเคราะห์ Stakeholders ทั้ง 6 กลุ่มของ EasyClinic:</h4>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Stakeholder</th>
+                <th>ประเภท</th>
+                <th>บทบาทหน้าที่และความรับผิดชอบในระบบ (Role & Responsibility)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Clinic Owner (เจ้าของคลินิก)</strong></td>
+                <td><span class="tag-stakeholder">Internal (Sponsor)</span></td>
+                <td>เป็นผู้อนุมัติงบประมาณและกำหนดเป้าหมายธุรกิจ ต้องการลดปัญหาผู้ป่วยเบี้ยวนัด (No-show) และดูรายงานสถิติการเข้ารับบริการ</td>
+              </tr>
+              <tr>
+                <td><strong>2. Patients (ผู้ป่วย/ผู้รับบริการ)</strong></td>
+                <td><span class="tag-stakeholder">External (End User)</span></td>
+                <td>ลงทะเบียนด้วยเบอร์โทร/เลขบัตรประชาชน เลือกแพทย์ วันเวลานัดหมาย และรับ SMS/Email แจ้งเตือนก่อนนัด 1 วันและ 1 ชั่วโมง</td>
+              </tr>
+              <tr>
+                <td><strong>3. Doctors (แพทย์)</strong></td>
+                <td><span class="tag-stakeholder">Internal (User)</span></td>
+                <td>เข้าสู่ระบบ Dashboard หลังบ้านเพื่อตรวจสอบตารางนัดหมายของตนเอง และปรับตารางเวลาตรวจรักษาตามความจำเป็น</td>
+              </tr>
+              <tr>
+                <td><strong>4. Clinic Staff (เจ้าหน้าที่หน้าเคาน์เตอร์)</strong></td>
+                <td><span class="tag-stakeholder">Internal (User)</span></td>
+                <td>ดูรายการจองคิวทั้งหมด อัปเดตสถานะผู้ป่วย เช่น "มาถึงแล้ว (Arrived)" หรือ "ไม่มาตามนัด (No-show)" และจัดการคิวเฉพาะหน้า</td>
+              </tr>
+              <tr>
+                <td><strong>5. Software Development Team</strong></td>
+                <td><span class="tag-stakeholder">Internal / Vendor</span></td>
+                <td>ออกแบบ พัฒนาระบบให้รองรับทั้ง Web Browser, Android และ iOS ภายใต้งบและระยะเวลาส่งมอบ 3 เดือน</td>
+              </tr>
+              <tr>
+                <td><strong>6. Ministry of Public Health / Regulators</strong></td>
+                <td><span class="tag-stakeholder">External (Regulator)</span></td>
+                <td>หน่วยงานกำกับดูแลมาตรฐานความปลอดภัยของข้อมูลสุขภาพ (HIPAA / แนวทางกระทรวงสาธารณสุข / PDPA)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- SECTION 4: EXAM-DAY CHEATSHEET & PLUG-IN TEMPLATE       -->
+    <!-- ======================================================= -->
+    <div class="content-card">
+      <h2 class="section-title">🏆 ตอนที่ 4: สูตรโกงในห้องสอบ (Plug-in Template) — เจอโจทย์ใหม่ เปลี่ยนแค่ชื่อก็ตอบได้เลย!</h2>
+      
+      <p style="margin-bottom: 12px;">
+        ถ้าในห้องสอบอาจารย์เปลี่ยนชื่อระบบเป็นอย่างอื่น (เช่น <em>"ระบบซ่อมรถอู่ช่างเอก"</em> หรือ <em>"ระบบสั่งอาหารหอพัก"</em>) 
+        ให้ใช้ <strong>โครงสร้างเทมเพลตมาตรฐาน</strong> นี้ในการเขียนตอบ คุณจะได้คะแนนเต็มทันที:
+      </p>
+
+      <div class="grid-2">
+        <div class="card-mini">
+          <div class="formula-badge">เทมเพลตเขียน Functional Requirements (FR)</div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            1. <code>The system shall allow [User] to register and log in using [Email/Phone/ID].</code><br>
+            2. <code>The system shall display [Product/Service/Menu listings] with clear details.</code><br>
+            3. <code>The system shall allow users to [Select/Book/Add to Cart] items.</code><br>
+            4. <code>The system shall calculate total costs and display an order/booking summary.</code><br>
+            5. <code>The system shall accept online payments via [Mobile banking / Credit card].</code><br>
+            6. <code>The system shall send automated [SMS / Email] confirmation and reminder alerts.</code>
+          </p>
+        </div>
+
+        <div class="card-mini">
+          <div class="formula-badge">เทมเพลตเขียน Non-Functional Requirements (NFR)</div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            • <strong>Usability:</strong> <code>First-time users shall complete tasks within [5–10 minutes] with an intuitive interface.</code><br>
+            • <strong>Performance:</strong> <code>The system response time shall be under [1–3 seconds] for [300–1,000 concurrent users].</code><br>
+            • <strong>Reliability:</strong> <code>The system shall maintain at least [99.9% uptime] during operational hours.</code><br>
+            • <strong>Security:</strong> <code>User passwords and financial data must be encrypted using SSL/TLS in compliance with PDPA.</code>
+          </p>
+        </div>
+
+        <div class="card-mini">
+          <div class="formula-badge">เทมเพลตเขียน Domain Requirements</div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            1. <code>The system must strictly comply with national privacy legislation (PDPA / HIPAA).</code><br>
+            2. <code>The system shall generate daily business operations and analytical sales reports for management.</code><br>
+            3. <code>The system must integrate with [University / Organization Central Authentication Server].</code>
+          </p>
+        </div>
+
+        <div class="card-mini">
+          <div class="formula-badge">เทมเพลตเขียน Constraints (ข้อจำกัด)</div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            1. <strong>Technology:</strong> <code>Must be developed using [Flutter / React / Laravel] supporting [Android, iOS, and Web].</code><br>
+            2. <strong>Budget:</strong> <code>Total development cost must not exceed [Budget from scenario] Baht.</code><br>
+            3. <strong>Timeline:</strong> <code>The project must be completed and deployed within [2–3 months].</code>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const btn = document.getElementById('themeBtn');
+      if (current === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        btn.textContent = '🌙 สลับธีมมืด';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ สลับธีมสว่าง';
+      }
+    }
+  </script>
+</body>
+</html>

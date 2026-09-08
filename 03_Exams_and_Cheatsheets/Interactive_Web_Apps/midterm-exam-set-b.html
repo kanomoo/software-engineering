@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="th" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SE Midterm Exam Studio (ชุด B) — รวมโจทย์ใหม่ 5 ข้อหลัก (ฉบับขาวคลีน A4)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,3,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,3,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       /* Clean Light Theme as Default */
@@ -29,8 +32,8 @@
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
       --shadow-glow: 0 0 15px rgba(2, 132, 199, 0.12);
     }
 
@@ -51,8 +54,8 @@
       --accent-rose: #fb7185;
       --border-color: #334155;
       --border-light: rgba(255, 255, 255, 0.1);
-      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.3);
-      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.4);
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
       --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.15);
     }
 
@@ -71,7 +74,8 @@
       padding-bottom: 80px;
     }
 
-    code, pre {
+    code,
+    pre {
       font-family: 'JetBrains Mono', monospace;
     }
 
@@ -319,7 +323,8 @@
       vertical-align: top;
     }
 
-    td:last-child, th:last-child {
+    td:last-child,
+    th:last-child {
       border-right: none;
     }
 
@@ -544,7 +549,12 @@
         padding: 0 !important;
       }
 
-      header, .header-controls, .search-box, .answer-toggle-btn, .btn, .no-print {
+      header,
+      .header-controls,
+      .search-box,
+      .answer-toggle-btn,
+      .btn,
+      .no-print {
         display: none !important;
       }
 
@@ -577,7 +587,8 @@
         page-break-after: avoid;
       }
 
-      .card, .exam-question-card {
+      .card,
+      .exam-question-card {
         background: #ffffff !important;
         border: 1pt solid #475569 !important;
         box-shadow: none !important;
@@ -645,6 +656,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -662,12 +674,23 @@
         <div class="header-controls">
           <div class="search-box">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาโจทย์ / คีย์เวิร์ด..." onkeyup="filterContent()">
+            <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาโจทย์ / คีย์เวิร์ด..."
+              onkeyup="filterContent()">
           </div>
 
-          <a href="practice-reqeng-guide.html" class="btn" style="background: rgba(2, 132, 199, 0.1); color: var(--accent-blue); border-color: rgba(2, 132, 199, 0.3); font-weight: 600; text-decoration: none;">🧭 คู่มือแกะโจทย์ & สูตรตอบ</a>
+          <a href="midterm-thai-exam-answers.html" class="btn"
+            style="background: rgba(4, 120, 87, 0.1); color: var(--accent-emerald); border-color: rgba(4, 120, 87, 0.3); font-weight: 700; text-decoration: none;">📝
+            เฉลยไทย 5 ข้อ + 4 Stakeholders</a>
+          <a href="practice-reqeng-exam-breakdown.html" class="btn"
+            style="background: rgba(190, 18, 60, 0.1); color: var(--accent-rose); border-color: rgba(190, 18, 60, 0.3); font-weight: 700; text-decoration: none;">📑
+            ถอดรหัส PDF 68 & แปลไทย</a>
+          <a href="practice-reqeng-guide.html" class="btn"
+            style="background: rgba(2, 132, 199, 0.1); color: var(--accent-blue); border-color: rgba(2, 132, 199, 0.3); font-weight: 600; text-decoration: none;">🧭
+            คู่มือแกะโจทย์ & สูตรตอบ</a>
           <a href="midterm-cheatsheet-68.html" class="btn">📖 ชุด A (Cheatsheet)</a>
-          <a href="midterm-exam-set-c.html" class="btn" style="background: rgba(126, 34, 206, 0.1); color: var(--accent-purple); border-color: rgba(126, 34, 206, 0.3); font-weight: 600; text-decoration: none;">🔬 ชุด C (เน้นบท 4)</a>
+          <a href="midterm-exam-set-c.html" class="btn"
+            style="background: rgba(126, 34, 206, 0.1); color: var(--accent-purple); border-color: rgba(126, 34, 206, 0.3); font-weight: 600; text-decoration: none;">🔬
+            ชุด C (เน้นบท 4)</a>
           <button class="btn" onclick="toggleAllAnswers(true)">👁️ แสดงเฉลยทั้งหมด</button>
           <button class="btn" onclick="toggleAllAnswers(false)">🙈 ซ่อนเฉลย (ฝึกทำ)</button>
           <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
@@ -683,7 +706,10 @@
     <div class="hero-banner">
       <h2 class="hero-title">🎯 ข้อสอบจำลองชุด B (Alternative Practice Exam Set — 5 ข้อหลักชุดใหม่)</h2>
       <p class="hero-desc">
-        ชุดนี้ใช้กรณีศึกษาตรงตามสไลด์ <strong>New_68</strong> เช่น <strong>Mentcare Clinic System</strong>, <strong>Wilderness Weather Station</strong>, <strong>iLearn Digital Learning</strong>, <strong>V-Model Testing</strong>, และ <strong>ACM/IEEE Ethics Dilemma</strong> ช่วยเพิ่มความมั่นใจในการวิเคราะห์โจทย์ข้อสอบจริง
+        ชุดนี้ใช้กรณีศึกษาตรงตามสไลด์ <strong>New_68</strong> เช่น <strong>Mentcare Clinic System</strong>,
+        <strong>Wilderness Weather Station</strong>, <strong>iLearn Digital Learning</strong>, <strong>V-Model
+          Testing</strong>, และ <strong>ACM/IEEE Ethics Dilemma</strong>
+        ช่วยเพิ่มความมั่นใจในการวิเคราะห์โจทย์ข้อสอบจริง
       </p>
       <div class="hero-tags">
         <span class="hero-tag highlight">📌 โจทย์ภาษาอังกฤษ + แปลไทย</span>
@@ -699,7 +725,8 @@
     <!-- QUESTION 1: MENTCARE / HEALTHCARE SYSTEM -->
     <div class="exam-question-card" data-searchable>
       <span class="q-number-tag">EXAM QUESTION 1 : REQUIREMENT IDENTIFICATION (CASE: MENTCARE CLINIC)</span>
-      <h3 class="q-title">Question 1: Requirements Engineering for "Mentcare" Mental Health Patient Information System</h3>
+      <h3 class="q-title">Question 1: Requirements Engineering for "Mentcare" Mental Health Patient Information System<br><small style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]: การระบุและจำแนกประเภทความต้องการสำหรับระบบเวชระเบียนผู้ป่วยสุขภาพจิต "Mentcare"</small>
+      </h3>
       <div class="q-meta">
         <span><strong>หัวข้อ:</strong> Chapter 1, 4 & Practice-ReqEng Standard</span>
         <span>• <strong>คะแนนโดยประมาณ:</strong> 25 คะแนน</span>
@@ -707,19 +734,34 @@
 
       <div class="scenario-box en">
         <strong>[English Problem Scenario]: "Mentcare" Clinic Patient Management System</strong><br>
-        The National Health Authority commissioned a patient information system called <strong>"Mentcare"</strong> to manage records of mental health outpatients across community health centers.
+        The National Health Authority commissioned a patient information system called <strong>"Mentcare"</strong> to
+        manage records of mental health outpatients across community health centers.
         Medical staff (doctors and nurses) must log in securely using their 8-digit employee ID and smart identity card.
-        Clinicians must be able to search patient records across all local clinics, record consultation notes, prescribe medications, and view past clinical history summaries.
-        The system must monitor patient records in real-time and automatically generate high-priority safety warning alerts to clinical staff if a patient exhibits severe suicidal tendencies or violent behavior.
-        At the end of each month, the system shall automatically generate administrative drug cost reports categorized by clinic and dosage units.
-        The system must operate reliably on clinic desktop PCs and maintain local data caching so medical staff can access and record patient data even when secure network connectivity is temporarily lost (offline mode).
-        System availability must reach at least 99.9% during clinic working hours (Mon–Fri, 08:30–17:30), with downtime not exceeding 5 seconds in any one day.
-        All patient medical data must strictly comply with national patient privacy legislation (HStan-03-2006-priv and PDPA).
-        The system must be deployed on Linux servers with a total development budget capped at 400,000 Baht and delivered within 4 months.
+        Clinicians must be able to search patient records across all local clinics, record consultation notes, prescribe
+        medications, and view past clinical history summaries.
+        The system must monitor patient records in real-time and automatically generate high-priority safety warning
+        alerts to clinical staff if a patient exhibits severe suicidal tendencies or violent behavior.
+        At the end of each month, the system shall automatically generate administrative drug cost reports categorized
+        by clinic and dosage units.
+        The system must operate reliably on clinic desktop PCs and maintain local data caching so medical staff can
+        access and record patient data even when secure network connectivity is temporarily lost (offline mode).
+        System availability must reach at least 99.9% during clinic working hours (Mon–Fri, 08:30–17:30), with downtime
+        not exceeding 5 seconds in any one day.
+        All patient medical data must strictly comply with national patient privacy legislation (HStan-03-2006-priv and
+        PDPA).
+        The system must be deployed on Linux servers with a total development budget capped at 400,000 Baht and
+        delivered within 4 months.
       </div>
 
       <div class="scenario-box th">
-        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> หน่วยงานสาธารณสุขต้องการพัฒนาระบบข้อมูลผู้ป่วยสุขภาพจิต <strong>"Mentcare"</strong> สำหรับคลินิกชุมชน แพทย์และพยาบาลต้องล็อกอินด้วยรหัสพนักงาน 8 หลักและบัตรสมาร์ทการ์ด แพทย์สามารถค้นหาประวัติคนไข้ข้ามคลินิก บันทึกผลตรวจ สั่งยา และดูสรุปประวัติย้อนหลังได้ ระบบต้องตรวจสอบข้อมูลและส่งสัญญาณเตือนภัยเร่งด่วนแก่บุคลากรทางการแพทย์ทันทีหากพบว่าผู้ป่วยมีแนวโน้มจะฆ่าตัวตายหรือเป็นอันตรายต่อผู้อื่น ทุกสิ้นเดือนระบบต้องสร้างรายงานสรุปค่ายาแยกตามคลินิกและขนาดยา ระบบต้องทำงานได้บน PC และมีระบบบันทึกข้อมูลออฟไลน์ชั่วคราวเมื่อเน็ตหลุด ความพร้อมใช้งานต้องไม่ต่ำกว่า 99.9% ในเวลาทำการ (จ.-ศ. 08:30-17:30) ระบบหยุดทำงานได้ไม่เกิน 5 วินาทีต่อวัน ข้อมูลผู้ป่วยต้องเป็นความลับตามกฎหมาย HStan-03-2006-priv และ PDPA ติดตั้งบน Linux Server งบไม่เกิน 400,000 บาท เสร็จใน 4 เดือน
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong> หน่วยงานสาธารณสุขต้องการพัฒนาระบบข้อมูลผู้ป่วยสุขภาพจิต
+        <strong>"Mentcare"</strong> สำหรับคลินิกชุมชน แพทย์และพยาบาลต้องล็อกอินด้วยรหัสพนักงาน 8 หลักและบัตรสมาร์ทการ์ด
+        แพทย์สามารถค้นหาประวัติคนไข้ข้ามคลินิก บันทึกผลตรวจ สั่งยา และดูสรุปประวัติย้อนหลังได้
+        ระบบต้องตรวจสอบข้อมูลและส่งสัญญาณเตือนภัยเร่งด่วนแก่บุคลากรทางการแพทย์ทันทีหากพบว่าผู้ป่วยมีแนวโน้มจะฆ่าตัวตายหรือเป็นอันตรายต่อผู้อื่น
+        ทุกสิ้นเดือนระบบต้องสร้างรายงานสรุปค่ายาแยกตามคลินิกและขนาดยา ระบบต้องทำงานได้บน PC
+        และมีระบบบันทึกข้อมูลออฟไลน์ชั่วคราวเมื่อเน็ตหลุด ความพร้อมใช้งานต้องไม่ต่ำกว่า 99.9% ในเวลาทำการ (จ.-ศ.
+        08:30-17:30) ระบบหยุดทำงานได้ไม่เกิน 5 วินาทีต่อวัน ข้อมูลผู้ป่วยต้องเป็นความลับตามกฎหมาย HStan-03-2006-priv และ
+        PDPA ติดตั้งบน Linux Server งบไม่เกิน 400,000 บาท เสร็จใน 4 เดือน
       </div>
 
       <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -728,46 +770,71 @@
       </button>
 
       <div class="answer-content">
-        <div class="answer-subheading">1. Functional Requirements (ความต้องการเชิงหน้าที่ — What the system shall do)</div>
-        <div class="bilingual-pair">
-          <div class="en">• Each staff member using the system shall be uniquely identified and authenticated by their 8-digit employee number and smart ID card.</div>
-          <div class="th">ระบบต้องอนุญาตให้เจ้าหน้าที่เข้าสู่ระบบด้วยรหัสพนักงาน 8 หลักและบัตรประจำตัวสมาร์ทการ์ดเพื่อยืนยันตัวตน</div>
+        <div class="answer-subheading">1. Functional Requirements (ความต้องการเชิงหน้าที่ — What the system shall do)
         </div>
         <div class="bilingual-pair">
-          <div class="en">• Clinicians shall be able to search the patient database across all clinics, create new patient records, and edit treatment history.</div>
-          <div class="th">แพทย์และพยาบาลต้องสามารถค้นหาประวัติผู้ป่วยจากทุกคลินิก สร้างเวชระเบียนใหม่ และแก้ไขประวัติการรักษาได้</div>
+          <div class="en">• Each staff member using the system shall be uniquely identified and authenticated by their
+            8-digit employee number and smart ID card.</div>
+          <div class="th">ระบบต้องอนุญาตให้เจ้าหน้าที่เข้าสู่ระบบด้วยรหัสพนักงาน 8
+            หลักและบัตรประจำตัวสมาร์ทการ์ดเพื่อยืนยันตัวตน</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en">• The system shall monitor patient records and issue automated warning alerts to clinicians when potentially suicidal or dangerous behaviors are detected.</div>
-          <div class="th">ระบบต้องตรวจสอบประวัติผู้ป่วยและส่งการแจ้งเตือนความปลอดภัยทันทีเมื่อพบสัญญาณเตือนว่าคนไข้อาจทำร้ายตนเองหรือผู้อื่น</div>
+          <div class="en">• Clinicians shall be able to search the patient database across all clinics, create new
+            patient records, and edit treatment history.</div>
+          <div class="th">แพทย์และพยาบาลต้องสามารถค้นหาประวัติผู้ป่วยจากทุกคลินิก สร้างเวชระเบียนใหม่
+            และแก้ไขประวัติการรักษาได้</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en">• On the last working day of each month, the system shall automatically generate drug cost and prescription summary reports for each clinic.</div>
-          <div class="th">ระบบต้องสร้างรายงานสรุปยอดการสั่งจ่ายยาและต้นทุนค่ายาประจำเดือนของแต่ละคลินิกโดยอัตโนมัติในวันทำการสุดท้ายของเดือน</div>
+          <div class="en">• The system shall monitor patient records and issue automated warning alerts to clinicians
+            when potentially suicidal or dangerous behaviors are detected.</div>
+          <div class="th">
+            ระบบต้องตรวจสอบประวัติผู้ป่วยและส่งการแจ้งเตือนความปลอดภัยทันทีเมื่อพบสัญญาณเตือนว่าคนไข้อาจทำร้ายตนเองหรือผู้อื่น
+          </div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en">• On the last working day of each month, the system shall automatically generate drug cost and
+            prescription summary reports for each clinic.</div>
+          <div class="th">
+            ระบบต้องสร้างรายงานสรุปยอดการสั่งจ่ายยาและต้นทุนค่ายาประจำเดือนของแต่ละคลินิกโดยอัตโนมัติในวันทำการสุดท้ายของเดือน
+          </div>
         </div>
 
-        <div class="answer-subheading">2. Non-Functional Requirements (ความต้องการเชิงคุณลักษณะ — How the system should perform)</div>
+        <div class="answer-subheading">2. Non-Functional Requirements (ความต้องการเชิงคุณลักษณะ — How the system should
+          perform)</div>
         <div class="bilingual-pair">
-          <div class="en"><strong>• Reliability & Availability (Product):</strong> The system shall maintain at least 99.9% availability during working hours (Mon–Fri, 08:30–17:30). System downtime within working hours shall not exceed 5 seconds in any one day.</div>
-          <div class="th"><strong>ด้านความพร้อมใช้งาน (Availability):</strong> ระบบต้องมีความพร้อมใช้งานไม่ต่ำกว่า 99.9% ในเวลาทำการ (จ.-ศ. 08:30–17:30) และมี Downtime สะสมไม่เกิน 5 วินาทีในแต่ละวัน</div>
+          <div class="en"><strong>• Reliability & Availability (Product):</strong> The system shall maintain at least
+            99.9% availability during working hours (Mon–Fri, 08:30–17:30). System downtime within working hours shall
+            not exceed 5 seconds in any one day.</div>
+          <div class="th"><strong>ด้านความพร้อมใช้งาน (Availability):</strong> ระบบต้องมีความพร้อมใช้งานไม่ต่ำกว่า 99.9%
+            ในเวลาทำการ (จ.-ศ. 08:30–17:30) และมี Downtime สะสมไม่เกิน 5 วินาทีในแต่ละวัน</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>• Usability (Product):</strong> Medical staff shall be able to use all core clinical functions after two hours of training, making fewer than 2 operational errors per hour.</div>
-          <div class="th"><strong>ด้านความง่ายในการใช้งาน (Usability):</strong> บุคลากรทางการแพทย์ต้องสามารถใช้งานฟังก์ชันหลักได้หลังฝึกอบรม 2 ชั่วโมง และมีอัตราความผิดพลาดไม่เกิน 2 ครั้งต่อชั่วโมงการใช้งาน</div>
+          <div class="en"><strong>• Usability (Product):</strong> Medical staff shall be able to use all core clinical
+            functions after two hours of training, making fewer than 2 operational errors per hour.</div>
+          <div class="th"><strong>ด้านความง่ายในการใช้งาน (Usability):</strong>
+            บุคลากรทางการแพทย์ต้องสามารถใช้งานฟังก์ชันหลักได้หลังฝึกอบรม 2 ชั่วโมง และมีอัตราความผิดพลาดไม่เกิน 2
+            ครั้งต่อชั่วโมงการใช้งาน</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>• Security & Privacy (External/Legislative):</strong> Patient information must be strictly confidential, encrypted during transit/storage, and accessible only by authorized clinical personnel.</div>
-          <div class="th"><strong>ด้านความปลอดภัย (Security):</strong> ข้อมูลการรักษาต้องถูกเก็บเป็นความลับและเข้ารหัสอย่างปลอดภัยตามมาตรฐานความปลอดภัยข้อมูลสุขภาพ</div>
+          <div class="en"><strong>• Security & Privacy (External/Legislative):</strong> Patient information must be
+            strictly confidential, encrypted during transit/storage, and accessible only by authorized clinical
+            personnel.</div>
+          <div class="th"><strong>ด้านความปลอดภัย (Security):</strong>
+            ข้อมูลการรักษาต้องถูกเก็บเป็นความลับและเข้ารหัสอย่างปลอดภัยตามมาตรฐานความปลอดภัยข้อมูลสุขภาพ</div>
         </div>
 
         <div class="answer-subheading">3. Domain Requirements (ความต้องการเฉพาะด้านโดเมน)</div>
         <div class="bilingual-pair">
-          <div class="en">• The system must implement patient privacy and medical records governance provisions as set out in medical standards (HStan-03-2006-priv) and PDPA.</div>
-          <div class="th">ระบบต้องปฏิบัติตามมาตรฐานการจัดเก็บเวชระเบียนทางการแพทย์ (HStan-03-2006-priv) และกฎหมาย PDPA อย่างเคร่งครัด</div>
+          <div class="en">• The system must implement patient privacy and medical records governance provisions as set
+            out in medical standards (HStan-03-2006-priv) and PDPA.</div>
+          <div class="th">ระบบต้องปฏิบัติตามมาตรฐานการจัดเก็บเวชระเบียนทางการแพทย์ (HStan-03-2006-priv) และกฎหมาย PDPA
+            อย่างเคร่งครัด</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en">• The system must support local PC data caching and disconnected operations, synchronizing records with the central database when connection resumes.</div>
-          <div class="th">ระบบต้องรองรับการทำงานแบบออฟไลน์บนเครื่อง PC และซิงค์ข้อมูลกลับสู่ฐานข้อมูลกลางเมื่อเชื่อมต่อเครือข่ายได้</div>
+          <div class="en">• The system must support local PC data caching and disconnected operations, synchronizing
+            records with the central database when connection resumes.</div>
+          <div class="th">ระบบต้องรองรับการทำงานแบบออฟไลน์บนเครื่อง PC
+            และซิงค์ข้อมูลกลับสู่ฐานข้อมูลกลางเมื่อเชื่อมต่อเครือข่ายได้</div>
         </div>
 
         <div class="answer-subheading">4. Constraints (ข้อจำกัดโครงการ)</div>
@@ -784,14 +851,15 @@
           <div class="th">ระบบต้องพัฒนาและส่งมอบให้พร้อมใช้งานจริงภายในระยะเวลาไม่เกิน 4 เดือน</div>
         </div>
 
-        <div class="scoring-tip">⭐ <strong>จุดสังเกต:</strong> ข้อนี้ถอดมาจาก Mentcare Case Study ในสไลด์ Ch1 และ Ch4 ซึ่งเป็นตัวอย่างคลาสสิกของ Ian Sommerville</div>
+        <div class="scoring-tip">⭐ <strong>จุดสังเกต:</strong> ข้อนี้ถอดมาจาก Mentcare Case Study ในสไลด์ Ch1 และ Ch4
+          ซึ่งเป็นตัวอย่างคลาสสิกของ Ian Sommerville</div>
       </div>
     </div>
 
     <!-- QUESTION 2: STAKEHOLDERS & FOCUSED ETHNOGRAPHY -->
     <div class="exam-question-card" data-searchable>
       <span class="q-number-tag">EXAM QUESTION 2 : STAKEHOLDERS & FOCUSED ETHNOGRAPHY (CASE: ECO-RIDE)</span>
-      <h3 class="q-title">Question 2: Stakeholder Analysis & Focused Ethnography Elicitation</h3>
+      <h3 class="q-title">Question 2: Stakeholder Analysis & Focused Ethnography Elicitation<br><small style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]: การวิเคราะห์ผู้มีส่วนได้ส่วนเสีย และเทคนิค Focused Ethnography สำหรับระบบ EcoRide</small></h3>
       <div class="q-meta">
         <span><strong>หัวข้อ:</strong> Chapter 4 (Stakeholders, Ethnography & Prototyping Integration)</span>
         <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
@@ -799,10 +867,21 @@
 
       <div class="scenario-box en">
         <strong>[Problem Prompt]:</strong><br>
-        A university is developing <strong>"EcoRide"</strong>, an automated campus electric shuttle routing and real-time tracking system.
+        A university is developing <strong>"EcoRide"</strong>, an automated campus electric shuttle routing and
+        real-time tracking system.
         <ol style="margin-left: 20px; margin-top: 6px;">
           <li>Identify at least <strong>5 key Stakeholders</strong> for the EcoRide project and define their roles.</li>
-          <li>Explain the concept of <strong>"Focused Ethnography"</strong> and explain why combining ethnography with <strong>Prototyping</strong> is effective during requirements elicitation.</li>
+          <li>Explain the concept of <strong>"Focused Ethnography"</strong> and explain why combining ethnography with
+            <strong>Prototyping</strong> is effective during requirements elicitation.</li>
+        </ol>
+      </div>
+
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        มหาวิทยาลัยแห่งหนึ่งกำลังพัฒนาระบบ <strong>"EcoRide"</strong> ซึ่งเป็นระบบจัดเส้นทางและติดตามรถชัตเติลบัสดิจิทัลพลังงานไฟฟ้าในวิทยาเขตแบบ Real-time
+        <ol style="margin-left: 20px; margin-top: 6px;">
+          <li>จงระบุ <strong>ผู้มีส่วนได้ส่วนเสียหลักอย่างน้อย 5 กลุ่ม</strong> สำหรับโครงการ EcoRide พร้อมอธิบายบทบาทหน้าที่ (Roles & Responsibilities) ของแต่ละกลุ่มในระบบ</li>
+          <li>จงอธิบายแนวคิดของ <strong>"Focused Ethnography" (การสังเกตพฤติกรรมแบบเจาะจง)</strong> และอธิบายว่าเหตุใดการนำเทคนิค Ethnography มาใช้ร่วมกับ <strong>การสร้างตัวต้นแบบ (Prototyping)</strong> จึงมีประสิทธิภาพสูงในขั้นตอนการรวบรวมความต้องการ</li>
         </ol>
       </div>
 
@@ -852,24 +931,35 @@
           </table>
         </div>
 
-        <div class="answer-subheading">(b) การศึกษาเชิงชาติพันธุ์วรรณาแบบเจาะจง (Focused Ethnography & Prototyping)</div>
-        <div class="bilingual-pair">
-          <div class="en"><strong>• Concept of Ethnography:</strong> An observational technique where a researcher immerses themselves in the actual working environment to observe how people <em>actually work</em>, discovering implicit social and organizational factors not written in formal procedures.</div>
-          <div class="th"><strong>Ethnography:</strong> การที่นักวิเคราะห์เข้าไปสังเกตการณ์การทำงานจริงในสถานที่จริง เพื่อดูว่าผู้ปฏิบัติงานทำงานอย่างไรในชีวิตประจำวัน ทำให้ค้นพบกระบวนการจริงที่ไม่ได้เขียนไว้ในคู่มือ</div>
+        <div class="answer-subheading">(b) การศึกษาเชิงชาติพันธุ์วรรณาแบบเจาะจง (Focused Ethnography & Prototyping)
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>• Focused Ethnography with Prototyping:</strong> Combines ethnographic observation with system prototyping. Building early prototypes raises unanswered operational questions, which direct and focus subsequent ethnographic observations on critical user interactions (Debriefing -> Focused Observation -> Prototype Refinement).</div>
-          <div class="th"><strong>Focused Ethnography ร่วมกับ Prototyping:</strong> เป็นการนำตัวต้นแบบ (Prototype) มาใช้ควบคู่กับการสังเกตการณ์ เมื่อสร้าง Prototype แล้วพบจุดสงสัย นักวิเคราะห์จะเข้าไปสังเกตการณ์เฉพาะจุดนั้นๆ (Focused) เพื่อนำคำตอบมาปรับแก้ Prototype ให้ตรงกับการใช้งานจริงมากที่สุด</div>
+          <div class="en"><strong>• Concept of Ethnography:</strong> An observational technique where a researcher
+            immerses themselves in the actual working environment to observe how people <em>actually work</em>,
+            discovering implicit social and organizational factors not written in formal procedures.</div>
+          <div class="th"><strong>Ethnography:</strong> การที่นักวิเคราะห์เข้าไปสังเกตการณ์การทำงานจริงในสถานที่จริง
+            เพื่อดูว่าผู้ปฏิบัติงานทำงานอย่างไรในชีวิตประจำวัน ทำให้ค้นพบกระบวนการจริงที่ไม่ได้เขียนไว้ในคู่มือ</div>
+        </div>
+        <div class="bilingual-pair">
+          <div class="en"><strong>• Focused Ethnography with Prototyping:</strong> Combines ethnographic observation
+            with system prototyping. Building early prototypes raises unanswered operational questions, which direct and
+            focus subsequent ethnographic observations on critical user interactions (Debriefing -> Focused Observation
+            -> Prototype Refinement).</div>
+          <div class="th"><strong>Focused Ethnography ร่วมกับ Prototyping:</strong> เป็นการนำตัวต้นแบบ (Prototype)
+            มาใช้ควบคู่กับการสังเกตการณ์ เมื่อสร้าง Prototype แล้วพบจุดสงสัย
+            นักวิเคราะห์จะเข้าไปสังเกตการณ์เฉพาะจุดนั้นๆ (Focused) เพื่อนำคำตอบมาปรับแก้ Prototype
+            ให้ตรงกับการใช้งานจริงมากที่สุด</div>
         </div>
 
-        <div class="scoring-tip">⭐ <strong>คีย์เวิร์ดสำคัญ:</strong> "How people actually work vs ought to work" และลูป "Debriefing -> Focused Ethnography -> Prototype Evaluation"</div>
+        <div class="scoring-tip">⭐ <strong>คีย์เวิร์ดสำคัญ:</strong> "How people actually work vs ought to work" และลูป
+          "Debriefing -> Focused Ethnography -> Prototype Evaluation"</div>
       </div>
     </div>
 
     <!-- QUESTION 3: V-MODEL TESTING & PROCESS SELECTION -->
     <div class="exam-question-card" data-searchable>
       <span class="q-number-tag">EXAM QUESTION 3 : TESTING V-MODEL & LIFECYCLE (CASE: WILDERNESS WEATHER)</span>
-      <h3 class="q-title">Question 3: Plan-Driven Testing V-Model & Software Evolution</h3>
+      <h3 class="q-title">Question 3: Plan-Driven Testing V-Model & Software Evolution<br><small style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]: โมเดลการทดสอบ V-Model และวงจรวิวัฒนาการของระบบ (Software Evolution)</small></h3>
       <div class="q-meta">
         <span><strong>หัวข้อ:</strong> Chapter 2 (V-Model Testing Stages, Evolution & Prototyping)</span>
         <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
@@ -877,8 +967,16 @@
 
       <div class="scenario-box en">
         <strong>[Problem Prompt]:</strong><br>
-        (a) Explain the <strong>Testing Phases in a Plan-Driven Software Process (V-Model)</strong> by detailing how each development design phase corresponds to its testing phase.<br>
-        (b) Explain why <strong>Software Evolution (Maintenance)</strong> is now considered inseparable from software development, and describe the <strong>System Evolution Process Cycle</strong>.
+        (a) Explain the <strong>Testing Phases in a Plan-Driven Software Process (V-Model)</strong> by detailing how
+        each development design phase corresponds to its testing phase.<br>
+        (b) Explain why <strong>Software Evolution (Maintenance)</strong> is now considered inseparable from software
+        development, and describe the <strong>System Evolution Process Cycle</strong>.
+      </div>
+
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        (a) จงอธิบาย <strong>ขั้นตอนการทดสอบในกระบวนการพัฒนาซอฟต์แวร์แบบ Plan-Driven (V-Model)</strong> โดยระบุอย่างละเอียดว่าแต่ละเฟสของการออกแบบ (Design Phase) เชื่อมโยงและจับคู่กับเฟสการทดสอบ (Testing Phase) ใดบ้าง<br>
+        (b) จงอธิบายว่าเหตุใดในปัจจุบัน <strong>การวิวัฒนาการซอฟต์แวร์ (Software Evolution / Maintenance)</strong> จึงถือเป็นสิ่งที่ไม่สามารถแยกขาดจากการพัฒนาซอฟต์แวร์ได้ และจงอธิบาย <strong>วงจรกระบวนการวิวัฒนาการของระบบ (System Evolution Process Cycle 4 ขั้นตอน)</strong>
       </div>
 
       <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -901,49 +999,61 @@
               <tr>
                 <td><strong>1. Requirements Specification</strong><br><small>(ข้อกำหนดความต้องการ)</small></td>
                 <td>Acceptance Test Plan<br><small>(แผนการตรวจรับมอบงาน)</small></td>
-                <td><strong>Acceptance Test / Customer Test:</strong> ทดสอบร่วมกับลูกค้าด้วยข้อมูลจริงเพื่อตรวจรับมอบระบบ</td>
+                <td><strong>Acceptance Test / Customer Test:</strong>
+                  ทดสอบร่วมกับลูกค้าด้วยข้อมูลจริงเพื่อตรวจรับมอบระบบ</td>
               </tr>
               <tr>
                 <td><strong>2. System Specification</strong><br><small>(ข้อกำหนดระบบภาพรวม)</small></td>
                 <td>System Integration Test Plan<br><small>(แผนการทดสอบรวมระบบ)</small></td>
-                <td><strong>System Integration Test:</strong> ทดสอบการทำงานร่วมกันของระบบทั้งหมดและ Emergent Properties</td>
+                <td><strong>System Integration Test:</strong> ทดสอบการทำงานร่วมกันของระบบทั้งหมดและ Emergent Properties
+                </td>
               </tr>
               <tr>
                 <td><strong>3. System Design</strong><br><small>(การออกแบบสถาปัตยกรรมระบบ)</small></td>
                 <td>Sub-system Integration Test Plan<br><small>(แผนทดสอบระบบย่อย)</small></td>
-                <td><strong>Sub-system Integration Test:</strong> ทดสอบการเชื่อมต่อสื่อสารระหว่างโมดูลหรือ Sub-systems</td>
+                <td><strong>Sub-system Integration Test:</strong> ทดสอบการเชื่อมต่อสื่อสารระหว่างโมดูลหรือ Sub-systems
+                </td>
               </tr>
               <tr>
                 <td><strong>4. Detailed Design</strong><br><small>(การออกแบบรายละเอียดโมดูล)</small></td>
                 <td>Module / Unit Test Plan<br><small>(แผนทดสอบยูนิต)</small></td>
-                <td><strong>Module & Unit Code and Test:</strong> โปรแกรมเมอร์เขียนโค้ดและรัน Unit Test ทดสอบฟังก์ชันย่อย</td>
+                <td><strong>Module & Unit Code and Test:</strong> โปรแกรมเมอร์เขียนโค้ดและรัน Unit Test
+                  ทดสอบฟังก์ชันย่อย</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="answer-subheading">(b) วิวัฒนาการของซอฟต์แวร์และวงจร System Evolution (Software Evolution Process)</div>
+        <div class="answer-subheading">(b) วิวัฒนาการของซอฟต์แวร์และวงจร System Evolution (Software Evolution Process)
+        </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>• Inseparability of Development & Evolution:</strong> Software is inherently flexible. As business circumstances, regulations, and hardware platforms change, software must continuously evolve to remain useful. In modern software engineering, few systems are completely new from scratch; most development is the evolution of existing systems.</div>
-          <div class="th"><strong>เหตุผลที่การพัฒนาและ Evolution แยกกันไม่ออก:</strong> เพราะธุรกิจและเทคโนโลยีเปลี่ยนแปลงตลอดเวลา ซอฟต์แวร์จึงต้องถูกปรับแก้เรื่อยๆ เพื่อให้ยังใช้งานได้ ปัจจุบันซอฟต์แวร์ส่วนใหญ่เป็นการพัฒนาต่อยอดจากระบบเดิมที่มีอยู่แล้ว</div>
+          <div class="en"><strong>• Inseparability of Development & Evolution:</strong> Software is inherently flexible.
+            As business circumstances, regulations, and hardware platforms change, software must continuously evolve to
+            remain useful. In modern software engineering, few systems are completely new from scratch; most development
+            is the evolution of existing systems.</div>
+          <div class="th"><strong>เหตุผลที่การพัฒนาและ Evolution แยกกันไม่ออก:</strong>
+            เพราะธุรกิจและเทคโนโลยีเปลี่ยนแปลงตลอดเวลา ซอฟต์แวร์จึงต้องถูกปรับแก้เรื่อยๆ เพื่อให้ยังใช้งานได้
+            ปัจจุบันซอฟต์แวร์ส่วนใหญ่เป็นการพัฒนาต่อยอดจากระบบเดิมที่มีอยู่แล้ว</div>
         </div>
         <div class="bilingual-pair">
           <div class="en"><strong>• 4-Step System Evolution Cycle:</strong><br>
-          1. <code>Define System Requirements</code> (กำหนดความต้องการใหม่)<br>
-          2. <code>Assess Existing Systems</code> (ประเมินระบบเดิมว่ารองรับได้แค่ไหน)<br>
-          3. <code>Propose System Changes</code> (เสนอแนวทางการปรับแก้ระบบ)<br>
-          4. <code>Modify Systems</code> ➔ Produces <code>New System</code>.</div>
-          <div class="th"><strong>วงจรการพัฒนาวิวัฒนาการ 4 ขั้นตอน:</strong> กำหนด Requirement ใหม่ ➔ ประเมินระบบเดิม ➔ เสนอแผนการปรับแก้ ➔ ลงมือแก้ไขระบบ เพื่อส่งมอบเป็น New System</div>
+            1. <code>Define System Requirements</code> (กำหนดความต้องการใหม่)<br>
+            2. <code>Assess Existing Systems</code> (ประเมินระบบเดิมว่ารองรับได้แค่ไหน)<br>
+            3. <code>Propose System Changes</code> (เสนอแนวทางการปรับแก้ระบบ)<br>
+            4. <code>Modify Systems</code> ➔ Produces <code>New System</code>.</div>
+          <div class="th"><strong>วงจรการพัฒนาวิวัฒนาการ 4 ขั้นตอน:</strong> กำหนด Requirement ใหม่ ➔ ประเมินระบบเดิม ➔
+            เสนอแผนการปรับแก้ ➔ ลงมือแก้ไขระบบ เพื่อส่งมอบเป็น New System</div>
         </div>
 
-        <div class="scoring-tip">⭐ <strong>ข้อสอบชอบออก:</strong> การจับคู่ V-Model ให้เขียนเป็นคู่ๆ เช่น Requirements Spec คู่กับ Acceptance Test เสมอ</div>
+        <div class="scoring-tip">⭐ <strong>ข้อสอบชอบออก:</strong> การจับคู่ V-Model ให้เขียนเป็นคู่ๆ เช่น Requirements
+          Spec คู่กับ Acceptance Test เสมอ</div>
       </div>
     </div>
 
     <!-- QUESTION 4: ETHICS DILEMMA & SOFTWARE CHALLENGES -->
     <div class="exam-question-card" data-searchable>
       <span class="q-number-tag">EXAM QUESTION 4 : ETHICAL DILEMMA & SE CHALLENGES</span>
-      <h3 class="q-title">Question 4: Software Engineering Challenges & Privacy Data Breach Ethics Dilemma</h3>
+      <h3 class="q-title">Question 4: Software Engineering Challenges & Privacy Data Breach Ethics Dilemma<br><small style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]: ความท้าทายของวิศวกรรมซอฟต์แวร์ และกรณีศึกษาจริยธรรมข้อมูลนักศึกษารั่วไหล (ACM/IEEE)</small></h3>
       <div class="q-meta">
         <span><strong>หัวข้อ:</strong> Chapter 1, Handwritten Notes & ACM/IEEE Ethics</span>
         <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
@@ -951,9 +1061,21 @@
 
       <div class="scenario-box en">
         <strong>[Problem Prompt]:</strong><br>
-        (a) State the <strong>3 Key Challenges</strong> facing modern software engineering (from Chapter 1 & handwritten notes).<br>
-        (b) <strong>Ethics Dilemma Case Study:</strong> While conducting performance optimization on a university student portal, a software engineer discovers an unencrypted database leak that exposes 10,000 students' personal national ID numbers and financial records to the public internet. The company CEO instructs the engineer to keep silent and delete the incident logs to protect the university's public image and stock value.<br>
+        (a) State the <strong>3 Key Challenges</strong> facing modern software engineering (from Chapter 1 & handwritten
+        notes).<br>
+        (b) <strong>Ethics Dilemma Case Study:</strong> While conducting performance optimization on a university
+        student portal, a software engineer discovers an unencrypted database leak that exposes 10,000 students'
+        personal national ID numbers and financial records to the public internet. The company CEO instructs the
+        engineer to keep silent and delete the incident logs to protect the university's public image and stock
+        value.<br>
         Analyze the engineer's ethical obligations according to the <strong>ACM/IEEE Code of Ethics</strong>.
+      </div>
+
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        (a) จงระบุ <strong>3 ความท้าทายสำคัญ (3 Key Challenges)</strong> ที่วิศวกรรมซอฟต์แวร์สมัยใหม่กำลังเผชิญอยู่ (จากสไลด์บทที่ 1 และสมุดจดเลกเชอร์)<br>
+        (b) <strong>กรณีศึกษาข้อพิพาททางจริยธรรม:</strong> ขณะที่วิศวกรซอฟต์แวร์กำลังทดสอบประสิทธิภาพระบบพอร์ทัลนักศึกษาของมหาวิทยาลัย ได้ค้นพบช่องโหว่ฐานข้อมูลที่ไม่มีการเข้ารหัส ทำให้ข้อมูลเลขบัตรประชาชนและข้อมูลทางการเงินของนักศึกษา 10,000 คนรั่วไหลสู่สาธารณะ เมื่อแจ้งผู้บริหาร ซีอีโอกลับสั่งให้วิศวกร "เก็บเงียบและลบ Audit Log การรั่วไหลทิ้ง" เพื่อปกป้องภาพลักษณ์และมูลค่าหุ้นของมหาวิทยาลัย<br>
+        จงวิเคราะห์ภาระหน้าที่และแนวทางการตัดสินใจของวิศวกรซอฟต์แวร์ตามหลัก <strong>จรรยาบรรณวิชาชีพ ACM/IEEE Code of Ethics</strong>
       </div>
 
       <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -964,43 +1086,62 @@
       <div class="answer-content">
         <div class="answer-subheading">(a) 3 ความท้าทายสำคัญของวิศวกรรมซอฟต์แวร์สมัยใหม่ (3 Key Challenges in SE)</div>
         <div class="bilingual-pair">
-          <div class="en"><strong>1. Coping with Increasing Diversity (Heterogeneity):</strong> Developing software that can operate across distributed platforms, various devices (PC, mobile, IoT), and diverse operating systems.</div>
-          <div class="th"><strong>1. การรับมือกับความหลากหลาย (Diversity/Heterogeneity):</strong> ต้องพัฒนาระบบให้ทำงานได้บนอุปกรณ์และแพลตฟอร์มที่หลากหลาย</div>
+          <div class="en"><strong>1. Coping with Increasing Diversity (Heterogeneity):</strong> Developing software that
+            can operate across distributed platforms, various devices (PC, mobile, IoT), and diverse operating systems.
+          </div>
+          <div class="th"><strong>1. การรับมือกับความหลากหลาย (Diversity/Heterogeneity):</strong>
+            ต้องพัฒนาระบบให้ทำงานได้บนอุปกรณ์และแพลตฟอร์มที่หลากหลาย</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>2. Demands for Reduced Delivery Times:</strong> Delivering high-quality software rapidly to market as business environments change quickly.</div>
-          <div class="th"><strong>2. ความต้องการลดเวลาในการส่งมอบ (Reduced Delivery Times):</strong> ธุรกิจต้องการซอฟต์แวร์ที่พัฒนาและปล่อยใช้งานได้อย่างรวดเร็วทันตลาด</div>
+          <div class="en"><strong>2. Demands for Reduced Delivery Times:</strong> Delivering high-quality software
+            rapidly to market as business environments change quickly.</div>
+          <div class="th"><strong>2. ความต้องการลดเวลาในการส่งมอบ (Reduced Delivery Times):</strong>
+            ธุรกิจต้องการซอฟต์แวร์ที่พัฒนาและปล่อยใช้งานได้อย่างรวดเร็วทันตลาด</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>3. Developing Trustworthy Software:</strong> Ensuring high reliability, dependability, security, and safety as society relies deeply on software.</div>
-          <div class="th"><strong>3. การสร้างซอฟต์แวร์ที่เชื่อถือได้ (Trustworthy Software):</strong> ซอฟต์แวร์ต้องมีความปลอดภัย เสถียร และน่าเชื่อถือเพราะกระทบต่อชีวิตและทรัพย์สิน</div>
+          <div class="en"><strong>3. Developing Trustworthy Software:</strong> Ensuring high reliability, dependability,
+            security, and safety as society relies deeply on software.</div>
+          <div class="th"><strong>3. การสร้างซอฟต์แวร์ที่เชื่อถือได้ (Trustworthy Software):</strong>
+            ซอฟต์แวร์ต้องมีความปลอดภัย เสถียร และน่าเชื่อถือเพราะกระทบต่อชีวิตและทรัพย์สิน</div>
         </div>
 
         <div class="answer-subheading">(b) การตัดสินใจตามหลักจริยธรรม ACM/IEEE Code of Ethics</div>
-        <div class="scenario-box" style="background: #fff1f2; border-left: 4px solid var(--accent-rose); color: #9f1239;">
-          <strong>คำตัดสินทางจริยธรรม:</strong> วิศวกร <strong>"ห้ามลบ Log และห้ามปกปิดข้อมูลรั่วไหลเด็ดขาด"</strong> ต้องดำเนินการแจ้งเตือนและแก้ไขช่องโหว่ทันที
+        <div class="scenario-box"
+          style="background: #fff1f2; border-left: 4px solid var(--accent-rose); color: #9f1239;">
+          <strong>คำตัดสินทางจริยธรรม:</strong> วิศวกร <strong>"ห้ามลบ Log และห้ามปกปิดข้อมูลรั่วไหลเด็ดขาด"</strong>
+          ต้องดำเนินการแจ้งเตือนและแก้ไขช่องโหว่ทันที
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>1. Principle 1: PUBLIC (Public Interest):</strong> The personal data privacy and financial safety of the 10,000 students take absolute precedence over company reputation or commercial interests.</div>
-          <div class="th"><strong>ด้านประโยชน์ส่วนรวม (Public):</strong> ต้องปกป้องข้อมูลและความปลอดภัยของประชาชน/นักศึกษาเป็นอันดับแรก การปกปิดความผิดถือเป็นการซ้ำเติมความเสียหาย</div>
+          <div class="en"><strong>1. Principle 1: PUBLIC (Public Interest):</strong> The personal data privacy and
+            financial safety of the 10,000 students take absolute precedence over company reputation or commercial
+            interests.</div>
+          <div class="th"><strong>ด้านประโยชน์ส่วนรวม (Public):</strong>
+            ต้องปกป้องข้อมูลและความปลอดภัยของประชาชน/นักศึกษาเป็นอันดับแรก การปกปิดความผิดถือเป็นการซ้ำเติมความเสียหาย
+          </div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>2. Principle 4: JUDGMENT (Professional Integrity):</strong> The engineer must maintain professional objectivity and refuse to falsify records, alter audit logs, or endorse deceptive practices.</div>
-          <div class="th"><strong>ด้านความซื่อสัตย์ในวิชาชีพ (Judgment):</strong> ต้องมีดุลยพินิจที่เป็นอิสระ ไม่ทำตามคำสั่งมิชอบ เช่น การทำลายหลักฐานหรือลบ Log</div>
+          <div class="en"><strong>2. Principle 4: JUDGMENT (Professional Integrity):</strong> The engineer must maintain
+            professional objectivity and refuse to falsify records, alter audit logs, or endorse deceptive practices.
+          </div>
+          <div class="th"><strong>ด้านความซื่อสัตย์ในวิชาชีพ (Judgment):</strong> ต้องมีดุลยพินิจที่เป็นอิสระ
+            ไม่ทำตามคำสั่งมิชอบ เช่น การทำลายหลักฐานหรือลบ Log</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>3. Principle 6: PROFESSION:</strong> Covering up a severe data breach damages the reputation and integrity of the software engineering profession.</div>
-          <div class="th"><strong>ด้านเกียรติแห่งวิชาชีพ (Profession):</strong> การกระทำที่โปร่งใสและตรงไปตรงมาช่วยรักษาความน่าเชื่อถือของวิชาชีพวิศวกรซอฟต์แวร์ในสังคม</div>
+          <div class="en"><strong>3. Principle 6: PROFESSION:</strong> Covering up a severe data breach damages the
+            reputation and integrity of the software engineering profession.</div>
+          <div class="th"><strong>ด้านเกียรติแห่งวิชาชีพ (Profession):</strong>
+            การกระทำที่โปร่งใสและตรงไปตรงมาช่วยรักษาความน่าเชื่อถือของวิชาชีพวิศวกรซอฟต์แวร์ในสังคม</div>
         </div>
 
-        <div class="scoring-tip">⭐ <strong>แนวทางการตอบ:</strong> ให้ระบุชื่อหลักการ (Principle) พร้อมอธิบายเหตุผลว่าทำไมผลประโยชน์สาธารณะ (Public Interest) ถึงสำคัญกว่าผลประโยชน์ของบริษัท</div>
+        <div class="scoring-tip">⭐ <strong>แนวทางการตอบ:</strong> ให้ระบุชื่อหลักการ (Principle)
+          พร้อมอธิบายเหตุผลว่าทำไมผลประโยชน์สาธารณะ (Public Interest) ถึงสำคัญกว่าผลประโยชน์ของบริษัท</div>
       </div>
     </div>
 
     <!-- QUESTION 5: USE CASE & REQUIREMENTS VALIDATION -->
     <div class="exam-question-card" data-searchable>
       <span class="q-number-tag">EXAM QUESTION 5 : USE CASES, TABULAR SPECS & VALIDATION CHECKS</span>
-      <h3 class="q-title">Question 5: Use Case Modeling, Decision Tables & Requirements Validation Checks</h3>
+      <h3 class="q-title">Question 5: Use Case Modeling, Decision Tables & Requirements Validation Checks<br><small style="font-size: 0.95rem; font-weight: 500; color: var(--accent-blue);">[ภาษาไทย]: การจำลอง Use Case, ตารางการตัดสินใจ (Decision Table) และ 5 เกณฑ์ตรวจสอบความถูกต้อง (V-C-C-R-V)</small></h3>
       <div class="q-meta">
         <span><strong>หัวข้อ:</strong> Chapter 4 (Use Cases, Tabular Specifications, V-C-C-R-V Checks)</span>
         <span>• <strong>คะแนนโดยประมาณ:</strong> 20 คะแนน</span>
@@ -1008,13 +1149,28 @@
 
       <div class="scenario-box en">
         <strong>[Problem Prompt]:</strong><br>
-        (a) Based on the <strong>Mentcare Clinical System</strong>, draw/explain a <strong>Use Case interaction diagram</strong> identifying actors (Doctor, Nurse, Medical Receptionist, Manager) and their associated system use cases.<br>
-        (b) Create a <strong>Tabular Decision Specification</strong> for an automated patient appointment fee calculation rule:<br>
+        (a) Based on the <strong>Mentcare Clinical System</strong>, draw/explain a <strong>Use Case interaction
+          diagram</strong> identifying actors (Doctor, Nurse, Medical Receptionist, Manager) and their associated system
+        use cases.<br>
+        (b) Create a <strong>Tabular Decision Specification</strong> for an automated patient appointment fee
+        calculation rule:<br>
         • General Patient (Regular Hours): Fee = 300 THB<br>
         • General Patient (After Hours): Fee = 500 THB<br>
         • Student/Senior Citizen (Regular Hours): Fee = 150 THB (50% discount)<br>
         • Student/Senior Citizen (After Hours): Fee = 250 THB (50% discount)<br>
-        (c) Explain the <strong>5 Requirements Validation Checks (Validity, Consistency, Completeness, Realism, Verifiability)</strong>.
+        (c) Explain the <strong>5 Requirements Validation Checks (Validity, Consistency, Completeness, Realism,
+          Verifiability)</strong>.
+      </div>
+
+      <div class="scenario-box th">
+        <strong>[คำแปลโจทย์ภาษาไทย]:</strong><br>
+        (a) จากกรณีศึกษาระบบคลินิก <strong>Mentcare</strong> จงเขียน/อธิบาย <strong>แผนภาพ Use Case Interaction Diagram</strong> ระบุกลุ่ม Actors (แพทย์, พยาบาล, เจ้าหน้าที่เวชระเบียน, ผู้จัดการ) และ Use Cases ที่เกี่ยวข้องของแต่ละคน<br>
+        (b) จงสร้าง <strong>ตารางระบุข้อกำหนดการตัดสินใจ (Tabular Decision Specification)</strong> สำหรับกฎการคำนวณค่าธรรมเนียมนัดหมายตรวจรักษาผู้ป่วยอัตโนมัติ:<br>
+        • ผู้ป่วยทั่วไป (ในเวลาทำการ 08:30 - 16:30): ค่าตรวจ = 300 บาท<br>
+        • ผู้ป่วยทั่วไป (นอกเวลาทำการ 16:31 - 20:00): ค่าตรวจ = 500 บาท<br>
+        • นักศึกษา / ผู้สูงอายุ (&ge; 60 ปี) ในเวลาทำการ: ค่าตรวจ = 150 บาท (ส่วนลด 50%)<br>
+        • นักศึกษา / ผู้สูงอายุ (&ge; 60 ปี) นอกเวลาทำการ: ค่าตรวจ = 250 บาท (ส่วนลด 50%)<br>
+        (c) จงอธิบาย <strong>5 เกณฑ์การตรวจสอบความถูกต้องของ Requirements (Requirements Validation Checks: Validity, Consistency, Completeness, Realism, Verifiability)</strong>
       </div>
 
       <button class="answer-toggle-btn" onclick="toggleAnswer(this)">
@@ -1035,19 +1191,23 @@
             <tbody>
               <tr>
                 <td><strong>1. Medical Receptionist</strong> (เจ้าหน้าที่เวชระเบียน)</td>
-                <td><code>Register Patient</code> (ลงทะเบียนผู้ป่วยใหม่), <code>View Personal Info</code> (ดูข้อมูลส่วนตัว)</td>
+                <td><code>Register Patient</code> (ลงทะเบียนผู้ป่วยใหม่), <code>View Personal Info</code>
+                  (ดูข้อมูลส่วนตัว)</td>
               </tr>
               <tr>
                 <td><strong>2. Nurse</strong> (พยาบาล)</td>
-                <td><code>View Record</code> (ดูประวัติการรักษา), <code>Edit Record</code> (บันทึกอาการเบื้องต้น/การให้ยา)</td>
+                <td><code>View Record</code> (ดูประวัติการรักษา), <code>Edit Record</code>
+                  (บันทึกอาการเบื้องต้น/การให้ยา)</td>
               </tr>
               <tr>
                 <td><strong>3. Doctor</strong> (แพทย์)</td>
-                <td><code>View Record</code> (ดูประวัติ), <code>Edit Record</code> (วินิจฉัย/สั่งยา), <code>Setup Consultation</code> (นัดหมายตรวจ)</td>
+                <td><code>View Record</code> (ดูประวัติ), <code>Edit Record</code> (วินิจฉัย/สั่งยา),
+                  <code>Setup Consultation</code> (นัดหมายตรวจ)</td>
               </tr>
               <tr>
                 <td><strong>4. Clinic Manager</strong> (ผู้จัดการคลินิก)</td>
-                <td><code>Generate Report</code> (สร้างรายงานบริหาร), <code>Export Statistics</code> (ส่งออกสถิติผู้ป่วย)</td>
+                <td><code>Generate Report</code> (สร้างรายงานบริหาร), <code>Export Statistics</code>
+                  (ส่งออกสถิติผู้ป่วย)</td>
               </tr>
             </tbody>
           </table>
@@ -1095,27 +1255,33 @@
 
         <div class="answer-subheading">(c) 5 เกณฑ์ตรวจสอบความต้องการ (5 Requirements Validation Checks: V-C-C-R-V)</div>
         <div class="bilingual-pair">
-          <div class="en"><strong>1. Validity (ความถูกต้องสมเหตุสมผล):</strong> Ensures functions align with what users really need to do their job.</div>
+          <div class="en"><strong>1. Validity (ความถูกต้องสมเหตุสมผล):</strong> Ensures functions align with what users
+            really need to do their job.</div>
           <div class="th">ตรวจสอบว่าฟังก์ชันที่ระบุตรงกับสิ่งที่ผู้ใช้ต้องการใช้งานจริงในงานของตนเอง</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>2. Consistency (ความไม่ขัดแย้งกัน):</strong> No requirement contradicts or conflicts with any other requirement in the document.</div>
+          <div class="en"><strong>2. Consistency (ความไม่ขัดแย้งกัน):</strong> No requirement contradicts or conflicts
+            with any other requirement in the document.</div>
           <div class="th">ไม่มีข้อกำหนดใดในเอกสารที่ขัดแย้งหรือขัดขากันเอง</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>3. Completeness (ความสมบูรณ์ครบถ้วน):</strong> All system facilities, user constraints, and error situations are fully documented.</div>
+          <div class="en"><strong>3. Completeness (ความสมบูรณ์ครบถ้วน):</strong> All system facilities, user
+            constraints, and error situations are fully documented.</div>
           <div class="th">ระบุฟังก์ชัน ข้อจำกัด และกรณีเกิด Error ครบถ้วนทุกกรณี ไม่ตกหล่น</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>4. Realism (ความเป็นไปได้ในทางปฏิบัติ):</strong> The system can be realistically developed within technology, schedule, and budget limits.</div>
+          <div class="en"><strong>4. Realism (ความเป็นไปได้ในทางปฏิบัติ):</strong> The system can be realistically
+            developed within technology, schedule, and budget limits.</div>
           <div class="th">สามารถสร้างได้จริงภายใต้งบประมาณ เทคโนโลยี และเวลาที่มีอยู่</div>
         </div>
         <div class="bilingual-pair">
-          <div class="en"><strong>5. Verifiability (ความสามารถในการทดสอบได้):</strong> Every requirement can be objectively checked and tested via test cases.</div>
+          <div class="en"><strong>5. Verifiability (ความสามารถในการทดสอบได้):</strong> Every requirement can be
+            objectively checked and tested via test cases.</div>
           <div class="th">ทุก Requirement ต้องวัดผลและเขียน Test Case เพื่อทดสอบได้อย่างเป็นรูปธรรม</div>
         </div>
 
-        <div class="scoring-tip">⭐ <strong>เทคนิคการจำ:</strong> ท่องจำหลักการตรวจสอบ 5 ข้อด้วยรหัส <strong>V-C-C-R-V</strong></div>
+        <div class="scoring-tip">⭐ <strong>เทคนิคการจำ:</strong> ท่องจำหลักการตรวจสอบ 5 ข้อด้วยรหัส
+          <strong>V-C-C-R-V</strong></div>
       </div>
     </div>
 
@@ -1175,4 +1341,5 @@
     }
   </script>
 </body>
+
 </html>

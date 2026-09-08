@@ -1,6 +1,6 @@
 # 📖 สารบัญสไลด์หลักสูตรเดิมและตำราอ้างอิง (02_Old_Slides_Textbook)
 
-โฟลเดอร์นี้รวบรวมสไลด์บรรยายหลักสูตรเดิม 10 บทตามหนังสือ *Engineering Software Products* ของ Ian Sommerville, ตำรามาตรฐานเล่มเต็ม (10th Edition) และสไลด์คลาสสิกของอาจารย์ผู้สอน
+โฟลเดอร์นี้รวบรวมสไลด์บรรยายหลักสูตรเดิม 10 บทตามหนังสือ *Engineering Software Products* ของ Ian Sommerville, ตำรามาตรฐานเล่มเต็ม (10th Edition) และสไลด์อ้างอิงการประเมินราคาซอฟต์แวร์
 
 ---
 
@@ -18,12 +18,11 @@
 | **08** | `08_Reliable_Programming.pdf` | **Reliable Programming** | Fault Tolerance, Exception Handling, Defensive Programming |
 | **09** | `09_Testing.pdf` | **Software Testing** | การทดสอบซอฟต์แวร์, Test Levels, Test-Driven Development (TDD) |
 | **10** | `10_DevOps_and_Code_Management.pdf` | **DevOps & CI/CD** | วัฒนธรรม DevOps, CALMS Model, Git Branching, CI/CD Pipeline |
-| **11** | `11_Classic_Slide_Testing_se_chapter6.pdf` | **สไลด์บรรยาย Testing (เดิม)** | สไลด์ภาษาไทย/อังกฤษเรื่องการทดสอบซอฟต์แวร์และ Test Cases |
-| **12** | `12_Classic_Slide_Cost_Estimation_se_chapter4.pdf` | **สไลด์บรรยาย Cost Estimation (เดิม)** | การประมาณการราคาและขนาดซอฟต์แวร์ (COCOMO & Function Point Analysis) |
+| **11** | `11_Classic_Slide_Cost_Estimation_se_chapter4.pdf` | **สไลด์บรรยาย Cost Estimation (เดิม)** | การประมาณการราคาและขนาดซอฟต์แวร์ (COCOMO & Function Point Analysis) |
 | 📚 | `Textbook_Software_Engineering_Ian_Sommerville_10th.pdf` | **ตำราหลักเล่มเต็ม** | Software Engineering ฉบับสมบูรณ์ (10th Global Edition) |
 
 ---
 
 ## 💡 หมายเหตุการใช้งาน
 - สไลด์ลำดับ **01 ถึง 10** ตรงกับเนื้อหาใน `Wiki/` เลกเชอร์ 1 ถึง 10
-- สไลด์ลำดับ **11 และ 12** เป็นสไลด์เฉพาะของอาจารย์ที่ใช้สั่งงานใน `04_Work_and_Homework`
+- สไลด์ลำดับ **11** เป็นสไลด์เฉพาะของอาจารย์ที่ใช้อ้างอิงการบ้านใน `04_Work_and_Homework/Sw cost estimation` และเนื้อหาใน `Wiki/Lecture 11`

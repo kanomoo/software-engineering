@@ -22,7 +22,7 @@ software-engineering/
 
 ## 📖 รายละเอียดแต่ละหมวดหมู่
 
-### 1. `01_New_Slides_68/` — สไลด์เรียนล่าสุด (ปี 2568 เรียงลำดับ 01-11)
+### 1. `01_New_Slides_68/` — สไลด์เรียนล่าสุด (ปี 2568 เรียงลำดับ 01-12)
 รวบรวมไฟล์สไลด์ PDF ภาคเรียนปัจจุบัน พร้อมจัดลำดับการอ่านตั้งแต่ต้นเทอมถึงปลายเทอม (ดูรายละเอียดหัวข้อได้ใน [00_READING_ORDER_สารบัญการอ่าน.md](file:///c:/Project/software-engineering/01_New_Slides_68/00_READING_ORDER_%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99.md)):
 - `01_Ch1_Introduction.pdf` — บทนำวิศวกรรมซอฟต์แวร์ จรรยาบรรณวิชาชีพ และระบบพื้นฐาน
 - `02_Ch2_SW_Processes.pdf` — แบบจำลองกระบวนการพัฒนา (Waterfall, Incremental, Reuse)
@@ -33,14 +33,14 @@ software-engineering/
 - `07_UseCase_Textual_Specifications_l3.pdf` — การจัดทำสเปกข้อความ Use Case Specifications
 - `08_Agile_and_Scrum_Framework.pdf` — ระเบียบวิธีพัฒนาแบบ Agile และ Scrum Framework
 - `09_Scrum_Burndown_Chart.pdf` — การวิเคราะห์กราฟ Burndown Chart และการวัด Team Velocity
-- `10_Week9_Software_Testing_and_QA.pdf` — การทดสอบซอฟต์แวร์ (Black-Box, White-Box & TDD)
-- `11_Week10_Testing_Metrics_Cyclomatic.pdf` — Flow Graph, Basis Path และ Cyclomatic Complexity
+- `10_Ch6_Software_Testing.pdf` — สไลด์บทที่ 6 เรื่อง Software Testing (ฉบับเต็มของอาจารย์)
+- `11_Week9_Software_Testing_and_QA.pdf` — การทดสอบซอฟต์แวร์ (Black-Box, White-Box & TDD)
+- `12_Week10_Testing_Metrics_Cyclomatic.pdf` — Flow Graph, Basis Path และ Cyclomatic Complexity
 
-### 2. `02_Old_Slides_Textbook/` — สไลด์เดิม 10 บท, ตำรามาตรฐาน และสไลด์อ้างอิง (เรียงลำดับ 01-12)
+### 2. `02_Old_Slides_Textbook/` — สไลด์เดิม 10 บท, ตำรามาตรฐาน และสไลด์อ้างอิง (เรียงลำดับ 01-11)
 รวบรวมเอกสารอ้างอิงและตำราหลักมาตรฐานสากล (ดูรายละเอียดได้ใน [00_READING_ORDER_สารบัญสไลด์เดิม.md](file:///c:/Project/software-engineering/02_Old_Slides_Textbook/00_READING_ORDER_%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%AA%E0%B9%84%E0%B8%A5%E0%B8%94%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%A1.md)):
-- `01_Software_Products.pdf` ถึง `10_DevOps_and_Code_Management.pdf` — สไลด์ 10 บทครบครัน
-- `11_Classic_Slide_Testing_se_chapter6.pdf` — สไลด์บรรยายเรื่อง Testing และ Test Cases
-- `12_Classic_Slide_Cost_Estimation_se_chapter4.pdf` — สไลด์การประมาณการต้นทุนซอฟต์แวร์ (COCOMO & FPA)
+- `01_Software_Products.pdf` ถึง `10_DevOps_and_Code_Management.pdf` — สไลด์หลักสูตรเดิม 10 บทครบครัน
+- `11_Classic_Slide_Cost_Estimation_se_chapter4.pdf` — สไลด์การประมาณการต้นทุนซอฟต์แวร์ (COCOMO & FPA)
 - `Textbook_Software_Engineering_Ian_Sommerville_10th.pdf` — ตำราหลักเล่มเต็มของ Ian Sommerville ฉบับที่ 10
 
 ### 3. `03_Exams_and_Cheatsheets/` — คลังข้อสอบจำลองและสรุปเข้ม

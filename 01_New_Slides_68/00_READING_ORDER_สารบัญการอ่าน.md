@@ -1,6 +1,6 @@
 # 📖 ลำดับการอ่านสไลด์เรียน ภาคการศึกษา 2568 (Reading Order)
 
-โฟลเดอร์นี้รวบรวมไฟล์สไลด์ PDF ทั้งหมด 11 ชุดของเทอม 2568 (New Curriculum) โดยจัดเรียงลำดับเนื้อหาตามสัปดาห์และบทเรียน เพื่อให้อ่านเข้าใจง่ายและต่อเนื่อง
+โฟลเดอร์นี้รวบรวมไฟล์สไลด์ PDF ทั้งหมด 12 ชุดของเทอม 2568 (New Curriculum) โดยจัดเรียงลำดับเนื้อหาตามสัปดาห์และบทเรียน เพื่อให้อ่านเข้าใจง่ายและต่อเนื่อง
 
 ---
 
@@ -17,7 +17,7 @@
        ↓
 [08 - 09] ระเบียบวิธีแบบ Agile & Scrum Framework และ Burndown Chart
        ↓
-[10 - 11] การทดสอบซอฟต์แวร์ (Testing QA, White-Box & Cyclomatic Complexity)
+[10 - 12] การทดสอบซอฟต์แวร์ (Ch6 Software Testing, Testing QA, White-Box & Cyclomatic Complexity)
 ```
 
 ---
@@ -35,19 +35,13 @@
 | **07** | `07_UseCase_Textual_Specifications_l3.pdf` | **Use Case Textual Specs** | ตารางเขียนสเปก Use Case ภาษาเขียน (Precondition, Basic Flow, Alternate Flow, Exception), โซลูชัน ATM & Library |
 | **08** | `08_Agile_and_Scrum_Framework.pdf` | **Agile & Scrum** | Agile Manifesto 12 ประการ, บทบาทใน Scrum (PO, SM, Dev), พิธีกรรม (Sprint, Daily, Review, Retro), User Stories |
 | **09** | `09_Scrum_Burndown_Chart.pdf` | **Burndown Chart** | การวิเคราะห์กราฟ Burndown Chart, Ideal Line vs Actual Effort, ปัญหา Scope Creep และการวัด Team Velocity |
-| **10** | `10_Week9_Software_Testing_and_QA.pdf` | **การทดสอบซอฟต์แวร์ (Week 9)** | ระดับการทดสอบ (Unit, Integration, System, Acceptance), TDD, Black-Box (Equivalence Partitioning, BVA) |
-| **11** | `11_Week10_Testing_Metrics_Cyclomatic.pdf` | **การวัดผลเชิงโครงสร้าง (Week 10)** | White-Box Testing, Flow Graph, Basis Path Testing, สูตร Cyclomatic Complexity $V(G) = E - N + 2$ |
-
----
-
-## 📌 สไลด์อ้างอิงเพิ่มเติม (Cost Estimation)
-- สไลด์เดิมเรื่องการประมาณการราคาและขนาดซอฟต์แวร์ (COCOMO Model และ Function Point Analysis) ถูกจัดเก็บไว้ที่:
-  `02_Old_Slides_Textbook/se_chapter4_Software_Cost_Estimation.pdf`
-  (ใช้อ้างอิงสำหรับการบ้านใน `04_Work_and_Homework/Sw cost estimation` และเนื้อหาใน `Wiki/Lecture 11`)
+| **10** | `10_Ch6_Software_Testing.pdf` | **สไลด์บทที่ 6: Testing (ฉบับเต็ม)** | ภาพรวมการทดสอบซอฟต์แวร์ของอาจารย์ (Verification & Validation, Test Case Design, Testing Strategies) |
+| **11** | `11_Week9_Software_Testing_and_QA.pdf` | **การทดสอบซอฟต์แวร์ (Week 9)** | ระดับการทดสอบ (Unit, Integration, System, Acceptance), TDD, Black-Box (Equivalence Partitioning, BVA) |
+| **12** | `12_Week10_Testing_Metrics_Cyclomatic.pdf` | **การวัดผลเชิงโครงสร้าง (Week 10)** | White-Box Testing, Flow Graph, Basis Path Testing, สูตร Cyclomatic Complexity $V(G) = E - N + 2$ |
 
 ---
 
 ## 💡 คำแนะนำในการอ่านและเตรียมสอบ
 - สำหรับการเตรียมสอบกลางภาค (Midterm): ควรอ่านลำดับที่ **01 ถึง 09** อย่างละเอียด
-- สำหรับการเตรียมสอบปลายภาค (Final): เน้นลำดับที่ **10 ถึง 11** ร่วมกับสไลด์ Cost Estimation ในหมวด Old
+- สำหรับการเตรียมสอบปลายภาค (Final): เน้นลำดับที่ **10 ถึง 12** ซึ่งครอบคลุมบท Testing ทั้งหมด
 - สามารถเปิดเว็บข้อสอบจำลองและเฉลยเพื่อซ้อมทำควบคู่ได้ที่ **`03_Exams_and_Cheatsheets/Exam_Hub.html`**

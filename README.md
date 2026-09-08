@@ -22,18 +22,19 @@ software-engineering/
 
 ## 📖 รายละเอียดแต่ละหมวดหมู่
 
-### 1. `01_New_Slides_68/` — สไลด์เรียนล่าสุด (ปี 2568 เรียงลำดับ 01-10)
+### 1. `01_New_Slides_68/` — สไลด์เรียนล่าสุด (ปี 2568 เรียงลำดับ 01-11)
 รวบรวมไฟล์สไลด์ PDF ภาคเรียนปัจจุบัน พร้อมจัดลำดับการอ่านตั้งแต่ต้นเทอมถึงปลายเทอม (ดูรายละเอียดหัวข้อได้ใน [00_READING_ORDER_สารบัญการอ่าน.md](file:///c:/Project/software-engineering/01_New_Slides_68/00_READING_ORDER_%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99.md)):
 - `01_Ch1_Introduction.pdf` — บทนำวิศวกรรมซอฟต์แวร์ จรรยาบรรณวิชาชีพ และระบบพื้นฐาน
 - `02_Ch2_SW_Processes.pdf` — แบบจำลองกระบวนการพัฒนา (Waterfall, Incremental, Reuse)
 - `03_Ch2_Processes_Supplementary_l1.pdf` — สไลด์บรรยายเสริม Chapter 2 และ CMMI Framework
 - `04_Ch4_Requirements_Engineering.pdf` — วิศวกรรมความต้องการ (Ian Sommerville Ch 4)
 - `05_Ch4_Requirements_Cases_l2.pdf` — สไลด์บรรยายกรณีศึกษาและการทำ Elicitation
-- `06_Agile_and_Scrum_Framework.pdf` — ระเบียบวิธีพัฒนาแบบ Agile และ Scrum Framework
-- `07_Scrum_Burndown_Chart.pdf` — การวิเคราะห์กราฟ Burndown Chart และการวัด Team Velocity
-- `08_Ch6_Software_Testing.pdf` — สไลด์บทที่ 6 เรื่อง Software Testing (ฉบับเต็มของอาจารย์)
-- `09_Week9_Software_Testing_and_QA.pdf` — การทดสอบซอฟต์แวร์ (Black-Box, White-Box & TDD)
-- `10_Week10_Testing_Metrics_Cyclomatic.pdf` — Flow Graph, Basis Path และ Cyclomatic Complexity
+- `06_Practice_ReqEng.pdf` — โจทย์แบบฝึกหัดภาคปฏิบัติ Requirements Engineering (Official)
+- `07_Agile_and_Scrum_Framework.pdf` — ระเบียบวิธีพัฒนาแบบ Agile และ Scrum Framework
+- `08_Scrum_Burndown_Chart.pdf` — การวิเคราะห์กราฟ Burndown Chart และการวัด Team Velocity
+- `09_Ch6_Software_Testing.pdf` — สไลด์บทที่ 6 เรื่อง Software Testing (ฉบับเต็มของอาจารย์)
+- `10_Week9_Software_Testing_and_QA.pdf` — การทดสอบซอฟต์แวร์ (Black-Box, White-Box & TDD)
+- `11_Week10_Testing_Metrics_Cyclomatic.pdf` — Flow Graph, Basis Path และ Cyclomatic Complexity
 
 ### 2. `02_Old_Slides_Textbook/` — สไลด์เดิม 10 บท, ตำรามาตรฐาน และสไลด์อ้างอิง (เรียงลำดับ 01-13)
 รวบรวมเอกสารอ้างอิงและตำราหลักมาตรฐานสากล (ดูรายละเอียดได้ใน [00_READING_ORDER_สารบัญสไลด์เดิม.md](file:///c:/Project/software-engineering/02_Old_Slides_Textbook/00_READING_ORDER_%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%AA%E0%B9%84%E0%B8%A5%E0%B8%94%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%A1.md)):

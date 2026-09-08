@@ -84,10 +84,15 @@ flowchart TD
 เจาะลึกกระบวนการค้นหา วิเคราะห์ และจัดทำข้อกำหนดความต้องการ พร้อมการเขียนแผนภาพ Use Case และสเปกข้อความอย่างละเอียด
 
 - 🔹 **[[Lecture 3 - Requirements Engineering, Elicitation & Case Studies]]**
-  - ประเภทของความต้องการ: Functional, Non-Functional, Domain Requirements และ System Constraints
-  - เทคนิคการเก็บรวบรวมความต้องการ 6 เทคนิค (Interviews, Questionnaires, Focus Groups, Brainstorming, Observation/Ethnography, Document Analysis) พร้อมข้อดี ข้อเสีย และตัวอย่าง
-  - การวิเคราะห์ Stakeholders (Primary, Secondary, External)
-  - กรณีศึกษาเชิงลึก 8 ระบบจริง: BookNest (Mobile Library), ParkEasy (Smart Parking), StudyMate (Study Group), FreshMart (E-commerce), KMUTNB Cafeteria, PizzaFriend, ReadSmart, EasyClinic
+  - ระดับความ abstraกต์ของความต้องการ: User Requirements vs System Requirements (Davis Abstraction Level & Target Readers Matrix)
+  - จำแนก Non-Functional Requirements เชิงลึกตาม Ian Sommerville: Product, Organisational, External Requirements (9+ หมวดย่อย)
+  - กระบวนการ RE Spiral Model: Elicitation & Analysis, Specification, Validation, Change Management
+  - เทคนิคการเก็บรวบรวมความต้องการ 6 เทคนิค + Ethnography & Focused Ethnography (Air Traffic Control) และ iLearn Scenarios
+  - รูปแบบการจัดทำสเปกข้อกำหนด 5 Notations, Natural Language Guidelines (`shall` vs `should`), Form-based Specs (Insulin Pump) & Tabular Specs
+  - โครงสร้างเอกสารข้อกำหนด SRS (IEEE 830 / Sommerville 10 หัวข้อ) และกลุ่มผู้ใช้งาน
+  - การตรวจสอบความถูกต้อง (Requirements Validation): 5 Core Checks (Validity, Consistency, Completeness, Realism, Verifiability) & Review Checklist
+  - การบริหารการเปลี่ยนแปลงและการติดตาม (Requirements Change Management & Traceability Matrices: Source, Requirement, Design)
+  - กรณีศึกษาและแบบฝึกหัด 10 ระบบจริง: FreshMart, KMUTNB Cafeteria, PizzaFriend, ReadSmart, EasyClinic, Mentcare, Insulin Pump, iLearn, BookNest, ParkEasy & StudyMate
 
 - 🔹 **[[Lecture 4 - Use Case Modeling & Textual Specifications]]**
   - องค์ประกอบ UML Use Case Diagram: Actors, Use Cases, System Boundary, Communication Links

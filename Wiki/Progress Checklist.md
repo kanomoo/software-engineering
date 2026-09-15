@@ -20,7 +20,7 @@ type: checklist
 
 ## 🏗️ Core Mega-Guides (11 Lectures)
 
-- [x] **[[Lecture 1 - Introduction to Software Engineering, Products & Ethics]]**
+- [x] **[[01_Ch1_Introduction|Lecture 1 - Introduction to Software Engineering, Products & Ethics]]**
   - [x] นิยาม Software Engineering, ประสิทธิภาพและต้นทุน
   - [x] คุณลักษณะ 4 ประการของซอฟต์แวร์ที่ดี (Maintainability, Dependability, Efficiency, Acceptability)
   - [x] กิจกรรมพื้นฐาน 4 ประการ & ประเภทของแอปพลิเคชัน 7 ประเภท
@@ -31,14 +31,14 @@ type: checklist
   - [x] SE Ethics & ACM/IEEE Code 8 ประการ
   - [x] Case Studies: Insulin Pump, Mentcare, Weather Station, iLearn
 
-- [x] **[[Lecture 2 - Software Processes & Process Improvement]]**
+- [x] **[[02_Ch2_SW_Processes|Lecture 2 - Software Processes & Process Improvement]]**
   - [x] Software Process Models: Waterfall, Incremental, Reuse-oriented
   - [x] Process Activities: Requirements, Design/Impl, Validation, Evolution
   - [x] Coping with Change: Prototyping (Throw-away, 2-Stage), Incremental Delivery
   - [x] Process Improvement Cycle: Measurement, Analysis, Change
   - [x] SEI CMMI Capability Maturity Levels (1 to 5)
 
-- [x] **[[Lecture 3 - Requirements Engineering, Elicitation & Case Studies]]**
+- [x] **[[04_Ch4_Requirements_Eng|Lecture 3 - Requirements Engineering, Elicitation & Case Studies]]**
   - [x] User Requirements vs System Requirements (Davis Abstraction & Target Readers Matrix)
   - [x] Sommerville Non-Functional Requirements Taxonomy (Product, Organisational, External)
   - [x] RE Process & Spiral Model (Elicitation, Analysis, Specification, Validation, Change Mgmt)
@@ -49,14 +49,14 @@ type: checklist
   - [x] Requirements Management & Change Control (Volatile vs Enduring & Traceability Policies)
   - [x] 10 Case Studies & Practice Exercises (FreshMart, KMUTNB Cafeteria, PizzaFriend, ReadSmart, EasyClinic, Mentcare, Insulin Pump, iLearn, BookNest, ParkEasy, StudyMate)
 
-- [x] **[[Lecture 4 - Use Case Modeling & Textual Specifications]]**
+- [x] **[[05_Use_Case_Diagrams|Lecture 4 - Use Case Modeling & Textual Specifications]]**
   - [x] UML Use Case Elements & System Boundary
   - [x] Relationships: Association, Include, Extend, Generalisation
   - [x] Scenario vs Use Case & Step-by-Step Drawing
   - [x] 14 Textual Use Case Specifications (BookNest, ATM, Library)
   - [x] Mistakes & Best Practices
 
-- [x] **[[Lecture 5 - Agile Software Engineering & Scrum Framework]]**
+- [x] **[[07_Agile_and_Scrum|Lecture 5 - Agile Software Engineering & Scrum Framework]]**
   - [x] Agile Manifesto & 12 Principles
   - [x] Scrum Framework (Roles, Events, Artifacts)
   - [x] Extreme Programming (XP) Practices
@@ -64,14 +64,14 @@ type: checklist
   - [x] Acceptance Criteria & Definition of Done (DoD)
   - [x] Story Mapping & Velocity
 
-- [x] **[[Lecture 6 - Software Architecture & Microservices]]**
+- [x] **[[04_Software_Architecture|Lecture 6 - Software Architecture & Microservices]]**
   - [x] Architectural Views (4+1 View Model)
   - [x] Patterns: Layered, Repository, Client-Server, Pipe-Filter, MVC
   - [x] Microservices vs Monolith
   - [x] Service Decomposition & Database per Service
   - [x] API Gateway, Service Discovery, Event-Driven Architecture & Saga Pattern
 
-- [x] **[[Lecture 7 - Cloud-Based Software & Infrastructure]]**
+- [x] **[[05_Cloud_Based_Software|Lecture 7 - Cloud-Based Software & Infrastructure]]**
   - [x] Cloud Models (IaaS, PaaS, SaaS)
   - [x] Virtualization vs Docker Containers
   - [x] Multi-tenancy Architecture Strategies
@@ -79,31 +79,56 @@ type: checklist
   - [x] Scalability & Elasticity
   - [x] Cloud Cost Models
 
-- [x] **[[Lecture 8 - Security, Privacy & Reliable Programming]]**
+- [x] **[[07_Security_and_Privacy|Lecture 8 - Security, Privacy & Reliable Programming]]**
   - [x] CIA Triad & Threat Modeling
   - [x] OWASP Top 10 Vulnerabilities
   - [x] Privacy Laws: Thai PDPA & GDPR
   - [x] Cryptography (AES-256, TLS/SSL)
   - [x] Reliable Programming (Fault Tolerance, Defensive Prog, Assertions, Memory & Thread Safety)
 
-- [x] **[[Lecture 9 - Software Testing & Quality Assurance]]**
+- [x] **[[09_Ch6_Software_Testing|Lecture 9 - Software Testing & Quality Assurance]]**
   - [x] Testing Levels: Unit, Integration, System, Acceptance
   - [x] Test-Driven Development (TDD)
   - [x] Black-box vs White-box Testing
   - [x] Equivalence Partitioning & Boundary Value Analysis (BVA)
   - [x] Code Coverage Metrics
 
-- [x] **[[Lecture 10 - DevOps, CI-CD & Code Management]]**
+- [x] **[[10_DevOps_and_Code_Management|Lecture 10 - DevOps, CI-CD & Code Management]]**
   - [x] DevOps Culture & CALMS Model
   - [x] CI/CD Pipelines
   - [x] Git Version Control & Branching Strategies (GitFlow vs Trunk-based)
   - [x] Infrastructure as Code (IaC)
   - [x] Monitoring, Logging & Observability
 
-- [x] **[[Lecture 11 - Software Cost Estimation & Metrics]]**
+- [x] **[[13_Classic_Slide_Cost_Estimation|Lecture 11 - Software Cost Estimation & Metrics]]**
   - [x] Size Metrics: LOC, DSI
   - [x] Estimation Models: LaBolle, Wolverton, Walston & Felix
   - [x] COCOMO I & II Models
   - [x] Function Point Analysis (FPA): 5 Function Types, Complexity Tables, UFP, 14 GSCs, VAF, FP formula
   - [x] Language Conversion (SLOC/FP) & Productivity
   - [x] Worked Calculation Examples & Exercises
+
+---
+
+## 🛠️ Workshops & Practical Case Studies (ภาคปฏิบัติและกรณีศึกษา 2568)
+
+- [x] **[[05_Use_Case_Diagrams|05_Use_Case_Diagrams (Lecture 4)]]** — แนวคิดและองค์ประกอบ Use Case Diagram (32 หน้า)
+  - [x] นิยาม User POV vs Implementation, Actor (Primary/Supporting) & System Boundary
+  - [x] 4 ความสัมพันธ์ (Association, `<<include>>`, `<<extend>>`, Generalization)
+  - [x] Use Case Specification (Main Flow, Alternative Flow, Exception Flow)
+  - [x] UML Ecosystem, Testing Traceability & Hotel Case Study (UC-05)
+  - [x] 6 ข้อผิดพลาดที่พบบ่อย (Common Pitfalls) และ Checklist ตรวจสอบ
+- [x] **[[05_Case_Study_1_Library_System]]** — กรณีศึกษา 1: ระบบยืม-คืนหนังสือห้องสมุด
+  - [x] วิเคราะห์ Actor (Student, Librarian) & Use Cases
+  - [x] วิเคราะห์ `<<include>>`: Check Member Status & Check Book Availability
+  - [x] แผนภาพ Use Case Diagram สมบูรณ์ตามสไลด์ Workshop
+  - [x] ส่วนต่อขยายระบบห้องสมุดกลาง มจพ. (KMUTNB Central Library)
+- [x] **[[05_Case_Study_2_University_Registration]]** — กรณีศึกษา 2: ระบบลงทะเบียนเรียนออนไลน์
+  - [x] วิเคราะห์ 4 กฎทางธุรกิจ และ Actor Generalization Hierarchy (`System User`, `Staff`)
+  - [x] วิเคราะห์ `<<include>>` (Check Prerequisite, Check Seat Availability)
+  - [x] วิเคราะห์ `<<extend>>` (Request Seat Override [Course Full], Request Prerequisite Override)
+  - [x] วิเคราะห์ Use Case Generalization (`Make Payment`, `Manage Course`)
+  - [x] แผนภาพ Use Case Diagram สมบูรณ์ & Key Takeaways 5 ขั้นตอน
+- [x] **[[04_Work_and_Workshops/ATM_and_Elevator_Workshop|ATM and Elevator Workshop]]** — เวิร์กช็อป Use Case ระบบตู้ ATM และระบบควบคุมลิฟต์
+- [x] **[[04_Work_and_Workshops/Software_Cost_Estimation_Workshop|Software Cost Estimation Workshop]]** — เวิร์กช็อปคำนวณ Sw Cost Estimation (COCOMO & FPA)
+

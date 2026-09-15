@@ -38,7 +38,14 @@
 
 ---
 
-## 📌 สไลด์ Use Case และหัวข้อเสริมในหมวด Old
+## 📌 สไลด์และเวิร์กช็อป Use Case Diagram ฉบับใหม่ล่าสุด (2568)
+- สไลด์บรรยายฉบับปรับปรุงใหม่และกรณีศึกษาภาคปฏิบัติถูกจัดเก็บไว้ใน `04_Work_and_Homework/Use_Case_Diagram_Workshop/`:
+  1. `Use-Case-Diagram.pdf` — สไลด์บรรยายเจาะลึก 32 หน้า (Concept, Notations, include/extend/generalization, Use Case Specs, Testing Traceability & Hotel Case Study)
+  2. `Library_Borrow_Return_System_Case_Study.pdf` — สไลด์ Workshop กรณีศึกษาระบบห้องสมุด (5 หน้า)
+  3. `University_Course_Registration_System_Case_Study.pdf` — สไลด์ Workshop กรณีศึกษาระบบลงทะเบียนเรียนออนไลน์ (10 หน้า)
+  *(อ่านคู่มือวิเคราะห์เชิงลึกได้ใน Wiki: `Wiki/04_Work_and_Workshops/Use_Case_Diagram_Master_Guide.md`, `Library_System_Workshop.md` และ `University_Registration_System_Workshop.md`)*
+
+## 📌 สไลด์ Use Case และหัวข้อเสริมในหมวด Old (Classic)
 - สไลด์ Use Case Modeling ดั้งเดิมของอาจารย์ถูกจัดเก็บไว้ที่:
   - `02_Old_Slides_Textbook/11_Classic_Slide_UseCase_Diagrams_usecaseDia2.pdf`
   - `02_Old_Slides_Textbook/12_Classic_Slide_UseCase_Textual_Specs_l3.pdf`

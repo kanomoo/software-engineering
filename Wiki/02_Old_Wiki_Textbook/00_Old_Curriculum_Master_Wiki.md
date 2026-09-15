@@ -12,6 +12,10 @@ created: 2026-09-08
 updated: 2026-09-08
 curriculum: Old & Classic Textbook
 type: master-wiki
+aliases:
+  - 02_Old_Curriculum_Classic_Wiki
+  - Old Curriculum Classic Wiki
+  - Classic Archive Wiki
 ---
 
 # 🏛️ Software Engineering Master Wiki: หลักสูตรเดิมและสไลด์คลาสสิก (Old Curriculum & Classic Archive)

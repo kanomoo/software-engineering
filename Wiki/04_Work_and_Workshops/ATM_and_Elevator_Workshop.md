@@ -28,10 +28,10 @@ type: workshop-guide
 
 ### 1.2 Use Cases หลัก
 1. `Authenticate Customer (Verify PIN)`
-2. `Withdraw Cash` $\xrightarrow{<<include>>}$ `Authenticate Customer`
-3. `Deposit Funds` $\xrightarrow{<<include>>}$ `Authenticate Customer`
-4. `Check Balance` $\xrightarrow{<<include>>}$ `Authenticate Customer`
-5. `Print Receipt` $\xleftarrow{<<extend>>}$ `Withdraw Cash` (เลือกพิมพ์หรือไม่พิมพ์ก็ได้)
+2. `Withdraw Cash` ──[«include»]──> `Authenticate Customer`
+3. `Deposit Funds` ──[«include»]──> `Authenticate Customer`
+4. `Check Balance` ──[«include»]──> `Authenticate Customer`
+5. `Print Receipt` <──[«extend»]── `Withdraw Cash` (เลือกพิมพ์หรือไม่พิมพ์ก็ได้)
 6. `Replenish Cash / Maintenance` (เชื่อมกับ `Technician`)
 
 ---
@@ -48,5 +48,5 @@ type: workshop-guide
 1. `Call Elevator (Request Pick-up)` — กดปุ่มเรียกลิฟต์จากภายนอก
 2. `Select Destination Floor` — กดเลือกชั้นปลายทางภายในลิฟต์
 3. `Open / Close Doors`
-4. `Emergency Stop / Alarm` $\xleftarrow{<<extend>>}$ `Operate Elevator`
+4. `Emergency Stop / Alarm` <──[«extend»]── `Operate Elevator`
 5. `Fire Emergency Override` — เมื่อตรวจพบควัน ลิฟต์จะลงจอดชั้น 1 และเปิดประตูค้างอัตโนมัติ

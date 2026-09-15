@@ -116,16 +116,16 @@ stateDiagram-v2
 
 ```mermaid
 graph TD
-    Testing_Tech[Testing Techniques] --> BB[Black-box Testing<br/>(ทดสอบแบบกล่องดำ)]
-    Testing_Tech --> WB[White-box Testing<br/>(ทดสอบแบบกล่องขาว)]
+    Testing_Tech["Testing Techniques"] --> BB["Black-box Testing<br/>(ทดสอบแบบกล่องดำ)"]
+    Testing_Tech --> WB["White-box Testing<br/>(ทดสอบแบบกล่องขาว)"]
 
-    BB --> BB1[ไม่สนใจโครงสร้างโค้ดภายใน]
-    BB --> BB2[อ้างอิงจาก Specification & Requirements]
-    BB --> BB3[เทคนิค: Equivalence Partitioning, BVA]
+    BB --> BB1["ไม่สนใจโครงสร้างโค้ดภายใน"]
+    BB --> BB2["อ้างอิงจาก Specification & Requirements"]
+    BB --> BB3["เทคนิค: Equivalence Partitioning, BVA"]
 
-    WB --> WB1[วิเคราะห์โครงสร้างซอร์สโค้ดภายใน]
-    WB --> WB2[ตรวจสอบเงื่อนไข ลูป และการประมวลผล]
-    WB --> WB3[เทคนิค: Statement, Branch, Path Coverage]
+    WB --> WB1["วิเคราะห์โครงสร้างซอร์สโค้ดภายใน"]
+    WB --> WB2["ตรวจสอบเงื่อนไข ลูป และการประมวลผล"]
+    WB --> WB3["เทคนิค: Statement, Branch, Path Coverage"]
 ```
 
 ---

@@ -319,7 +319,7 @@ xychart-beta
 ---
 
 # References
-- **Exam Notice:** [[mid.png]] (Exam date: Tuesday 19 Aug 2568, 09:00 AM, Open Book, English prompt, 5 questions, 30 pts, +5 bonus)
-- **Comprehensive Subject Wiki:** [[01_New_Wiki_68/Midterm_68/SE-Midterm-Wiki-68|SE-Midterm-Wiki-68]]
+- **Exam Notice:** [mid.png](../../03_Exams_and_Cheatsheets/mid.png) (Exam date: Tuesday 19 Aug 2568, 09:00 AM, Open Book, English prompt, 5 questions, 30 pts, +5 bonus)
+- **Comprehensive Subject Wiki:** [[SE-Midterm-Wiki-68]]
 - **Master Curriculum Hub:** [[Software Engineering Index]]
 - **Practice Guides:** [[Practice-ReqEng-Methodology-Guide]]

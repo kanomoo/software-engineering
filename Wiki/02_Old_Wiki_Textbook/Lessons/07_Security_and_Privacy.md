@@ -127,8 +127,8 @@ flowchart LR
 
 ```mermaid
 graph TD
-    Crypto[Cryptography in Software] --> Sym[Symmetric Encryption<br/>(สมมาตร - กุญแจดอกเดียว)]
-    Crypto --> Asym[Asymmetric Encryption<br/>(อสมมาตร - กุญแจคู่ Public/Private)]
+    Crypto["Cryptography in Software"] --> Sym["Symmetric Encryption<br/>(สมมาตร - กุญแจดอกเดียว)"]
+    Crypto --> Asym["Asymmetric Encryption<br/>(อสมมาตร - กุญแจคู่ Public/Private)"]
 
     Sym --> AES["AES-256 (นิยมใช้เก็บ Data at Rest)"]
     Asym --> RSA["RSA / ECC (นิยมใช้แลกเปลี่ยนกุญแจ/Digital Signature)"]

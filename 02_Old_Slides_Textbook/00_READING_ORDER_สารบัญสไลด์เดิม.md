@@ -27,5 +27,6 @@
 
 ## 💡 หมายเหตุการใช้งาน
 - สไลด์ลำดับ **01 ถึง 10** ตรงกับเนื้อหาใน `Wiki/02_Old_Wiki_Textbook/Lessons/` ไฟล์ `01` ถึง `10`
-- สไลด์ลำดับ **11 และ 12** ใช้ประกอบแบบฝึกหัดและการบ้าน Use Case ใน `04_Work_and_Homework` และอ่านคู่มือได้ที่ `Wiki/02_Old_Wiki_Textbook/Lessons/11_Classic_Slide_UseCase_Diagrams.md` และ `12_Classic_Slide_UseCase_Textual_Specs.md`
+- สไลด์ลำดับ **11 และ 12** ใช้ประกอบแบบฝึกหัดและการบ้าน Use Case เดิมใน `04_Work_and_Homework` *(สำหรับสไลด์ Use Case ฉบับใหม่ล่าสุดปี 2568 พร้อมเวิร์กช็อป ดูได้ที่ `04_Work_and_Homework/Use_Case_Diagram_Workshop/` และ Wiki `Wiki/04_Work_and_Workshops/Use_Case_Diagram_Master_Guide.md`)*
 - สไลด์ลำดับ **13** ใช้อ้างอิงการบ้าน `04_Work_and_Homework/Sw cost estimation` และเนื้อหาใน `Wiki/02_Old_Wiki_Textbook/Lessons/13_Classic_Slide_Cost_Estimation.md` รวมถึงเวิร์กช็อป `Wiki/04_Work_and_Workshops/Software_Cost_Estimation_Workshop.md`
+

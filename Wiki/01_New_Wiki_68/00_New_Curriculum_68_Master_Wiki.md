@@ -9,6 +9,10 @@ created: 2026-09-08
 updated: 2026-09-08
 curriculum: New 2568
 type: master-wiki
+aliases:
+  - 01_New_Curriculum_68_Wiki
+  - New Curriculum 68 Master Wiki
+  - Master Wiki 68
 ---
 
 # 🌟 Software Engineering Master Wiki: หลักสูตรใหม่ 2568 (New Curriculum 68)
@@ -201,6 +205,12 @@ mindmap
   * *Functional Requirement:* ระบบต้องแสดงประวัติการแพ้ยาของผู้ป่วยทันทีที่เปิดดูแฟ้มประวัติ
   * *Non-Functional Requirement:* ข้อมูลเวชระเบียนต้องเข้ารหัสด้วยมาตรฐาน AES-256 และเปิดอ่านได้ภายใน 2 วินาที
   * *Domain Requirement:* การสั่งจ่ายยาที่มีสารเสพติดต้องได้รับการลงนามยืนยันจากแพทย์อาวุโส 2 ท่านเสมอ
+
+### 3.5 คลังแบบจำลอง Use Case Modeling & เวิร์กช็อปภาคปฏิบัติ (2568)
+นอกจากการเขียนข้อกำหนด (SRS) แบบข้อความแล้ว การสร้างแบบจำลอง Use Case Diagram เป็นแกนสำคัญของการเปลี่ยน Requirement สู่ภาพรวมระบบ:
+* 📘 **บทเรียน Lecture 4 ฉบับสมบูรณ์:** [[05_Use_Case_Diagrams]] (32 สไลด์: Actor, Use Case, include, extend, generalization, Use Case Spec 3 Flows, Traceability)
+* 📚 **กรณีศึกษาที่ 1:** [[05_Case_Study_1_Library_System]] (ฝึกวิเคราะห์ Actor, Use Case, และ `<<include>>`)
+* 🎓 **กรณีศึกษาที่ 2:** [[05_Case_Study_2_University_Registration]] (เวิร์กช็อปขั้นสูง ครบทั้ง `<<include>>`, `<<extend>>`, และ `Generalization / Specialization`)
 
 ---
 

@@ -91,6 +91,7 @@ flowchart TD
 4. 🌟 **[[01_New_Wiki_68/Lessons/05_Use_Case_Diagrams|05_Use_Case_Diagrams.md]]** — สอดคล้องกับ `Use-Case-Diagram.pdf` (Lecture 4: ทฤษฎี Use Case Modeling, Notations, include/extend/generalization, Use Case Specs, Testing Traceability & Checklist)
    - 📚 Case Study 1: **[[01_New_Wiki_68/Lessons/05_Case_Study_1_Library_System|05_Case_Study_1_Library_System.md]]** (ระบบยืม-คืนหนังสือห้องสมุด)
    - 🎓 Case Study 2: **[[01_New_Wiki_68/Lessons/05_Case_Study_2_University_Registration|05_Case_Study_2_University_Registration.md]]** (ระบบลงทะเบียนเรียนมหาวิทยาลัย)
+   - 🎙️ สรุปเทปบรรยายสดในห้องเรียน (15 ก.ย. 2569): **[[01_New_Wiki_68/Lessons/In-Class Lecture - Use Case Diagram & System Analysis|In-Class Lecture - Use Case Diagram & System Analysis.md]]** (ปรัชญา User Goal, Stickman Role, include vs extend, เฉลยสดระบบห้องสมุด และประชาสัมพันธ์ IAESTE)
 5. **[[01_New_Wiki_68/Lessons/07_Agile_and_Scrum|07_Agile_and_Scrum.md]]** — สอดคล้องกับ `07_Agile_and_Scrum_Framework.pdf` (Agile Manifesto, Scrum Roles, Events, Artifacts, User Stories)
 6. **[[01_New_Wiki_68/Lessons/08_Scrum_Burndown_Chart|08_Scrum_Burndown_Chart.md]]** — สอดคล้องกับ `08_Scrum_Burndown_Chart.pdf` (การอ่านกราฟ Actual vs Ideal, Scope Creep, การคิด Velocity)
 7. **[[01_New_Wiki_68/Lessons/09_Ch6_Software_Testing|09_Ch6_Software_Testing.md]]** — สอดคล้องกับ `09_Ch6_Software_Testing.pdf` (ภาพรวมการทดสอบซอฟต์แวร์ฉบับอาจารย์)

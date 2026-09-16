@@ -55,6 +55,7 @@ type: checklist
   - [x] Scenario vs Use Case & Step-by-Step Drawing
   - [x] 14 Textual Use Case Specifications (BookNest, ATM, Library)
   - [x] Mistakes & Best Practices
+  - [x] 🎙️ **[[In-Class Lecture - Use Case Diagram & System Analysis|In-Class Lecture 15 Sep 2026: Recording Notes & Library System Analysis]]**
 
 - [x] **[[07_Agile_and_Scrum|Lecture 5 - Agile Software Engineering & Scrum Framework]]**
   - [x] Agile Manifesto & 12 Principles

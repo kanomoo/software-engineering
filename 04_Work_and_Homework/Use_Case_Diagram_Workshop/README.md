@@ -33,4 +33,5 @@
 - 📖 [05_Use_Case_Diagrams](../../Wiki/01_New_Wiki_68/Lessons/05_Use_Case_Diagrams.md) — บทเรียนทฤษฎีเจาะลึก 32 สไลด์อย่างละเอียด (บรรยายที่ 4)
 - 📚 [05_Case_Study_1_Library_System](../../Wiki/01_New_Wiki_68/Lessons/05_Case_Study_1_Library_System.md) — กรณีศึกษาที่ 1: ระบบห้องสมุด
 - 🎓 [05_Case_Study_2_University_Registration](../../Wiki/01_New_Wiki_68/Lessons/05_Case_Study_2_University_Registration.md) — กรณีศึกษาที่ 2: ระบบลงทะเบียนเรียนมหาวิทยาลัย
+- 🎙️ [In-Class Lecture: Use Case Recording Notes](../../Wiki/01_New_Wiki_68/Lessons/In-Class%20Lecture%20-%20Use%20Case%20Diagram%20&%20System%20Analysis.md) — สรุปถอดเทปเสียงบรรยายสดในห้องเรียน (15 ก.ย. 2569)
 - 🌐 [[Software Engineering Index]] — สารบัญใหญ่ของระบบ Wiki ทั้งหมด

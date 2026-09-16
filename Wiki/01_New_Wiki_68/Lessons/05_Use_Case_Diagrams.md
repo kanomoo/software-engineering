@@ -28,6 +28,7 @@ aliases:
 > - **กรณีศึกษาภาคปฏิบัติต่อเนื่องในหมวด Lessons:**
 >   - 📚 Case Study 1: [[05_Case_Study_1_Library_System|05_Case_Study_1_Library_System.md]] (ระบบยืม-คืนหนังสือห้องสมุด)
 >   - 🎓 Case Study 2: [[05_Case_Study_2_University_Registration|05_Case_Study_2_University_Registration.md]] (ระบบลงทะเบียนเรียนออนไลน์)
+>   - 🎙️ สรุปเทปบรรยายสดในห้องเรียน (15 ก.ย. 2569): [[In-Class Lecture - Use Case Diagram & System Analysis|In-Class Lecture - Use Case Diagram & System Analysis.md]]
 > - **เป้าหมายการประเมิน:** ⭐ สอบกลางภาค (Midterm Exam), ออกแบบสถาปัตยกรรมระบบ และส่งการบ้าน Workshop
 
 ```mermaid

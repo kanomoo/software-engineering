@@ -39,6 +39,7 @@ aliases:
 > 3. **Generalization (△):** ชี้จากตัวลูก (Sub) ขึ้นหาตัวแม่ (Super) ด้วย **หัวลูกศรสามเหลี่ยมโปร่ง** ทั้งในระดับ Actor และ Use Case
 > 4. **`<<include>>` (ต้องทำเสมอ):** เส้นประหัวลูกศรแหลมเปิด พุ่งจาก **Base Case ➔ Included Case** (เช่น `Reserve Equipment` ➔ `Check Equipment Availability` และ `Verify Member Permission`)
 > 5. **`<<extend>>` (ทำตามเงื่อนไข):** เส้นประหัวลูกศรแหลมเปิด พุ่งจาก **Extension Case ➔ Base Case** พร้อมระบุเงื่อนไขในวงเล็บ `[condition]`
+> 6. **Dual-Role Use Case (สืบค้นตรง & บังคับตรวจตอนจอง):** `Check Equipment Availability` สมาชิกสามารถเรียกใช้งานได้โดยตรง (`Member ── Check Equipment Availability`) เพื่อตรวจดูคิวว่าง และในเวลาเดียวกันก็ถูก `Reserve Equipment` ดึงไปทำซ้ำแบบบังคับ (`<<include>>`) เพื่อยืนยันความพร้อมก่อนอนุมัติการจอง
 
 ---
 
@@ -87,62 +88,53 @@ aliases:
 ### 2.1 รายชื่อ Actors ในระบบ
 | Actor | บทบาทในระบบ (Role) | เป้าหมายหลัก (Main Goal) | ประเภท Actor |
 |:---|:---|:---|:---|
-| **System User** | ผู้ใช้งานระบบทุกคน | เข้าสู่ระบบเพื่อยืนยันตัวตน (Login) | Human (Root Super Actor) |
-| **Member** | สมาชิกผู้ใช้บริการ | ค้นหา, จอง, ยืม, คืนอุปกรณ์ และดูประวัติการยืม | Human (Super Actor ฝั่งผู้ยืม) |
+| **Member** | สมาชิกผู้ใช้บริการ | ค้นหา, ตรวจสอบความพร้อม, จอง, ยืม, คืนอุปกรณ์ และดูประวัติ | Human (Super Actor ฝั่งผู้ใช้บริการ) |
 | **Student** | นักศึกษา | เข้าใช้งานระบบตามสิทธิ์ของนักศึกษา | Human (Sub-Actor ของ Member) |
 | **Staff** | บุคลากรของมหาวิทยาลัย | ยืมอุปกรณ์วิจัยและอุปกรณ์เฉพาะทางเพิ่มเติม | Human (Sub-Actor ของ Member) |
-| **Lab Officer** | เจ้าหน้าที่ห้องปฏิบัติการ | ส่งมอบอุปกรณ์, รับคืน, ตรวจสภาพ, อนุมัติคำขอพิเศษ และจัดการอุปกรณ์ | Human (Sub-Actor ของ Staff / ผู้ปฏิบัติงาน) |
-| **Administrator** | ผู้ดูแลระบบ | จัดการบัญชีผู้ใช้ และกำหนดสิทธิ์การเข้าใช้งานในระบบ | Human (Sub-Actor ของ Staff / ผู้ดูแลระบบ) |
+| **Lab Officer** | เจ้าหน้าที่ห้องปฏิบัติการ | ส่งมอบอุปกรณ์, รับคืน, ตรวจสภาพ, อนุมัติคำขอพิเศษ และจัดการอุปกรณ์ | Human (Standalone Operational Actor - แยกอิสระ) |
+| **Administrator** | ผู้ดูแลระบบ | จัดการบัญชีผู้ใช้ และกำหนดสิทธิ์การเข้าใช้งานในระบบ | Human (Standalone Administrative Actor - แยกอิสระ) |
 
 ---
 
-### 2.2 โครงสร้างลำดับชั้นของ Actor (Complete Actor Generalization Hierarchy)
+### 2.2 โครงสร้างลำดับชั้นของ Actor (Actor Generalization Hierarchy)
 
-ในการออกแบบระบบจริงตามหลักวิศวกรรมซอฟต์แวร์ (เทียบเท่าสไลด์หน้า 2/10 และ 6/10 ของ [[05_Case_Study_2_University_Registration|Case Study 2: ระบบลงทะเบียนเรียน]]) เราสามารถจัดลำดับชั้นของ Actor ทั้งหมดให้อยู่ในโครงสร้าง Generalization เดียวกันได้อย่างสมบูรณ์:
+#### 🎯 แบบที่ 1: โครงสร้างมาตรฐานตามโจทย์และในห้องเรียน (In-Class & Workshop Standard) ★ สำหรับส่งงาน
+ตามโจทย์ข้อที่ 1 ระบุชัดเจนว่า **นักศึกษา (Student)** และ **บุคลากร (Staff)** ทั้งสองกลุ่มถือเป็น **สมาชิก (Member)** ของระบบ จึงจัดกลุ่มสืบทอดคุณสมบัติ (Generalization) เข้าหา `Member` ส่วน **Lab Officer** และ **Administrator** เป็นผู้ดูแลระบบที่ปฏิบัติหน้าที่คนละบทบาท จึงแยกเดี่ยวเป็นอิสระ:
 
 ```mermaid
 flowchart BT
-    subgraph Full_Actor_Hierarchy ["โครงสร้างลำดับชั้นของ Actor ฉบับสมบูรณ์ (Complete Actor Hierarchy)"]
+    subgraph InClass_Actor_Hierarchy ["โครงสร้าง Actor Generalization ตามโจทย์และในห้องเรียน"]
         direction BT
-        SysUser["👤 System User<br/>(ผู้ใช้งานระบบทุกคน)"]
+        
+        Member["👤 Member<br/>(สมาชิกผู้ใช้บริการ - Super Actor)"]
+        Student["🧑‍🎓 Student<br/>(นักศึกษา - Sub Actor)"]
+        Staff["👨‍🏫 Staff<br/>(บุคลากรผู้ยืม - Sub Actor)"]
 
-        Member["👤 Member<br/>(สมาชิกผู้ใช้บริการ)"]
-        Staff_Ops["👔 Staff<br/>(เจ้าหน้าที่ฝ่ายปฏิบัติการและระบบ)"]
+        Student -->|"is-a (△)"| Member
+        Staff -->|"is-a (△)"| Member
 
-        Student["🧑‍🎓 Student<br/>(นักศึกษา)"]
-        Staff_Mem["👨‍🏫 Staff Member<br/>(บุคลากรผู้ยืม)"]
-
-        LabOfficer["👨‍🔬 Lab Officer<br/>(เจ้าหน้าที่ห้องปฏิบัติการ)"]
-        Admin["🛡️ Administrator<br/>(ผู้ดูแลระบบ)"]
-
-        Student -->|is-a| Member
-        Staff_Mem -->|is-a| Member
-
-        LabOfficer -->|is-a| Staff_Ops
-        Admin -->|is-a| Staff_Ops
-
-        Member -->|is-a| SysUser
-        Staff_Ops -->|is-a| SysUser
+        subgraph Independent_Actors ["ผู้ปฏิบัติการและผู้ดูแลระบบ (แยกเดี่ยวอิสระ)"]
+            direction TB
+            LabOfficer["👨‍🔬 Lab Officer<br/>(เจ้าหน้าที่ห้องปฏิบัติการ)"]
+            Admin["🛡️ Administrator<br/>(ผู้ดูแลระบบ)"]
+        end
     end
 
-    style SysUser fill:#e3f2fd,stroke:#0d47a1,stroke-width:2.5px
-    style Member fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style Staff_Ops fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    style Student fill:#ffffff,stroke:#263238
-    style Staff_Mem fill:#ffffff,stroke:#263238
-    style LabOfficer fill:#ffffff,stroke:#bf360c
-    style Admin fill:#ffffff,stroke:#4a148c
+    style Member fill:#e0f2fe,stroke:#0284c7,stroke-width:2.5px
+    style Student fill:#ffffff,stroke:#475569,stroke-width:1.5px
+    style Staff fill:#ffffff,stroke:#475569,stroke-width:1.5px
+    style LabOfficer fill:#fff7ed,stroke:#ea580c,stroke-width:2px
+    style Admin fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px
+    style Independent_Actors fill:#f8fafc,stroke:#cbd5e1,stroke-dasharray: 4 4
 ```
 
-#### 💡 ประโยชน์เชิงสถาปัตยกรรม (Architectural Benefits):
-1. **`System User` เป็นรากฐาน (Root Actor):**
-   - ทุกคนที่ต้องเข้าใช้งานระบบ (ทั้งนักศึกษา, อาจารย์, เจ้าหน้าที่ห้องแล็บ และแอดมิน) ถือเป็น `System User`
-   - ทำให้ Use Case พื้นฐานอย่าง **`Login` (และ Logout)** สามารถเชื่อมโยงเข้ากับ `System User` เพียงเส้นเดียว ทุกคนจะได้รับสิทธิ์การล็อกอินโดยอัตโนมัติ ไม่ต้องลากเส้น Association ซ้ำซ้อนถึง 5 เส้น!
-2. **`Member` รวบรวมฝั่งผู้ใช้บริการ (Borrowing Operations):**
-   - ทั้ง `Student` และ `Staff Member` สืบทอดมาจาก `Member` ทำให้ Use Cases หลักอย่าง `Search Equipment`, `Reserve Equipment`, `Borrow Equipment`, `Return Equipment` ผูกกับ `Member` เพียงจุดเดียว
-3. **`Staff` รวบรวมฝั่งเจ้าหน้าที่ดำเนินงาน (Operational & Administrative Roles):**
-   - ทั้ง **`Lab Officer` (เจ้าหน้าที่ห้องแล็บ)** และ **`Administrator` (ผู้ดูแลระบบ)** ต่างมีสถานะเป็นบุคลากรของมหาวิทยาลัย (`Staff`) ที่ปฏิบัติหน้าที่ดูแลระบบและให้บริการ
-   - ในแผนภาพของอาจารย์บนกระดาน อาจารย์จึงได้เขียนกำกับว่า `Staff` หรือ `Lab Officer` สามารถเชื่อมกับ Use Case การอนุมัติ (`Approval`) ได้ เพราะเจ้าหน้าที่ห้องแล็บก็คือบุคลากรฝ่ายสนับสนุนของมหาวิทยาลัยนั่นเอง
+#### 💡 กฎเหล็กของ Actor Generalization:
+1. **ทิศทางหัวลูกศร (is-a):** ต้องชี้จาก **ตัวลูก (Sub-Actor: Student, Staff)** พุ่งเข้าหา **ตัวแม่ (Super-Actor: Member)** เสมอ ด้วย **หัวลูกศรสามเหลี่ยมโปร่ง (△)**
+2. **การสืบทอดความสัมพันธ์ (Inheritance):** เมื่อ `Student` และ `Staff` สืบทอดมาจาก `Member` ทั้งสองกลุ่มจะได้รับสิทธิ์เข้าถึง Use Cases ทั้งหมดที่เชื่อมกับ `Member` ทันที โดยไม่ต้องลากเส้นซ้ำซ้อน
+3. **การแยกบทบาท (Separation of Roles):**
+   - **`Staff` ทางซ้าย:** หมายถึงอาจารย์/นักวิจัย/เจ้าหน้าที่มหาวิทยาลัยที่มา **ขอยืมอุปกรณ์** (เป็น Sub-Actor ของ `Member`)
+   - **`Lab Officer` ทางขวา:** คือเจ้าหน้าที่ประจำห้องแล็บที่ทำหน้าที่ **ส่งมอบ/รับคืน/ตรวจสภาพ/อนุมัติคำขอ** (เป็น Operational Actor แยกอิสระ)
+   - **`Administrator` ทางขวา:** คือผู้ดูแลระบบที่ทำหน้าที่ **จัดการบัญชีและสิทธิ์** (เป็น Administrative Actor แยกอิสระ)
 
 ---
 
@@ -165,7 +157,7 @@ flowchart BT
 2. **หมวดการสืบค้นและตรวจสอบ (Search & Inquiry):**
    * `Search Equipment` — ค้นหาอุปกรณ์ตามประเภท รหัส หรือชื่อ
    * `View Equipment Detail` — ดูรายละเอียด สถานที่จัดเก็บ และคุณสมบัติ
-   * `Check Equipment Availability` — ตรวจสอบสถานะความพร้อมใช้งาน (ว่าง/ถูกจอง/กำลังถูกยืม)
+   * `Check Equipment Availability` — ตรวจสอบสถานะความพร้อมใช้งาน (ว่าง/ถูกจอง/กำลังถูกยืม) โดยผู้ใช้สามารถสืบค้นดูตารางคิวว่างได้โดยตรง (Standalone Action) และถูกเรียกใช้ซ้ำแบบบังคับเมื่อจองอุปกรณ์ (Included Case)
    * `View Borrowing History` — ดูประวัติการยืม–คืนของตนเอง
 3. **หมวดการจองอุปกรณ์ (Reservation Workflow):**
    * `Reserve Equipment` — ทำรายการจองอุปกรณ์ล่วงหน้า (Base Use Case)
@@ -217,7 +209,7 @@ flowchart LR
 
 ### เหตุผลและหลักการของ `<<include>>`:
 1. **ต้องเกิดขึ้นเสมอ 100%:** ทุกครั้งที่สมาชิกกดจองอุปกรณ์ (`Reserve Equipment`) ระบบจะยืนยันการจองไม่ได้เลย หากยังไม่ได้ตรวจว่าอุปกรณ์ว่างจริงหรือไม่ และผู้ใช้มีสิทธิ์ยืมอุปกรณ์นั้นหรือไม่
-2. **Reuse พฤติกรรมร่วม:** พฤติกรรมการตรวจความพร้อมของอุปกรณ์ (`Check Equipment Availability`) สามารถถูกนำไปใช้ซ้ำได้ทั้งในการสืบค้นทั่วไปและการยืนยันการจอง
+2. **Reuse พฤติกรรมร่วม และ Dual-Role Use Case:** พฤติกรรมการตรวจความพร้อมของอุปกรณ์ (`Check Equipment Availability`) สามารถทำหน้าที่ได้ 2 สถานะ: สมาชิกเรียกใช้โดยตรงเพื่อดูคิวว่าง และระบบเรียกใช้อีกครั้งแบบบังคับ 100% ผ่าน `<<include>>` เมื่อทำการจอง เพื่อรับประกันว่าจะไม่มีการจองชนกัน
 3. **ทิศทางลูกศร:** ชี้จาก **Base Use Case ──[«include»]──> Included Use Case** เสมอ
 
 ---
@@ -282,7 +274,8 @@ flowchart BT
 | **Actor Generalization** | `Staff` | `Member` | `Staff is-a Member` (สืบทอดสิทธิ์การใช้งานทั่วไป) |
 | **Use Case Generalization** | `Login with University SSO` | `Login` | รูปแบบการเข้าสู่ระบบด้วย Single Sign-On |
 | **Use Case Generalization** | `Login with Username and Password` | `Login` | รูปแบบการเข้าสู่ระบบด้วยชื่อผู้ใช้และรหัสผ่าน |
-| **`<<include>>`** | `Reserve Equipment` | `Check Equipment Availability` | ต้องตรวจความพร้อมของอุปกรณ์เสมอทุกครั้งที่จอง |
+| **Association (สืบค้นตรง)** | `Member` | `Check Equipment Availability` | สมาชิกสามารถตรวจสอบสถานะความพร้อมใช้งานของอุปกรณ์ได้โดยตรงด้วยตนเอง (Standalone Action) |
+| **`<<include>>`** | `Reserve Equipment` | `Check Equipment Availability` | ต้องตรวจความพร้อมของอุปกรณ์เสมอทุกครั้งที่จอง (ป้องกันการจองชนเวลา) |
 | **`<<include>>`** | `Reserve Equipment` | `Verify Member Permission` | ต้องตรวจสิทธิ์ของสมาชิกเสมอทุกครั้งที่จอง |
 | **`<<extend>>`** | `Request Special Approval` | `Reserve Equipment` | ทำเมื่อ `[Special / High-Value Equipment]` เท่านั้น |
 | **`<<include>>`** | `Borrow Equipment` | `Verify Reservation` | เจ้าหน้าที่ต้องตรวจสอบใบจองก่อนส่งมอบอุปกรณ์เสมอ |
@@ -293,58 +286,72 @@ flowchart BT
 
 ---
 
-## 8. ภาพรวม Use Case Diagram ที่สมบูรณ์แบบ
+## 8. ภาพรวม Use Case Diagram ที่สมบูรณ์แบบ (Full System Overview)
+
+![UML Use Case Diagram](lab_equipment_usecase_diagram.png)
+
+> [!TIP] 💡 ไฮไลท์การตรวจสอบความถูกต้องตามมาตรฐาน UML:
+> 1. **ห้ามเขียนย่อชื่อ Use Case:** ทุก Use Case ระบุชื่อเต็มด้วยโครงสร้าง **Verb + Object** (เช่น `Login with University SSO`, `Check Equipment Availability`, `Verify Member Permission`, `Request Special Approval`)
+> 2. **Actor เป็นรูปคน (Stickman):** ใช้สัญลักษณ์ตัวคนตามมาตรฐานสากล โดยมี `Member` เป็น Super Actor และมี `Student` กับ `Staff` สืบทอดคุณสมบัติ
+> 3. **Generalization (△):** ชี้จากตัวลูก (Sub) ขึ้นหาตัวแม่ (Super) ด้วย **หัวลูกศรสามเหลี่ยมโปร่ง** ทั้งในระดับ Actor และ Use Case
+> 4. **`<<include>>` (ต้องทำเสมอ):** เส้นประหัวลูกศรแหลมเปิด พุ่งจาก **Base Case ➔ Included Case**
+> 5. **`<<extend>>` (ทำตามเงื่อนไข):** เส้นประหัวลูกศรแหลมเปิด พุ่งจาก **Extension Case ➔ Base Case** พร้อมระบุเงื่อนไขในวงเล็บ `[condition]`
 
 ```mermaid
 flowchart LR
-    subgraph Boundary ["University Laboratory Equipment Borrowing System"]
+    subgraph Boundary ["System Boundary: University Laboratory Equipment Borrowing System"]
         direction TB
 
         %% Authentication Group
-        subgraph AuthGroup ["การเข้าสู่ระบบ (Authentication)"]
+        subgraph Group1 ["1. Authentication (การเข้าสู่ระบบ)"]
             direction TB
-            U_LOGIN(["Login"])
-            U_SSO(["Login with University SSO"])
-            U_UP(["Login with Username and Password"])
-            
+            U_LOGIN(["Login (เข้าสู่ระบบ)"])
+            U_SSO(["Login with University SSO (บัญชีมหาวิทยาลัย)"])
+            U_UP(["Login with Username and Password (ชื่อผู้ใช้และรหัสผ่าน)"])
+
             U_SSO -->|is-a| U_LOGIN
             U_UP -->|is-a| U_LOGIN
         end
 
-        %% Catalog Group
-        subgraph CatalogGroup ["การสืบค้นและประวัติ (Catalog & History)"]
-            U_SEARCH(["Search Equipment"])
-            U_VIEW(["View Equipment Detail"])
-            U_HIST(["View Borrowing History"])
+        %% Catalog & Inquiry Group
+        subgraph Group1_2 ["การสืบค้นและประวัติ (Catalog & Inquiry)"]
+            direction TB
+            U_SEARCH(["Search Equipment (ค้นหาอุปกรณ์)"])
+            U_VIEW(["View Equipment Detail (ดูรายละเอียด)"])
+            U_HIST(["View Borrowing History (ดูประวัติการยืม-คืน)"])
         end
 
-        %% Reservation Group
-        subgraph ReserveGroup ["การจองอุปกรณ์ (Reservation Workflow)"]
+        %% Reservation Workflow Group
+        subgraph Group2 ["2. Reservation Workflow (การจองอุปกรณ์ - In-Class Focus)"]
             direction TB
-            U_RESERVE(["Reserve Equipment"])
-            U_CHK_AVAIL(["Check Equipment Availability"])
-            U_VER_PERM(["Verify Member Permission"])
-            U_REQ_SPEC(["Request Special Approval"])
+            U_RESERVE(["Reserve Equipment (จองอุปกรณ์)"])
+            U_CHK_AVAIL(["Check Equipment Availability (ตรวจความพร้อม)"])
+            U_VER_PERM(["Verify Member Permission (ตรวจสิทธิ์สมาชิก)"])
+            U_REQ_SPEC(["Request Special Approval (ขออนุมัติพิเศษ)"])
 
             U_RESERVE -.->|«include»| U_CHK_AVAIL
             U_RESERVE -.->|«include»| U_VER_PERM
             U_REQ_SPEC -.->|"«extend» [Special Equipment]"| U_RESERVE
         end
 
-        %% Borrow & Return Group
-        subgraph OpsGroup ["การยืมและคืนอุปกรณ์ (Borrow & Return Operations)"]
+        %% Borrow Operations Group
+        subgraph Group3 ["3. Borrow Operations (การส่งมอบและยืมอุปกรณ์)"]
             direction TB
-            U_BORROW(["Borrow Equipment"])
-            U_VER_RES(["Verify Reservation"])
-            U_REC_BORROW(["Record Borrowing Transaction"])
-
-            U_RETURN(["Return Equipment"])
-            U_CHK_COND(["Check Equipment Condition"])
-            U_CALC_PEN(["Calculate Penalty"])
-            U_REP_DMG(["Report Equipment Damage"])
+            U_BORROW(["Borrow Equipment (ยืมอุปกรณ์)"])
+            U_VER_RES(["Verify Reservation (ตรวจรายการจอง)"])
+            U_REC_BORROW(["Record Borrowing Transaction (บันทึกรายการยืม)"])
 
             U_BORROW -.->|«include»| U_VER_RES
             U_BORROW -.->|«include»| U_REC_BORROW
+        end
+
+        %% Return Operations Group
+        subgraph Group4 ["4. Return Operations (การคืนและตรวจสภาพอุปกรณ์)"]
+            direction TB
+            U_RETURN(["Return Equipment (คืนอุปกรณ์)"])
+            U_CHK_COND(["Check Equipment Condition (ตรวจสภาพ)"])
+            U_CALC_PEN(["Calculate Penalty (คำนวณค่าปรับ)"])
+            U_REP_DMG(["Report Equipment Damage (รายงานความเสียหาย)"])
 
             U_RETURN -.->|«include»| U_CHK_COND
             U_CALC_PEN -.->|"«extend» [Overdue]"| U_RETURN
@@ -352,50 +359,48 @@ flowchart LR
         end
 
         %% Management Group
-        subgraph MgmtGroup ["การบริหารจัดการระบบ (Management & Administration)"]
-            U_APP_SPEC(["Approve Special Equipment Request"])
-            U_MAN_EQ(["Manage Equipment"])
-            U_MAN_USER(["Manage User Account"])
-            U_MAN_PERM(["Manage User Permission"])
+        subgraph Group5 ["5. Management & Administration (การจัดการระบบ)"]
+            direction TB
+            U_APP_SPEC(["Approve Special Equipment Request (อนุมัติคำขอพิเศษ)"])
+            U_MAN_EQ(["Manage Equipment (จัดการอุปกรณ์)"])
+            U_MAN_USER(["Manage User Account (จัดการบัญชีผู้ใช้)"])
+            U_MAN_PERM(["Manage User Permission (จัดการสิทธิ์ผู้ใช้งาน)"])
         end
     end
 
-    %% Actor Hierarchy
-    ACT_MEM["👤 Member"]
-    ACT_STU["🧑‍🎓 Student"]
-    ACT_STAFF["👨‍🏫 Staff"]
-    ACT_OFFICER["👨‍🔬 Lab Officer"]
-    ACT_ADMIN["🛡️ Administrator"]
+    %% Left Actors: Generalization & Primary User
+    ACT_STU["🧑‍🎓 Student"] -->|is-a| ACT_MEM["👤 Member"]
+    ACT_STAFF["👨‍🏫 Staff"] -->|is-a| ACT_MEM
 
-    ACT_STU -->|is-a| ACT_MEM
-    ACT_STAFF -->|is-a| ACT_MEM
-
-    %% Member Associations
+    %% Clean Association Fan-out from Member (No Crossing)
     ACT_MEM --- U_LOGIN
     ACT_MEM --- U_SEARCH
     ACT_MEM --- U_VIEW
+    ACT_MEM --- U_CHK_AVAIL
     ACT_MEM --- U_HIST
     ACT_MEM --- U_RESERVE
     ACT_MEM --- U_BORROW
     ACT_MEM --- U_RETURN
 
-    %% Lab Officer Associations
+    %% Right Actors: Secondary & Administration
+    ACT_OFFICER["👨‍🔬 Lab Officer"] --- U_APP_SPEC
     ACT_OFFICER --- U_BORROW
     ACT_OFFICER --- U_RETURN
-    ACT_OFFICER --- U_APP_SPEC
     ACT_OFFICER --- U_MAN_EQ
 
-    %% Administrator Associations
-    ACT_ADMIN --- U_MAN_USER
+    ACT_ADMIN["🛡️ Administrator"] --- U_MAN_USER
     ACT_ADMIN --- U_MAN_PERM
 
-    style Boundary fill:#ffffff,stroke:#263238,stroke-width:2px
-    style ACT_MEM fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style ACT_OFFICER fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    style ACT_ADMIN fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
-    style U_RESERVE fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    style U_BORROW fill:#f0f4c3,stroke:#9e9d24
-    style U_RETURN fill:#fff9c4,stroke:#fbc02d
+    style Boundary fill:#ffffff,stroke:#0f172a,stroke-width:2.5px
+    style ACT_MEM fill:#e0f2fe,stroke:#0284c7,stroke-width:2.5px
+    style ACT_STU fill:#ffffff,stroke:#475569
+    style ACT_STAFF fill:#ffffff,stroke:#475569
+    style ACT_OFFICER fill:#fff7ed,stroke:#ea580c,stroke-width:2.5px
+    style ACT_ADMIN fill:#f5f3ff,stroke:#7c3aed,stroke-width:2.5px
+    style U_RESERVE fill:#fce7f3,stroke:#db2777,stroke-width:2px
+    style U_BORROW fill:#fef08a,stroke:#ca8a04,stroke-width:2px
+    style U_RETURN fill:#bbf7d0,stroke:#16a34a,stroke-width:2px
+    style U_LOGIN fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
 ```
 
 ---
@@ -408,14 +413,15 @@ flowchart LR
 - ส่วนต่อขยาย: `Request Special Approval` พุ่งขึ้นหา `Reserve Equipment` ด้วย `<<extend>>`
 - ตัวคนด้านขวา: `Lab Officer` เชื่อมโยงกับ `Approval`
 
-เมื่อแปลงเป็น **ชื่อทางการแบบไม่ย่อ** ตามข้อกำหนดทางวิชาการ:
+เมื่อแปลงเป็น **ชื่อทางการแบบไม่ย่อ** ตามข้อกำหนดทางวิชาการ (จัดเส้นแนวนอน Left-to-Right ให้ไหลลื่น ไม่มีเส้นตัดขวาง):
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph Boundary ["System Boundary: ระบบยืม–คืนอุปกรณ์ห้องปฏิบัติการ"]
-        direction TB
+        direction LR
 
         subgraph Generalization_Login ["Use Case Generalization: การเข้าสู่ระบบ"]
+            direction TB
             LOGIN(["Login<br/>(เข้าสู่ระบบ)"])
             SSO(["Login with University SSO<br/>(เข้าสู่ระบบด้วยบัญชีมหาวิทยาลัย)"])
             UP(["Login with Username and Password<br/>(เข้าสู่ระบบด้วยชื่อผู้ใช้และรหัสผ่าน)"])
@@ -424,10 +430,14 @@ flowchart TB
             UP -->|is-a| LOGIN
         end
 
-        SEARCH(["Search Equipment<br/>(ค้นหาอุปกรณ์)"])
-        VIEW(["View Equipment Detail<br/>(ดูรายละเอียดอุปกรณ์)"])
+        subgraph Catalog ["การสืบค้น"]
+            direction TB
+            SEARCH(["Search Equipment<br/>(ค้นหาอุปกรณ์)"])
+            VIEW(["View Equipment Detail<br/>(ดูรายละเอียดอุปกรณ์)"])
+        end
 
         subgraph Core_Reservation ["แกนหลัก: การจอง, การตรวจสอบ และการขออนุมัติ"]
+            direction TB
             RESERVE(["Reserve Equipment<br/>(จองอุปกรณ์)"])
             CHECK(["Check Equipment Availability<br/>(ตรวจความพร้อมอุปกรณ์) ✔"])
             VERIFY(["Verify Member Permission<br/>(ตรวจสิทธิ์สมาชิก) ✔"])
@@ -442,16 +452,18 @@ flowchart TB
         end
     end
 
-    %% Actor Generalization
+    %% Actor Generalization (Left)
     STUDENT["🧑‍🎓 Student<br/>(นักศึกษา)"] -->|is-a| MEMBER["👤 Member<br/>(สมาชิก)"]
     STAFF_MEM["👨‍🏫 Staff<br/>(บุคลากร)"] -->|is-a| MEMBER
 
+    %% Secondary Actor (Right)
     OFFICER["👨‍🔬 Lab Officer<br/>(เจ้าหน้าที่ห้องปฏิบัติการ)"]
 
-    %% Associations
+    %% Direct Associations
     MEMBER --- LOGIN
     MEMBER --- SEARCH
     MEMBER --- VIEW
+    MEMBER --- CHECK
     MEMBER --- RESERVE
 
     APPROVAL --- OFFICER
@@ -502,6 +514,13 @@ flowchart TB
 > 2. **อะไรคือพฤติกรรมที่เกิดเฉพาะบางเงื่อนไข?** ➔ คำตอบคือ `<<extend>>` (พุ่งจาก Extension ➔ Base พร้อม `[condition]`)
 > 3. **Actor ใดมีความสัมพันธ์แบบ is-a หรือใช้สิทธิ์ร่วมกัน?** ➔ คำตอบคือ `Actor Generalization` (พุ่งจาก Sub ➔ Super ด้วย △)
 > 4. **Use Case ใดมีเป้าหมายเดียวกันแต่มีหลายวิธีดำเนินการ?** ➔ คำตอบคือ `Use Case Generalization` (พุ่งจาก Sub ➔ Super ด้วย △)
+
+### 10.4 ประเด็นชวนคิดระดับเซียน: ทำไม User จึงสามารถ `Check Equipment Availability` ได้โดยตรง? (Dual-Role Use Case)
+
+> [!NOTE] 💡 ทำไม Use Case ตัวเดียวกันถึงมีทั้งเส้น Association ตรงจาก User และเส้น `<<include>>` จาก Base Case?
+> 1. **ในมุมมองของผู้ใช้ (Requirement ข้อ 3 - Standalone Inquiry):** สมาชิกต้องการเพียงแค่ค้นหาและกดดูสถานะความพร้อมของอุปกรณ์ (เช่น เช็กปฏิทินดูว่ากล้อง DSLR หรือเครื่องมือวัดว่างในวันศุกร์นี้หรือไม่) โดยที่ยังไม่ต้องจอง การทำงานนี้จึงเป็น Use Case อิสระที่มี Actor เริ่มต้นกระทำโดยตรง (`Member ── Check Equipment Availability`)
+> 2. **ในมุมมองของระบบการจอง (Requirement ข้อ 4 - Mandatory Verification):** เมื่อสมาชิกตัดสินใจทำรายการจอง (`Reserve Equipment`) ระบบจะปล่อยให้การจองสำเร็จไม่ได้หากยังไม่ได้ตรวจความพร้อมซ้ำเพื่อป้องกันการจองชนเวลา (Double Booking) ระบบจึงต้องสั่งรัน `Check Equipment Availability` เสมอ 100% ผ่านความสัมพันธ์ `<<include>>`
+> 3. **มาตรฐาน UML (OMG Standard):** Use Case ที่ถูก `<<include>>` **ไม่จำเป็นต้องเป็น Use Case ลับ/ปิดกั้น** สามารถเป็น Use Case ปกติที่ Actor เรียกใช้เองได้ และ Use Case อื่นก็ดึงไปรียูส (Reuse) ได้เช่นกัน นี่คือหลักการสูงสุดของการออกแบบเชิงวัตถุและ Use Case Modeling!
 
 ---
 

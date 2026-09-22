@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1560" width="100%" height="100%" style="background:#f8fafc; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+const fs = require('fs');
+const path = require('path');
+
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1560" width="100%" height="100%" style="background:#f8fafc; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <!-- Generalization Hollow Triangle Marker -->
     <marker id="triangle-blue" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
@@ -469,4 +472,21 @@
     <text x="38" y="28" font-size="10" fill="#64748b">ต้องใช้ Verb + Object ที่ชัดเจน</text>
     <text x="38" y="42" font-size="9.5" fill="#16a34a">Actor อยู่นอกกรอบ / Use Case อยู่ในกรอบ</text>
   </g>
-</svg>
+</svg>`;
+
+const outputPath1 = path.join(__dirname, 'lab_equipment_usecase_diagram.svg');
+fs.writeFileSync(outputPath1, svgContent, 'utf8');
+const outputPath2 = path.join(__dirname, '../../Wiki/01_New_Wiki_68/Lessons/lab_equipment_usecase_diagram.svg');
+fs.writeFileSync(outputPath2, svgContent, 'utf8');
+console.log('SVG written successfully to both locations! Size:', svgContent.length);
+
+const renderScript = `async (page) => {
+  await page.setViewportSize({ width: 1920, height: 1560 });
+  await page.setContent('<!DOCTYPE html><html><body style="margin:0;padding:0;background:#f8fafc;">' + ${JSON.stringify(svgContent)} + '</body></html>');
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: "c:/Project/software-engineering/04_Work_and_Homework/Use_Case_Diagram_Workshop/lab_equipment_usecase_diagram.png", fullPage: true });
+  await page.screenshot({ path: "c:/Project/software-engineering/Wiki/01_New_Wiki_68/Lessons/lab_equipment_usecase_diagram.png", fullPage: true });
+  return "Rendered both PNGs successfully!";
+}`;
+fs.writeFileSync(path.join(__dirname, 'render_script.js'), renderScript, 'utf8');
+console.log('render_script.js created successfully!');

@@ -1,418 +1,472 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1780 1440" width="100%" height="100%" style="background:#f4f6f9; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1560" width="100%" height="100%" style="background:#f8fafc; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <!-- Generalization Hollow Triangle Marker -->
     <marker id="triangle-blue" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
-      <polygon points="1 1, 11 6, 1 11" fill="#ffffff" stroke="#1565c0" stroke-width="1.8"/>
+      <polygon points="1 1, 11 6, 1 11" fill="#ffffff" stroke="#0284c7" stroke-width="1.8"/>
     </marker>
     <marker id="triangle-dark" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
-      <polygon points="1 1, 11 6, 1 11" fill="#ffffff" stroke="#263238" stroke-width="1.8"/>
+      <polygon points="1 1, 11 6, 1 11" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
     </marker>
 
-    <!-- Open Arrow for Include (Rose / Magenta) -->
+    <!-- Open Arrow for Include (Pink / Rose) -->
     <marker id="arrow-inc" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
-      <polyline points="2 2, 10 6, 2 10" fill="none" stroke="#c2185b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="2 2, 10 6, 2 10" fill="none" stroke="#db2777" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
 
-    <!-- Open Arrow for Extend (Orange) -->
+    <!-- Open Arrow for Extend (Orange / Amber) -->
     <marker id="arrow-ext" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
-      <polyline points="2 2, 10 6, 2 10" fill="none" stroke="#e65100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="2 2, 10 6, 2 10" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+
+    <!-- Open Arrow for Olive / Gold Include -->
+    <marker id="arrow-inc-gold" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <polyline points="2 2, 10 6, 2 10" fill="none" stroke="#ca8a04" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
 
     <!-- Open Arrow for Green Include -->
     <marker id="arrow-inc-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
-      <polyline points="2 2, 10 6, 2 10" fill="none" stroke="#2e7d32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="2 2, 10 6, 2 10" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
 
+    <!-- Drop Shadow Filter for Clean Floating Effect -->
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.07"/>
+    </filter>
+
     <!-- Stickman Definitions -->
-    <g id="stickman-blue">
-      <circle cx="0" cy="-32" r="14" fill="#ffffff" stroke="#1565c0" stroke-width="2.8"/>
-      <line x1="0" y1="-18" x2="0" y2="16" stroke="#1565c0" stroke-width="2.8"/>
-      <line x1="-22" y1="-6" x2="22" y2="-6" stroke="#1565c0" stroke-width="2.8"/>
-      <line x1="0" y1="16" x2="-16" y2="42" stroke="#1565c0" stroke-width="2.8"/>
-      <line x1="0" y1="16" x2="16" y2="42" stroke="#1565c0" stroke-width="2.8"/>
+    <g id="stickman-primary">
+      <circle cx="0" cy="-32" r="15" fill="#ffffff" stroke="#0284c7" stroke-width="2.8"/>
+      <line x1="0" y1="-17" x2="0" y2="18" stroke="#0284c7" stroke-width="2.8"/>
+      <line x1="-22" y1="-3" x2="22" y2="-3" stroke="#0284c7" stroke-width="2.8"/>
+      <line x1="0" y1="18" x2="-16" y2="46" stroke="#0284c7" stroke-width="2.8"/>
+      <line x1="0" y1="18" x2="16" y2="46" stroke="#0284c7" stroke-width="2.8"/>
     </g>
 
-    <g id="stickman-dark">
-      <circle cx="0" cy="-22" r="9" fill="#ffffff" stroke="#37474f" stroke-width="2"/>
-      <line x1="0" y1="-13" x2="0" y2="11" stroke="#37474f" stroke-width="2"/>
-      <line x1="-14" y1="-3" x2="14" y2="-3" stroke="#37474f" stroke-width="2"/>
-      <line x1="0" y1="11" x2="-11" y2="28" stroke="#37474f" stroke-width="2"/>
-      <line x1="0" y1="11" x2="11" y2="28" stroke="#37474f" stroke-width="2"/>
+    <g id="stickman-sub">
+      <circle cx="0" cy="-24" r="11" fill="#ffffff" stroke="#475569" stroke-width="2.2"/>
+      <line x1="0" y1="-13" x2="0" y2="13" stroke="#475569" stroke-width="2.2"/>
+      <line x1="-16" y1="-2" x2="16" y2="-2" stroke="#475569" stroke-width="2.2"/>
+      <line x1="0" y1="13" x2="-12" y2="34" stroke="#475569" stroke-width="2.2"/>
+      <line x1="0" y1="13" x2="12" y2="34" stroke="#475569" stroke-width="2.2"/>
     </g>
 
-    <g id="stickman-orange">
-      <circle cx="0" cy="-32" r="14" fill="#ffffff" stroke="#e65100" stroke-width="2.8"/>
-      <line x1="0" y1="-18" x2="0" y2="16" stroke="#e65100" stroke-width="2.8"/>
-      <line x1="-22" y1="-6" x2="22" y2="-6" stroke="#e65100" stroke-width="2.8"/>
-      <line x1="0" y1="16" x2="-16" y2="42" stroke="#e65100" stroke-width="2.8"/>
-      <line x1="0" y1="16" x2="16" y2="42" stroke="#e65100" stroke-width="2.8"/>
+    <g id="stickman-officer">
+      <circle cx="0" cy="-32" r="15" fill="#ffffff" stroke="#ea580c" stroke-width="2.8"/>
+      <line x1="0" y1="-17" x2="0" y2="18" stroke="#ea580c" stroke-width="2.8"/>
+      <line x1="-22" y1="-3" x2="22" y2="-3" stroke="#ea580c" stroke-width="2.8"/>
+      <line x1="0" y1="18" x2="-16" y2="46" stroke="#ea580c" stroke-width="2.8"/>
+      <line x1="0" y1="18" x2="16" y2="46" stroke="#ea580c" stroke-width="2.8"/>
     </g>
 
-    <g id="stickman-purple">
-      <circle cx="0" cy="-32" r="14" fill="#ffffff" stroke="#6a1b9a" stroke-width="2.8"/>
-      <line x1="0" y1="-18" x2="0" y2="16" stroke="#6a1b9a" stroke-width="2.8"/>
-      <line x1="-22" y1="-6" x2="22" y2="-6" stroke="#6a1b9a" stroke-width="2.8"/>
-      <line x1="0" y1="16" x2="-16" y2="42" stroke="#6a1b9a" stroke-width="2.8"/>
-      <line x1="0" y1="16" x2="16" y2="42" stroke="#6a1b9a" stroke-width="2.8"/>
+    <g id="stickman-admin">
+      <circle cx="0" cy="-32" r="15" fill="#ffffff" stroke="#7c3aed" stroke-width="2.8"/>
+      <line x1="0" y1="-17" x2="0" y2="18" stroke="#7c3aed" stroke-width="2.8"/>
+      <line x1="-22" y1="-3" x2="22" y2="-3" stroke="#7c3aed" stroke-width="2.8"/>
+      <line x1="0" y1="18" x2="-16" y2="46" stroke="#7c3aed" stroke-width="2.8"/>
+      <line x1="0" y1="18" x2="16" y2="46" stroke="#7c3aed" stroke-width="2.8"/>
     </g>
   </defs>
 
-  <!-- TOP HEADER BANNER -->
-  <rect x="25" y="15" width="1730" height="78" rx="12" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.5"/>
-  <text x="890" y="46" text-anchor="middle" font-size="23" font-weight="bold" fill="#0d47a1">ภาพรวม Use Case Diagram: ระบบยืม–คืนอุปกรณ์ห้องปฏิบัติการ (Laboratory Equipment Borrowing System)</text>
-  <text x="890" y="72" text-anchor="middle" font-size="14" fill="#455a64">มาตรฐานทางวิชาการ UML แท้ 100%: แสดงลำดับชั้น Actor ครบทุกตัว | ไม่ใช้คำย่อ | ตัวคน (Stickman) | Generalization (△) | &lt;&lt;include&gt;&gt; | &lt;&lt;extend&gt;&gt;</text>
+  <!-- ================= TOP HEADER BANNER ================= -->
+  <rect x="35" y="15" width="1850" height="76" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="960" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#0f172a">แผนภาพ Use Case Diagram มาตรฐาน: ระบบยืม–คืนอุปกรณ์ห้องปฏิบัติการ (University Lab Equipment Borrowing System)</text>
+  <text x="960" y="72" text-anchor="middle" font-size="13.5" fill="#475569">โครงสร้างมาตรฐาน UML สากล (ฉบับจัดระเบียบเส้น 100%): Base Cases ชิดซ้าย | Sub-cases ชิดขวา | เส้น Association แผ่เป็นระเบียบไม่ตัดทับ Use Case อื่น</text>
 
-  <!-- LEFT SIDEBAR -->
-  <!-- Box 1: Complete Actor Generalization Hierarchy (ครบทุก Actor) -->
-  <rect x="25" y="105" width="340" height="425" rx="10" fill="#ffffff" stroke="#90caf9" stroke-width="1.8"/>
-  <rect x="25" y="105" width="340" height="38" rx="10" fill="#e3f2fd"/>
-  <text x="195" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">👥 ลำดับชั้น Actor ฉบับสมบูรณ์ (ครบ 5 ตัว)</text>
-
-  <!-- Level 1: System User (Top Root) -->
-  <g transform="translate(195, 185)">
-    <use href="#stickman-dark" x="0" y="0"/>
-    <text x="0" y="-36" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">System User</text>
-    <text x="0" y="-24" text-anchor="middle" font-size="10" fill="#1565c0">(ผู้ใช้งานระบบทุกคน)</text>
+  <!-- ================= LEFT ACTORS: STUDENT & STAFF GENERALIZE TO MEMBER ================= -->
+  <!-- Sub-Actor: Student -->
+  <g transform="translate(100, 240)">
+    <use href="#stickman-sub" x="0" y="0"/>
+    <text x="0" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">Student</text>
+    <text x="0" y="68" text-anchor="middle" font-size="10.5" fill="#64748b">(นักศึกษา)</text>
   </g>
 
-  <!-- Level 2 Left: Member (Super Actor for Borrowers) -->
-  <g transform="translate(110, 275)">
-    <use href="#stickman-blue" x="0" y="0" transform="scale(0.85)"/>
-    <text x="0" y="-38" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">Member</text>
-    <text x="0" y="-25" text-anchor="middle" font-size="9.5" fill="#1565c0">(สมาชิกผู้ยืม)</text>
+  <!-- Sub-Actor: Staff -->
+  <g transform="translate(100, 390)">
+    <use href="#stickman-sub" x="0" y="0"/>
+    <text x="0" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">Staff</text>
+    <text x="0" y="68" text-anchor="middle" font-size="10.5" fill="#64748b">(บุคลากร)</text>
   </g>
 
-  <!-- Level 2 Right: Staff / Operations (Super Actor for Operators) -->
-  <g transform="translate(280, 275)">
-    <use href="#stickman-dark" x="0" y="0" transform="scale(0.85)"/>
-    <text x="0" y="-38" text-anchor="middle" font-size="13" font-weight="bold" fill="#37474f">Staff</text>
-    <text x="0" y="-25" text-anchor="middle" font-size="9.5" fill="#546e7a">(เจ้าหน้าที่/ผู้ดูแล)</text>
+  <!-- Actor Generalization Arrows to Member (is-a with hollow triangle) -->
+  <line x1="120" y1="240" x2="225" y2="295" stroke="#0284c7" stroke-width="2" marker-end="url(#triangle-blue)"/>
+  <rect x="150" y="255" width="52" height="18" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+  <text x="176" y="268" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0284c7">is-a (△)</text>
+
+  <line x1="120" y1="390" x2="225" y2="335" stroke="#0284c7" stroke-width="2" marker-end="url(#triangle-blue)"/>
+  <rect x="150" y="350" width="52" height="18" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+  <text x="176" y="363" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0284c7">is-a (△)</text>
+
+  <!-- Primary Super-Actor: Member -->
+  <g transform="translate(265, 315)">
+    <use href="#stickman-primary" x="0" y="0"/>
+    <text x="0" y="68" text-anchor="middle" font-size="16" font-weight="bold" fill="#0284c7">Member</text>
+    <text x="0" y="86" text-anchor="middle" font-size="12" font-weight="bold" fill="#0369a1">(สมาชิกผู้ใช้บริการ)</text>
+    <rect x="-55" y="95" width="110" height="20" rx="10" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1"/>
+    <text x="0" y="109" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0369a1">Super-Actor</text>
   </g>
 
-  <!-- Generalization lines from Level 2 up to System User -->
-  <line x1="130" y1="240" x2="175" y2="205" stroke="#1565c0" stroke-width="1.8" marker-end="url(#triangle-blue)"/>
-  <line x1="260" y1="240" x2="215" y2="205" stroke="#1565c0" stroke-width="1.8" marker-end="url(#triangle-blue)"/>
+  <!-- ================= ACTOR GENERALIZATION SIDEBAR CARD (EXACTLY AS IN CLASS) ================= -->
+  <g transform="translate(45, 520)">
+    <!-- Outer Card -->
+    <rect x="0" y="0" width="215" height="380" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" filter="url(#shadow)"/>
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 205 0 Q 215 0 215 10 L 215 32 L 0 32 Z" fill="#0284c7"/>
+    <text x="107" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">👥 Actor Generalization</text>
+    <text x="107" y="48" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0369a1">(ผังการสืบทอดคุณสมบัติ)</text>
 
-  <!-- Level 3: Sub-Actors -->
-  <!-- Under Member: Student & Staff Member -->
-  <g transform="translate(68, 385)">
-    <use href="#stickman-dark" x="0" y="0" transform="scale(0.75)"/>
-    <text x="0" y="32" text-anchor="middle" font-size="11" font-weight="bold" fill="#263238">Student</text>
-    <text x="0" y="44" text-anchor="middle" font-size="8.5" fill="#546e7a">(นักศึกษา)</text>
-  </g>
+    <!-- Super-Actor: Member -->
+    <g transform="translate(107, 105)">
+      <use href="#stickman-primary" x="0" y="0" transform="scale(0.7)"/>
+      <rect x="-42" y="36" width="84" height="20" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="0" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#0369a1">Member</text>
+    </g>
 
-  <g transform="translate(145, 385)">
-    <use href="#stickman-dark" x="0" y="0" transform="scale(0.75)"/>
-    <text x="0" y="32" text-anchor="middle" font-size="11" font-weight="bold" fill="#263238">Staff Mem</text>
-    <text x="0" y="44" text-anchor="middle" font-size="8.5" fill="#546e7a">(บุคลากร)</text>
-  </g>
+    <!-- Sub-Actor: Student -->
+    <g transform="translate(50, 195)">
+      <use href="#stickman-sub" x="0" y="0" transform="scale(0.75)"/>
+      <rect x="-36" y="30" width="72" height="18" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1"/>
+      <text x="0" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155">Student</text>
+    </g>
 
-  <!-- Under Staff: Lab Officer & Administrator -->
-  <g transform="translate(235, 385)">
-    <use href="#stickman-dark" x="0" y="0" transform="scale(0.75)"/>
-    <text x="0" y="32" text-anchor="middle" font-size="11" font-weight="bold" fill="#bf360c">Lab Officer</text>
-    <text x="0" y="44" text-anchor="middle" font-size="8.5" fill="#e65100">(จนท.แล็บ)</text>
-  </g>
+    <!-- Sub-Actor: Staff -->
+    <g transform="translate(165, 195)">
+      <use href="#stickman-sub" x="0" y="0" transform="scale(0.75)"/>
+      <rect x="-32" y="30" width="64" height="18" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1"/>
+      <text x="0" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155">Staff</text>
+    </g>
 
-  <g transform="translate(305, 385)">
-    <use href="#stickman-dark" x="0" y="0" transform="scale(0.75)"/>
-    <text x="0" y="32" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a148c">Admin</text>
-    <text x="0" y="44" text-anchor="middle" font-size="8.5" fill="#6a1b9a">(ผู้ดูแลระบบ)</text>
-  </g>
+    <!-- Inheritance / Generalization Arrows (is-a △ pointing up to Member) -->
+    <line x1="50" y1="180" x2="88" y2="155" stroke="#0284c7" stroke-width="1.6" marker-end="url(#triangle-blue)"/>
+    <line x1="165" y1="180" x2="126" y2="155" stroke="#0284c7" stroke-width="1.6" marker-end="url(#triangle-blue)"/>
 
-  <!-- Generalization lines to Member -->
-  <line x1="75" y1="360" x2="98" y2="305" stroke="#1565c0" stroke-width="1.6" marker-end="url(#triangle-blue)"/>
-  <line x1="140" y1="360" x2="120" y2="305" stroke="#1565c0" stroke-width="1.6" marker-end="url(#triangle-blue)"/>
+    <!-- Separator Line -->
+    <line x1="15" y1="248" x2="200" y2="248" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="107" y="264" text-anchor="middle" font-size="9" font-weight="bold" fill="#64748b">อิสระ (ไม่ขึ้นตรงกับ Member)</text>
 
-  <!-- Generalization lines to Staff -->
-  <line x1="245" y1="360" x2="270" y2="305" stroke="#1565c0" stroke-width="1.6" marker-end="url(#triangle-blue)"/>
-  <line x1="300" y1="360" x2="285" y2="305" stroke="#1565c0" stroke-width="1.6" marker-end="url(#triangle-blue)"/>
+    <!-- Independent Actors: Lab Officer & Administrator -->
+    <g transform="translate(55, 305)">
+      <use href="#stickman-officer" x="0" y="0" transform="scale(0.65)"/>
+      <text x="0" y="38" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#ea580c">Lab Officer</text>
+      <text x="0" y="49" text-anchor="middle" font-size="8" fill="#9a3412">(ผู้ปฏิบัติการ)</text>
+    </g>
 
-  <rect x="35" y="445" width="320" height="72" rx="6" fill="#f1f8e9" stroke="#81c784" stroke-width="1"/>
-  <text x="45" y="465" font-size="10.5" font-weight="bold" fill="#2e7d32">💡 ข้อสรุปเชิงสถาปัตยกรรม (เหมือนสไลด์ 2/10):</text>
-  <text x="45" y="482" font-size="9.5" fill="#37474f">• <tspan font-weight="bold">System User:</tspan> เป็นแม่ของทุกคน (สืบทอดสิทธิ์ Login)</text>
-  <text x="45" y="497" font-size="9.5" fill="#37474f">• <tspan font-weight="bold">Member:</tspan> รวมผู้ยืม (Student &amp; Staff) เข้าด้วยกัน</text>
-  <text x="45" y="511" font-size="9.5" fill="#37474f">• <tspan font-weight="bold">Staff:</tspan> เป็นแม่ของ Lab Officer และ Administrator</text>
+    <g transform="translate(160, 305)">
+      <use href="#stickman-admin" x="0" y="0" transform="scale(0.65)"/>
+      <text x="0" y="38" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#7c3aed">Administrator</text>
+      <text x="0" y="49" text-anchor="middle" font-size="8" fill="#581c87">(ผู้ดูแลระบบ)</text>
+    </g>
 
-
-  <!-- Box 2: Relationship Legend & Rules -->
-  <rect x="25" y="540" width="340" height="705" rx="10" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.8"/>
-  <rect x="25" y="540" width="340" height="38" rx="10" fill="#eceff1"/>
-  <text x="195" y="565" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#263238">📖 สรุปสัญลักษณ์และการนำไปใช้</text>
-
-  <g transform="translate(45, 595)">
-    <line x1="0" y1="12" x2="60" y2="12" stroke="#263238" stroke-width="2.2"/>
-    <text x="75" y="10" font-size="12" font-weight="bold" fill="#263238">Association (ความสัมพันธ์)</text>
-    <text x="75" y="26" font-size="10.5" fill="#546e7a">Actor มีส่วนร่วมกับ Use Case</text>
-
-    <line x1="0" y1="65" x2="60" y2="65" stroke="#c2185b" stroke-width="2.2" stroke-dasharray="6 3" marker-end="url(#arrow-inc)"/>
-    <text x="75" y="60" font-size="12" font-weight="bold" fill="#c2185b">&lt;&lt;include&gt;&gt; (ต้องทำเสมอ)</text>
-    <text x="75" y="76" font-size="10.5" fill="#546e7a">Base ชี้ไปหา Included (100%)</text>
-
-    <line x1="0" y1="115" x2="60" y2="115" stroke="#e65100" stroke-width="2.2" stroke-dasharray="6 3" marker-end="url(#arrow-ext)"/>
-    <text x="75" y="110" font-size="12" font-weight="bold" fill="#e65100">&lt;&lt;extend&gt;&gt; (ทำตามเงื่อนไข)</text>
-    <text x="75" y="126" font-size="10.5" fill="#546e7a">Extension ชี้หา Base [condition]</text>
-
-    <line x1="0" y1="165" x2="60" y2="165" stroke="#1565c0" stroke-width="2.2" marker-end="url(#triangle-blue)"/>
-    <text x="75" y="160" font-size="12" font-weight="bold" fill="#1565c0">Generalization (is-a)</text>
-    <text x="75" y="176" font-size="10.5" fill="#546e7a">ตัวลูกชี้หาตัวแม่ด้วยสามเหลี่ยมโปร่ง △</text>
-  </g>
-
-  <!-- Detailed Rules Card -->
-  <rect x="38" y="805" width="314" height="425" rx="8" fill="#f8f9fe" stroke="#c5cae9" stroke-width="1.2"/>
-  <text x="195" y="828" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">🎯 5 กฎเหล็กตรวจคำตอบ (เหมือนสไลด์ 9/10)</text>
-
-  <text x="50" y="855" font-size="11.5" font-weight="bold" fill="#0d47a1">1. ห้ามเขียนย่อชื่อ Use Case:</text>
-  <text x="50" y="873" font-size="10.5" fill="#37474f">ต้องใช้ Verb + Object ที่ชัดเจน เช่น</text>
-  <text x="50" y="889" font-size="10" fill="#2e7d32">• Login with University SSO</text>
-  <text x="50" y="905" font-size="10" fill="#2e7d32">• Check Equipment Availability</text>
-  <text x="50" y="921" font-size="10" fill="#2e7d32">• Verify Member Permission</text>
-  <text x="50" y="937" font-size="10" fill="#2e7d32">• Request Special Approval</text>
-
-  <text x="50" y="965" font-size="11.5" font-weight="bold" fill="#c2185b">2. ทิศทาง «include» (ต้องทำเสมอ):</text>
-  <text x="50" y="983" font-size="10.5" fill="#37474f">พุ่งจาก Base Use Case ➔ Included Case</text>
-  <text x="50" y="999" font-size="10" fill="#546e7a">(เช่น Reserve Equipment ➔ Check / Verify)</text>
-
-  <text x="50" y="1027" font-size="11.5" font-weight="bold" fill="#e65100">3. ทิศทาง «extend» (ทำเมื่อมีเงื่อนไข):</text>
-  <text x="50" y="1045" font-size="10.5" fill="#37474f">พุ่งจาก Extension Case ➔ Base Case</text>
-  <text x="50" y="1061" font-size="10" fill="#546e7a">(เช่น Special Approval ➔ Reserve Equipment)</text>
-  <text x="50" y="1077" font-size="10" fill="#bf360c">ระบุเงื่อนไขในวงเล็บ [เงื่อนไขเฉพาะ]</text>
-
-  <text x="50" y="1105" font-size="11.5" font-weight="bold" fill="#1565c0">4. Actor Generalization:</text>
-  <text x="50" y="1123" font-size="10.5" fill="#37474f">Member รวบ Student/Staff | Staff รวบ Lab/Admin</text>
-  <text x="50" y="1139" font-size="10" fill="#546e7a">เพื่อลดความซ้ำซ้อนของเส้น Association ทั้งระบบ</text>
-
-  <text x="50" y="1167" font-size="11.5" font-weight="bold" fill="#263238">5. System Boundary:</text>
-  <text x="50" y="1185" font-size="10.5" fill="#37474f">Use Case ทั้งหมดอยู่ในกรอบสี่เหลี่ยม</text>
-  <text x="50" y="1201" font-size="10" fill="#546e7a">Actor ทั้งหมดอยู่นอกกรอบเสมอ</text>
-
-
-  <!-- PRIMARY ACTOR: MEMBER (Standing on Left) -->
-  <g transform="translate(425, 310)">
-    <use href="#stickman-blue" x="0" y="0"/>
-    <text x="0" y="-48" text-anchor="middle" font-size="16" font-weight="bold" fill="#0d47a1">Member</text>
-    <text x="0" y="-33" text-anchor="middle" font-size="12" fill="#1565c0">(สมาชิกผู้ใช้บริการ)</text>
+    <rect x="10" y="358" width="195" height="16" rx="3" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+    <text x="107" y="369" text-anchor="middle" font-size="8" fill="#475569">✓ ตรงตามโจทย์และกระดานในคลาส</text>
   </g>
 
 
-  <!-- CENTER: SYSTEM BOUNDARY (x: 495 to 1475, width: 980) -->
-  <rect x="495" y="105" width="980" height="1140" rx="14" fill="#ffffff" stroke="#263238" stroke-width="2.5"/>
-  <rect x="495" y="105" width="980" height="42" rx="14" fill="#0d47a1"/>
-  <text x="985" y="132" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">University Laboratory Equipment Borrowing System</text>
-
-  <!-- 1. AUTHENTICATION (GENERALIZATION) -->
-  <rect x="520" y="160" width="930" height="135" rx="10" fill="#f5f9ff" stroke="#90caf9" stroke-width="1.2" stroke-dasharray="4 4"/>
-  <text x="540" y="182" font-size="13" font-weight="bold" fill="#0d47a1">🔐 Use Case Generalization: การเข้าสู่ระบบ (Authentication)</text>
-
-  <!-- General Use Case: Login -->
-  <ellipse cx="985" cy="200" rx="95" ry="25" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2"/>
-  <text x="985" y="204" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">Login</text>
-  <text x="985" y="217" text-anchor="middle" font-size="10" fill="#1565c0">(เข้าสู่ระบบ)</text>
-
-  <!-- Specialized Use Case 1: Login with University SSO -->
-  <ellipse cx="725" cy="262" rx="150" ry="22" fill="#ffffff" stroke="#1565c0" stroke-width="1.8"/>
-  <text x="725" y="265" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">Login with University SSO</text>
-  <text x="725" y="278" text-anchor="middle" font-size="9.5" fill="#546e7a">(เข้าสู่ระบบด้วยบัญชีมหาวิทยาลัย)</text>
-
-  <!-- Specialized Use Case 2: Login with Username and Password -->
-  <ellipse cx="1235" cy="262" rx="170" ry="22" fill="#ffffff" stroke="#1565c0" stroke-width="1.8"/>
-  <text x="1235" y="265" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">Login with Username and Password</text>
-  <text x="1235" y="278" text-anchor="middle" font-size="9.5" fill="#546e7a">(เข้าสู่ระบบด้วยชื่อผู้ใช้และรหัสผ่าน)</text>
-
-  <!-- Generalization Arrows pointing UP to Login -->
-  <line x1="795" y1="243" x2="915" y2="216" stroke="#1565c0" stroke-width="2" marker-end="url(#triangle-blue)"/>
-  <line x1="1165" y1="243" x2="1055" y2="216" stroke="#1565c0" stroke-width="2" marker-end="url(#triangle-blue)"/>
+  <!-- ================= CENTER: SYSTEM BOUNDARY ================= -->
+  <!-- Boundary Box: x: 380 to 1540, Width = 1160 -->
+  <rect x="380" y="105" width="1160" height="1310" rx="14" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="380" y="105" width="1160" height="42" rx="14" fill="#0f172a"/>
+  <text x="960" y="132" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">System Boundary: University Laboratory Equipment Borrowing System (ระบบยืม–คืนอุปกรณ์ห้องปฏิบัติการ)</text>
 
 
-  <!-- 2. SEARCH, VIEW & HISTORY -->
-  <ellipse cx="655" cy="335" rx="120" ry="25" fill="#f8f9fa" stroke="#455a64" stroke-width="1.8"/>
-  <text x="655" y="337" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">Search Equipment</text>
-  <text x="655" y="351" text-anchor="middle" font-size="10" fill="#546e7a">(ค้นหาอุปกรณ์)</text>
+  <!-- ================= GROUP 1: AUTHENTICATION & INQUIRY ================= -->
+  <rect x="400" y="160" width="1120" height="315" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="415" y="168" width="440" height="22" rx="4" fill="#e0f2fe"/>
+  <text x="425" y="183" font-size="11.5" font-weight="bold" fill="#0369a1">🔐 หมวดที่ 1: การเข้าสู่ระบบและการสืบค้นข้อมูล (Authentication &amp; Inquiry)</text>
 
-  <ellipse cx="985" cy="335" rx="130" ry="25" fill="#f8f9fa" stroke="#455a64" stroke-width="1.8"/>
-  <text x="985" y="337" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">View Equipment Detail</text>
-  <text x="985" y="351" text-anchor="middle" font-size="10" fill="#546e7a">(ดูรายละเอียดอุปกรณ์)</text>
+  <!-- Login (Base / General) -->
+  <ellipse cx="610" cy="225" rx="110" ry="25" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.2" filter="url(#shadow)"/>
+  <text x="610" y="226" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0369a1">Login</text>
+  <text x="610" y="240" text-anchor="middle" font-size="9.5" fill="#0284c7">(เข้าสู่ระบบเพื่อยืนยันตัวตน)</text>
 
-  <ellipse cx="1305" cy="335" rx="130" ry="25" fill="#f8f9fa" stroke="#455a64" stroke-width="1.8"/>
-  <text x="1305" y="337" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">View Borrowing History</text>
-  <text x="1305" y="351" text-anchor="middle" font-size="10" fill="#546e7a">(ดูประวัติการยืม–คืน)</text>
+  <!-- Login Subtype 1: SSO -->
+  <ellipse cx="1060" cy="200" rx="155" ry="23" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1060" y="201" text-anchor="middle" font-size="12" font-weight="bold" fill="#0369a1">Login with University SSO</text>
+  <text x="1060" y="214" text-anchor="middle" font-size="9" fill="#64748b">(เข้าสู่ระบบด้วยบัญชีมหาวิทยาลัย)</text>
 
+  <!-- Login Subtype 2: Username and Password -->
+  <ellipse cx="1060" cy="255" rx="170" ry="23" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1060" y="256" text-anchor="middle" font-size="12" font-weight="bold" fill="#0369a1">Login with Username and Password</text>
+  <text x="1060" y="269" text-anchor="middle" font-size="9" fill="#64748b">(เข้าสู่ระบบด้วยชื่อผู้ใช้และรหัสผ่าน)</text>
 
-  <!-- 3. RESERVATION WORKFLOW (IN-CLASS FOCUS) -->
-  <rect x="520" y="380" width="930" height="235" rx="10" fill="#fff8f9" stroke="#f48fb1" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <text x="540" y="402" font-size="13" font-weight="bold" fill="#c2185b">🎯 กระบวนการจองอุปกรณ์ (Reservation Workflow): «include» &amp; «extend»</text>
+  <!-- Generalization lines from SSO / UP left to Login -->
+  <line x1="905" y1="200" x2="720" y2="218" stroke="#0284c7" stroke-width="1.8" marker-end="url(#triangle-blue)"/>
+  <rect x="785" y="195" width="55" height="16" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+  <text x="812" y="207" text-anchor="middle" font-size="9" font-weight="bold" fill="#0284c7">is-a (△)</text>
 
-  <!-- Base Use Case: Reserve Equipment -->
-  <ellipse cx="795" cy="455" rx="130" ry="28" fill="#fce4ec" stroke="#c2185b" stroke-width="2.5"/>
-  <text x="795" y="456" text-anchor="middle" font-size="15" font-weight="bold" fill="#880e4f">Reserve Equipment</text>
-  <text x="795" y="471" text-anchor="middle" font-size="10.5" fill="#ad1457">(จองอุปกรณ์ล่วงหน้า)</text>
+  <line x1="890" y1="255" x2="720" y2="233" stroke="#0284c7" stroke-width="1.8" marker-end="url(#triangle-blue)"/>
+  <rect x="785" y="248" width="55" height="16" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+  <text x="812" y="260" text-anchor="middle" font-size="9" font-weight="bold" fill="#0284c7">is-a (△)</text>
 
-  <!-- Included Use Case 1: Check Equipment Availability -->
-  <ellipse cx="645" cy="565" rx="145" ry="25" fill="#ffffff" stroke="#c2185b" stroke-width="2"/>
-  <text x="645" y="565" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#880e4f">Check Equipment Availability</text>
-  <text x="645" y="579" text-anchor="middle" font-size="10" fill="#546e7a">(ตรวจสอบความพร้อมใช้งาน) ✔</text>
+  <!-- Inquiry Use Cases (Stacked Vertically at cx: 610) -->
+  <ellipse cx="610" cy="295" rx="120" ry="24" fill="#ffffff" stroke="#475569" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="610" y="296" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">Search Equipment</text>
+  <text x="610" y="309" text-anchor="middle" font-size="9.5" fill="#64748b">(ค้นหาอุปกรณ์ตามประเภท/รหัส)</text>
 
-  <!-- Included Use Case 2: Verify Member Permission -->
-  <ellipse cx="975" cy="565" rx="140" ry="25" fill="#ffffff" stroke="#c2185b" stroke-width="2"/>
-  <text x="975" y="565" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#880e4f">Verify Member Permission</text>
-  <text x="975" y="579" text-anchor="middle" font-size="10" fill="#546e7a">(ตรวจสอบสิทธิ์ของสมาชิก) ✔</text>
+  <ellipse cx="610" cy="360" rx="125" ry="24" fill="#ffffff" stroke="#475569" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="610" y="361" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">View Equipment Detail</text>
+  <text x="610" y="374" text-anchor="middle" font-size="9.5" fill="#64748b">(ดูรายละเอียดและคุณสมบัติอุปกรณ์)</text>
 
-  <!-- <<include>> Arrows -->
-  <line x1="740" y1="480" x2="680" y2="540" stroke="#c2185b" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrow-inc)"/>
-  <rect x="670" y="498" width="85" height="18" rx="3" fill="#ffffff" stroke="#c2185b" stroke-width="1"/>
-  <text x="712" y="511" text-anchor="middle" font-size="11" font-weight="bold" fill="#c2185b">&lt;&lt;include&gt;&gt;</text>
-
-  <line x1="850" y1="480" x2="920" y2="540" stroke="#c2185b" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrow-inc)"/>
-  <rect x="850" y="498" width="85" height="18" rx="3" fill="#ffffff" stroke="#c2185b" stroke-width="1"/>
-  <text x="892" y="511" text-anchor="middle" font-size="11" font-weight="bold" fill="#c2185b">&lt;&lt;include&gt;&gt;</text>
-
-  <!-- Extension Use Case: Request Special Approval -->
-  <ellipse cx="1265" cy="455" rx="145" ry="28" fill="#fff3e0" stroke="#e65100" stroke-width="2.2"/>
-  <text x="1265" y="455" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#bf360c">Request Special Approval</text>
-  <text x="1265" y="470" text-anchor="middle" font-size="10" fill="#e65100">(ขออนุมัติอุปกรณ์พิเศษ / มูลค่าสูง)</text>
-
-  <!-- <<extend>> Arrow from Request Special Approval LEFT to Reserve Equipment -->
-  <line x1="1120" y1="455" x2="930" y2="455" stroke="#e65100" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrow-ext)"/>
-  <rect x="980" y="430" width="105" height="32" rx="4" fill="#ffffff" stroke="#e65100" stroke-width="1"/>
-  <text x="1032" y="444" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">&lt;&lt;extend&gt;&gt;</text>
-  <text x="1032" y="457" text-anchor="middle" font-size="8.5" fill="#bf360c">[อุปกรณ์พิเศษ / มูลค่าสูง]</text>
+  <ellipse cx="610" cy="425" rx="125" ry="24" fill="#ffffff" stroke="#475569" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="610" y="426" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">View Borrowing History</text>
+  <text x="610" y="439" text-anchor="middle" font-size="9.5" fill="#64748b">(ดูประวัติการยืม–คืนของตนเอง)</text>
 
 
-  <!-- 4. BORROW & RETURN OPERATIONS -->
-  <rect x="520" y="630" width="930" height="280" rx="10" fill="#fbfdf8" stroke="#aed581" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <text x="540" y="652" font-size="13" font-weight="bold" fill="#33691e">📦 กระบวนการยืมและคืนอุปกรณ์ (Borrow &amp; Return Operations)</text>
+  <!-- ================= GROUP 2: RESERVATION WORKFLOW (IN-CLASS FOCUS) ================= -->
+  <rect x="400" y="490" width="1120" height="225" rx="10" fill="#fdf2f8" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="415" y="498" width="480" height="22" rx="4" fill="#fce7f3"/>
+  <text x="425" y="513" font-size="11.5" font-weight="bold" fill="#9d174d">🎯 หมวดที่ 2: กระบวนการจองอุปกรณ์ (Reservation Workflow) — จุดเน้นสำคัญในห้องเรียน</text>
 
-  <!-- Borrow Equipment -->
-  <ellipse cx="745" cy="700" rx="125" ry="26" fill="#f0f4c3" stroke="#9e9d24" stroke-width="2.2"/>
-  <text x="745" y="702" text-anchor="middle" font-size="14" font-weight="bold" fill="#558b2f">Borrow Equipment</text>
-  <text x="745" y="716" text-anchor="middle" font-size="10" fill="#33691e">(ยืมอุปกรณ์ ณ วันนัดหมาย)</text>
+  <!-- Base Case: Reserve Equipment -->
+  <ellipse cx="610" cy="590" rx="125" ry="28" fill="#fce7f3" stroke="#db2777" stroke-width="2.4" filter="url(#shadow)"/>
+  <text x="610" y="590" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#831843">Reserve Equipment</text>
+  <text x="610" y="605" text-anchor="middle" font-size="10" fill="#9d174d">(จองอุปกรณ์ล่วงหน้า - Base Case)</text>
 
-  <ellipse cx="620" cy="800" rx="105" ry="24" fill="#ffffff" stroke="#9e9d24" stroke-width="1.8"/>
-  <text x="620" y="800" text-anchor="middle" font-size="12" font-weight="bold" fill="#33691e">Verify Reservation</text>
-  <text x="620" y="813" text-anchor="middle" font-size="9.5" fill="#546e7a">(ตรวจสอบรายการจอง) ✔</text>
+  <!-- Included Case 1: Check Equipment Availability -->
+  <ellipse cx="1040" cy="540" rx="145" ry="24" fill="#ffffff" stroke="#db2777" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1040" y="540" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#831843">Check Equipment Availability</text>
+  <text x="1040" y="553" text-anchor="middle" font-size="9" fill="#0369a1">(ตรวจความพร้อมได้โดยตรง &amp; include ในการจอง) ✔</text>
 
-  <ellipse cx="850" cy="800" rx="110" ry="24" fill="#ffffff" stroke="#9e9d24" stroke-width="1.8"/>
-  <text x="850" y="796" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#33691e">Record Borrowing</text>
-  <text x="850" y="810" text-anchor="middle" font-size="11" font-weight="bold" fill="#33691e">Transaction</text>
-  <text x="850" y="822" text-anchor="middle" font-size="8.5" fill="#546e7a">(บันทึกรายการยืมและวันคืน)</text>
+  <!-- Included Case 2: Verify Member Permission -->
+  <ellipse cx="1040" cy="600" rx="140" ry="24" fill="#ffffff" stroke="#db2777" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1040" y="600" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#831843">Verify Member Permission</text>
+  <text x="1040" y="613" text-anchor="middle" font-size="9.5" fill="#64748b">(ตรวจสอบสิทธิ์ของสมาชิกตามประเภท) ✔</text>
 
-  <!-- Include in Borrowing -->
-  <line x1="710" y1="725" x2="655" y2="776" stroke="#9e9d24" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-inc-green)"/>
-  <rect x="650" y="740" width="75" height="18" rx="3" fill="#ffffff" stroke="#9e9d24" stroke-width="1"/>
-  <text x="687" y="753" text-anchor="middle" font-size="10" font-weight="bold" fill="#558b2f">&lt;&lt;include&gt;&gt;</text>
+  <!-- Extension Case: Request Special Approval -->
+  <ellipse cx="1040" cy="665" rx="145" ry="25" fill="#fff7ed" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="665" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#9a3412">Request Special Approval</text>
+  <text x="1040" y="678" text-anchor="middle" font-size="9.5" fill="#ea580c">(ขออนุมัติการใช้อุปกรณ์พิเศษ / มูลค่าสูง)</text>
 
-  <line x1="780" y1="725" x2="820" y2="776" stroke="#9e9d24" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-inc-green)"/>
-  <rect x="765" y="740" width="75" height="18" rx="3" fill="#ffffff" stroke="#9e9d24" stroke-width="1"/>
-  <text x="802" y="753" text-anchor="middle" font-size="10" font-weight="bold" fill="#558b2f">&lt;&lt;include&gt;&gt;</text>
+  <!-- Include Arrows from Reserve Equipment -->
+  <line x1="725" y1="575" x2="895" y2="550" stroke="#db2777" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-inc)"/>
+  <rect x="785" y="548" width="75" height="16" rx="3" fill="#ffffff" stroke="#db2777" stroke-width="0.8"/>
+  <text x="822" y="560" text-anchor="middle" font-size="9" font-weight="bold" fill="#db2777">&lt;&lt;include&gt;&gt;</text>
 
-  <!-- Return Equipment -->
-  <ellipse cx="1155" cy="700" rx="125" ry="26" fill="#fff9c4" stroke="#fbc02d" stroke-width="2.2"/>
-  <text x="1155" y="702" text-anchor="middle" font-size="14" font-weight="bold" fill="#f57f17">Return Equipment</text>
-  <text x="1155" y="716" text-anchor="middle" font-size="10" fill="#e65100">(คืนอุปกรณ์)</text>
+  <line x1="735" y1="595" x2="900" y2="600" stroke="#db2777" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-inc)"/>
+  <rect x="790" y="589" width="75" height="16" rx="3" fill="#ffffff" stroke="#db2777" stroke-width="0.8"/>
+  <text x="827" y="601" text-anchor="middle" font-size="9" font-weight="bold" fill="#db2777">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- Extend Arrow from Request Special Approval into Reserve Equipment -->
+  <line x1="895" y1="655" x2="725" y2="610" stroke="#ea580c" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-ext)"/>
+  <rect x="765" y="625" width="105" height="24" rx="3" fill="#ffffff" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="817" y="636" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ea580c">&lt;&lt;extend&gt;&gt;</text>
+  <text x="817" y="646" text-anchor="middle" font-size="7.5" fill="#9a3412">[อุปกรณ์พิเศษ/มูลค่าสูง]</text>
+
+  <!-- Request Special Approval is extended from Reserve Equipment; Approve Special Equipment Request is standalone for Lab Officer. Decoupled per UML standard! -->
+
+  <!-- Special Action Case: Approve Special Equipment Request (Column 3) -->
+  <ellipse cx="1385" cy="665" rx="115" ry="25" fill="#fff7ed" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1385" y="661" text-anchor="middle" font-size="11" font-weight="bold" fill="#9a3412">Approve Special</text>
+  <text x="1385" y="674" text-anchor="middle" font-size="11" font-weight="bold" fill="#9a3412">Equipment Request</text>
+  <text x="1385" y="685" text-anchor="middle" font-size="8.5" fill="#ea580c">(อนุมัติคำขอพิเศษ)</text>
+
+
+  <!-- ================= GROUP 3: BORROW OPERATIONS ================= -->
+  <rect x="400" y="730" width="1120" height="175" rx="10" fill="#fefce8" stroke="#facc15" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="415" y="738" width="440" height="22" rx="4" fill="#fef08a"/>
+  <text x="425" y="753" font-size="11.5" font-weight="bold" fill="#854d0e">📦 หมวดที่ 3: กระบวนการส่งมอบและยืมอุปกรณ์ (Borrow Operations)</text>
+
+  <!-- Base Case: Borrow Equipment -->
+  <ellipse cx="610" cy="820" rx="120" ry="28" fill="#fef08a" stroke="#ca8a04" stroke-width="2.4" filter="url(#shadow)"/>
+  <text x="610" y="820" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#713f12">Borrow Equipment</text>
+  <text x="610" y="835" text-anchor="middle" font-size="10" fill="#854d0e">(ส่งมอบและยืมอุปกรณ์ ณ วันนัดหมาย)</text>
+
+  <!-- Included Cases -->
+  <ellipse cx="1040" cy="780" rx="135" ry="24" fill="#ffffff" stroke="#ca8a04" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1040" y="780" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#713f12">Verify Reservation</text>
+  <text x="1040" y="793" text-anchor="middle" font-size="9.5" fill="#64748b">(ตรวจสอบรายการจองก่อนส่งมอบ) ✔</text>
+
+  <ellipse cx="1040" cy="855" rx="145" ry="24" fill="#ffffff" stroke="#ca8a04" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1040" y="851" text-anchor="middle" font-size="12" font-weight="bold" fill="#713f12">Record Borrowing</text>
+  <text x="1040" y="864" text-anchor="middle" font-size="12" font-weight="bold" fill="#713f12">Transaction</text>
+  <text x="1040" y="875" text-anchor="middle" font-size="9" fill="#64748b">(บันทึกรายการยืมและกำหนดวันคืน) ✔</text>
+
+  <!-- Include Arrows from Borrow Equipment -->
+  <line x1="720" y1="808" x2="905" y2="788" stroke="#ca8a04" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-inc-gold)"/>
+  <rect x="785" y="788" width="75" height="16" rx="3" fill="#ffffff" stroke="#ca8a04" stroke-width="0.8"/>
+  <text x="822" y="800" text-anchor="middle" font-size="9" font-weight="bold" fill="#ca8a04">&lt;&lt;include&gt;&gt;</text>
+
+  <line x1="720" y1="832" x2="895" y2="848" stroke="#ca8a04" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-inc-gold)"/>
+  <rect x="785" y="833" width="75" height="16" rx="3" fill="#ffffff" stroke="#ca8a04" stroke-width="0.8"/>
+  <text x="822" y="845" text-anchor="middle" font-size="9" font-weight="bold" fill="#ca8a04">&lt;&lt;include&gt;&gt;</text>
+
+
+  <!-- ================= GROUP 4: RETURN OPERATIONS ================= -->
+  <rect x="400" y="920" width="1120" height="245" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="415" y="928" width="480" height="22" rx="4" fill="#bbf7d0"/>
+  <text x="425" y="943" font-size="11.5" font-weight="bold" fill="#15803d">🔄 หมวดที่ 4: กระบวนการส่งคืน ตรวจสภาพ และบันทึกค่าปรับ (Return Operations)</text>
+
+  <!-- Base Case: Return Equipment -->
+  <ellipse cx="610" cy="1040" rx="120" ry="28" fill="#bbf7d0" stroke="#16a34a" stroke-width="2.4" filter="url(#shadow)"/>
+  <text x="610" y="1040" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#14532d">Return Equipment</text>
+  <text x="610" y="1055" text-anchor="middle" font-size="10" fill="#15803d">(ส่งคืนและรับคืนอุปกรณ์ - Base Case)</text>
 
   <!-- Included: Check Equipment Condition -->
-  <ellipse cx="1095" cy="800" rx="100" ry="24" fill="#ffffff" stroke="#fbc02d" stroke-width="1.8"/>
-  <text x="1095" y="796" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#f57f17">Check Equipment</text>
-  <text x="1095" y="809" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#f57f17">Condition</text>
-  <text x="1095" y="822" text-anchor="middle" font-size="8.5" fill="#546e7a">(ตรวจสภาพอุปกรณ์) ✔</text>
+  <ellipse cx="1040" cy="975" rx="140" ry="24" fill="#ffffff" stroke="#16a34a" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1040" y="975" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Check Equipment Condition</text>
+  <text x="1040" y="988" text-anchor="middle" font-size="9.5" fill="#64748b">(ตรวจสอบสภาพอุปกรณ์เมื่อรับคืน) ✔</text>
 
-  <line x1="1135" y1="725" x2="1110" y2="776" stroke="#fbc02d" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-inc)"/>
-  <rect x="1085" y="740" width="75" height="18" rx="3" fill="#ffffff" stroke="#fbc02d" stroke-width="1"/>
-  <text x="1122" y="753" text-anchor="middle" font-size="10" font-weight="bold" fill="#f57f17">&lt;&lt;include&gt;&gt;</text>
+  <!-- Extension 1: Calculate Penalty -->
+  <ellipse cx="1040" cy="1040" rx="130" ry="24" fill="#fff7ed" stroke="#ea580c" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1040" y="1040" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412">Calculate Penalty</text>
+  <text x="1040" y="1053" text-anchor="middle" font-size="9.5" fill="#64748b">(คำนวณค่าปรับกรณีคืนล่าช้า)</text>
 
-  <!-- Extend 1: Calculate Penalty -->
-  <ellipse cx="1335" cy="740" rx="100" ry="23" fill="#ffffff" stroke="#e65100" stroke-width="1.8"/>
-  <text x="1335" y="740" text-anchor="middle" font-size="12" font-weight="bold" fill="#bf360c">Calculate Penalty</text>
-  <text x="1335" y="753" text-anchor="middle" font-size="9" fill="#546e7a">(คำนวณค่าปรับเกินเวลา)</text>
+  <!-- Extension 2: Report Equipment Damage -->
+  <ellipse cx="1040" cy="1105" rx="145" ry="24" fill="#ffffff" stroke="#ea580c" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="1040" y="1105" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412">Report Equipment Damage</text>
+  <text x="1040" y="1118" text-anchor="middle" font-size="9.5" fill="#64748b">(รายงานและบันทึกความเสียหาย)</text>
 
-  <!-- Extend 2: Report Equipment Damage -->
-  <ellipse cx="1335" cy="815" rx="110" ry="23" fill="#ffffff" stroke="#e65100" stroke-width="1.8"/>
-  <text x="1335" y="827" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#bf360c">Report Equipment Damage</text>
-  <text x="1335" y="840" text-anchor="middle" font-size="8.5" fill="#546e7a">(รายงานความเสียหายอุปกรณ์)</text>
+  <!-- Arrows in Group 4 -->
+  <line x1="720" y1="1025" x2="900" y2="988" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-inc-green)"/>
+  <rect x="785" y="995" width="75" height="16" rx="3" fill="#ffffff" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="822" y="1007" text-anchor="middle" font-size="9" font-weight="bold" fill="#16a34a">&lt;&lt;include&gt;&gt;</text>
 
-  <!-- Extend arrows to Return Equipment -->
-  <line x1="1240" y1="730" x2="1200" y2="715" stroke="#e65100" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-ext)"/>
-  <rect x="1185" y="720" width="75" height="24" rx="3" fill="#ffffff" stroke="#e65100" stroke-width="0.8"/>
-  <text x="1222" y="731" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#e65100">&lt;&lt;extend&gt;&gt;</text>
-  <text x="1222" y="742" text-anchor="middle" font-size="7.5" fill="#bf360c">[คืนล่าช้า]</text>
+  <line x1="910" y1="1040" x2="730" y2="1040" stroke="#ea580c" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-ext)"/>
+  <rect x="775" y="1027" width="95" height="24" rx="3" fill="#ffffff" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="822" y="1038" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ea580c">&lt;&lt;extend&gt;&gt;</text>
+  <text x="822" y="1048" text-anchor="middle" font-size="7.5" fill="#9a3412">[คืนล่าช้า / Overdue]</text>
 
-  <line x1="1240" y1="800" x2="1190" y2="725" stroke="#e65100" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-ext)"/>
-  <rect x="1200" y="760" width="75" height="24" rx="3" fill="#ffffff" stroke="#e65100" stroke-width="0.8"/>
-  <text x="1237" y="771" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#e65100">&lt;&lt;extend&gt;&gt;</text>
-  <text x="1237" y="782" text-anchor="middle" font-size="7.5" fill="#bf360c">[ชำรุดเสียหาย]</text>
-
-
-  <!-- 5. MANAGEMENT & ADMINISTRATION -->
-  <rect x="520" y="925" width="930" height="300" rx="10" fill="#fbf8fd" stroke="#ce93d8" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <text x="540" y="948" font-size="13" font-weight="bold" fill="#6a1b9a">🛠️ การบริหารจัดการระบบ (Management &amp; Administration)</text>
-
-  <!-- Approve Special Equipment Request -->
-  <ellipse cx="765" cy="995" rx="180" ry="26" fill="#fff3e0" stroke="#e65100" stroke-width="2.2"/>
-  <text x="765" y="995" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#bf360c">Approve Special Equipment Request</text>
-  <text x="765" y="1010" text-anchor="middle" font-size="9.5" fill="#e65100">(อนุมัติคำขอใช้อุปกรณ์พิเศษ)</text>
-
-  <!-- Manage Equipment -->
-  <ellipse cx="1215" cy="995" rx="165" ry="26" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2"/>
-  <text x="1215" y="995" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#4a148c">Manage Equipment</text>
-  <text x="1215" y="1010" text-anchor="middle" font-size="9.5" fill="#6a1b9a">(จัดการข้อมูลอุปกรณ์: เพิ่ม/แก้ไข/ปรับสถานะ)</text>
-
-  <!-- Manage User Account -->
-  <ellipse cx="765" cy="1115" rx="155" ry="25" fill="#ede7f6" stroke="#5e35b1" stroke-width="2"/>
-  <text x="765" y="1116" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#311b92">Manage User Account</text>
-  <text x="765" y="1130" text-anchor="middle" font-size="9.5" fill="#5e35b1">(จัดการบัญชีผู้ใช้งาน)</text>
-
-  <!-- Manage User Permission -->
-  <ellipse cx="1215" cy="1115" rx="165" ry="25" fill="#ede7f6" stroke="#5e35b1" stroke-width="2"/>
-  <text x="1215" y="1116" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#311b92">Manage User Permission</text>
-  <text x="1215" y="1130" text-anchor="middle" font-size="9.5" fill="#5e35b1">(จัดการสิทธิ์ผู้ใช้งาน)</text>
+  <line x1="895" y1="1100" x2="725" y2="1055" stroke="#ea580c" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-ext)"/>
+  <rect x="765" y="1070" width="105" height="24" rx="3" fill="#ffffff" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="817" y="1081" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ea580c">&lt;&lt;extend&gt;&gt;</text>
+  <text x="817" y="1091" text-anchor="middle" font-size="7.5" fill="#9a3412">[ชำรุดเสียหาย / Damaged]</text>
 
 
-  <!-- CLEAN ASSOCIATIONS FROM MEMBER (Standing at 425, 310) -->
-  <line x1="450" y1="280" x2="895" y2="208" stroke="#1565c0" stroke-width="1.8"/>
-  <line x1="450" y1="300" x2="540" y2="335" stroke="#1565c0" stroke-width="1.8"/>
-  <line x1="450" y1="310" x2="860" y2="335" stroke="#1565c0" stroke-width="1.6"/>
-  <line x1="450" y1="320" x2="1180" y2="335" stroke="#1565c0" stroke-width="1.4"/>
-  <line x1="450" y1="330" x2="670" y2="455" stroke="#1565c0" stroke-width="2.2"/>
-  <line x1="450" y1="345" x2="625" y2="695" stroke="#1565c0" stroke-width="1.8"/>
-  <line x1="450" y1="360" x2="1040" y2="695" stroke="#1565c0" stroke-width="1.8"/>
+  <!-- ================= GROUP 5: MANAGEMENT & ADMINISTRATION ================= -->
+  <rect x="400" y="1180" width="1120" height="220" rx="10" fill="#faf5ff" stroke="#d8b4fe" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="415" y="1188" width="440" height="22" rx="4" fill="#f3e8ff"/>
+  <text x="425" y="1203" font-size="11.5" font-weight="bold" fill="#6b21a8">🛠️ หมวดที่ 5: การบริหารจัดการระบบ (Management &amp; Administration)</text>
+
+  <!-- Left Info Card in Group 5 -->
+  <rect x="430" y="1225" width="370" height="155" rx="8" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.2"/>
+  <text x="615" y="1250" text-anchor="middle" font-size="12" font-weight="bold" fill="#6b21a8">🛡️ การควบคุมสิทธิ์ (Role-Based Access Control)</text>
+  <text x="450" y="1278" font-size="11" font-weight="bold" fill="#ea580c">• Lab Officer:</text>
+  <text x="460" y="1296" font-size="10" fill="#475569">จัดการข้อมูลอุปกรณ์ในระบบห้องแล็บโดยตรง</text>
+  <text x="450" y="1326" font-size="11" font-weight="bold" fill="#7c3aed">• Administrator:</text>
+  <text x="460" y="1344" font-size="10" fill="#475569">จัดการบัญชีผู้ใช้ และกำหนดระดับสิทธิ์ทั้งหมด</text>
+  <text x="615" y="1368" text-anchor="middle" font-size="9" fill="#9333ea">*แยกหน้าที่ชัดเจนตามหลัก Security Architecture*</text>
+
+  <!-- Manage Equipment (Lab Officer) - Positioned Right Column -->
+  <ellipse cx="1120" cy="1235" rx="165" ry="24" fill="#f3e8ff" stroke="#9333ea" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="1235" text-anchor="middle" font-size="13" font-weight="bold" fill="#581c87">Manage Equipment</text>
+  <text x="1120" y="1248" text-anchor="middle" font-size="9.5" fill="#7e22ce">(จัดการข้อมูลอุปกรณ์: เพิ่ม/แก้ไข/ปรับปรุงสถานะ)</text>
+
+  <!-- Manage User Account (Admin) -->
+  <ellipse cx="1120" cy="1295" rx="155" ry="24" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="1295" text-anchor="middle" font-size="13" font-weight="bold" fill="#4c1d95">Manage User Account</text>
+  <text x="1120" y="1308" text-anchor="middle" font-size="9.5" fill="#6d28d9">(จัดการข้อมูลและบัญชีผู้ใช้งานระบบ)</text>
+
+  <!-- Manage User Permission (Admin) -->
+  <ellipse cx="1120" cy="1355" rx="160" ry="24" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="1355" text-anchor="middle" font-size="13" font-weight="bold" fill="#4c1d95">Manage User Permission</text>
+  <text x="1120" y="1368" text-anchor="middle" font-size="9.5" fill="#6d28d9">(จัดการและกำหนดสิทธิ์ผู้ใช้งานตามประเภท)</text>
 
 
-  <!-- RIGHT ACTORS -->
-  <!-- Lab Officer at (1620, 750) -->
-  <g transform="translate(1620, 750)">
-    <use href="#stickman-orange" x="0" y="0"/>
-    <text x="0" y="-48" text-anchor="middle" font-size="16" font-weight="bold" fill="#bf360c">Lab Officer</text>
-    <text x="0" y="-33" text-anchor="middle" font-size="12" fill="#e65100">(เจ้าหน้าที่ห้องปฏิบัติการ)</text>
+  <!-- ================= UNTANGLED FAN-OUT ASSOCIATION LINES FROM MEMBER ================= -->
+  <!-- Member is at (265, 315). All lines fan out unobstructed into the left anchor of each Base Use Case -->
+  <!-- Target 1: Login (500, 225) -->
+  <line x1="295" y1="290" x2="500" y2="225" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- Target 2: Search Equipment (490, 295) -->
+  <line x1="295" y1="305" x2="490" y2="295" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- Target 3: View Equipment Detail (485, 360) -->
+  <line x1="295" y1="320" x2="485" y2="360" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- Target 4: View Borrowing History (485, 425) -->
+  <line x1="295" y1="335" x2="485" y2="425" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- Target 5: Check Equipment Availability (Direct Association: สมาชิกสามารถตรวจความพร้อมได้โดยตรง) -->
+  <path d="M 295 345 L 360 482 L 950 482 L 950 516" fill="none" stroke="#0284c7" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Target 6: Reserve Equipment (485, 590) -->
+  <line x1="295" y1="355" x2="485" y2="590" stroke="#0284c7" stroke-width="2.2"/>
+
+  <!-- Target 7: Borrow Equipment (490, 820) -->
+  <line x1="285" y1="370" x2="490" y2="820" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- Target 8: Return Equipment (490, 1040) -->
+  <line x1="275" y1="385" x2="490" y2="1040" stroke="#0284c7" stroke-width="2"/>
+
+
+  <!-- ================= RIGHT ACTORS: LAB OFFICER & ADMINISTRATOR ================= -->
+  <!-- Lab Officer -->
+  <g transform="translate(1690, 755)">
+    <use href="#stickman-officer" x="0" y="0"/>
+    <text x="0" y="68" text-anchor="middle" font-size="16" font-weight="bold" fill="#ea580c">Lab Officer</text>
+    <text x="0" y="86" text-anchor="middle" font-size="12" fill="#9a3412">(เจ้าหน้าที่ห้องปฏิบัติการ)</text>
   </g>
 
-  <!-- Associations from Lab Officer -->
-  <line x1="1580" y1="730" x2="1275" y2="700" stroke="#e65100" stroke-width="2"/>
-  <line x1="1580" y1="745" x2="865" y2="705" stroke="#e65100" stroke-width="1.6"/>
-  <line x1="1580" y1="770" x2="945" y2="995" stroke="#e65100" stroke-width="2.2"/>
-  <line x1="1580" y1="785" x2="1375" y2="995" stroke="#e65100" stroke-width="2"/>
-
-
-  <!-- Administrator at (1620, 1115) -->
-  <g transform="translate(1620, 1115)">
-    <use href="#stickman-purple" x="0" y="0"/>
-    <text x="0" y="-48" text-anchor="middle" font-size="16" font-weight="bold" fill="#4a148c">Administrator</text>
-    <text x="0" y="-33" text-anchor="middle" font-size="12" fill="#6a1b9a">(ผู้ดูแลระบบ)</text>
+  <!-- Administrator -->
+  <g transform="translate(1690, 1325)">
+    <use href="#stickman-admin" x="0" y="0"/>
+    <text x="0" y="68" text-anchor="middle" font-size="16" font-weight="bold" fill="#7c3aed">Administrator</text>
+    <text x="0" y="86" text-anchor="middle" font-size="12" fill="#581c87">(ผู้ดูแลระบบ)</text>
   </g>
 
-  <!-- Associations from Administrator -->
-  <line x1="1580" y1="1110" x2="920" y2="1115" stroke="#5e35b1" stroke-width="2"/>
-  <line x1="1580" y1="1120" x2="1375" y2="1115" stroke="#5e35b1" stroke-width="2"/>
+
+  <!-- ================= UNTANGLED ASSOCIATION LINES FROM RIGHT ACTORS ================= -->
+  <!-- 1. Lab Officer -> Approve Special Equipment Request (direct horizontal line) -->
+  <line x1="1650" y1="735" x2="1500" y2="665" stroke="#ea580c" stroke-width="2"/>
+
+  <!-- 2. Lab Officer -> Borrow Equipment (Clean Orthogonal Route via Upper Corridor at y: 755) -->
+  <path d="M 1650 755 L 610 755 L 610 792" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 3. Lab Officer -> Return Equipment (Clean Orthogonal Route via Right Highway at x: 1545 to y: 945) -->
+  <path d="M 1650 780 L 1545 780 L 1545 945 L 610 945 L 610 1012" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 4. Lab Officer -> Manage Equipment (Clean Orthogonal Route via Right Highway at x: 1545 to y: 1235) -->
+  <path d="M 1650 805 L 1545 805 L 1545 1235 L 1285 1235" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 5. Administrator -> Manage User Account (Clean Direct Line) -->
+  <line x1="1650" y1="1310" x2="1275" y2="1295" stroke="#7c3aed" stroke-width="2"/>
+
+  <!-- 6. Administrator -> Manage User Permission (Clean Direct Line) -->
+  <line x1="1650" y1="1340" x2="1280" y2="1355" stroke="#7c3aed" stroke-width="2"/>
 
 
-  <!-- BOTTOM BANNER -->
-  <rect x="25" y="1265" width="1730" height="145" rx="12" fill="#ffffff" stroke="#3f51b5" stroke-width="1.8"/>
-  <rect x="25" y="1265" width="1730" height="34" rx="12" fill="#e8eaf6"/>
-  <text x="890" y="1288" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a237e">🎓 สรุปหลักการออกแบบตามมาตรฐานวิชาการ (Academic Standards &amp; Exam Checklist)</text>
-  
-  <text x="55" y="1322" font-size="12.5" fill="#263238">1. <tspan font-weight="bold" fill="#0d47a1">ห้ามใช้คำย่อ:</tspan> ใช้ Verb + Object สมบูรณ์ (Login with University SSO, Check Equipment Availability, Verify Member Permission, Request Special Approval)</text>
-  <text x="55" y="1348" font-size="12.5" fill="#263238">2. <tspan font-weight="bold" fill="#c2185b">ทิศทาง «include»:</tspan> พุ่งจาก Base Case ➔ Included Case เสมอ (Reserve Equipment ➔ Check &amp; Verify) เพราะเป็นขั้นตอนที่ระบบ &quot;ต้องทำเสมอ 100%&quot;</text>
-  <text x="55" y="1374" font-size="12.5" fill="#263238">3. <tspan font-weight="bold" fill="#e65100">ทิศทาง «extend»:</tspan> พุ่งจาก Extension Case ➔ Base Case เสมอ พร้อมระบุ Extension Point และ Guard Condition ใน [วงเล็บ] (เช่น [อุปกรณ์พิเศษ / มูลค่าสูง])</text>
-  <text x="940" y="1322" font-size="12.5" fill="#263238">4. <tspan font-weight="bold" fill="#1565c0">Actor Hierarchy:</tspan> System User เป็นแม่สูงสุด แตกเป็น Member (Student &amp; Staff) และ Staff (Lab Officer &amp; Admin) เพื่อความสมบูรณ์เชิงสถาปัตยกรรม</text>
-  <text x="940" y="1348" font-size="12.5" fill="#263238">5. <tspan font-weight="bold" fill="#2e7d32">System Boundary:</tspan> Use Case ทั้งหมด 15 ตัวบรรจุอยู่ภายใน System Boundary สี่เหลี่ยม ส่วน Actor มนุษย์ทั้ง 4 ตัวอยู่นอกขอบเขตทั้งหมด</text>
-  <text x="940" y="1374" font-size="12.5" fill="#d84315">6. <tspan font-weight="bold" fill="#d84315">Actor ที่รับคำขอพิเศษ:</tspan> Request Special Approval ขยายเข้า Reserve Equipment และถูกส่งให้ Lab Officer อนุมัติผ่าน Approve Special Request</text>
+  <!-- ================= BOTTOM BANNER: UML NOTATION & 5 GOLDEN RULES ================= -->
+  <rect x="35" y="1435" width="1850" height="105" rx="12" fill="#ffffff" stroke="#334155" stroke-width="1.8" filter="url(#shadow)"/>
+  <rect x="35" y="1435" width="1850" height="30" rx="12" fill="#f8fafc"/>
+  <text x="960" y="1456" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0f172a">📖 สรุป 4 สัญลักษณ์มาตรฐาน UML และ 5 กฎเหล็กตรวจแผนภาพ Use Case (ตามเกณฑ์ข้อสอบและอาจารย์ผู้สอน)</text>
+
+  <!-- Notation Columns -->
+  <!-- Column 1: Association -->
+  <g transform="translate(55, 1475)">
+    <line x1="0" y1="14" x2="45" y2="14" stroke="#0284c7" stroke-width="2.4"/>
+    <text x="55" y="12" font-size="12" font-weight="bold" fill="#0f172a">Association (เส้นทึบ)</text>
+    <text x="55" y="28" font-size="10" fill="#64748b">Actor มีส่วนร่วมทำกับ Use Case</text>
+    <text x="55" y="42" font-size="9.5" fill="#0284c7">✓ เส้นแผ่ออกไม่ตัดทับ Use Case อื่น</text>
+  </g>
+
+  <!-- Column 2: Include -->
+  <g transform="translate(400, 1475)">
+    <line x1="0" y1="14" x2="45" y2="14" stroke="#db2777" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-inc)"/>
+    <text x="55" y="12" font-size="12" font-weight="bold" fill="#db2777">&lt;&lt;include&gt;&gt; (บังคับทำเสมอ 100%)</text>
+    <text x="55" y="28" font-size="10" fill="#64748b">Base Case ➔ Included Case</text>
+    <text x="55" y="42" font-size="9.5" fill="#9d174d">ขาดขั้นตอนนี้ Base Case จะไม่สำเร็จ</text>
+  </g>
+
+  <!-- Column 3: Extend -->
+  <g transform="translate(800, 1475)">
+    <line x1="0" y1="14" x2="45" y2="14" stroke="#ea580c" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-ext)"/>
+    <text x="55" y="12" font-size="12" font-weight="bold" fill="#ea580c">&lt;&lt;extend&gt;&gt; (ทำเฉพาะมีเงื่อนไข)</text>
+    <text x="55" y="28" font-size="10" fill="#64748b">Extension Case ➔ Base Case</text>
+    <text x="55" y="42" font-size="9.5" fill="#9a3412">ระบุเงื่อนไข [condition] กำกับเสมอ</text>
+  </g>
+
+  <!-- Column 4: Generalization -->
+  <g transform="translate(1200, 1475)">
+    <line x1="0" y1="14" x2="45" y2="14" stroke="#0284c7" stroke-width="2" marker-end="url(#triangle-blue)"/>
+    <text x="55" y="12" font-size="12" font-weight="bold" fill="#0284c7">Generalization (สามเหลี่ยมโปร่ง △)</text>
+    <text x="55" y="28" font-size="10" fill="#64748b">Sub-Actor / Sub-Case ➔ Super</text>
+    <text x="55" y="42" font-size="9.5" fill="#0369a1">เป้าหมายร่วมกันแต่มีวิธีการเฉพาะทาง</text>
+  </g>
+
+  <!-- Column 5: Boundary & Naming Rule -->
+  <g transform="translate(1620, 1475)">
+    <rect x="0" y="5" width="28" height="18" rx="3" fill="#f1f5f9" stroke="#0f172a" stroke-width="1.5"/>
+    <text x="38" y="12" font-size="12" font-weight="bold" fill="#0f172a">ห้ามใช้คำย่อเด็ดขาด!</text>
+    <text x="38" y="28" font-size="10" fill="#64748b">ต้องใช้ Verb + Object ที่ชัดเจน</text>
+    <text x="38" y="42" font-size="9.5" fill="#16a34a">Actor อยู่นอกกรอบ / Use Case อยู่ในกรอบ</text>
+  </g>
 </svg>

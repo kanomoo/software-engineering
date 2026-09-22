@@ -25,11 +25,16 @@ aliases:
 
 ## 🧭 แผนภาพสรุปภาพรวม (Quick Reference Diagram)
 
+![UML Use Case Diagram](../../04_Work_and_Homework/Use_Case_Diagram_Workshop/lab_equipment_usecase_diagram.png)
+
 ```mermaid
 flowchart LR
     subgraph System ["System: University Laboratory Equipment Borrowing System"]
         direction TB
-        subgraph Auth ["Authentication"]
+
+        %% Authentication Group
+        subgraph Group1 ["1. Authentication (การเข้าสู่ระบบ)"]
+            direction TB
             LOGIN(["Login"])
             SSO(["Login with University SSO"])
             UP(["Login with Username and Password"])
@@ -37,11 +42,17 @@ flowchart LR
             UP -->|is-a| LOGIN
         end
 
-        SEARCH(["Search Equipment"])
-        VIEW(["View Equipment Detail"])
-        HIST(["View Borrowing History"])
+        %% Catalog & Inquiry Group
+        subgraph Group1_2 ["การสืบค้นและประวัติ (Catalog & Inquiry)"]
+            direction TB
+            SEARCH(["Search Equipment"])
+            VIEW(["View Equipment Detail"])
+            HIST(["View Borrowing History"])
+        end
 
-        subgraph Res ["Reservation Workflow"]
+        %% Reservation Workflow Group
+        subgraph Group2 ["2. Reservation Workflow (การจองอุปกรณ์)"]
+            direction TB
             RESERVE(["Reserve Equipment"])
             VER_PERM(["Verify Member Permission"])
             CHK_AVAIL(["Check Equipment Availability"])
@@ -52,25 +63,33 @@ flowchart LR
             REQ_SPEC -.->|"«extend» [Special Equipment]"| RESERVE
         end
 
-        subgraph Ops ["Borrow & Return Operations"]
+        %% Borrow Operations Group
+        subgraph Group3 ["3. Borrow Operations (การยืมอุปกรณ์)"]
+            direction TB
             BORROW(["Borrow Equipment"])
             VER_RES(["Verify Reservation"])
             REC_BORROW(["Record Borrowing Transaction"])
 
+            BORROW -.->|«include»| VER_RES
+            BORROW -.->|«include»| REC_BORROW
+        end
+
+        %% Return Operations Group
+        subgraph Group4 ["4. Return Operations (การคืนอุปกรณ์)"]
+            direction TB
             RETURN(["Return Equipment"])
             CHK_COND(["Check Equipment Condition"])
             CALC_PEN(["Calculate Penalty"])
             REP_DMG(["Report Equipment Damage"])
-
-            BORROW -.->|«include»| VER_RES
-            BORROW -.->|«include»| REC_BORROW
 
             RETURN -.->|«include»| CHK_COND
             CALC_PEN -.->|"«extend» [Overdue]"| RETURN
             REP_DMG -.->|"«extend» [Damaged]"| RETURN
         end
 
-        subgraph Mgmt ["Management"]
+        %% Management Group
+        subgraph Group5 ["5. Management & Administration (การบริหารจัดการ)"]
+            direction TB
             APPROVE(["Approve Special Equipment Request"])
             MAN_EQ(["Manage Equipment"])
             MAN_USER(["Manage User Account"])
@@ -78,38 +97,47 @@ flowchart LR
         end
     end
 
+    %% Actor Hierarchy (Left)
     STUDENT["🧑‍🎓 Student"] -->|is-a| MEMBER["👤 Member"]
     STAFF["👨‍🏫 Staff"] -->|is-a| MEMBER
 
+    %% Association Fan-out from Member
     MEMBER --- LOGIN
     MEMBER --- SEARCH
     MEMBER --- VIEW
+    MEMBER --- CHK_AVAIL
     MEMBER --- HIST
     MEMBER --- RESERVE
     MEMBER --- BORROW
     MEMBER --- RETURN
 
-    BORROW --- OFFICER["👨‍🔬 Lab Officer"]
+    %% Associations to Right Actors
+    APPROVE --- OFFICER["👨‍🔬 Lab Officer"]
+    BORROW --- OFFICER
     RETURN --- OFFICER
-    OFFICER --- APPROVE
-    OFFICER --- MAN_EQ
+    MAN_EQ --- OFFICER
 
     ADMIN["🛡️ Administrator"] --- MAN_USER
     ADMIN --- MAN_PERM
 
-    style System fill:#ffffff,stroke:#263238,stroke-width:2px
-    style MEMBER fill:#e3f2fd,stroke:#1565c0
-    style OFFICER fill:#fff3e0,stroke:#e65100
-    style ADMIN fill:#f3e5f5,stroke:#7b1fa2
+    style System fill:#ffffff,stroke:#0f172a,stroke-width:2.5px
+    style MEMBER fill:#e0f2fe,stroke:#0284c7,stroke-width:2.5px
+    style OFFICER fill:#fff7ed,stroke:#ea580c,stroke-width:2.5px
+    style ADMIN fill:#f5f3ff,stroke:#7c3aed,stroke-width:2.5px
+    style RESERVE fill:#fce7f3,stroke:#db2777,stroke-width:2px
+    style BORROW fill:#fef08a,stroke:#ca8a04,stroke-width:2px
+    style RETURN fill:#bbf7d0,stroke:#16a34a,stroke-width:2px
+    style LOGIN fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
 ```
 
 ---
 
 ## 🎯 สรุปจุดตัดคะแนนสำคัญ (Key Grading Criteria)
 
-1. **การจำแนกประเภท Actor (Generalization):**
-   - มี Super Actor: `Member`
-   - มี Sub-Actors: `Student` และ `Staff` ที่สืบทอดมาจาก `Member`
+1. **การจำแนกประเภท Actor (Actor Generalization & Separation):**
+   - มี Super Actor: `Member` (สมาชิกผู้ใช้บริการ)
+   - มี Sub-Actors: `Student` และ `Staff` ที่สืบทอดมาจาก `Member` ด้วยหัวลูกศรสามเหลี่ยมโปร่ง (`is-a △`)
+   - แยก **`Lab Officer`** (ผู้ปฏิบัติการห้องแล็บ) และ **`Administrator`** (ผู้ดูแลระบบ) ออกมาเป็นอิสระ ไม่ปะปนกับ `Member`
 2. **การระบุ Use Case แบบ Generalization:**
    - `Login` เป็นแม่ของ `Login with University SSO` และ `Login with Username and Password`
 3. **การใช้ Include อย่างแม่นยำ (สิ่งที่ต้องทำเสมอ):**
@@ -122,6 +150,9 @@ flowchart LR
    - `Report Equipment Damage` $\rightarrow$ `Return Equipment` `[ตรวจพบอุปกรณ์เสียหาย]`
 5. **การกำหนดขอบเขตระบบ (System Boundary):**
    - Use Cases ทุกตัวอยู่ในขอบเขต Actor ทุกตัวอยู่นอกขอบเขต
+6. **Dual-Role Use Case (`Check Equipment Availability`):**
+   - สมาชิกสามารถสืบค้นตรวจสถานะความพร้อมได้โดยตรง (`Member ── Check Equipment Availability`)
+   - และในขณะเดียวกันกระบวนการจองก็บังคับทำซ้ำ 100% ผ่าน `<<include>>` จาก `Reserve Equipment` เพื่อป้องกันการจองชนเวลา
 
 ---
 

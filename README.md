@@ -37,6 +37,7 @@ software-engineering/
 - `09_Ch6_Software_Testing.pdf` — สไลด์บทที่ 6 เรื่อง Software Testing (ฉบับเต็มของอาจารย์)
 - `10_Week9_Software_Testing_and_QA.pdf` — การทดสอบซอฟต์แวร์ (Black-Box, White-Box & TDD)
 - `11_Week10_Testing_Metrics_Cyclomatic.pdf` — Flow Graph, Basis Path และ Cyclomatic Complexity
+- `12_ActivityDiagram.pdf` — แผนภาพกิจกรรม (Activity Diagrams) ทฤษฎี Workflow, Forks/Joins และ Swimlanes
 
 ### 2. `02_Old_Slides_Textbook/` — สไลด์เดิม 10 บท, ตำรามาตรฐาน และสไลด์อ้างอิง (เรียงลำดับ 01-13)
 รวบรวมเอกสารอ้างอิงและตำราหลักมาตรฐานสากล (ดูรายละเอียดได้ใน [00_READING_ORDER_สารบัญสไลด์เดิม.md](file:///home/few/Projects/software-engineering/02_Old_Slides_Textbook/00_READING_ORDER_%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%AA%E0%B9%84%E0%B8%A5%E0%B8%94%E0%B9%8C%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%A1.md)):
@@ -67,7 +68,13 @@ software-engineering/
   - `Use-Case-Diagram.pdf` — ทฤษฎีและแนวคิดหลัก Use Case Modeling 32 หน้า
   - `Library_Borrow_Return_System_Case_Study.pdf` — กรณีศึกษา 1: ระบบยืม-คืนหนังสือห้องสมุด (5 หน้า)
   - `University_Course_Registration_System_Case_Study.pdf` — กรณีศึกษา 2: ระบบลงทะเบียนเรียนออนไลน์ (10 หน้า)
+  - `Lab_Equipment_Borrowing_System_Case_Study.pdf` *(หรือ `casestudy-usecase.pdf`)* — กรณีศึกษา 3: ระบบยืม-คืนอุปกรณ์แล็บ (2 หน้า)
+  - `Lab_Equipment_Borrowing_System_Solution.md` — เอกสารเฉลยละเอียดและแบบส่งงาน Case Study 3
   - `README.md` — แผนผังและคู่มือการศึกษาประจำโฟลเดอร์
+- 🌟 **`Activity diagram/`** — คลังสไลด์และการบ้าน Activity Diagram:
+  - `ActivityDiagram.pdf` — สไลด์บรรยายหลักของอาจารย์ 27 หน้า
+  - `Activity_Diagram_Solutions.md` — เฉลยการบ้าน Deposit, Withdraw, Transfer
+  - `README.md` — สารบัญและคำอธิบายโฟลเดอร์
 - โฟลเดอร์ Workshop ในชั้นเรียน 12 ชุด (ATM Use Case, Library System, Scrum, Sw Cost Estimation ฯลฯ)
 - `Homework_1_PizzaFriend_Requirements (1).pdf`
 - `Homework_2_EasyClinic_Stakeholders.pdf`
@@ -76,14 +83,16 @@ software-engineering/
 ### 5. `Wiki/` — Obsidian Mega-Wiki (จัดระเบียบ 4 โฟลเดอร์สอดคล้องกับสไลด์)
 คลังความรู้เชิงลึกระดับตำราสำหรับเปิดอ่านผ่าน **Obsidian** จัดโฟลเดอร์ล้อตามโฟลเดอร์หลัก:
 - 🌟 **`01_New_Wiki_68/`** — รวบรวมเนื้อหาปี 2568 ทั้งหมด:
-  - `00_New_Curriculum_68_Master_Wiki.md` — สรุปภาพรวมหลักสูตรใหม่สไลด์ 01-11 ทั้ง Midterm & Final
-  - `Lessons/` — บทเรียนแยกตามลำดับสไลด์ 01 ถึง 11 (รวมถึง `05_Use_Case_Diagrams.md`, `05_Case_Study_1_Library_System.md`, `05_Case_Study_2_University_Registration.md`)
+  - `00_New_Curriculum_68_Master_Wiki.md` — สรุปภาพรวมหลักสูตรใหม่สไลด์ 01-12 ทั้ง Midterm & Final
+  - `Lessons/` — บทเรียนแยกตามลำดับสไลด์ 01 ถึง 12 (รวมถึง `05_Use_Case_Diagrams.md`, `05_Case_Study_1_Library_System.md`, `05_Case_Study_2_University_Registration.md`, `05_Case_Study_3_Lab_Equipment_Borrowing.md`, และ `12_Activity_Diagrams.md`)
   - `Midterm_68/` — `SE-Midterm-Wiki-68.md` รวมสรุปเตรียมสอบกลางภาคปี 68
   - `Work_and_Practice_68/` — คู่มือโจทย์ `06_Practice_ReqEng_Guide.md` และ `Homework_68_Solutions.md`
 - 🏛️ **`02_Old_Wiki_Textbook/`** — รวบรวมเนื้อหาสไลด์เดิม 10 บท + สไลด์คลาสสิก 3 ชุด (`Lessons/01` ถึง `13`) และตำราหลัก
 - 📝 **`03_Exams_and_Guides/`** — คลังแนวข้อสอบจำลองชุด B, ชุด C และคู่มือเตรียมสอบทั่วไป
 - 🔧 **`04_Work_and_Workshops/`** — เวิร์กช็อปและกรณีศึกษาภาคปฏิบัติ:
   - `Library_System_Workshop.md` — กรณีศึกษาระบบยืม-คืนหนังสือห้องสมุด (KMUTNB Central Library)
+  - `Lab_Equipment_Borrowing_Workshop.md` — กรณีศึกษาระบบยืม–คืนอุปกรณ์ห้องปฏิบัติการ (Case Study 3)
+  - `Activity_Diagram_Workshop.md` — เวิร์กช็อปและโจทย์ ATM Activity Diagram
   - `ATM_and_Elevator_Workshop.md` & `Software_Cost_Estimation_Workshop.md`
 - 🌐 **`Software Engineering Index.md`** — Super Hub ดัชนีสารบัญรวม ลิงก์ตรงสู่ทุกโฟลเดอร์และบทเรียน
 - 📊 **`Progress Checklist.md`** — เช็คลิสต์ติดตามความก้าวหน้าการอ่าน

@@ -35,6 +35,7 @@
 | **09** | `09_Ch6_Software_Testing.pdf` | **สไลด์บทที่ 6: Testing (ฉบับเต็ม)** | ภาพรวมการทดสอบซอฟต์แวร์ของอาจารย์ (Verification & Validation, Test Case Design, Testing Strategies) |
 | **10** | `10_Week9_Software_Testing_and_QA.pdf` | **การทดสอบซอฟต์แวร์ (Week 9)** | ระดับการทดสอบ (Unit, Integration, System, Acceptance), TDD, Black-Box (Equivalence Partitioning, BVA) |
 | **11** | `11_Week10_Testing_Metrics_Cyclomatic.pdf` | **การวัดผลเชิงโครงสร้าง (Week 10)** | White-Box Testing, Flow Graph, Basis Path Testing, สูตร Cyclomatic Complexity $V(G) = E - N + 2$ |
+| **12** | `12_ActivityDiagram.pdf` | **แผนภาพกิจกรรม (Activity Diagrams)** | Behavioral Workflow Modeling, Notations (Start, End, State, Guards, Decision/Merge, Fork/Join), Login, Change Password, ATM Systems |
 
 ---
 
@@ -43,7 +44,8 @@
   1. `Use-Case-Diagram.pdf` — สไลด์บรรยายเจาะลึก 32 หน้า (Concept, Notations, include/extend/generalization, Use Case Specs, Testing Traceability & Hotel Case Study)
   2. `Library_Borrow_Return_System_Case_Study.pdf` — สไลด์ Workshop กรณีศึกษาระบบห้องสมุด (5 หน้า)
   3. `University_Course_Registration_System_Case_Study.pdf` — สไลด์ Workshop กรณีศึกษาระบบลงทะเบียนเรียนออนไลน์ (10 หน้า)
-  *(อ่านคู่มือวิเคราะห์เชิงลึกได้ใน Wiki: `Wiki/04_Work_and_Workshops/Use_Case_Diagram_Master_Guide.md`, `Library_System_Workshop.md` และ `University_Registration_System_Workshop.md`)*
+  4. `Lab_Equipment_Borrowing_System_Case_Study.pdf` *(หรือ `casestudy-usecase.pdf`)* — Workshop กรณีศึกษาระบบยืม–คืนอุปกรณ์แล็บ (2 หน้า)
+  *(อ่านคู่มือวิเคราะห์เชิงลึกได้ใน Wiki: `Wiki/01_New_Wiki_68/Lessons/05_Case_Study_3_Lab_Equipment_Borrowing.md`, `Library_System_Workshop.md` และ `University_Registration_System_Workshop.md`)*
 
 ## 📌 สไลด์ Use Case และหัวข้อเสริมในหมวด Old (Classic)
 - สไลด์ Use Case Modeling ดั้งเดิมของอาจารย์ถูกจัดเก็บไว้ที่:

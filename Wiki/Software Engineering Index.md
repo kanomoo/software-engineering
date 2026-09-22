@@ -72,7 +72,8 @@ flowchart TD
 | **การทดสอบซอฟต์แวร์ & QA** | `09_Ch6_Software_Testing.pdf`<br/>`10_Week9_Software_Testing_QA.pdf` | `09_Testing.pdf` | `Lessons/09_Ch6_Software_Testing.md`<br/>`Lessons/10_Week9_Software_Testing_QA.md` | `Lessons/09_Testing.md` | ⭐ สอบ Final |
 | **Cyclomatic Complexity** | ⭐ `11_Week10_Testing_Metrics.pdf` | *(ไม่มีในสไลด์เดิม)* | `Lessons/11_Week10_Testing_Metrics.md` | - | ⭐ ออกสอบ Final คำนวณ |
 | **DevOps & CI/CD** | *(สอนในโปรเจกต์)* | `10_DevOps_and_Code_Management.pdf` | - | `Lessons/10_DevOps_and_Code_Management.md` | 📚 อ้างอิง Git & CI/CD |
-| **Use Case Diagrams & Workshops** | 🌟 `Use-Case-Diagram.pdf`<br/>`Library_Borrow_Return_System_Case_Study.pdf`<br/>`University_Course_Registration_System_Case_Study.pdf`<br/>*(ใน `04_Work_and_Homework/Use_Case_Diagram_Workshop/`)* | `11_Classic_Slide_UseCase_Dia.pdf`<br/>`12_Classic_Slide_UseCase_Specs.pdf` | `Lessons/05_Use_Case_Diagrams.md`<br/>`Lessons/05_Case_Study_1_Library_System.md`<br/>`Lessons/05_Case_Study_2_University_Registration.md` | `Lessons/11_Classic_Slide_UseCase_Diagrams.md`<br/>`Lessons/12_Classic_Slide_UseCase_Textual_Specs.md` | 🛠️ ทำการบ้าน Workshop & สอบออกแบบระบบ |
+| **Use Case Diagrams & Workshops** | 🌟 `Use-Case-Diagram.pdf`<br/>`Library_Borrow_Return_System_Case_Study.pdf`<br/>`University_Course_Registration_System_Case_Study.pdf`<br/>`Lab_Equipment_Borrowing_System_Case_Study.pdf`<br/>*(ใน `04_Work_and_Homework/Use_Case_Diagram_Workshop/`)* | `11_Classic_Slide_UseCase_Dia.pdf`<br/>`12_Classic_Slide_UseCase_Specs.pdf` | `Lessons/05_Use_Case_Diagrams.md`<br/>`Lessons/05_Case_Study_1_Library_System.md`<br/>`Lessons/05_Case_Study_2_University_Registration.md`<br/>`Lessons/05_Case_Study_3_Lab_Equipment_Borrowing.md` | `Lessons/11_Classic_Slide_UseCase_Diagrams.md`<br/>`Lessons/12_Classic_Slide_UseCase_Textual_Specs.md` | 🛠️ ทำการบ้าน Workshop & สอบออกแบบระบบ |
+| **Activity Diagrams & Workflows** | 🌟 `12_ActivityDiagram.pdf`<br/>*(ใน `01_New_Slides_68/` และ `04_Work_and_Homework/Activity diagram/`)* | (กระจายในบทเดิม) | `Lessons/12_Activity_Diagrams.md` | - | 🛠️ ทำการบ้าน ATM & สอบออกแบบ Process |
 | **Cost Estimation (COCOMO/FPA)** | (ใช้ใน Workshop) | `13_Classic_Slide_Cost_Estimation.pdf` | - | `Lessons/13_Classic_Slide_Cost_Estimation.md` | 🛠️ ทำการบ้าน Sw Cost |
 
 ---
@@ -89,14 +90,16 @@ flowchart TD
 2. **[[01_New_Wiki_68/Lessons/02_Ch2_SW_Processes|02_Ch2_SW_Processes.md]]** — สอดคล้องกับ `02_Ch2_SW_Processes.pdf` และ `03_Processes_Supp` (Waterfall, Incremental, Reuse, CMMI 5 ระดับ)
 3. **[[01_New_Wiki_68/Lessons/04_Ch4_Requirements_Eng|04_Ch4_Requirements_Eng.md]]** — สอดคล้องกับ `04_Ch4` และ `05_Cases` (User vs System Req, FR/NFR, shall vs should, VCCRV)
 4. 🌟 **[[01_New_Wiki_68/Lessons/05_Use_Case_Diagrams|05_Use_Case_Diagrams.md]]** — สอดคล้องกับ `Use-Case-Diagram.pdf` (Lecture 4: ทฤษฎี Use Case Modeling, Notations, include/extend/generalization, Use Case Specs, Testing Traceability & Checklist)
-   - 📚 Case Study 1: **[[01_New_Wiki_68/Lessons/05_Case_Study_1_Library_System|05_Case_Study_1_Library_System.md]]** (ระบบยืม-คืนหนังสือห้องสมุด)
-   - 🎓 Case Study 2: **[[01_New_Wiki_68/Lessons/05_Case_Study_2_University_Registration|05_Case_Study_2_University_Registration.md]]** (ระบบลงทะเบียนเรียนมหาวิทยาลัย)
-   - 🎙️ สรุปเทปบรรยายสดในห้องเรียน (15 ก.ย. 2569): **[[01_New_Wiki_68/Lessons/In-Class Lecture - Use Case Diagram & System Analysis|In-Class Lecture - Use Case Diagram & System Analysis.md]]** (ปรัชญา User Goal, Stickman Role, include vs extend, เฉลยสดระบบห้องสมุด และประชาสัมพันธ์ IAESTE)
+    - 📚 Case Study 1: **[[01_New_Wiki_68/Lessons/05_Case_Study_1_Library_System|05_Case_Study_1_Library_System.md]]** (ระบบยืม-คืนหนังสือห้องสมุด)
+    - 🎓 Case Study 2: **[[01_New_Wiki_68/Lessons/05_Case_Study_2_University_Registration|05_Case_Study_2_University_Registration.md]]** (ระบบลงทะเบียนเรียนมหาวิทยาลัย)
+    - 🔬 Case Study 3: **[[01_New_Wiki_68/Lessons/05_Case_Study_3_Lab_Equipment_Borrowing|05_Case_Study_3_Lab_Equipment_Borrowing.md]]** (ระบบยืม–คืนอุปกรณ์แล็บมหาวิทยาลัย)
+    - 🎙️ สรุปเทปบรรยายสดในห้องเรียน (15 ก.ย. 2569): **[[01_New_Wiki_68/Lessons/In-Class Lecture - Use Case Diagram & System Analysis|In-Class Lecture - Use Case Diagram & System Analysis.md]]** (ปรัชญา User Goal, Stickman Role, include vs extend, เฉลยสดระบบห้องสมุด และประชาสัมพันธ์ IAESTE)
 5. **[[01_New_Wiki_68/Lessons/07_Agile_and_Scrum|07_Agile_and_Scrum.md]]** — สอดคล้องกับ `07_Agile_and_Scrum_Framework.pdf` (Agile Manifesto, Scrum Roles, Events, Artifacts, User Stories)
 6. **[[01_New_Wiki_68/Lessons/08_Scrum_Burndown_Chart|08_Scrum_Burndown_Chart.md]]** — สอดคล้องกับ `08_Scrum_Burndown_Chart.pdf` (การอ่านกราฟ Actual vs Ideal, Scope Creep, การคิด Velocity)
 7. **[[01_New_Wiki_68/Lessons/09_Ch6_Software_Testing|09_Ch6_Software_Testing.md]]** — สอดคล้องกับ `09_Ch6_Software_Testing.pdf` (ภาพรวมการทดสอบซอฟต์แวร์ฉบับอาจารย์)
 8. **[[01_New_Wiki_68/Lessons/10_Week9_Software_Testing_QA|10_Week9_Software_Testing_QA.md]]** — สอดคล้องกับ `10_Week9_Software_Testing_and_QA.pdf` (V&V, 4 ระดับการทดสอบ, TDD, Equivalence Partitioning & BVA)
 9. **[[01_New_Wiki_68/Lessons/11_Week10_Testing_Metrics|11_Week10_Testing_Metrics.md]]** — สอดคล้องกับ `11_Week10_Testing_Metrics_Cyclomatic.pdf` (Control Flow Graph, Basis Path, สูตร $V(G)=E-N+2=P+1$)
+10. 🔄 **[[01_New_Wiki_68/Lessons/12_Activity_Diagrams|12_Activity_Diagrams.md]]** — สอดคล้องกับ `12_ActivityDiagram.pdf` (แผนภาพกิจกรรม Notations, Guards, Decisions, Forks/Joins, Swimlanes, Login/ATM Workflows)
 
 ### 🎯 หมวดข้อสอบกลางภาคปี 68 (Midterm_68/):
 * **[[01_New_Wiki_68/Midterm_68/SE-Midterm-Wiki-68|SE-Midterm-Wiki-68.md]]** — สรุปเตรียมสอบ Midterm 68 ครบทุกบทและบันทึกเฉลยข้อสอบ
@@ -143,7 +146,10 @@ flowchart TD
 * 📘 **[[01_New_Wiki_68/Lessons/05_Use_Case_Diagrams|05_Use_Case_Diagrams.md]]** — สรุปทฤษฎี Use Case Modeling (Lecture 4 ในหมวด Lessons)
   - 📚 Case Study 1: **[[01_New_Wiki_68/Lessons/05_Case_Study_1_Library_System|05_Case_Study_1_Library_System.md]]** (ระบบยืม-คืนหนังสือห้องสมุด)
   - 🎓 Case Study 2: **[[01_New_Wiki_68/Lessons/05_Case_Study_2_University_Registration|05_Case_Study_2_University_Registration.md]]** (ระบบลงทะเบียนเรียนมหาวิทยาลัย)
+  - 🔬 Case Study 3: **[[01_New_Wiki_68/Lessons/05_Case_Study_3_Lab_Equipment_Borrowing|05_Case_Study_3_Lab_Equipment_Borrowing.md]]** (ระบบยืม–คืนอุปกรณ์แล็บมหาวิทยาลัย)
 * 🏢 **[[04_Work_and_Workshops/ATM_and_Elevator_Workshop|ATM_and_Elevator_Workshop.md]]** — เวิร์กช็อป Use Case ระบบตู้ ATM และระบบควบคุมลิฟต์
 * 📚 **[[04_Work_and_Workshops/Library_System_Workshop|Library_System_Workshop.md]]** — เวิร์กช็อป Use Case ระบบห้องสมุดกลาง มจพ. (การบ้านในชั้นเรียน)
+* 🔬 **[[04_Work_and_Workshops/Lab_Equipment_Borrowing_Workshop|Lab_Equipment_Borrowing_Workshop.md]]** — เวิร์กช็อปและเฉลยกรณีศึกษาระบบยืม-คืนอุปกรณ์แล็บ (Case Study 3)
+* 🔄 **[[04_Work_and_Workshops/Activity_Diagram_Workshop|Activity_Diagram_Workshop.md]]** — เวิร์กช็อปและการบ้านแผนภาพกิจกรรม ATM (Deposit, WD, Transfer)
 * 📊 **[[04_Work_and_Workshops/Software_Cost_Estimation_Workshop|Software_Cost_Estimation_Workshop.md]]** — เวิร์กช็อปคำนวณ Sw Cost Estimation (COCOMO & Function Point Analysis)
 

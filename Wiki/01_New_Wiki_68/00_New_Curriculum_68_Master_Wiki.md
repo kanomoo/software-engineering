@@ -32,10 +32,11 @@ flowchart TD
         M5["05 Scrum Burndown Chart & Velocity<br/>(สไลด์ 08_Burndown)"]
     end
 
-    subgraph FINAL ["🎯 ภาคปลายภาค (Final Exams)"]
+    subgraph FINAL ["🎯 ภาคปลายภาค (Final Exams & Modeling)"]
         F1["06 Software Testing & QA Fundamentals<br/>(สไลด์ 09_Ch6 & 10_Week9)"]
         F2["07 Black-Box Testing: Equivalence & BVA<br/>(สไลด์ 10_Week9)"]
         F3["08 White-Box Testing & Cyclomatic Complexity<br/>(สไลด์ 11_Week10)"]
+        F4["09 Activity Diagrams & Workflow Modeling<br/>(สไลด์ 12_ActivityDiagram)"]
     end
 
     ROOT --> MIDTERM
@@ -57,7 +58,8 @@ flowchart TD
 5. [หมวดที่ 5: การวิเคราะห์กราฟ Burndown และการวัดความเร็วทีม (Burndown Chart & Velocity)](#หมวดที่-5-การวิเคราะห์กราฟ-burndown-และการวัดความเร็วทีม)
 6. [หมวดที่ 6: การทดสอบซอฟต์แวร์และการประกันคุณภาพ (Software Testing & QA)](#หมวดที่-6-การทดสอบซอฟต์แวร์และการประกันคุณภาพ)
 7. [หมวดที่ 7: การทดสอบกล่องขาว และ Cyclomatic Complexity Metrics (White-Box Testing)](#หมวดที่-7-การทดสอบกล่องขาว-และ-cyclomatic-complexity-metrics)
-8. [ตารางสรุปสูตรและคีย์เวิร์ดเตรียมสอบ (Quick Exam Cheatsheet)](#ตารางสรุปสูตรและคีย์เวิร์ดเตรียมสอบ)
+8. [หมวดที่ 8: แผนภาพกิจกรรม และการจำลองกระบวนการทำงาน (Activity Diagrams)](#หมวดที่-8-แผนภาพกิจกรรม-และการจำลองกระบวนการทำงาน-activity-diagrams)
+9. [ตารางสรุปสูตรและคีย์เวิร์ดเตรียมสอบ (Quick Exam Cheatsheet)](#ตารางสรุปสูตรและคีย์เวิร์ดเตรียมสอบ)
 
 ---
 
@@ -340,6 +342,23 @@ $$V(G) = \text{จำนวนพื้นที่ปิดและเปิ�
 
 ---
 
+# หมวดที่ 8: แผนภาพกิจกรรม และการจำลองกระบวนการทำงาน (Activity Diagrams)
+
+*📄 แหล่งอ้างอิง: `12_ActivityDiagram.pdf`* (ดูบทเรียนเต็ม: [[01_New_Wiki_68/Lessons/12_Activity_Diagrams|12_Activity_Diagrams.md]])
+
+### 8.1 หัวใจสำคัญของ Activity Diagram ใน UML
+* จำลอง **Procedural Logic, Business Workflow, และ Use Case Realization**
+* แสดงลำดับการทำงาน (Action State), การตัดสินใจทางเลือก (Decision / Merge), และการประมวลผลแบบคู่ขนาน (Fork / Join Concurrency)
+* **สัญลักษณ์หลัก:**
+  * **Initial Node:** วงกลมทึบ (Start)
+  * **Action State:** สี่เหลี่ยมขอบมน (หรืองานที่กำลังทำ)
+  * **Decision / Merge:** สี่เหลี่ยมข้าวหลามตัด (ห้ามใส่ข้อความข้างใน ให้ใส่ Guard `[...]` บนลูกศร)
+  * **Fork / Join:** แถบเส้นทึบหนา (Fork = 1 เข้า N ออก; Join = N เข้า 1 ออก เพื่อซิงโครไนซ์)
+  * **Activity Final:** วงกลมทึบมีวงแหวนล้อมรอบ (End)
+  * **Swimlanes / Partitions:** คอลัมน์แบ่งขอบเขตความรับผิดชอบตามแผนกหรือระบบย่อย
+
+---
+
 # ตารางสรุปสูตรและคีย์เวิร์ดเตรียมสอบ
 
 | หัวข้อ | สูตร / คีย์เวิร์ดสำคัญ | ความหมายในการประยุกต์ |
@@ -351,3 +370,6 @@ $$V(G) = \text{จำนวนพื้นที่ปิดและเปิ�
 | **ความเร็วทีม** | $\sum \text{Story Points of Done Stories}$ | Team Velocity ใน 1 Sprint |
 | **ขอบเขตค่าทดสอบ** | $\text{Min}-1, \text{Min}, \text{Min}+1, \text{Max}-1, \text{Max}, \text{Max}+1$ | Boundary Value Analysis |
 | **ความซับซ้อนของโค้ด** | $V(G) = E - N + 2 = P + 1 = R$ | McCabe's Cyclomatic Complexity |
+| **Use Case Relations** | `<<include>>` (ต้องทำเสมอ), `<<extend>>` (ทำตามเงื่อนไข [Guard]) | ความสัมพันธ์ใน Use Case Diagram |
+| **Activity Diagram** | Initial, Action, Guard `[...]`, Decision/Merge, Fork/Join, Swimlanes | แผนภาพพฤติกรรมจำลอง Workflow |
+

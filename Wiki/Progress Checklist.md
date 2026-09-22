@@ -129,7 +129,23 @@ type: checklist
   - [x] วิเคราะห์ `<<include>>` (Check Prerequisite, Check Seat Availability)
   - [x] วิเคราะห์ `<<extend>>` (Request Seat Override [Course Full], Request Prerequisite Override)
   - [x] วิเคราะห์ Use Case Generalization (`Make Payment`, `Manage Course`)
-  - [x] แผนภาพ Use Case Diagram สมบูรณ์ & Key Takeaways 5 ขั้นตอน
+- [x] **[[05_Case_Study_3_Lab_Equipment_Borrowing]]** — กรณีศึกษา 3: ระบบยืม–คืนอุปกรณ์ห้องปฏิบัติการมหาวิทยาลัย
+  - [x] Actor Generalization: `Student`, `Staff` $\rightarrow$ `Member`
+  - [x] Operational & Admin Actors: `Lab Officer`, `Administrator`
+  - [x] Use Case Generalization: `Login with University SSO` & `Login with Username and Password` $\rightarrow$ `Login`
+  - [x] `<<include>>`: Reserve $\rightarrow$ Verify Perm, Check Avail / Borrow $\rightarrow$ Verify Res, Record Tx / Return $\rightarrow$ Check Condition
+  - [x] `<<extend>>`: Special Approval [Special Equip], Calculate Penalty [Overdue], Damage Report [Damaged]
+  - [x] แผนภาพ Use Case Diagram สมบูรณ์ & สเปกข้อความ UC-02, UC-03, UC-04
+  - [x] เอกสารเฉลยส่งงาน: `04_Work_and_Homework/Use_Case_Diagram_Workshop/Lab_Equipment_Borrowing_System_Solution.md`
+- [x] **[[12_Activity_Diagrams|Lecture 12 - Activity Diagrams & Workflows]]** — แผนภาพกิจกรรมและการจำลองโฟลว์การทำงาน
+  - [x] นิยาม Procedural Logic, Business Workflow & Use Case Realization
+  - [x] สัญลักษณ์มาตรฐาน: Initial Node, Action State, Guard Condition, Decision/Merge, Fork/Join, Activity Final, Swimlanes
+  - [x] ตัวอย่างในสไลด์: Print Customers (Disk Full), Login Workflow (First Login), Change Password
+  - [x] เฉลยการบ้าน ATM: Deposit Activity Diagram, Withdrawal Activity Diagram, Transfer Activity Diagram
+  - [x] การประยุกต์ใช้กับระบบยืม–คืนอุปกรณ์ห้องแล็บ (Swimlanes: Member, Core System, Lab Officer)
 - [x] **[[04_Work_and_Workshops/ATM_and_Elevator_Workshop|ATM and Elevator Workshop]]** — เวิร์กช็อป Use Case ระบบตู้ ATM และระบบควบคุมลิฟต์
+- [x] **[[04_Work_and_Workshops/Activity_Diagram_Workshop|Activity Diagram Workshop]]** — เวิร์กช็อปและการบ้าน Activity Diagram สำหรับ ATM
+- [x] **[[04_Work_and_Workshops/Lab_Equipment_Borrowing_Workshop|Lab Equipment Borrowing Workshop]]** — เวิร์กช็อปกรณีศึกษาระบบยืม–คืนอุปกรณ์แล็บ
 - [x] **[[04_Work_and_Workshops/Software_Cost_Estimation_Workshop|Software Cost Estimation Workshop]]** — เวิร์กช็อปคำนวณ Sw Cost Estimation (COCOMO & FPA)
+
 

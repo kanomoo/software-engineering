@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/01_New_Wiki_68/Lessons/05_Use_Case_Diagrams.md",
+                "file": "04_Work_and_Homework/Use_Case_Diagram_Workshop/Lab_Equipment_Borrowing_System_Solution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05_Use_Case_Diagrams"
+              "title": "Lab_Equipment_Borrowing_System_Solution"
             }
           }
         ]
@@ -190,8 +190,22 @@
   },
   "active": "2b4e49dcf07ef492",
   "lastOpenFiles": [
-    "Wiki/01_New_Wiki_68/Lessons/05_Case_Study_2_University_Registration.md",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/Lab_Equipment_Borrowing_System_Case_Study.pdf",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/casestudy-usecase.pdf",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/Use-Case-Diagram.pdf",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/University_Course_Registration_System_Case_Study.pdf",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/Library_Borrow_Return_System_Case_Study.pdf",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/lab_equipment_usecase_diagram.png",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/lab_equipment_usecase_diagram.svg",
+    "04_Work_and_Homework/Use_Case_Diagram_Workshop/Lab_Equipment_Borrowing_System_Solution.md",
+    "Wiki/04_Work_and_Workshops/Lab_Equipment_Borrowing_Workshop.md",
+    "Wiki/04_Work_and_Workshops/ATM_and_Elevator_Workshop.md",
+    "Wiki/04_Work_and_Workshops/Library_System_Workshop.md",
+    "Wiki/04_Work_and_Workshops/Activity_Diagram_Workshop.md",
+    "Wiki/01_New_Wiki_68/Lessons/lab_equipment_usecase_diagram.png",
+    "Wiki/01_New_Wiki_68/Lessons/lab_equipment_usecase_diagram.svg",
     "Wiki/01_New_Wiki_68/Lessons/05_Use_Case_Diagrams.md",
+    "Wiki/01_New_Wiki_68/Lessons/05_Case_Study_2_University_Registration.md",
     "Wiki/01_New_Wiki_68/Lessons/05_Case_Study_1_Library_System.md",
     "Wiki/01_New_Wiki_68/Lessons/07_Agile_and_Scrum.md",
     "Wiki/01_New_Wiki_68/Midterm_68/SE-Midterm-Wiki-68.md",
@@ -205,12 +219,7 @@
     "04_Work_and_Homework/Use_Case_Diagram_Workshop/README.md",
     "04_Work_and_Homework/Homework usecase diagram/Screenshot 2026-02-15 182351.png",
     "04_Work_and_Homework/Homework usecase diagram/6706021612615.pdf",
-    "04_Work_and_Homework/Homework usecase diagram",
-    "04_Work_and_Homework/Use_Case_Diagram_Workshop/University_Course_Registration_System_Case_Study.pdf",
-    "04_Work_and_Homework/Use_Case_Diagram_Workshop/Library_Borrow_Return_System_Case_Study.pdf",
-    "04_Work_and_Homework/Use_Case_Diagram_Workshop/Use-Case-Diagram.pdf",
     "Wiki/01_New_Wiki_68/00_New_Curriculum_68_Master_Wiki.md",
-    "Wiki/04_Work_and_Workshops/ATM_and_Elevator_Workshop.md",
     "New/SE-Midterm-Wiki-68.md",
     "New/Practice-ReqEng-Methodology-Guide.md",
     "Wiki/Practice-ReqEng-Methodology-Guide.md",
@@ -221,10 +230,6 @@
     "Wiki/Lecture 4 - Use Case Modeling & Textual Specifications.md",
     "Wiki/Lecture 8 - Security, Privacy & Reliable Programming.md",
     "Wiki/Lecture 9 - Software Testing & Quality Assurance.md",
-    "Wiki/Lecture 11 - Software Cost Estimation & Metrics.md",
-    "Wiki/Progress Checklist.md",
-    "Wiki/Software Engineering Index.md",
-    "Wiki/Lecture 2 - Software Processes & Process Improvement.md",
-    "Wiki/Lecture 3 - Requirements Engineering, Elicitation & Case Studies.md"
+    "Wiki/Lecture 11 - Software Cost Estimation & Metrics.md"
   ]
 }

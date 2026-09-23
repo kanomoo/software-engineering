@@ -97,5 +97,10 @@ software-engineering/
 - 🌐 **`Software Engineering Index.md`** — Super Hub ดัชนีสารบัญรวม ลิงก์ตรงสู่ทุกโฟลเดอร์และบทเรียน
 - 📊 **`Progress Checklist.md`** — เช็คลิสต์ติดตามความก้าวหน้าการอ่าน
 
+### 6. `Transcripts/` & Voice Data Integration
+- 🎙️ [**VOICE_DATA_INTEGRATION_ARCHITECTURE.md**](file:///C:/Project/software-engineering/VOICE_DATA_INTEGRATION_ARCHITECTURE.md) — คู่มือสถาปัตยกรรมบูรณาการข้อมูลเสียงและการแปลงสู่ Use Case / Activity Diagrams
+- `Transcripts/20260915_092638.txt` — ถอดความการสอน Use Case Diagrams & System Boundary
+- `Transcripts/20260922_093313.txt` — ถอดความการสอนระบบยืมคืนอุปกรณ์, Activity Diagram (Fork/Join, Decision) และข้อสอบ Final
+
 ---
-*จัดระเบียบและปรับปรุงโครงสร้างล่าสุด: กันยายน 2568*
+*จัดระเบียบและปรับปรุงโครงสร้างล่าสุด: 23 กันยายน 2569*

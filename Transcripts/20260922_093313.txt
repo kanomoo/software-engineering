@@ -1,0 +1,113 @@
+================================================================================
+VERBATIM TRANSCRIPT: SOFTWARE ENGINEERING LECTURE (2026-09-22)
+================================================================================
+Subject: 07_Software_Engineering
+Date: Tuesday, 22 September 2026
+Time: 09:33:13 - 11:22:27 (Total Duration: ~1 hour 49 mins)
+Instructor: Software Engineering Course Instructor (อาจารย์ผู้สอนวิชาวิศวกรรมซอฟต์แวร์)
+Topic: Case Study: Laboratory Equipment Borrowing System,
+       Use Case Diagram Modelling (Actors, Use Cases, <<include>>, <<extend>>, Generalization),
+       Activity Diagram Modelling (Initial/Final Nodes, Guard Conditions, Decisions/Merges,
+       Fork & Join Concurrency, Swimlanes),
+       and Final Exam Direct Hints.
+Audio Sources: 20260922_093313.aac, 20260922_102855.aac, 20260922_105854.aac
+Target Project: C:\Project\software-engineering\
+================================================================================
+
+[Part 1: 00:00:00 - 00:15:00]
+อาจารย์: วันนี้จะมาพูดถึงเรื่องของการถอนวิชาเรียนนี้นะคะ หลังสอบกลางภาคไปแล้ว สำหรับบางคนคะแนนอาจจะไม่ค่อยดีเท่าไหร่ ถ้าจะถอนตอนนี้ จะได้สัญลักษณ์ W (Withdrawal) แต่ถ้าไปต่อ ก็ยังมีโอกาสได้ D หรือ C แต่ถ้าเกรดไม่ดีมันก็จะติด Transcript ไปตลอด
+เรื่องการเช็คชื่อ สัปดาห์หน้าจะมีการเช็คชื่ออย่างเป็นทางการนะคะ จะเป็นการขานชื่อรายบุคคล สัปดาห์นี้เมื่อเช้าที่ขานชื่อ เป็นการตรวจดูหน้าตาเฉยๆ ว่าใครได้คะแนนเท่าไหร่ สัปดาห์หน้าจะเช็คชื่อจริงจังตามเวลา 09:00 น. ตรง
+วันนี้จะมี 2 กิจกรรมหลักนะคะ:
+กิจกรรมแรก คือการทำ Case Study การเขียน Use Case Diagram
+กิจกรรมที่สอง คือการเรียนเรื่อง Activity Diagram ซึ่งเป็นตัวต่อยอดจาก Use Case Diagram
+
+*** คำเตือนเรื่องข้อสอบปลายภาค (Final Exam Confirmation) ***
+อาจารย์: "Use Case Diagram เนี่ย Confirm ครับ ออกใน Final แน่ๆ 1 ข้อนะครับ ทุกปี ยังไงก็ต้องมี... แล้วก็วันนี้จะต่อเรื่อง Activity Diagram ก็จะเป็นอีก 1 ประเด็นที่จะปรากฏอยู่ใน Final เหมือนกัน จาก Case Study เดียวกัน คุณจะได้เขียน Use Case Diagram แล้วก็เขียน Activity Diagram ใน Final..."
+ผมต้องตรวจกระดาษคำตอบจากลายมือทั้งหมด 121 ลายมือ ขอให้เขียนให้ชัดเจน เป็นระเบียบ อ่านง่ายนะครับ
+
+[Part 1: 00:15:00 - 00:35:00]
+อาจารย์: เปิด Case Study ใน Google Classroom เรื่อง "ระบบยืม-คืนอุปกรณ์ห้องปฏิบัติการ (Laboratory Equipment Borrowing System)"
+เมื่ออ่านโจทย์ สิ่งแรกที่ต้องหาคือ:
+1. ใครเป็น Actor (ผู้แสดงบทบาทที่เกี่ยวข้องกับระบบ)
+Actor ไม่ใช่คนเสมอไป แต่อาจเป็นระบบภายนอก หรือผู้ดูแล
+จาก Case Study:
+- สมาชิกที่ใช้บริการระบบ ประกอบด้วย "นักศึกษา (Student)" และ "บุคลากร (Staff)"
+- ทั้งสองประเภทถือเป็น "สมาชิก (Member)" ของระบบ
+ตรงนี้ตามหลักการ Object-Oriented และ UML เราเรียกว่า "Generalization"
+Member คือคลาสแม่ (General/Parent)
+Student และ Staff คือคลาสลูก (Specialized/Child)
+สัญลักษณ์ของ Generalization คือ เส้นตรงที่มีหัวลูกศรเป็นรูป "สามเหลี่ยมโปร่ง (Hollow Triangle)" ชี้จากคลาสลูกไปยังคลาสแม่
+
+นอกจากนี้ยังมีเจ้าหน้าที่อีกคนคือ:
+- เจ้าหน้าที่ห้องปฏิบัติการ (Lab Officer): ทำหน้าที่อนุมัติคำขอพิเศษ, ตรวจสอบสภาพอุปกรณ์ตอนคืน
+- ผู้ดูแลระบบ (Admin): จัดการบัญชีผู้ใช้ และสิทธิ์การใช้งาน
+
+[Part 1: 00:35:00 - 00:50:00]
+อาจารย์: คราวนี้มาดู Use Cases และความสัมพันธ์แบบ <<include>> และ <<extend>>
+1. การเข้าสู่ระบบ (Login):
+ทำได้ 2 วิธี คือผ่านบัญชีมหาวิทยาลัย (University SSO) หรือ Username/Password แบบนี้คือ Generalization ของ Login
+2. การค้นหาและดูรายละเอียดอุปกรณ์:
+- Search Equipment
+- View Equipment Details
+- Check Equipment Availability (ตรวจสอบสถานะว่าอุปกรณ์ว่างหรือไม่)
+3. การจองอุปกรณ์ (Reserve Equipment):
+เมื่อ Member ต้องการจองอุปกรณ์ ระบบต้องทำ 2 สิ่งนี้เสมอ:
+- ตรวจสอบสถานะว่าอุปกรณ์ว่างหรือไม่ (Check Equipment Availability)
+- ตรวจสอบสิทธิ์ของสมาชิก (Verify Eligibility)
+ดังนั้น ความสัมพันธ์จึงเป็น <<include>> ชี้จาก Reserve Equipment ไปยัง Check Availability และ Verify Eligibility
+(ลูกศรของ include ชี้จาก Use Case หลัก ไปยัง Use Case ที่ถูกรวมเข้ามา)
+แต่ถ้าอุปกรณ์ชิ้นนั้นมีมูลค่าสูง (เกิน 100,000 บาท) หรือเป็นอุปกรณ์ควบคุมพิเศษ จะต้องส่งเรื่องขออนุมัติเป็นกรณีพิเศษ (Request Special Approval) จาก Lab Officer
+กระบวนการนี้ไม่ได้เกิดขึ้นทุกครั้ง เกิดขึ้นเฉพาะกรณีเข้าเงื่อนไขพิเศษเท่านั้น
+ดังนั้น ความสัมพันธ์จึงเป็น <<extend>>!
+(ลูกศรของ extend ชี้จาก Use Case ส่วนขยาย Request Special Approval ย้อนกลับไปยัง Use Case หลัก Reserve Equipment)
+
+[Part 2: 00:00:00 - 00:28:36]
+อาจารย์: ในโจทย์ให้เขียนในกระดาษแบบฝึกหัด:
+1. ระบุรายชื่อ Actor ทั้งหมด
+2. ระบุรายชื่อ Use Case ทั้งหมด
+3. วาด Use Case Diagram ฉบับสมบูรณ์ (มี System Boundary, Actor, Use Case, Association, <<include>>, <<extend>>, Generalization)
+กำหนดส่ง: ภายในเที่ยงคืนวันนี้ (23:59 น.) ใน Google Classroom โดยถ่ายภาพกระดาษส่งเข้ามา
+
+ต่อไป เข้าสู่เนื้อหาใหม่: "Activity Diagram"
+Activity Diagram คืออะไร?
+Use Case Diagram แสดงภาพรวมจากมุมมองภายนอก (User Perspective) ว่าระบบทำอะไรได้บ้าง
+แต่ Activity Diagram จะเจาะลึกเข้าไปในมุมมองของระบบ (System Perspective / Workflow) เพื่ออธิบายขั้นตอน กระบวนการทำงาน (Process Flow) ภายในของแต่ละ Use Case
+1 Use Case สามารถนำมาขยายอธิบายด้วย 1 Activity Diagram
+
+สัญลักษณ์พื้นฐานของ Activity Diagram:
+1. Start Point (Initial Node): จุดเริ่มต้น ใช้สัญลักษณ์เป็นวงกลมสีดำทึบ
+2. End Point / Stop Point (Final Node): จุดสิ้นสุด ใช้สัญลักษณ์เป็นวงกลมทึบที่มีวงแหวนล้อมรอบด้านนอก (Bullseye)
+3. Activity State: กิจกรรมหรือสถานะการทำงาน ใช้รูปสี่เหลี่ยมมุมมน (Rounded Rectangle) มีชื่อกิจกรรมอยู่ข้างใน เช่น Ask for Username and Password, Verify Credentials
+4. Transition: เส้นลูกศรแสดงทิศทางการไหลของการทำงานจากกิจกรรมหนึ่งไปยังกิจกรรมถัดไป
+5. Guard Condition: เงื่อนไขกำกับการเปลี่ยนสถานะ เขียนอยู่ในเครื่องหมายวงเล็บก้ามปู [condition] เช่น [valid == true], [invalid], [hungry]
+
+[Part 3: 00:00:00 - 00:24:31]
+อาจารย์: สัญลักษณ์ขั้นสูงของ Activity Diagram:
+6. Decision Node & Merge Node: สัญลักษณ์รูปสี่เหลี่ยมข้าวหลามตัด (Diamond)
+- ทำหน้าที่เป็น Decision: มีเส้นเข้า 1 เส้น และแตกออกเป็น 2 เส้นทางขึ้นไป โดยมี Guard Condition กำกับที่แต่ละเส้นทาง เช่น [is_valid] ไปต่อ, [invalid] แจ้งเตือนและวนกลับ
+- ทำหน้าที่เป็น Merge: รวมเส้นทางหลายเส้นทางกลับเข้ามาเป็นเส้นทางเดียว
+7. Loop (การวนซ้ำ): สามารถวาด Transition ย้อนกลับไปที่ Decision หรือ Activity ก่อนหน้า เพื่อวนทำซ้ำจนกว่าเงื่อนไขจะบรรลุ
+8. Fork & Join (Concurrency / Parallel Execution):
+- สัญลักษณ์: แถบเส้นหนาสีดำทึบ (Thick Synchronization Bar)
+- Fork: จุดแยกการทำงานจาก 1 กิจกรรม แตกออกเป็นหลายกิจกรรมที่สามารถทำคู่ขนานกันได้ (Parallel Activities) เช่น เมื่อออกแบบสินค้าเสร็จ (Design Product) งานจะแตกออกเป็น 2 ฝั่งพร้อมกัน คือ ฝ่ายการตลาดทำการตลาดและขาย (Market & Sell Product) คู่ขนานกับฝ่ายโรงงานผลิตสินค้า (Manufacture Product)
+- Join: จุดรวมกิจกรรมคู่ขนาน แถบหนาจะรอให้กิจกรรมคู่ขนานทั้งหมดทำเสร็จครบก่อน จึงจะส่งงานไปยังกิจกรรมถัดไป (เช่น รอผลิตและขายเสร็จ จึงจะทำการส่งมอบ Deliver Product)
+9. Swimlane (ช่องว่ายน้ำ):
+แบ่งพื้นที่ของ Activity Diagram ออกเป็นคอลัมน์แนวดิ่งหรือแนวนอน เพื่อระบุความรับผิดชอบของแต่ละแผนกหรือ Role เช่น แผนก Marketing, แผนก Manufacturing, แผนก Delivery
+
+ตัวอย่างจริง: Activity Diagram ของ Use Case "Login":
+- Start Node ->
+- System Display: "Ask for Username and Password" ->
+- User Action: Input Credentials ->
+- Activity: "Verify Username and Password" ->
+- Decision Node:
+  - Branch [Invalid]: -> "Display Error Message" -> "Record Log" -> Loop กลับไปที่ "Ask for Username and Password"
+  - Branch [Valid]: -> Decision Node [First Login?]:
+    - [Yes]: -> Invoke Use Case "Change Password" -> Final Node
+    - [No]: -> Transition to Dashboard / Main Menu -> Final Node
+
+สรุปสำหรับ Final Exam:
+อาจารย์จะให้โจทย์ Case Study มา 1 เรื่อง แล้วให้ออกแบบทั้ง Use Case Diagram และเขียน Activity Diagram ขยาย Use Case สำคัญ 1-2 Use Case เพราะฉะนั้นหัดเขียนและใช้สัญลักษณ์ให้ถูกต้องตามมาตรฐาน UML นะคะ
+ส่งงานให้ตรงเวลาภายใน 23:59 น. วันนี้ วันอังคารหน้าเจอกัน 9:00 น. ตรง จะเริ่มเช็คชื่อค่ะ เลิกคลาสได้ครับ
+================================================================================
+END OF VERBATIM TRANSCRIPT
+================================================================================

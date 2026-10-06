@@ -49,6 +49,7 @@ flowchart TD
 * 🏛️ **คู่มือสรุปภาพรวมหลักสูตรเดิมและสไลด์คลาสสิก (ฉบับสมบูรณ์):** **[[02_Old_Wiki_Textbook/00_Old_Curriculum_Master_Wiki|00_Old_Curriculum_Master_Wiki]]**
 * 🎯 **สรุปเข้มข้อสอบกลางภาค 2568:** **[[01_New_Wiki_68/Midterm_68/SE-Midterm-Wiki-68|SE-Midterm-Wiki-68]]**
 * 📝 **เจาะลึกแนวข้อสอบ Midterm 68 & เทคนิคคว้าคะแนนโบนัส +5:** **[[03_Exams_and_Guides/Midterm_Exam_Scope_and_Strategy_68|Midterm_Exam_Scope_and_Strategy_68]]**
+* 🔥 **แนวข้อสอบปลายภาค 5 ข้อใหญ่ 100% EXPLICIT LEAKS & Mock Exam (30 คะแนน Open Book):** **[[03_Exams_and_Guides/Final_Exam_Guide_and_5_Items_Master_Leak_68|Final_Exam_Guide_and_5_Items_Master_Leak_68]]**
 * 📊 **ดัชนีตรวจความก้าวหน้าการเรียน:** **[[Progress Checklist]]**
 
 ---

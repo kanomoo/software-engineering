@@ -147,5 +147,6 @@ type: checklist
 - [x] **[[04_Work_and_Workshops/Activity_Diagram_Workshop|Activity Diagram Workshop]]** — เวิร์กช็อปและการบ้าน Activity Diagram สำหรับ ATM
 - [x] **[[04_Work_and_Workshops/Lab_Equipment_Borrowing_Workshop|Lab Equipment Borrowing Workshop]]** — เวิร์กช็อปกรณีศึกษาระบบยืม–คืนอุปกรณ์แล็บ
 - [x] **[[04_Work_and_Workshops/Software_Cost_Estimation_Workshop|Software Cost Estimation Workshop]]** — เวิร์กช็อปคำนวณ Sw Cost Estimation (COCOMO & FPA)
+- [x] 🔥 **[[03_Exams_and_Guides/Final_Exam_Guide_and_5_Items_Master_Leak_68|Final Exam Master Guide & 100% Leaks (5 Items)]]** — คลังแนวข้อสอบปลายภาค 5 ข้อใหญ่ (30 คะแนน Open Book): Use Case, Activity Diagram, Testing EP/BVA, Cyclomatic Complexity 3 วิธี, และ Agile/Scrum Burn-down Chart พร้อมชุดข้อสอบจำลองและเฉลยละเอียด
 
 

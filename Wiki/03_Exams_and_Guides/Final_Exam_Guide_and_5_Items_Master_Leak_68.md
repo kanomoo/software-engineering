@@ -31,7 +31,59 @@
 
 ---
 
-## 🏛️ 2. แผนที่โครงสร้างข้อสอบ 5 ข้อใหญ่ (5 Exam Items Master Scope)
+## 📸 2. หลักฐานลายมือผู้สอนและประกาศทางการ (Classroom Visual Evidence & Official Confirmation)
+
+เพื่อให้มั่นใจว่าการเตรียมตัวสอบตรงเป้าหมาย 100% โดยไม่อาศัยเพียงเสียงบรรยาย ได้ทำการนำภาพถ่ายหน้าจอที่อาจารย์เขียนสดในห้องเรียน และประกาศทางการใน Google Classroom มาประกอบการวิเคราะห์:
+
+### ภาพที่ 1: ลายมืออาจารย์ผู้สอนบนจอภาพขณะบรรยายสดในห้องเรียน (06/10/2569 เวลา 10:02 น.)
+![ลายมืออาจารย์ผู้สอนบนจอภาพห้องเรียน](../../images/exams/final_exam_board_notes_20261006.jpg)
+*(ไฟล์ต้นฉบับ: [`final_exam_board_notes_20261006.jpg`](file:///C:/Project/software-engineering/images/exams/final_exam_board_notes_20261006.jpg))*
+
+#### 🔍 ถอดความลายมืออาจารย์จากจอภาพทีละบรรทัด (Verbatim Board Transcription):
+```text
+1. Case study       Actor - Role
+           (a)      Student "..................."  ✓
+           (b)      Use case diagram
+
+2. Case study       Activity Diagram  ✓
+
+3. a  Equivalence Partitioning  }
+   b  Boundary Value Analysis   }
+  (c) ?
+
+4. Cyclomatic Complexity  ✓
+   Independent Path  ✓
+
+5. Agile / Scrum / Burndown Chart
+   a) Role
+   b) Burndown Chart
+      b1
+      b2
+      b3
+```
+
+---
+
+### ภาพที่ 2: ประกาศทางการจาก Google Classroom โดย ผศ.ดร.สุปีติ กุลจันทร์ (Supeeti Kulchan)
+![ประกาศ Google Classroom โดย ผศ.ดร.สุปีติ กุลจันทร์](../../images/exams/final_exam_classroom_announcement.png)
+*(ไฟล์ต้นฉบับ: [`final_exam_classroom_announcement.png`](file:///C:/Project/software-engineering/images/exams/final_exam_classroom_announcement.png))*
+
+#### 📢 ข้อความประกาศทางการใน Google Classroom:
+> **Supeeti Kulchan**  
+> *สรุปเรื่องการเตรียมตัวสอบ ดังนี้:*  
+> 1. ตรวจสอบวัน เวลา และสถานที่สอบด้วยตัวเอง  
+> 2. เตรียมเอกสาร dictionary (ข้อสอบเป็นภาษาอังกฤษ) บัตร นศ. หรือใบแทน เครื่องแต่งกายในการเข้าสอบให้พร้อม  
+> 3. หัวข้อที่ให้นักศึกษาเตรียมตัว:  
+>    3.1 การวิเคราะห์หา Actor และ Role โดยตามอ่าน case study  
+>    3.2 การเขียน Activity Diagram จาก Case Study  
+>    3.3 Equivalence Partitioning และ Boundary Value Analysis ที่อยู่ใน slide เรื่อง Software Testing  
+>    3.4 Cyclomatic Complexity ที่อยู่ใน Slide เรื่อง Software Testing  
+>    3.5 Agile, Scrum, Burndown Chart  
+> 4. ให้ส่งการบ้านให้เรียบร้อย  
+
+---
+
+## 🏛️ 3. แผนที่โครงสร้างข้อสอบ 5 ข้อใหญ่ (5 Exam Items Master Scope)
 
 ```mermaid
 flowchart TD
@@ -46,7 +98,7 @@ flowchart TD
 
 ---
 
-## 📚 3. เจาะลึกทฤษฎีและข้อสอบรั่วรายข้อ (In-Depth Technical Mastery)
+## 📚 4. เจาะลึกทฤษฎีและข้อสอบรั่วรายข้อ (In-Depth Technical Mastery)
 
 ---
 

@@ -20,6 +20,8 @@ software-engineering/
 └── Web.md                     🔗 ลิงก์งานค้นคว้าและเครื่องมือเสริม
 ```
 
+> 🔗 **Google Classroom Hub**: เชื่อมต่อข้อมูลการบ้านและสไลด์ต้นฉบับไว้ที่ [KMUTNB-Classroom/03_Software_Engineering_060243111](../KMUTNB-Classroom/03_Software_Engineering_060243111/) และบันทึกไว้ใน [Classroom Assignment & Slide Sync](Wiki/Classroom_Assignment_and_Slide_Sync.md)
+
 ---
 
 ## 📖 รายละเอียดแต่ละหมวดหมู่
